@@ -31,9 +31,7 @@ public class Player : MonoBehaviour
         {
             TakeDamage(20);
             GetScores();
-
         }
-        
     }
                                   
     void TakeDamage(int damage)
