@@ -21,17 +21,17 @@ public class ThirdPersonShooterController : MonoBehaviour
     {
         Vector3 aimPosition = Vector3.zero;
         // Get Screen centre
-        Vector2 screenCentrePoint = new Vector2(Screen.width /2f , Screen.height / 2f);
-        Ray ray = Camera.main.ScreenPointToRay(screenCentrePoint);
-        if (Physics.Raycast(ray, out RaycastHit rayCastHit, 999f, aimColliderLayerMask)){
-            transform.position = rayCastHit.point;
-            debugTransform.position = rayCastHit.point;
-        }
+        // Vector2 screenCentrePoint = new Vector2(Screen.width /2f , Screen.height / 2f);
+        // Ray ray = Camera.main.ScreenPointToRay(screenCentrePoint);
+        // if (Physics.Raycast(ray, hitInfo: out RaycastHit rayCastHit, 999f, aimColliderLayerMask)){
+        //     transform.position = rayCastHit.point;
+        //     // debugTransform.position = rayCastHit.point;
+        // }
 
         if (starterAssetsInputs.shoot){
             // Vector3 aimDir = (aimPosition - spawnProjectilePosition.position).normalized;
             Vector3 aimDir = spawnProjectilePosition.position.normalized;
-            Instantiate(PaintBallProjectile, spawnProjectilePosition.position, Quaternion.LookRotation(aimDir, Vector3.up));
+            Instantiate(PaintBallProjectile, spawnProjectilePosition.position,spawnProjectilePosition.rotation);// Quaternion.LookRotation(aimDir, Vector3.up));
             starterAssetsInputs.shoot = false;
         }
     }

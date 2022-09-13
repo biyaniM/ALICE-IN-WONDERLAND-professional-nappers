@@ -6,16 +6,19 @@ public class BulletProjectile : MonoBehaviour
 {
     // Update is called once per frame
     private Rigidbody bulletRigidbody;
+    public float bulletSpeed = 30f;
+    public float bulletLifeSpan = 0.3f;
 
     private void Awake(){
         bulletRigidbody = GetComponent<Rigidbody>();
     }
     private void Start(){
-        float speed = 50f;
-        bulletRigidbody.velocity = transform.forward * speed;
+        // bulletRigidbody.AddForce(bulletRigidbody.transform.forward * bulletSpeed);
+        bulletRigidbody.velocity = bulletRigidbody.transform.forward * bulletSpeed;
+        Destroy(gameObject, bulletLifeSpan);
     }
 
     private void OnTriggerEnter(Collider other){
-        Destroy(bulletRigidbody);
+        Destroy(gameObject);
     }
 }
