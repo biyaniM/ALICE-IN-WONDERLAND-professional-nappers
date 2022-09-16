@@ -50,6 +50,7 @@ public class turret : MonoBehaviour
             currentGun.Fire();
             fireRateDelta = fireRate;
        }
+       
         
     }
 
