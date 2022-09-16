@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class enemy_movement : MonoBehaviour
 {
+
+
+    // public Transform player;
+    // public float speed = 2f;
+    // private void update()
+    // {
+    //     Vector3 vectorToTarget = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
+    //     transform.LookAt(vectorToTarget);
+    // }
+
     public float speed;
     public GameObject player;
     public float rotationModifier;
