@@ -8,6 +8,8 @@ public class CollectCoins : MonoBehaviour
     public int redCoins; 
     public int blueCoins;
     public int yellowCoins;
+    public int coinPointIncreaseOnCollection = 2;
+    public int coinPointIncreaseOnEnemy = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -17,18 +19,18 @@ public class CollectCoins : MonoBehaviour
 
     public void OnTriggerEnter(Collider col){
         if(col.gameObject.tag == "RedCoin"){
-            Debug.Log("Coin Collected!");
-            redCoins = redCoins + 2;
+            Debug.Log("Coin Collected!"); //TODO Add Collection Sound
+            redCoins += coinPointIncreaseOnCollection;
             col.gameObject.SetActive(false);
         }
         else if(col.gameObject.tag == "BlueCoin"){
             Debug.Log("Coin Collected!");
-            blueCoins = blueCoins + 2;
+            blueCoins += coinPointIncreaseOnCollection;
             col.gameObject.SetActive(false);
         }
         else if(col.gameObject.tag == "YellowCoin"){
             Debug.Log("Coin Collected!");
-            yellowCoins = yellowCoins + 2;
+            yellowCoins += coinPointIncreaseOnCollection;
             col.gameObject.SetActive(false);
         }
     }
