@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CollectCoins : MonoBehaviour
 {
+    public Player player;
     public int redCoins; 
     public int blueCoins;
     public int yellowCoins;
@@ -37,6 +38,9 @@ public class CollectCoins : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //update coins status to HUD
+        player.UpdateCoins(redCoins, blueCoins, yellowCoins);
+         //check if player has collected enough colors to pass gate
+        player.CheckGoal(redCoins, blueCoins, yellowCoins);
     }
 }
