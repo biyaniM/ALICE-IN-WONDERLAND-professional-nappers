@@ -18,17 +18,17 @@ public class CollectCoins : MonoBehaviour
     public void OnTriggerEnter(Collider col){
         if(col.gameObject.tag == "RedCoin"){
             Debug.Log("Coin Collected!");
-            redCoins = redCoins + 1;
+            redCoins = redCoins + 2;
             col.gameObject.SetActive(false);
         }
         else if(col.gameObject.tag == "BlueCoin"){
             Debug.Log("Coin Collected!");
-            blueCoins = blueCoins + 1;
+            blueCoins = blueCoins + 2;
             col.gameObject.SetActive(false);
         }
         else if(col.gameObject.tag == "YellowCoin"){
             Debug.Log("Coin Collected!");
-            yellowCoins = yellowCoins + 1;
+            yellowCoins = yellowCoins + 2;
             col.gameObject.SetActive(false);
         }
     }
@@ -38,5 +38,7 @@ public class CollectCoins : MonoBehaviour
     {
         //update coins status to HUD
         player.UpdateCoins(redCoins, blueCoins, yellowCoins);
+         //check if player has collected enough colors to pass gate
+        player.CheckGoal(redCoins, blueCoins, yellowCoins);
     }
 }
