@@ -18,7 +18,15 @@ public class BulletProjectile : MonoBehaviour
         Destroy(gameObject, bulletLifeSpan);
     }
 
-    private void OnTriggerEnter(Collider other){
+    private void OnCollisionEnter(Collision collision){
+        if (collision.collider.GetComponent<BulletTarget>() !=null){
+            Debug.Log("Hit Target!");
+        }else{
+            Debug.Log("Not Hit target");
+        }
         Destroy(gameObject);
     }
+
+    // private void OnTriggerEnter(Collider other){
+        
 }
