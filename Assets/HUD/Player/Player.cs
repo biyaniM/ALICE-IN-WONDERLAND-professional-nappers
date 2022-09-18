@@ -23,10 +23,12 @@ public class Player : MonoBehaviour
     public AmmoCount ammoCount;
     public Canvas tutorial;
 
+    public GameObject finishBoundary;
+
     void Start()
     {
         //test
-        SetGoal(10, 10, 10);
+        SetGoal(2, 2, 2);
         InitAmmo(80);
         InitHealth(100);
         InitializeHUD();
@@ -83,5 +85,15 @@ public class Player : MonoBehaviour
         yellowCoins = YELLOW_GOAL;
         Debug.Log("Initialize HUD values");
     }
+
+    //check if the player has collected enough colors
+    public void CheckGoal(int red, int blue, int yellow){
+        if(red >= RED_GOAL && blue >= BLUE_GOAL && yellow>= YELLOW_GOAL){
+            finishBoundary = GameObject.Find("FinishBoundary");
+            Destroy(finishBoundary);
+            //end game display ui
+        }
+    }
+
 
 }
