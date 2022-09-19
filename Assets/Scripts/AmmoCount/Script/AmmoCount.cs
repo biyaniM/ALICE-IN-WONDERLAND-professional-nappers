@@ -6,16 +6,19 @@ using UnityEngine.UI;
 public class AmmoCount : MonoBehaviour
 {
     [SerializeField] public Text balance;
-    private int totalAmmo;
+    public int totalAmmo;
+    public int currentAmmo;
 
     public void SetTotalAmmo(int total){
         totalAmmo = total;
+        currentAmmo = total;
         balance.text = total.ToString();
         Debug.Log("Total Ammo" + balance);
     }
 
     public void SetBalance(int count){
-        //balance.text = (totalAmmo - count).ToString();
-        balance.text = count.ToString();
+        currentAmmo = count;
+        balance.text = currentAmmo.ToString();
+        // balance.text = count.ToString();
     }
 }
