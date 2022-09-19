@@ -9,6 +9,7 @@ public class LevelComplete : MonoBehaviour
     int ammoBalance;
     ThirdPersonShooterController shootingComponent;
     SendToGoogle analyticsComponent;
+    [SerializeField] LevelCompleteScreen levelCompleteScreen;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +41,7 @@ public class LevelComplete : MonoBehaviour
                 analyticsComponent.Send("1", ammoBalance.ToString(), "0");
 
                 //! show the level complete HUD
+                levelCompleteScreen.Setup();
 
             }
         }
