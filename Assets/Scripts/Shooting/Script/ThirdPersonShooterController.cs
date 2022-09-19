@@ -7,14 +7,13 @@ using StarterAssets;
 public class ThirdPersonShooterController : MonoBehaviour
 {
     
-    [SerializeField] private LayerMask aimColliderLayerMask = new LayerMask();
+    // [SerializeField] private LayerMask aimColliderLayerMask = new LayerMask();
     [SerializeField] private Transform debugTransform;
     [SerializeField] private Transform PaintBallProjectile;
     [SerializeField] private Transform spawnProjectilePosition;
     private StarterAssetsInputs starterAssetsInputs;
     [SerializeField] Player player;
     public int maxAmmo = 10;
-    // private AmmoCount
     void Start(){
         player.InitAmmo(maxAmmo);
     }
