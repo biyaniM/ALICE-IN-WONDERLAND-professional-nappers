@@ -5,15 +5,16 @@ using UnityEngine.Networking;
 
 public class LevelComplete : MonoBehaviour
 {
-    public bool levelOverCheck = false;
+    public bool levelOverCheck;
     int ammoBalance;
     ThirdPersonShooterController shootingComponent;
     SendToGoogle analyticsComponent;
+    [SerializeField] LevelCompleteScreen levelCompleteScreen;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        levelOverCheck = false;
     }
 
     // Update is called once per frame
@@ -30,18 +31,23 @@ public class LevelComplete : MonoBehaviour
 
     public void OnTriggerEnter(Collider col){
         Debug.Log("collider: "+col.name);
+        // GameObject finishBoundary = GameObject.Find("FinishBoundary");
         // get ammo balance
         ammoBalance = shootingComponent.currentAmmo;
         if(levelOverCheck == false){
             if(col.gameObject.tag == "LevelCompleteTag"){
                 Debug.Log("reached level over loc!");
                 levelOverCheck = true;
+
                 // capture the analytics
                 analyticsComponent.Send("1", ammoBalance.ToString(), "0");
 
                 //! show the level complete HUD
+                levelCompleteScreen.Setup();
 
             }
         }
+        // show the finishboundary again
+        // finishBoundary.GetComponent<BoxCollider>().enabled = true;
     }
 }
