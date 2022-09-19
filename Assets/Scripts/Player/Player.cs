@@ -98,7 +98,7 @@ public class Player : MonoBehaviour
             finishBoundary = GameObject.Find("FinishBoundary");
             finishBoundary.GetComponent<BoxCollider>().enabled = false;
             // finishBoundary.enabled = false;
-            Destroy(finishBoundary);
+            // Destroy(finishBoundary);
             //end game display ui
         }
     }
