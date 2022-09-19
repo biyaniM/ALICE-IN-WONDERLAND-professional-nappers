@@ -53,5 +53,7 @@ public class CountDownTimer : MonoBehaviour , IPointerClickHandler
     {
         //End Time , if want Do something
         print("End");
+        
+        //! if slider.value  <= 0: trigger the game over HUD
     }
 }
