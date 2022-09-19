@@ -14,15 +14,19 @@ public class ThirdPersonShooterController : MonoBehaviour
     private StarterAssetsInputs starterAssetsInputs;
     [SerializeField] Player player;
     public int maxAmmo = 10;
+    public int currentAmmo;
+    
     void Start(){
         player.InitAmmo(maxAmmo);
     }
     void Awake(){
         starterAssetsInputs = GetComponent<StarterAssetsInputs>();
+        currentAmmo = player.ammoCount.currentAmmo;
     }
     // Update is called once per frame
     void Update()
     {
+        currentAmmo = player.ammoCount.currentAmmo;
         Vector3 aimPosition = Vector3.zero;
         // Get Screen centre
         // Vector2 screenCentrePoint = new Vector2(Screen.width /2f , Screen.height / 2f);
@@ -38,6 +42,7 @@ public class ThirdPersonShooterController : MonoBehaviour
                 Instantiate(PaintBallProjectile, spawnProjectilePosition.position,spawnProjectilePosition.rotation);// Quaternion.LookRotation(aimDir, Vector3.up));
                 starterAssetsInputs.shoot = false; //* To implement Semi-automatic Shooting.
                 player.UpdateAmmo(player.ammoCount.currentAmmo - 1);
+                
                 string currentAmmoMessage = string.Format("Current Ammmo {0}/{1}",player.ammoCount.currentAmmo,player.ammoCount.totalAmmo);
                 Debug.Log(currentAmmoMessage);
             }

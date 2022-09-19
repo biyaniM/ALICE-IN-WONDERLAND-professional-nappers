@@ -32,6 +32,8 @@ public class Player : MonoBehaviour
         // InitAmmo(80); //! Removinng from Test
         InitHealth(100);
         InitializeHUD();
+        SendToGoogle analyticsComponent = GetComponent<SendToGoogle>();
+        analyticsComponent.Send("1", "NA", "1");
     }
 
     void Update(){
