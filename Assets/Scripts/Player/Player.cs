@@ -32,8 +32,12 @@ public class Player : MonoBehaviour
         // InitAmmo(80); //! Removinng from Test
         InitHealth(100);
         InitializeHUD();
+        // endboundary collider 
+        setFinishBoundary(true);
+
         SendToGoogle analyticsComponent = GetComponent<SendToGoogle>();
         analyticsComponent.Send("1", "NA", "1");
+
     }
 
     void Update(){
@@ -92,9 +96,16 @@ public class Player : MonoBehaviour
     public void CheckGoal(int red, int blue, int yellow){
         if(red >= RED_GOAL && blue >= BLUE_GOAL && yellow>= YELLOW_GOAL){
             finishBoundary = GameObject.Find("FinishBoundary");
+            finishBoundary.GetComponent<BoxCollider>().enabled = false;
+            // finishBoundary.enabled = false;
             Destroy(finishBoundary);
             //end game display ui
         }
+    }
+
+    public void setFinishBoundary(bool param){
+        finishBoundary = GameObject.Find("FinishBoundary");
+        finishBoundary.GetComponent<BoxCollider>().enabled = param;
     }
 
 
