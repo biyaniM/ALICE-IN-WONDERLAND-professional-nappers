@@ -36,7 +36,7 @@ public class enemy : MonoBehaviour
         transform.Rotate(new Vector3(0f,0.3f,0f));
         fireRateDelta -= 10*Time.deltaTime;
 
-        if(fireRateDelta <= 0 && distance < 5)
+        if(fireRateDelta <= 0 && distance < 7)
         {
             currentGun.Fire();
             currentGun.Fire();
