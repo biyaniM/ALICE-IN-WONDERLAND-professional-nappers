@@ -16,5 +16,7 @@ public class HealthBar : MonoBehaviour
     public void SetHealth(int health)
     {
         slider.value = health;
+
+        //! if slider.value  <= 0: trigger the game over HUD
     }
 }
