@@ -12,9 +12,12 @@ public class ThirdPersonShooterController : MonoBehaviour
     [SerializeField] private Transform PaintBallProjectile;
     [SerializeField] private Transform spawnProjectilePosition;
     private StarterAssetsInputs starterAssetsInputs;
+    [SerializeField] Player player;
     public int maxAmmo = 10;
-    public int currentAmmo = 10;
-    
+    // private AmmoCount
+    void Start(){
+        player.InitAmmo(maxAmmo);
+    }
     void Awake(){
         starterAssetsInputs = GetComponent<StarterAssetsInputs>();
     }
@@ -29,14 +32,14 @@ public class ThirdPersonShooterController : MonoBehaviour
         //     transform.position = rayCastHit.point;
         //     // debugTransform.position = rayCastHit.point;
         // }
-        if (currentAmmo>0 && currentAmmo<=maxAmmo){
+        if (player.ammoCount.currentAmmo>0){
             if (starterAssetsInputs.shoot){
                 // Vector3 aimDir = (aimPosition - spawnProjectilePosition.position).normalized;
                 Vector3 aimDir = spawnProjectilePosition.position.normalized;
                 Instantiate(PaintBallProjectile, spawnProjectilePosition.position,spawnProjectilePosition.rotation);// Quaternion.LookRotation(aimDir, Vector3.up));
                 starterAssetsInputs.shoot = false; //* To implement Semi-automatic Shooting.
-                currentAmmo--;
-                string currentAmmoMessage = string.Format("Current Ammmo {0}/{1}",currentAmmo,maxAmmo);
+                player.UpdateAmmo(player.ammoCount.currentAmmo - 1);
+                string currentAmmoMessage = string.Format("Current Ammmo {0}/{1}",player.ammoCount.currentAmmo,player.ammoCount.totalAmmo);
                 Debug.Log(currentAmmoMessage);
             }
         }else{
