@@ -29,13 +29,13 @@ public class Player : MonoBehaviour
     {
         //test
         SetGoal(2, 2, 2);
-        InitAmmo(80);
+        // InitAmmo(80); //! Removinng from Test
         InitHealth(100);
         InitializeHUD();
     }
 
     void Update(){
-        Debug.Log("Time" + Time.time);
+        // Debug.Log("Time" + Time.time); //TODO Commenting it out to make other Debug logs readable
         if(tutorial.enabled && Time.time >= 5f){
             tutorial.enabled = false;
         }
@@ -67,7 +67,7 @@ public class Player : MonoBehaviour
         coinsScore.SetGoals(RED_GOAL, BLUE_GOAL, YELLOW_GOAL);
     }
     //import from player shooting???
-    void InitAmmo(int ammoAmount){
+    public void InitAmmo(int ammoAmount){
         SUM_AMMO = ammoAmount;
         ammoCount.SetTotalAmmo(SUM_AMMO);
     }

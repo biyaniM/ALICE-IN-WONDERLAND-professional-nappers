@@ -8,7 +8,7 @@ public class BulletProjectile : MonoBehaviour
     private Rigidbody bulletRigidbody;
     public float bulletSpeed = 30f;
     public float bulletLifeSpan = 0.3f;
-
+    
     private void Awake(){
         bulletRigidbody = GetComponent<Rigidbody>();
     }

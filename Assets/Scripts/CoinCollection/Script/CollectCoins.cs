@@ -8,7 +8,7 @@ public class CollectCoins : MonoBehaviour
     public int redCoins; 
     public int blueCoins;
     public int yellowCoins;
-    public int coinPointIncreaseOnCollection = 2;
+    private int coinPointIncreaseOnCollection = 2;
     public int coinPointIncreaseOnEnemy = 1;
 
     // Start is called before the first frame update
