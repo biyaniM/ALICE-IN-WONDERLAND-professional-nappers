@@ -7,7 +7,6 @@ public class LevelComplete : MonoBehaviour
 {
     public bool levelOverCheck = false;
     int ammoBalance;
-    int i = 1;
     
 
     // Start is called before the first frame update
@@ -27,8 +26,6 @@ public class LevelComplete : MonoBehaviour
     public void OnTriggerEnter(Collider col){
         if(col.gameObject.tag == "LevelCompleteTag"){
             Debug.Log("reached level over loc!");
-            Debug.Log(i);
-            i = i + 1;
             levelOverCheck = true;
             ThirdPersonShooterController shootingComponent = GetComponent<ThirdPersonShooterController>();
             ammoBalance = shootingComponent.currentAmmo;
