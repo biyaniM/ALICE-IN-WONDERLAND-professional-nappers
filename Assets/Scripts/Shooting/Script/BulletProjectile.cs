@@ -24,7 +24,7 @@ public class BulletProjectile : MonoBehaviour
         }else{
             Debug.Log("Not Hit target");
         }
-        Destroy(gameObject);
+        // Destroy(gameObject);
     }
 
     // private void OnTriggerEnter(Collider other){
