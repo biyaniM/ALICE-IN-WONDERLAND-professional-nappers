@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     private int ammoBalance;
     //fake const(set from outside)
     private int SUM_AMMO;
-    private int SUM_HEALTH;
+    public int SUM_HEALTH;
     private int RED_GOAL;
     private int BLUE_GOAL;
     private int YELLOW_GOAL;
@@ -47,8 +47,13 @@ public class Player : MonoBehaviour
         }
     }
 
+    public int GetMaxHealth(){
+        return SUM_HEALTH;
+    }
 
-
+    public int GetCurrHealth(){
+        return healthPoint;
+    }
     public void UpdateHealth(int health){
         healthPoint = health;
         healthBar.SetHealth(healthPoint);
