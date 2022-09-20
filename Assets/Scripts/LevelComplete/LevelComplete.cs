@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 
 public class LevelComplete : MonoBehaviour
 {
-    public bool levelOverCheck;
+    public bool levelOverCheck = false;
     int ammoBalance;
     ThirdPersonShooterController shootingComponent;
     SendToGoogle analyticsComponent;
@@ -14,7 +14,7 @@ public class LevelComplete : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        levelOverCheck = false;
+
     }
 
     // Update is called once per frame
