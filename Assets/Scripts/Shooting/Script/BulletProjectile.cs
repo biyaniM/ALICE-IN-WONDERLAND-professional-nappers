@@ -20,9 +20,9 @@ public class BulletProjectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision){
         if (collision.collider.GetComponent<BulletTarget>() !=null){
-           // Debug.Log("Hit Target!");
+            Debug.Log("Hit Target!");
         }else{
-           // Debug.Log("Not Hit target");
+            Debug.Log("Not Hit target");
         }
         Destroy(gameObject);
     }
