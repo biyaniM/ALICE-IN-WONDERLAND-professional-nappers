@@ -36,7 +36,9 @@ public class Player : MonoBehaviour
         setFinishBoundary(true);
 
         SendToGoogle analyticsComponent = GetComponent<SendToGoogle>();
+        Debug.Log("Level started-------");
         analyticsComponent.Send("1", "NA", "1");
+        Debug.Log("Level started2-------");
 
     }
 
