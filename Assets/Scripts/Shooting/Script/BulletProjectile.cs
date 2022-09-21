@@ -13,18 +13,18 @@ public class BulletProjectile : MonoBehaviour
         bulletRigidbody = GetComponent<Rigidbody>();
     }
     private void Start(){
-        // bulletRigidbody.AddForce(bulletRigidbody.transform.forward * bulletSpeed);
+        //bulletRigidbody.AddForce(bulletRigidbody.transform.forward * bulletSpeed);
         bulletRigidbody.velocity = bulletRigidbody.transform.forward * bulletSpeed;
         Destroy(gameObject, bulletLifeSpan);
     }
 
     private void OnCollisionEnter(Collision collision){
         if (collision.collider.GetComponent<BulletTarget>() !=null){
-            Debug.Log("Hit Target!");
+             Debug.Log("Hit Target!");
         }else{
             Debug.Log("Not Hit target");
         }
-        Destroy(gameObject);
+        // Destroy(gameObject);
     }
 
     // private void OnTriggerEnter(Collider other){
