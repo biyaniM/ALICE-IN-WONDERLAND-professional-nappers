@@ -8,7 +8,7 @@ public class SendToGoogle : MonoBehaviour
     // prod level
     // [SerializeField] private string URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSe1Jc8y171JmrqUy1h_NyxluyZk6d4JB8wBOd7Xp4UsTSB5Uw/formResponse";
     // dev level
-    [SerializeField] private string URL = "https://docs.google.com/forms/u/1/d/e/1FAIpQLSf3B08L-3hPyw2etOwwyMn7hOziz6TsQF395ZD9-dtHGqFzrQ/formResponse";
+    [SerializeField] private string URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSf3B08L-3hPyw2etOwwyMn7hOziz6TsQF395ZD9-dtHGqFzrQ/formResponse";
 
     private IEnumerator Post(string s1, string s2, string s3)
     {
