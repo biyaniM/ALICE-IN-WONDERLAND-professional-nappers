@@ -108,6 +108,9 @@ GameObject:
   - component: {fileID: 1404114414586556645}
   - component: {fileID: 9175571587742630351}
   - component: {fileID: -5553208075762204901}
+  - component: {fileID: 733531534684379818}
+  - component: {fileID: -5809697077464575540}
+  - component: {fileID: -2871292397143096319}
   m_Layer: 0
   m_Name: PaintBallProjectile
   m_TagString: Untagged
@@ -159,3 +162,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf36fe19fd0b50b489b31eb1c545528c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletSpeed: 50
+  bulletLifeSpan: 0.3
+--- !u!114 &733531534684379818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2866643433148882676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f666cee0b184eda8ad18efca545912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy1Hits: 0
+  enemy2Hits: 0
+  enemy3Hits: 0
+--- !u!65 &-5809697077464575540
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2866643433148882676}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &-2871292397143096319
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2866643433148882676}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
