@@ -19,13 +19,14 @@ public class killEnemy : MonoBehaviour
         
     }
 
-    public void OnTriggerEnter(Collider col) {
+    /*public void OnTriggerEnter(Collider col) {
         Debug.Log("Got over here!");
         if(col.gameObject.tag == "enemy1" || col.gameObject.tag == "enemy2" || col.gameObject.tag == "enemy3"){
             Destroy(col.gameObject);
             Debug.Log("Killed Enemy!!!!!");
         }
-    }
+    }*/
+    
     //     if(col.gameObject.tag == "enemy1"){
     //         if(enemy1Hits >= 1) {  // Will change this value later when health system is integrated
     //             Debug.Log("Enemy 1 Killed!");
