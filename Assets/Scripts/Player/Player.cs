@@ -86,9 +86,9 @@ public class Player : MonoBehaviour
     void InitializeHUD(){
         healthPoint = SUM_HEALTH;
         ammoBalance = SUM_AMMO;
-        redCoins = RED_GOAL;
-        blueCoins = BLUE_GOAL;
-        yellowCoins = YELLOW_GOAL;
+        redCoins = 0;
+        blueCoins = 0;
+        yellowCoins = 0;
         Debug.Log("Initialize HUD values");
     }
 
@@ -108,5 +108,17 @@ public class Player : MonoBehaviour
         finishBoundary.GetComponent<BoxCollider>().enabled = param;
     }
 
+
+    public int GetRedCoinsScore(){
+        return redCoins;
+    }
+
+    public int GetBlueCoinsScore(){
+        return blueCoins;
+    }
+
+    public int GetYellowCoinsScore(){
+        return yellowCoins;
+    }
 
 }
