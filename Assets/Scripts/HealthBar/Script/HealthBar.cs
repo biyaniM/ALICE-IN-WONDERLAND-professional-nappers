@@ -9,12 +9,13 @@ public class HealthBar : MonoBehaviour
 
     public void SetMaxHealth(int health)
     {
+        
         slider.maxValue = health;
         slider.value = health;
     }
 
     public void SetHealth(int health)
-    {
+    {   Debug.Log("Inside health broooo!!!!");
         slider.value = health;
 
         //! if slider.value  <= 0: trigger the game over HUD
