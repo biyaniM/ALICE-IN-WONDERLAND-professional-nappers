@@ -18,15 +18,18 @@ public class BulletProjectile : MonoBehaviour
         Destroy(gameObject, bulletLifeSpan);
     }
 
-    private void OnCollisionEnter(Collision collision){
-        if (collision.collider.GetComponent<BulletTarget>() !=null){
+    private void OnTriggerEnter(Collider col){
+        /*if (col.GetComponent<BulletTarget>() !=null){
              Debug.Log("Hit Target!");
         }else{
             Debug.Log("Not Hit target");
-        }
-        // Destroy(gameObject);
-    }
+        }*/
+        Destroy(gameObject);
 
-    // private void OnTriggerEnter(Collider other){
+        if(col.gameObject.tag == "enemy1" || col.gameObject.tag == "enemy2" || col.gameObject.tag == "enemy3"){
+            Destroy(col.gameObject);
+            Debug.Log("Killed Enemy!!!!!");
+        }
+    }
         
 }
