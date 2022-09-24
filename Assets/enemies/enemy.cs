@@ -34,12 +34,10 @@ public class enemy : MonoBehaviour
 
         distance = Vector3.Distance(transform.position, player.transform.position);
         transform.Rotate(new Vector3(0f,0.3f,0f));
-        fireRateDelta -= 10*Time.deltaTime;
+        fireRateDelta -= 25 * Time.deltaTime;
 
         if(fireRateDelta <= 0 && distance < 7)
         {
-            currentGun.Fire();
-            currentGun.Fire();
             currentGun.Fire();
             fireRateDelta = fireRate;
         }
