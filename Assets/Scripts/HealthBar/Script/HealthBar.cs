@@ -15,7 +15,7 @@ public class HealthBar : MonoBehaviour
     }
 
     public void SetHealth(int health)
-    {   Debug.Log("Inside health broooo!!!!");
+    {   Debug.Log("Inside setHealth");
         slider.value = health;
 
         //! if slider.value  <= 0: trigger the game over HUD

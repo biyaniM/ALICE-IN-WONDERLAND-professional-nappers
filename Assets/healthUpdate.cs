@@ -22,23 +22,21 @@ public class healthUpdate : MonoBehaviour
     }
 
     public void OnTriggerEnter(Collider col) {
-        Debug.Log("Got Hit!!!!");
+        Debug.Log("Player got hit");
         if(col.gameObject.tag == "enemyBullet") {
             Destroy(col.gameObject);
-            Debug.Log("Enemy YOOOOO");
+            Debug.Log("Enemy bullet destroyed!");
             Debug.Log(col.gameObject);
             currentHealth = currentHealth - 20;
             updateHealth(currentHealth);
-            return;
-            //healthBar.SetHealth(currentHealth);
-            
+            return;            
         }
     }
 
     public void updateHealth(int health) {
-        Debug.Log("Set health");
+        Debug.Log("Set health Called");
         healthBar.SetHealth(health);
-        Debug.Log("Set!");
+        Debug.Log("Health set");
     }
     //     public void OnCollisionEnter(Collision col) {
     //     Debug.Log("Got Hit!!!!");
