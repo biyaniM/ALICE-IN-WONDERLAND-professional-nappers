@@ -390,7 +390,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25464
+  m_Name: pb_Mesh31060
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -739,6 +739,7 @@ GameObject:
   - component: {fileID: 261995576}
   - component: {fileID: 261995575}
   - component: {fileID: 261995574}
+  - component: {fileID: 261995578}
   m_Layer: 0
   m_Name: enemy3
   m_TagString: enemy3
@@ -821,6 +822,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &261995578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261995572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae1ac2164ad974aa78e215ceb3aa12bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1320465628}
+  redCoins: 0
+  blueCoins: 0
+  yellowCoins: 0
 --- !u!1 &272373497
 GameObject:
   m_ObjectHideFlags: 0
@@ -1483,6 +1500,7 @@ GameObject:
   - component: {fileID: 681441282}
   - component: {fileID: 681441281}
   - component: {fileID: 681441280}
+  - component: {fileID: 681441284}
   m_Layer: 0
   m_Name: enemy1
   m_TagString: enemy1
@@ -1565,6 +1583,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &681441284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681441278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae1ac2164ad974aa78e215ceb3aa12bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1320465628}
+  redCoins: 0
+  blueCoins: 0
+  yellowCoins: 0
 --- !u!4 &700051398 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8338988566280778637, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
@@ -1583,6 +1617,7 @@ GameObject:
   - component: {fileID: 732443383}
   - component: {fileID: 732443382}
   - component: {fileID: 732443381}
+  - component: {fileID: 732443385}
   m_Layer: 0
   m_Name: enemy2
   m_TagString: enemy2
@@ -1665,6 +1700,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &732443385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732443379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae1ac2164ad974aa78e215ceb3aa12bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1320465628}
+  redCoins: 0
+  blueCoins: 0
+  yellowCoins: 0
 --- !u!1 &745890511
 GameObject:
   m_ObjectHideFlags: 0
@@ -2671,7 +2722,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25196
+  m_Name: pb_Mesh30792
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3310,7 +3361,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25478
+  m_Name: pb_Mesh31074
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4755,7 +4806,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25134
+  m_Name: pb_Mesh30730
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4920,6 +4971,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3000203538197607806, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1320465628}
     - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -5070,6 +5125,7 @@ MonoBehaviour:
   blueCoins: 0
   yellowCoins: 0
   coinPointIncreaseOnEnemy: 1
+  isTriggered: 0
 --- !u!114 &1762682278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5638,7 +5694,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25362
+  m_Name: pb_Mesh30958
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
