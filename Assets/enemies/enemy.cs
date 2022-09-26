@@ -5,7 +5,9 @@ using UnityEngine;
 public class enemy : MonoBehaviour
 {
     [SerializeField] float turretRange = 13f;
-    [SerializeField] float turretRotationSpeed = 0.05f;
+    [SerializeField] int turretRotationOnDetectionSpeed = 10;
+    [SerializeField] float angleThreshold = 15.0f;
+    [SerializeField] int turretShootRange = 7;
 
    // private Transform playerTransform;  //could be changed to 'target' 
     private gun currentGun;
@@ -13,6 +15,7 @@ public class enemy : MonoBehaviour
     private float fireRateDelta;
     [SerializeField] GameObject player;
     public float distance;
+    private Transform playerTarget; //* Variable to locate the player's body part we want to hit.
 
     private GameObject target;
 
@@ -21,25 +24,35 @@ public class enemy : MonoBehaviour
     {
         currentGun = GetComponentInChildren<gun>();
         fireRate = currentGun.GetRateOfFire();
+        playerTarget = GetSkeletonPlayerTargetTransform(player);
+    }
+
+    private Transform GetSkeletonPlayerTargetTransform(GameObject playerArmature, 
+                string skeletonPart="Skeleton/Hips/Spine/Chest/UpperChest"){
+        return playerArmature.transform.Find(skeletonPart);
     }
 
     private void Update()
     {   
-        float turretRotationStep = turretRotationSpeed * Time.deltaTime;
-        // Vector3 playerGroundPos = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
-        // Vector3 playerDirection = playerGroundPos - transform.position;
-        // Vector3 newLookDirection = Vector3.RotateTowards(transform.forward, playerDirection,
-        // turretRotationStep, 0f);
-        // transform.rotation = Quaternion.LookRotation(newLookDirection);
+        Vector3 playerDirection = playerTarget.transform.position - transform.position;
+        // //! playerGroundPos - transform.position is different from transform.position - playerGroundPos. This is because this is Vector subtraction, the direction will become opposite.
+        distance = Vector3.Distance(playerTarget.transform.position, transform.position); 
 
-        distance = Vector3.Distance(transform.position, player.transform.position);
-        transform.Rotate(new Vector3(0f,0.3f,0f));
         fireRateDelta -= 25 * Time.deltaTime;
 
-        if(fireRateDelta <= 0 && distance < 7)
+        if(fireRateDelta <= 0 && distance < turretShootRange)
         {
-            currentGun.Fire();
-            fireRateDelta = fireRate;
+            //* Rotate if the player is in range for the turret
+            Quaternion rotation = Quaternion.LookRotation(playerDirection);
+            Quaternion current = transform.localRotation;
+            transform.localRotation = Quaternion.Slerp(current, rotation, Time.deltaTime * turretRotationOnDetectionSpeed);
+            
+            //* Angle function checks the angle between the players position vector and enemy's position vector
+            if (180-Vector3.Angle(currentGun.transform.forward,playerTarget.transform.position)<=angleThreshold){
+                //* If the enemy is in a certain angle threshold, only then shoot
+                currentGun.Fire();
+                fireRateDelta = fireRate;
+            } 
         }
        
     }
