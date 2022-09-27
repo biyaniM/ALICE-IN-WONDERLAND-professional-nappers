@@ -1,24 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
+using UnityEngine.EventSystems;
 
 public class healthUpdate : MonoBehaviour
 {
+    [SerializeField] GameOverHUD gameOverHUD;
+    [SerializeField] bool gameOverCheck;
+    [SerializeField] CountDownTimer timer;
+
     public HealthBar healthBar;
     public int maxHealth = 100;
     public int currentHealth = 100;
     // Start is called before the first frame update
     void Start()
-    {
-        
+    {  
+        gameOverCheck = false;        
     }
 
     // Update is called once per frame
     void Update()
     {
         if(currentHealth <= 0) {
-            Destroy(gameObject);
+            // destroy the player
+            // Destroy(gameObject);   
+            // gameOverHUD.Setup();
+            if(gameOverCheck == false){
+                runGameOverHud();
+                // stop timer
+                timer.pauseTimer();
+            }
         }
+    }
+
+    public void runGameOverHud(){
+        Debug.Log("Game over hud from health update!!");
+        gameOverHUD.Setup();
+        gameOverCheck = true;
+        // destroy the player
+        // Destroy(gameObject);
     }
 
     public void OnCollisionEnter(Collision col) {
