@@ -23,7 +23,7 @@ public class CollectCoins : MonoBehaviour
         redCoins = player.GetRedCoinsScore();
         blueCoins = player.GetBlueCoinsScore();
         yellowCoins = player.GetYellowCoinsScore();
-        Debug.Log("Collect!" + redCoins + blueCoins + yellowCoins);
+        // Debug.Log("Collect!" + redCoins + blueCoins + yellowCoins);
         if(col.gameObject.tag == "RedCoin"){
             Debug.Log("Coin Collected!"); //TODO Add Collection Sound
             redCoins += coinPointIncreaseOnCollection;
