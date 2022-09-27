@@ -21,7 +21,7 @@ public class healthUpdate : MonoBehaviour
         }
     }
 
-    public void OnTriggerEnter(Collider col) {
+    public void OnCollisionEnter(Collision col) {
         Debug.Log("Player got hit");
         if(col.gameObject.tag == "enemyBullet") {
             Destroy(col.gameObject);
