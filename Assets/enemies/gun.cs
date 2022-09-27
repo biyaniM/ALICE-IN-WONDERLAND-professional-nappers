@@ -20,7 +20,7 @@ public class gun : MonoBehaviour
 
     public void Fire()
     {
-        Instantiate(projectile, gunPoint.position, transform.rotation);   
-        Instantiate(projectile, gunPoint.position, transform.rotation);  
+        Instantiate(projectile.transform, gunPoint.position, gunPoint.rotation);   
+        // Instantiate(projectile, gunPoint.position, transform.rotation);  
     }
 }
