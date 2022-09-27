@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
         setFinishBoundary(true);
 
         SendToGoogle analyticsComponent = GetComponent<SendToGoogle>();
-        analyticsComponent.Send("1", "NA", "1");
+        analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "1");
 
     }
 

@@ -9,6 +9,7 @@ public class LevelCompleteScreen: MonoBehaviour
     [SerializeField] Button restartBtn;
     [SerializeField] Button nextLevelBtn;
     [SerializeField] int curr_level;
+    [SerializeField] CountDownTimer timer;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,8 @@ public class LevelCompleteScreen: MonoBehaviour
         restartBtn.onClick.AddListener(ResetGame);
         nextLevelBtn.onClick.AddListener(NextLevel);
         Debug.Log("Setup game end ui");
+        timer.pauseTimer();
+        Debug.Log("paused timer!!!!");
     }
 
     void ResetGame(){

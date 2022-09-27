@@ -41,11 +41,10 @@ public class LevelComplete : MonoBehaviour
                 levelOverCheck = true;
 
                 // capture the analytics
-                analyticsComponent.Send("1", ammoBalance.ToString(), "0");
+                analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), ammoBalance.ToString(), "0");
 
                 //! show the level complete HUD
                 levelCompleteScreen.Setup();
-
             }
         }
         // show the finishboundary again
