@@ -6,8 +6,18 @@ public class BulletProjectile : MonoBehaviour
 {
     // Update is called once per frame
     private Rigidbody bulletRigidbody;
+    public GameObject bullet;
+    public Transform spawnPoint;
     public float bulletSpeed = 30f;
     public float bulletLifeSpan = 0.3f;
+    [SerializeField] float projectileSpeed = 15f;
+    // public float projectileSpeed = 5f;
+    // public Transform attackPoint;
+    // public float shootForce, upwardForce;
+    // public float spread;
+    // public GameObject bullet;
+    // public Camera fpsCam;
+
     
     private void Awake(){
         bulletRigidbody = GetComponent<Rigidbody>();
