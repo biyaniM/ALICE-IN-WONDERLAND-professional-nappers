@@ -9,30 +9,30 @@ public class enemy : MonoBehaviour
     [SerializeField] int turretShootRange = 7;
 
    // private Transform playerTransform;  //could be changed to 'target' 
-    private gun currentGun;
-    private float fireRate;
-    private float fireRateDelta;
+    protected gun currentGun;
+    protected float fireRate;
+    protected float fireRateDelta;
     [SerializeField] GameObject player;
     public float distance;
-    private Transform playerTarget; //* Variable to locate the player's body part we want to hit.
+    protected Transform playerTarget; //* Variable to locate the player's body part we want to hit.
 
-    private GameObject target;
-    private RaycastHit hit;
+    protected GameObject target;
+    protected RaycastHit hit;
 
 
-    private void Start()
+    protected void Start()
     {
         currentGun = GetComponentInChildren<gun>();
         fireRate = currentGun.GetRateOfFire();
         playerTarget = GetSkeletonPlayerTargetTransform(player);
     }
 
-    private Transform GetSkeletonPlayerTargetTransform(GameObject playerArmature, 
+    protected Transform GetSkeletonPlayerTargetTransform(GameObject playerArmature, 
                 string skeletonPart="Skeleton/Hips/Spine/Chest/UpperChest"){
         return playerArmature.transform.Find(skeletonPart);
     }
 
-    private void Update()
+    protected void Update()
     {   
         Vector3 playerDirection = playerTarget.transform.position - transform.position;
         // //! playerGroundPos - transform.position is different from transform.position - playerGroundPos. This is because this is Vector subtraction, the direction will become opposite.
@@ -64,7 +64,7 @@ public class enemy : MonoBehaviour
        
     }
 
-    private void OnDrawGizmosSelected()
+    protected void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(transform.position, turretRange);
     }
