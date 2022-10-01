@@ -26,6 +26,7 @@ public class healthUpdate : MonoBehaviour
             // destroy the player
             // Destroy(gameObject);   
             // gameOverHUD.Setup();
+            gameObject.SetActiveRecursively(false);
             if(gameOverCheck == false){
                 runGameOverHud();
                 // stop timer
