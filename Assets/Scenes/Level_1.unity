@@ -13131,6 +13131,7 @@ GameObject:
   - component: {fileID: 1513814447}
   - component: {fileID: 1513814446}
   - component: {fileID: 1513814445}
+  - component: {fileID: 1513814450}
   m_Layer: 0
   m_Name: enemy1_RED (1)
   m_TagString: enemy1
@@ -13146,7 +13147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1513814443}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.96, y: -2.115, z: 5.86}
+  m_LocalPosition: {x: -14.05, y: -1.98, z: 0.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13178,7 +13179,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1513814443}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
@@ -13231,6 +13232,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1513814450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513814443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79e62490a61abcd4b97e8915d290404a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turretRange: 13
+  turretRotationOnDetectionSpeed: 30
+  turretShootRange: 7
+  player: {fileID: 24084660}
+  distance: 0
+  speed: 2
 --- !u!1 &1658879402
 GameObject:
   m_ObjectHideFlags: 0
