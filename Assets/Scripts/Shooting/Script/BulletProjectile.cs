@@ -6,8 +6,18 @@ public class BulletProjectile : MonoBehaviour
 {
     // Update is called once per frame
     private Rigidbody bulletRigidbody;
+    public GameObject bullet;
+    public Transform spawnPoint;
     public float bulletSpeed = 30f;
     public float bulletLifeSpan = 0.3f;
+    [SerializeField] float projectileSpeed = 15f;
+    // public float projectileSpeed = 5f;
+    // public Transform attackPoint;
+    // public float shootForce, upwardForce;
+    // public float spread;
+    // public GameObject bullet;
+    // public Camera fpsCam;
+
     
     private void Awake(){
         bulletRigidbody = GetComponent<Rigidbody>();
@@ -18,15 +28,18 @@ public class BulletProjectile : MonoBehaviour
         Destroy(gameObject, bulletLifeSpan);
     }
 
-    private void OnCollisionEnter(Collision collision){
-        if (collision.collider.GetComponent<BulletTarget>() !=null){
+    private void OnCollisionEnter(Collision col){
+        /*if (col.GetComponent<BulletTarget>() !=null){
              Debug.Log("Hit Target!");
         }else{
             Debug.Log("Not Hit target");
-        }
-        // Destroy(gameObject);
-    }
+        }*/
+        Destroy(gameObject);
 
-    // private void OnTriggerEnter(Collider other){
+        if(col.gameObject.tag == "enemy1" || col.gameObject.tag == "enemy2" || col.gameObject.tag == "enemy3"){
+            Destroy(col.gameObject);
+            Debug.Log("Killed Enemy!!!!!");
+        }
+    }
         
 }

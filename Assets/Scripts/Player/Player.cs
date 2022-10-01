@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -36,7 +37,7 @@ public class Player : MonoBehaviour
         setFinishBoundary(true);
 
         SendToGoogle analyticsComponent = GetComponent<SendToGoogle>();
-        analyticsComponent.Send("1", "NA", "1");
+        analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "1");
 
     }
 
@@ -86,9 +87,9 @@ public class Player : MonoBehaviour
     void InitializeHUD(){
         healthPoint = SUM_HEALTH;
         ammoBalance = SUM_AMMO;
-        redCoins = RED_GOAL;
-        blueCoins = BLUE_GOAL;
-        yellowCoins = YELLOW_GOAL;
+        redCoins = 0;
+        blueCoins = 0;
+        yellowCoins = 0;
         Debug.Log("Initialize HUD values");
     }
 
@@ -108,5 +109,17 @@ public class Player : MonoBehaviour
         finishBoundary.GetComponent<BoxCollider>().enabled = param;
     }
 
+
+    public int GetRedCoinsScore(){
+        return redCoins;
+    }
+
+    public int GetBlueCoinsScore(){
+        return blueCoins;
+    }
+
+    public int GetYellowCoinsScore(){
+        return yellowCoins;
+    }
 
 }
