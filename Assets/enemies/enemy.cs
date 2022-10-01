@@ -7,6 +7,7 @@ public class enemy : MonoBehaviour
     [SerializeField] float turretRange = 13f;
     [SerializeField] int turretRotationOnDetectionSpeed = 30;
     [SerializeField] int turretShootRange = 7;
+    [SerializeField] int fireRateConstant = 10;
 
    // private Transform playerTransform;  //could be changed to 'target' 
     private gun currentGun;
@@ -38,7 +39,7 @@ public class enemy : MonoBehaviour
         // //! playerGroundPos - transform.position is different from transform.position - playerGroundPos. This is because this is Vector subtraction, the direction will become opposite.
         distance = Vector3.Distance(playerTarget.transform.position, transform.position); 
 
-        fireRateDelta -= 25 * Time.deltaTime;
+        fireRateDelta -= fireRateConstant * Time.deltaTime;
 
         // if(fireRateDelta <= 0 && distance < turretShootRange)
         if(fireRateDelta <= 0 && distance < turretShootRange)
