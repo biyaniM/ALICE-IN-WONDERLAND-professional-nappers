@@ -16,7 +16,7 @@ public class CountDownTimer : MonoBehaviour , IPointerClickHandler
         Pause = !Pause;
     }
 
-    [SerializeField] private Image uiFill;
+    //[SerializeField] private Image uiFill;
     [SerializeField] private Text uiText;
 
     public int Duration;
@@ -51,7 +51,7 @@ public class CountDownTimer : MonoBehaviour , IPointerClickHandler
             if (!Pause)
             {
                 uiText.text = $"{remainingDuration / 60:00}:{remainingDuration % 60:00}";
-                uiFill.fillAmount = Mathf.InverseLerp(0, Duration, remainingDuration);
+                //uiFill.fillAmount = Mathf.InverseLerp(0, Duration, remainingDuration);
                 remainingDuration--;
                 yield return new WaitForSeconds(1f);
             }
