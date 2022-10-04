@@ -8,6 +8,7 @@ public class LevelCompleteScreen: MonoBehaviour
 {
     [SerializeField] Button restartBtn;
     [SerializeField] Button nextLevelBtn;
+    [SerializeField] Button mainMenuBtn;
     [SerializeField] int curr_level;
     [SerializeField] CountDownTimer timer;
 
@@ -22,6 +23,7 @@ public class LevelCompleteScreen: MonoBehaviour
         //release the cursor to press the button.
         Cursor.lockState = CursorLockMode.None;
         restartBtn.onClick.AddListener(ResetGame);
+        mainMenuBtn.onClick.AddListener(BackToMain);
         if(SceneManager.GetActiveScene().buildIndex != 2){
             nextLevelBtn.onClick.AddListener(NextLevel);
         }
@@ -42,5 +44,10 @@ public class LevelCompleteScreen: MonoBehaviour
         if(curr_level == 1){
             SceneManager.LoadScene("Level_1");
         }
+    }
+    
+    void BackToMain(){
+        Debug.Log("Main Menu!");
+        SceneManager.LoadScene("Menu");
     }
 }
