@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement; 
 
 public class Player : MonoBehaviour
 {
@@ -15,9 +15,9 @@ public class Player : MonoBehaviour
     //fake const(set from outside)
     private int SUM_AMMO;
     private int SUM_HEALTH;
-    private int RED_GOAL;
-    private int BLUE_GOAL;
-    private int YELLOW_GOAL;
+    [SerializeField] int RED_GOAL;
+    [SerializeField] int BLUE_GOAL;
+    [SerializeField] int YELLOW_GOAL;
     // UI components
     public HealthBar healthBar;
     public CoinsScore coinsScore;
@@ -26,10 +26,12 @@ public class Player : MonoBehaviour
 
     public GameObject finishBoundary;
 
+    public int numOfKill;
+
+
     void Start()
     {
-        //test
-        SetGoal(2, 2, 2);
+        SetGoal(RED_GOAL, BLUE_GOAL, YELLOW_GOAL);
         // InitAmmo(80); //! Removinng from Test
         InitHealth(100);
         InitializeHUD();
@@ -37,7 +39,7 @@ public class Player : MonoBehaviour
         setFinishBoundary(true);
 
         SendToGoogle analyticsComponent = GetComponent<SendToGoogle>();
-        analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "1");
+        analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "1", "NA", "NA");
 
     }
 
@@ -120,6 +122,15 @@ public class Player : MonoBehaviour
 
     public int GetYellowCoinsScore(){
         return yellowCoins;
+    }
+
+    public void UpdateNumberOfKill()
+    {
+        numOfKill++;
+    }
+    public int GetNumberOfKill()
+    {
+        return numOfKill;
     }
 
 }
