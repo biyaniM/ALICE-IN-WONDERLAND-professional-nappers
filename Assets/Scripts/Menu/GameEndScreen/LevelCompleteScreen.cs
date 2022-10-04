@@ -35,8 +35,9 @@ public class LevelCompleteScreen: MonoBehaviour
 
     void NextLevel(){
         curr_level = SceneManager.GetActiveScene().buildIndex;
-        Debug.Log("Next Level");
-        if(curr_level == 0){
+        Debug.Log("Next Level-------->");
+        Debug.Log(curr_level);
+        if(curr_level == 1){
             SceneManager.LoadScene("Level_1");
         }
     }
