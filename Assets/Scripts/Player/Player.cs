@@ -26,6 +26,8 @@ public class Player : MonoBehaviour
 
     public GameObject finishBoundary;
 
+    public int numOfKill;
+
 
     void Start()
     {
@@ -120,6 +122,15 @@ public class Player : MonoBehaviour
 
     public int GetYellowCoinsScore(){
         return yellowCoins;
+    }
+
+    public void UpdateNumberOfKill()
+    {
+        numOfKill++;
+    }
+    public int GetNumberOfKill()
+    {
+        return numOfKill;
     }
 
 }
