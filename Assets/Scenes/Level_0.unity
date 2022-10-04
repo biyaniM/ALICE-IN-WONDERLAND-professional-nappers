@@ -241,6 +241,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+--- !u!114 &34778280 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 227063952170519725, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+  m_PrefabInstance: {fileID: 34778279}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d556d11c6e8744c068e142730eddbd90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &62297649
 GameObject:
   m_ObjectHideFlags: 0
@@ -2936,7 +2947,7 @@ GameObject:
   - component: {fileID: 896483720}
   m_Layer: 0
   m_Name: enemyYellow
-  m_TagString: enemy1
+  m_TagString: enemy2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6031,7 +6042,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverHUD: {fileID: 1288594012}
   gameOverCheck: 0
-  timer: {fileID: 0}
+  timer: {fileID: 34778280}
   healthBar: {fileID: 1849744726}
   maxHealth: 100
   currentHealth: 100
@@ -6129,7 +6140,7 @@ GameObject:
   - component: {fileID: 1803874826}
   m_Layer: 0
   m_Name: enemyBlue
-  m_TagString: enemy1
+  m_TagString: enemy3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6557,7 +6568,7 @@ MonoBehaviour:
   restartBtn: {fileID: 1968288269}
   nextLevelBtn: {fileID: 123796121}
   curr_level: 0
-  timer: {fileID: 0}
+  timer: {fileID: 34778280}
 --- !u!1001 &1979352518
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6753,7 +6764,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25652
+  m_Name: pb_Mesh42260
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
