@@ -6,27 +6,40 @@ public class BulletProjectile : MonoBehaviour
 {
     // Update is called once per frame
     private Rigidbody bulletRigidbody;
+    public GameObject bullet;
+    public Transform spawnPoint;
     public float bulletSpeed = 30f;
     public float bulletLifeSpan = 0.3f;
+    [SerializeField] float projectileSpeed = 15f;
+    // public float projectileSpeed = 5f;
+    // public Transform attackPoint;
+    // public float shootForce, upwardForce;
+    // public float spread;
+    // public GameObject bullet;
+    // public Camera fpsCam;
+
     
     private void Awake(){
         bulletRigidbody = GetComponent<Rigidbody>();
     }
     private void Start(){
-        // bulletRigidbody.AddForce(bulletRigidbody.transform.forward * bulletSpeed);
+        //bulletRigidbody.AddForce(bulletRigidbody.transform.forward * bulletSpeed);
         bulletRigidbody.velocity = bulletRigidbody.transform.forward * bulletSpeed;
         Destroy(gameObject, bulletLifeSpan);
     }
 
-    private void OnCollisionEnter(Collision collision){
-        if (collision.collider.GetComponent<BulletTarget>() !=null){
-            Debug.Log("Hit Target!");
+    private void OnCollisionEnter(Collision col){
+        /*if (col.GetComponent<BulletTarget>() !=null){
+             Debug.Log("Hit Target!");
         }else{
             Debug.Log("Not Hit target");
-        }
+        }*/
         Destroy(gameObject);
-    }
 
-    // private void OnTriggerEnter(Collider other){
+        if(col.gameObject.tag == "enemy_red" || col.gameObject.tag == "enemy_yellow" || col.gameObject.tag == "enemy_blue"){
+            Destroy(col.gameObject);
+            Debug.Log("Killed Enemy!!!!!");
+        }
+    }
         
 }
