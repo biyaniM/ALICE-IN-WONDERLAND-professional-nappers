@@ -33,13 +33,13 @@ public class CoinCollecctionOnEnemyKill : MonoBehaviour
                 blueCoins = player.GetBlueCoinsScore();
                 yellowCoins = player.GetYellowCoinsScore();
 
-                if (gameObject.tag=="enemy1"){
+                if (gameObject.tag=="enemy_red"){
                     Debug.Log("Before Red Kill"+redCoins);
                     redCoins += 1;
                     player.UpdateCoins(redCoins, blueCoins, yellowCoins);
                     Debug.Log("After Red Kill"+redCoins);
                 }
-                else if (gameObject.tag=="enemy2"){
+                else if (gameObject.tag=="enemy_yellow"){
                     // Debug.Log("Before Blue Kill"+redCoins);
                     yellowCoins += 1;
                     player.UpdateCoins(redCoins, blueCoins, yellowCoins);
@@ -47,7 +47,7 @@ public class CoinCollecctionOnEnemyKill : MonoBehaviour
                     
                     // Debug.Log("After Red Kill"+redCoins);
                 }
-                else if (gameObject.tag=="enemy3"){
+                else if (gameObject.tag=="enemy_blue"){
                     // Debug.Log("Before Red Kill"+redCoins);
                     blueCoins += 1;
                     player.UpdateCoins(redCoins, blueCoins, yellowCoins);
