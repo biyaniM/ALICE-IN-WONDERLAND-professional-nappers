@@ -42,7 +42,7 @@ public class BulletProjectile : MonoBehaviour
             Debug.Log("Killed Enemy!!!!!");
             player = GameObject.Find("HUD").GetComponent<Player>();
             player.UpdateNumberOfKill();
-            Debug.Log("Number of Enemy Kill:" + player.GetNumberOfKill());
+            //Debug.Log("Number of Enemy Kill:" + player.GetNumberOfKill());
         }
     }
         

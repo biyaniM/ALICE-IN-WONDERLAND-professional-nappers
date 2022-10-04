@@ -8,9 +8,11 @@ public class LevelComplete : MonoBehaviour
 {
     public bool levelOverCheck;
     int ammoBalance;
+    int numKill;
     ThirdPersonShooterController shootingComponent;
     SendToGoogle analyticsComponent;
     [SerializeField] LevelCompleteScreen levelCompleteScreen;
+    [SerializeField] Player player;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +29,8 @@ public class LevelComplete : MonoBehaviour
     void Awake(){
         shootingComponent = GetComponent<ThirdPersonShooterController>();
         analyticsComponent = GetComponent<SendToGoogle>();
+        player = GameObject.Find("HUD").GetComponent<Player>();
+        
     }
     
 
@@ -35,11 +39,12 @@ public class LevelComplete : MonoBehaviour
         // GameObject finishBoundary = GameObject.Find("FinishBoundary");
         // get ammo balance
         ammoBalance = shootingComponent.currentAmmo;
-        if(levelOverCheck == false){
+        numKill = player.GetNumberOfKill();
+        if (levelOverCheck == false){
             if(col.gameObject.tag == "LevelCompleteTag"){
                 Debug.Log("reached level over loc!");
                 levelOverCheck = true;
-
+                Debug.Log("Number of Enemy Kill:" + numKill);
                 // capture the analytics
                 analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), ammoBalance.ToString(), "0");
 
