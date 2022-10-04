@@ -51,7 +51,7 @@ public class LevelComplete : MonoBehaviour
                 Debug.Log("Number of Enemy Kill:" + numKill);
                 Debug.Log("Time Left:" + timer);
                 // capture the analytics
-                analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), ammoBalance.ToString(), "0");
+                analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), ammoBalance.ToString(), "0", timer.ToString(), numKill.ToString());
 
                 //! show the level complete HUD
                 levelCompleteScreen.Setup();
