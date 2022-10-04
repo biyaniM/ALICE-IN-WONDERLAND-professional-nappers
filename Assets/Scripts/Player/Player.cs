@@ -26,6 +26,8 @@ public class Player : MonoBehaviour
 
     public GameObject finishBoundary;
 
+    public int numOfKill;
+
 
     void Start()
     {
@@ -37,7 +39,7 @@ public class Player : MonoBehaviour
         setFinishBoundary(true);
 
         SendToGoogle analyticsComponent = GetComponent<SendToGoogle>();
-        analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "1");
+        analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "1", "NA", "NA");
 
     }
 
@@ -120,6 +122,15 @@ public class Player : MonoBehaviour
 
     public int GetYellowCoinsScore(){
         return yellowCoins;
+    }
+
+    public void UpdateNumberOfKill()
+    {
+        numOfKill++;
+    }
+    public int GetNumberOfKill()
+    {
+        return numOfKill;
     }
 
 }

@@ -21,7 +21,7 @@ public class CountDownTimer : MonoBehaviour , IPointerClickHandler
 
     public int Duration;
 
-    private int remainingDuration;
+    public int remainingDuration;
     
     private bool Pause;
 
