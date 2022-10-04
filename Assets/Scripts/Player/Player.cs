@@ -15,9 +15,9 @@ public class Player : MonoBehaviour
     //fake const(set from outside)
     private int SUM_AMMO;
     private int SUM_HEALTH;
-    private int RED_GOAL;
-    private int BLUE_GOAL;
-    private int YELLOW_GOAL;
+    [SerializeField] int RED_GOAL;
+    [SerializeField] int BLUE_GOAL;
+    [SerializeField] int YELLOW_GOAL;
     // UI components
     public HealthBar healthBar;
     public CoinsScore coinsScore;
@@ -26,10 +26,10 @@ public class Player : MonoBehaviour
 
     public GameObject finishBoundary;
 
+
     void Start()
     {
-        //test
-        SetGoal(2, 2, 2);
+        SetGoal(RED_GOAL, BLUE_GOAL, YELLOW_GOAL);
         // InitAmmo(80); //! Removinng from Test
         InitHealth(100);
         InitializeHUD();
