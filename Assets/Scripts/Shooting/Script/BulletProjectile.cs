@@ -36,7 +36,7 @@ public class BulletProjectile : MonoBehaviour
         }*/
         Destroy(gameObject);
 
-        if(col.gameObject.tag == "enemy1" || col.gameObject.tag == "enemy2" || col.gameObject.tag == "enemy3"){
+        if(col.gameObject.tag == "enemy_red" || col.gameObject.tag == "enemy_yellow" || col.gameObject.tag == "enemy_blue"){
             Destroy(col.gameObject);
             Debug.Log("Killed Enemy!!!!!");
         }
