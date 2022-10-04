@@ -22,10 +22,12 @@ public class LevelCompleteScreen: MonoBehaviour
         //release the cursor to press the button.
         Cursor.lockState = CursorLockMode.None;
         restartBtn.onClick.AddListener(ResetGame);
-        nextLevelBtn.onClick.AddListener(NextLevel);
+        if(SceneManager.GetActiveScene().buildIndex != 2){
+            nextLevelBtn.onClick.AddListener(NextLevel);
+        }
         Debug.Log("Setup game end ui");
         timer.pauseTimer();
-        Debug.Log("paused timer!!!!");
+        Debug.Log("paused timer!!!!----------------------");
     }
 
     void ResetGame(){
