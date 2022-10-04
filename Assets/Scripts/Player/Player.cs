@@ -25,6 +25,8 @@ public class Player : MonoBehaviour
     public Canvas tutorial;
 
     public GameObject finishBoundary;
+    //for PM analysis
+    public int numOfKill;
 
     void Start()
     {
@@ -120,6 +122,13 @@ public class Player : MonoBehaviour
 
     public int GetYellowCoinsScore(){
         return yellowCoins;
+    }
+
+    public void UpdateNumberOfKill(){
+        numOfKill++;
+    }
+    public int GetNumberOfKill(){
+        return numOfKill;
     }
 
 }
