@@ -38,7 +38,7 @@ public class LevelComplete : MonoBehaviour
     
 
     public void OnTriggerEnter(Collider col){
-        Debug.Log("collider: "+col.name);
+        // Debug.Log("collider: "+col.name);
         // GameObject finishBoundary = GameObject.Find("FinishBoundary");
         // get ammo balance
         ammoBalance = shootingComponent.currentAmmo;
@@ -46,7 +46,7 @@ public class LevelComplete : MonoBehaviour
         timer = timerComponent.remainingDuration+1;
         if (levelOverCheck == false){
             if(col.gameObject.tag == "LevelCompleteTag"){
-                Debug.Log("reached level over loc!");
+                Debug.Log("reached level over loc!" + col.gameObject.name);
                 levelOverCheck = true;
                 Debug.Log("Number of Enemy Kill:" + numKill);
                 Debug.Log("Time Left:" + timer);
