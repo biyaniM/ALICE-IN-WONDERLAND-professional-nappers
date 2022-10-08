@@ -133,4 +133,7 @@ public class Player : MonoBehaviour
         return numOfKill;
     }
 
+    private void OnCollisionEnter(Collision col){
+        Debug.Log("I HIT"+ col.gameObject);
+    }
 }
