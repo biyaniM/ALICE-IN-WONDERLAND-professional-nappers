@@ -8,34 +8,36 @@ public class Rotation1 : MonoBehaviour
     [SerializeField] private Vector3 _rotation;
     [SerializeField] private float _speed; 
 
+
     // Use this for initialization
     void Start()
     {
+        _speed = 20;
         StartCoroutine(RotateObject(90, Vector3.up, 3));
     }
 
     IEnumerator RotateObject(float angle, Vector3 axis, float inTime)
     {
-        // calculate rotation speed
-        float rotationSpeed = angle / inTime;
-
         while (true)
         {
             // delay here
             yield return new WaitForSeconds(5);
-            
-            // save starting rotation position
-            Quaternion startRotation = transform.rotation;
 
             float deltaAngle = 0;
 
             // rotate until reaching angle
             while (deltaAngle < angle)
             {
-                deltaAngle += rotationSpeed * Time.deltaTime;
+                deltaAngle += _speed* Time.deltaTime;
                 deltaAngle = Mathf.Min(deltaAngle, angle);
 
-                transform.rotation = startRotation * Quaternion.AngleAxis(deltaAngle, axis);
+                transform.RotateAround(transform.position, Vector3.up, _speed*Time.deltaTime);
+                Debug.Log("---------------------");
+                Debug.Log(transform.position.x);
+                Debug.Log(transform.position.y);
+                Debug.Log(transform.position.z);
+                Debug.Log("---------------------");
+                // transform.Rotate(_rotation * Time.deltaTime);
 
                 yield return null;
             }
