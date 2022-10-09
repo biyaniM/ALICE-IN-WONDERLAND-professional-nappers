@@ -1,33 +1,3 @@
-// using System.Collections;
-// using System.Collections.Generic;
-// using UnityEngine;
-
-// public class FloorMovement : MonoBehaviour
-// {
-//     public float speed = 5f;
-//     [SerializeField] private Vector3 curr_pos;
-//     // Start is called before the first frame update
-//     void Start()
-//     {
-//         // pingPongBetweenLevels();
-//         curr_pos = new Vector3(transform.position.x, 0, 0);
-//         Debug.Log("curr_pos-----");
-//         Debug.Log(curr_pos);
-//     }
-
-//     // Update is called once per frame
-//     void Update()
-//     {
-//         transform.position = curr_pos + new Vector3(Mathf.PingPong(Time.time * speed, 18), transform.position.y, transform.position.z);
-//         // transformww.position = new Vector3(Mathf.PingPong(-1, 8), transform.position.y, transform.position.z);
-        
-//     }
-
-// //     void pingPongBetweenLevels(){
-// //         transform.position = new Vector3(Mathf.Sin(Mathf.PingPong(Time.time, 2* Mathf.PI)));
-// //     }
-// }
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
