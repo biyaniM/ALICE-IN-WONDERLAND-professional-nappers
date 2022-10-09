@@ -7,41 +7,29 @@ public class FloorMovement : MonoBehaviour
 {
     public float speed = 5f;
     public float movementMultiplier = 3f;
-    private float original;
-    private List<char> movementAxisSelectionOptions = new List<char> {'X','Y','Z','x','y','z'};
-    public char movementAxis;
+    private float original_x;
+    private float original_z;
+    private float original_y;
+    private List<string> movementAxisSelectionOptions = new List<string> {"XZ","Y","ZX","xz", "y","zx"};
+    public string movementAxis;
     [SerializeField] private GameObject player;
     // Start is called before the first frame update
     void Start()
     {
         Assert.IsTrue(movementAxisSelectionOptions.Contains(movementAxis));
-        if (movementAxis == 'Z' || movementAxis == 'z'){
-            original = transform.position.z;
+        if (movementAxis == "xz" || movementAxis == "XZ" || movementAxis == "ZX" || movementAxis == "zx"){
+            original_z = transform.position.z;
+            original_x = transform.position.x;
         }
-        else if (movementAxis == 'X' || movementAxis == 'x'){
-            original = transform.position.x;
-        }
-        else{
-            original = transform.position.y;
-        }
-        Debug.Log("ORIGINAL "+original);
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (movementAxis == 'Z' || movementAxis == 'z'){
-            float zVal = original + movementMultiplier * Mathf.Sin(Mathf.PingPong(Time.time, 2* Mathf.PI));
-            transform.position = new Vector3(transform.position.x, transform.position.y , zVal);
-        }
-        else if (movementAxis == 'X' || movementAxis == 'x'){
-            float xVal = original + (Mathf.PingPong(Time.time * speed, 18));
-            // float xVal = original + movementMultiplier * Mathf.Sin(Mathf.PingPong(Time.time, 2* Mathf.PI));
-            transform.position = new Vector3(xVal, transform.position.y , transform.position.z);
-        }
-        else{
-            float yVal = original + movementMultiplier * Mathf.Sin(Mathf.PingPong(Time.time, 2* Mathf.PI));
-            transform.position = new Vector3(transform.position.x, yVal , transform.position.z);
+        if (movementAxis == "xz" || movementAxis == "XZ" || movementAxis == "ZX" || movementAxis == "zx"){
+            float zVal = original_z + (Mathf.PingPong(Time.time * speed, 21));
+            float xVal = original_x + (Mathf.PingPong(Time.time * speed, 21));
+            transform.position = new Vector3(xVal, transform.position.y , zVal);
         }
     }
 
