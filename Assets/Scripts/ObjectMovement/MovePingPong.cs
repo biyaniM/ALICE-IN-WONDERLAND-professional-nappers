@@ -24,7 +24,7 @@ public class MovePingPong : MonoBehaviour
         else{
             original = transform.position.y;
         }
-        Debug.Log("ORIGINAL "+original);
+        // Debug.Log("ORIGINAL "+original);
     }
 
     // Update is called once per frame
@@ -49,7 +49,7 @@ public class MovePingPong : MonoBehaviour
         if (collider.gameObject == player){
             // player.transform.parent = transform;
             collider.transform.SetParent(transform, true);
-            Debug.Log("Changed Parent to "+player.transform.parent.gameObject);
+            // Debug.Log("Changed Parent to "+player.transform.parent.gameObject);
         }
     }
 
