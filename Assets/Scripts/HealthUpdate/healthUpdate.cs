@@ -8,7 +8,7 @@ public class healthUpdate : MonoBehaviour
 {
     [SerializeField] GameOverHUD gameOverHUD;
     [SerializeField] bool gameOverCheck;
-    [SerializeField] CountDownTimer timer;
+    [SerializeField] public CountDownTimer timer;
 
     public HealthBar healthBar;
     public int maxHealth = 100;
