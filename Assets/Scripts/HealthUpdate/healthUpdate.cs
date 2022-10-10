@@ -49,7 +49,7 @@ public class healthUpdate : MonoBehaviour
             Destroy(col.gameObject);
             Debug.Log("Enemy bullet destroyed!");
             Debug.Log(col.gameObject);
-            currentHealth = currentHealth - 20;
+            currentHealth = currentHealth - 10;
             updateHealth(currentHealth);
             return;            
         }
