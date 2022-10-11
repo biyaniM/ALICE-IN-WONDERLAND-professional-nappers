@@ -55,7 +55,7 @@ public class Player : MonoBehaviour
 
     void Update(){
         // Debug.Log("Time" + Time.time); //TODO Commenting it out to make other Debug logs readable
-        if(tutorial.enabled && Time.time >= 5f){
+        if(tutorial.enabled && Time.timeSinceLevelLoad >= 5f){
             tutorial.enabled = false;
         }
     }
