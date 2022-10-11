@@ -21,6 +21,7 @@ public class Reset : MonoBehaviour
         if((transform.position.y < threshold) && !level_complete_object.levelOverCheck){
             gameOverHud.runGameOverHud();
             gameOverHud.timer.pauseTimer();
+            level_complete_object.levelOverCheck = !level_complete_object.levelOverCheck;
             // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }    
     }
