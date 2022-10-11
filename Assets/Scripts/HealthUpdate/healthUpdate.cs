@@ -9,30 +9,56 @@ public class healthUpdate : MonoBehaviour
     [SerializeField] GameOverHUD gameOverHUD;
     [SerializeField] bool gameOverCheck;
     [SerializeField] CountDownTimer timer;
+    [SerializeField] Transform player;
 
     public HealthBar healthBar;
     public int maxHealth = 100;
     public int currentHealth = 100;
+
+    private bool respawning;
+    private static Vector3 respawnPoint;
     // Start is called before the first frame update
     void Start()
     {  
-        gameOverCheck = false;        
+        gameOverCheck = false;  
+        respawnPoint = player.transform.position;      
     }
 
     // Update is called once per frame
     void Update()
     {
         if(currentHealth <= 0) {
+            respawn();
             // destroy the player
             // Destroy(gameObject);   
             // gameOverHUD.Setup();
-            gameObject.SetActiveRecursively(false);
-            if(gameOverCheck == false){
-                runGameOverHud();
-                // stop timer
-                timer.pauseTimer();
-            }
+            
+            //gameObject.SetActiveRecursively(false);
+            //respawn();
+            // if(gameOverCheck == false){
+            //     runGameOverHud();
+            //     // stop timer
+            //     timer.pauseTimer();
+            // }
         }
+    }
+
+    public void respawn() {
+        player.transform.position = respawnPoint;
+        Physics.SyncTransforms();
+        currentHealth = maxHealth; 
+        updateHealth(currentHealth);
+        
+        //gameObject.SetActiveRecursively(true);
+        // Debug.Log("I got here bro!");
+        // Debug.Log(respawnPoint);
+        // player.transform.position = respawnPoint;
+        // Debug.Log(gameObject.transform.position);
+        // updateHealth(maxHealth);
+    }
+
+    public static void setSpawnPoint(Vector3 spawnPoint) {
+        respawnPoint = spawnPoint;
     }
 
     public void runGameOverHud(){
