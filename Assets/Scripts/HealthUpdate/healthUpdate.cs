@@ -60,6 +60,13 @@ public class healthUpdate : MonoBehaviour
         healthBar.SetHealth(health);
         Debug.Log("Health set");
     }
+
+    public void changeCurrentHealth(int health){
+        Debug.Log("Updated health ::: "+ health);
+        currentHealth += health;
+        updateHealth(currentHealth);
+        Debug.Log("Current health ::: "+ currentHealth);
+    }
     //     public void OnCollisionEnter(Collision col) {
     //     Debug.Log("Got Hit!!!!");
     //     if(col.gameObject.tag == "enemyBullet") {
