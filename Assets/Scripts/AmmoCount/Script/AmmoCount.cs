@@ -21,4 +21,11 @@ public class AmmoCount : MonoBehaviour
         balance.text = currentAmmo.ToString();
         // balance.text = count.ToString();
     }
+
+    public void changeAmmoCount(int count){
+        Debug.Log("Updated ammo ::: "+ ammo);
+        currentAmmo += ammo;
+        SetBalance(currentAmmo);
+        Debug.Log("Current ammo ::: "+ currentAmmo);
+    }
 }

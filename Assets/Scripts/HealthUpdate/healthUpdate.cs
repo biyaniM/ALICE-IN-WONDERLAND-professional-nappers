@@ -61,22 +61,11 @@ public class healthUpdate : MonoBehaviour
         Debug.Log("Health set");
     }
 
-    public void changeCurrentHealth(int health){
+    public void changeCurrentAmmo(int health){
         Debug.Log("Updated health ::: "+ health);
         currentHealth += health;
-        updateHealth(currentHealth);
+        updateHealth(health: currentHealth);
         Debug.Log("Current health ::: "+ currentHealth);
     }
-    //     public void OnCollisionEnter(Collision col) {
-    //     Debug.Log("Got Hit!!!!");
-    //     if(col.gameObject.tag == "enemyBullet") {
-    //         Destroy(col.gameObject);
-    //         Debug.Log("Enemy YOOOOO");
-    //         Debug.Log(col.gameObject);
-    //         currentHealth = currentHealth - 20;
-    //         Debug.Log(currentHealth);
-    //         healthBar.SetHealth(currentHealth);
-            
-    //     }
-    // }
+    
 }
