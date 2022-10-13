@@ -27,7 +27,7 @@ public class DestroyBox : MonoBehaviour
             
         }
         if(boxDestroy == 0){
-            updateHealth(5);
+            updateHealth(10);
         }
         return;
     }
