@@ -29,30 +29,39 @@ public class CollectCoins : MonoBehaviour
             redCoins += coinPointIncreaseOnCollection;
             player.UpdateCoins(redCoins, blueCoins, yellowCoins);
             col.gameObject.SetActive(false);
-            
+            SendMsg("Red");   
         }
         else if(col.gameObject.tag == "BlueCoin"){
             Debug.Log("Coin Collected!");
             blueCoins += coinPointIncreaseOnCollection;
             player.UpdateCoins(redCoins, blueCoins, yellowCoins);
             col.gameObject.SetActive(false);
-            
+            SendMsg("Blue");
         }
         else if(col.gameObject.tag == "YellowCoin"){
             Debug.Log("Coin Collected!");
             yellowCoins += coinPointIncreaseOnCollection;
             player.UpdateCoins(redCoins, blueCoins, yellowCoins);
             col.gameObject.SetActive(false);
-            
+            SendMsg("Yellow");
         }
         else if(col.gameObject.tag == "BlueTutorialCoin"){
             Debug.Log("Coin Collected! Collect more color coins to finish the level!");
             blueCoins += coinPointIncreaseOnCollection;
             player.UpdateCoins(redCoins, blueCoins, yellowCoins);
             col.gameObject.SetActive(false);
-            
+            SendMsg("Blue");
         }
 
+    }
+
+    void SendMsg(string color){
+        string msg = color + " Coin : + 1";
+        player.ShowInstruction(msg);
+    }
+
+    private void OnCollisionExit(Collision other) {
+        player.CloseInstruction();
     }
 
     // Update is called once per frame
