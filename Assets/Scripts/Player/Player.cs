@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement; 
+using TMPro;
 
 public class Player : MonoBehaviour
 {
@@ -24,16 +25,20 @@ public class Player : MonoBehaviour
     public CoinsScore coinsScore;
     public AmmoCount ammoCount;
     public Canvas tutorial;
+    private GameObject instructionPanel;
+    private TextMeshProUGUI instructionMsg;
     //public GameObject finishBoundary;
     public GameObject finishBoundaryRed;
     public GameObject finishBoundaryBlue;
     public GameObject finishBoundaryYellow;
+    
 
     public int numOfKill;
 
 
     void Start()
     {
+        SetUpComponents();
         SetGoal(RED_GOAL, BLUE_GOAL, YELLOW_GOAL);
         // InitAmmo(80); //! Removinng from Test
         InitHealth(100);
@@ -47,9 +52,13 @@ public class Player : MonoBehaviour
             setFinishBoundary(true, "FinishBoundary", finishBoundaryRed);
         }
         
-
         SendToGoogle analyticsComponent = GetComponent<SendToGoogle>();
         analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "1", "NA", "NA");
+
+        //Instruction
+        
+
+     
 
     }
 
@@ -59,8 +68,15 @@ public class Player : MonoBehaviour
             tutorial.enabled = false;
         }
     }
-
-
+    //GetComponenets : Replace SerializeField
+    private void SetUpComponents(){
+        //Instruction Panel
+        instructionPanel = GameObject.Find("Instruction");
+        instructionPanel.SetActive(false);
+        //Instruction Msg
+        instructionMsg  = instructionPanel.GetComponentInChildren<TextMeshProUGUI>();
+        
+    }
 
     public void UpdateHealth(int health){
         healthPoint = health;
@@ -154,6 +170,18 @@ public class Player : MonoBehaviour
     public int GetNumberOfKill()
     {
         return numOfKill;
+    }
+
+    public void ShowInstruction(string msg){
+        instructionPanel.SetActive(true);
+        instructionMsg.text = msg;
+        Debug.Log("Show Instruction! " + msg);
+        //enable panel
+        //show line
+    }
+
+    public void CloseInstruction(){
+        instructionPanel.SetActive(false);
     }
 
 }
