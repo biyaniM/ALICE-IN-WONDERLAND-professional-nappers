@@ -12,6 +12,7 @@ public class CollectCoins : MonoBehaviour
     public int coinPointIncreaseOnEnemy = 2;
     public bool isTriggered = false;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,5 +54,18 @@ public class CollectCoins : MonoBehaviour
     {
          //check if player has collected enough colors to pass gate
         player.CheckGoal(redCoins, blueCoins, yellowCoins);
+    }
+
+    public void updateGoldenCoin()
+    {
+        redCoins = player.GetRedCoinsScore();
+        blueCoins = player.GetBlueCoinsScore();
+        yellowCoins = player.GetYellowCoinsScore();
+
+        redCoins += coinPointIncreaseOnCollection;
+        blueCoins += coinPointIncreaseOnCollection;
+        yellowCoins += coinPointIncreaseOnCollection;
+        player.UpdateCoins(redCoins, blueCoins, yellowCoins);
+        
     }
 }

@@ -723,7 +723,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26076
+  m_Name: pb_Mesh25968
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -887,7 +887,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3784
+  m_Name: pb_Mesh25226
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1193,7 +1193,7 @@ GameObject:
   - component: {fileID: 206875303}
   - component: {fileID: 206875302}
   - component: {fileID: 206875301}
-  - component: {fileID: 206875300}
+  - component: {fileID: 206875307}
   m_Layer: 0
   m_Name: MysteryBox (2)
   m_TagString: Untagged
@@ -1216,20 +1216,6 @@ Transform:
   m_Father: {fileID: 2129805543}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &206875300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 206875298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 276246f0ad50f4b36a84ce9b47a91f39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthUpdate: {fileID: 1762682284}
-  boxDestroy: 3
 --- !u!136 &206875301
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1546,6 +1532,20 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!114 &206875307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206875298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eff2ea5268b66847a37891768dad01b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boxDestroy: 3
+  goldCoin: {fileID: 1762682273}
 --- !u!1 &210582778
 GameObject:
   m_ObjectHideFlags: 0
@@ -14241,6 +14241,17 @@ Transform:
   m_Father: {fileID: 2129805543}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1308861665 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6156367654895273610, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+  m_PrefabInstance: {fileID: 34778279}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da847fe8485dc4ca496b2268c8f9077a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1320465628 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4452270970643524159, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
@@ -15366,7 +15377,7 @@ GameObject:
   - component: {fileID: 1592553790}
   - component: {fileID: 1592553789}
   - component: {fileID: 1592553788}
-  - component: {fileID: 1592553787}
+  - component: {fileID: 1592553794}
   m_Layer: 0
   m_Name: MysteryBox (1)
   m_TagString: Untagged
@@ -15389,20 +15400,6 @@ Transform:
   m_Father: {fileID: 2129805543}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1592553787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1592553785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 276246f0ad50f4b36a84ce9b47a91f39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthUpdate: {fileID: 1762682284}
-  boxDestroy: 3
 --- !u!136 &1592553788
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -15719,6 +15716,20 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!114 &1592553794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592553785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd29793eac47fb144a72883c82cf9968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boxDestroy: 3
+  totalAmmo: {fileID: 1308861665}
 --- !u!1 &1658879402
 GameObject:
   m_ObjectHideFlags: 0
@@ -17000,7 +17011,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2926
+  m_Name: pb_Mesh25796
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

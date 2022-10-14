@@ -61,7 +61,7 @@ public class healthUpdate : MonoBehaviour
         Debug.Log("Health set");
     }
 
-    public void changeCurrentAmmo(int health){
+    public void changeCurrentHealth(int health){
         Debug.Log("Updated health ::: "+ health);
         currentHealth += health;
         updateHealth(health: currentHealth);

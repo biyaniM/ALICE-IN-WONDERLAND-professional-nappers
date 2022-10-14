@@ -23,8 +23,8 @@ public class AmmoCount : MonoBehaviour
     }
 
     public void changeAmmoCount(int count){
-        Debug.Log("Updated ammo ::: "+ ammo);
-        currentAmmo += ammo;
+        Debug.Log("Updated ammo ::: "+ count);
+        currentAmmo += count;
         SetBalance(currentAmmo);
         Debug.Log("Current ammo ::: "+ currentAmmo);
     }
