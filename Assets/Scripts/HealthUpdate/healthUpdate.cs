@@ -8,7 +8,7 @@ public class healthUpdate : MonoBehaviour
 {
     [SerializeField] GameOverHUD gameOverHUD;
     [SerializeField] bool gameOverCheck;
-    [SerializeField] CountDownTimer timer;
+    [SerializeField] public CountDownTimer timer;
 
     public HealthBar healthBar;
     public int maxHealth = 100;
@@ -49,7 +49,7 @@ public class healthUpdate : MonoBehaviour
             Destroy(col.gameObject);
             Debug.Log("Enemy bullet destroyed!");
             Debug.Log(col.gameObject);
-            currentHealth = currentHealth - 20;
+            currentHealth = currentHealth - 10;
             updateHealth(currentHealth);
             return;            
         }
