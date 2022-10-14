@@ -10,7 +10,6 @@ public class MovePingPong : MonoBehaviour
     private float original;
     private List<char> movementAxisSelectionOptions = new List<char> {'X','Y','Z','x','y','z'};
     public char movementAxis;
-    [SerializeField] private GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,7 +45,7 @@ public class MovePingPong : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider){
         Debug.Log(gameObject +" collides with " +collider.gameObject);
-        if (collider.gameObject == player){
+        if (collider.tag == "Player"){
             // player.transform.parent = transform;
             collider.transform.SetParent(transform, true);
             // Debug.Log("Changed Parent to "+player.transform.parent.gameObject);
@@ -54,7 +53,7 @@ public class MovePingPong : MonoBehaviour
     }
 
     private void OnTriggerExit(Collider collider){
-        if (collider.gameObject == player){
+        if (collider.tag == "Player"){
             collider.transform.parent = null;
         }
     }
