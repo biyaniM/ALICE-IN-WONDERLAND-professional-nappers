@@ -24,7 +24,6 @@ public class Player : MonoBehaviour
     public HealthBar healthBar;
     public CoinsScore coinsScore;
     public AmmoCount ammoCount;
-    public Canvas tutorial;
     private GameObject instructionPanel;
     private TextMeshProUGUI instructionMsg;
     //public GameObject finishBoundary;
@@ -53,29 +52,21 @@ public class Player : MonoBehaviour
         }
         
         SendToGoogle analyticsComponent = GetComponent<SendToGoogle>();
-        analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "1", "NA", "NA");
-
-        //Instruction
-        
-
-     
+        analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "1", "NA", "NA"); 
 
     }
 
     void Update(){
         // Debug.Log("Time" + Time.time); //TODO Commenting it out to make other Debug logs readable
-        if(tutorial.enabled && Time.timeSinceLevelLoad >= 5f){
-            tutorial.enabled = false;
-        }
     }
-    //GetComponenets : Replace SerializeField
+
+    //Todo: Replace SerializeField 
     private void SetUpComponents(){
         //Instruction Panel
         instructionPanel = GameObject.Find("Instruction");
         instructionPanel.SetActive(false);
         //Instruction Msg
-        instructionMsg  = instructionPanel.GetComponentInChildren<TextMeshProUGUI>();
-        
+        instructionMsg  = instructionPanel.GetComponentInChildren<TextMeshProUGUI>();        
     }
 
     public void UpdateHealth(int health){
@@ -175,9 +166,6 @@ public class Player : MonoBehaviour
     public void ShowInstruction(string msg){
         instructionPanel.SetActive(true);
         instructionMsg.text = msg;
-        Debug.Log("Show Instruction! " + msg);
-        //enable panel
-        //show line
     }
 
     public void CloseInstruction(){
