@@ -2140,8 +2140,7 @@ GameObject:
   - component: {fileID: 476805849}
   - component: {fileID: 476805848}
   - component: {fileID: 476805851}
-  - component: {fileID: 476805852}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tutorial Blue Coin
   m_TagString: BlueTutorialCoin
   m_Icon: {fileID: 0}
@@ -2241,19 +2240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   angle: 10
   roatationSpeed: 0.02
-  player: {fileID: 0}
---- !u!114 &476805852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 476805845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f56f671d24231bd42a14fd43f5c869d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  noKill: 1
 --- !u!1 &492664847
 GameObject:
   m_ObjectHideFlags: 0
@@ -5258,7 +5245,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899342364}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -4.67, y: -4.95, z: 24.5}
+  m_LocalPosition: {x: -5.79, y: -4.95, z: 24.15}
   m_LocalScale: {x: 0.67488885, y: -0.024953296, z: 0.6748887}
   m_ConstrainProportionsScale: 0
   m_Children: []
