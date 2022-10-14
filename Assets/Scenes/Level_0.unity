@@ -159,6 +159,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -0.6203613
       objectReference: {fileID: 0}
+    - target: {fileID: 5384936018097057363, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: yellowGoal
+      value: 
+      objectReference: {fileID: 415742260}
     - target: {fileID: 5384936019333487589, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -259,7 +263,8 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 7.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1400495364240628904, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
 --- !u!114 &34778280 stripped
 MonoBehaviour:
@@ -1779,6 +1784,45 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &415742256 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3800714309826839715, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+  m_PrefabInstance: {fileID: 34778279}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &415742260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415742256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9019608, g: 0.49411765, b: 0.13333334, a: 0.74509805}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 8a2b9e2a607dd2143b58c44bc32410b4, type: 3}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 0
 --- !u!1 &443137957
 GameObject:
   m_ObjectHideFlags: 0
@@ -11021,7 +11065,7 @@ MonoBehaviour:
   gameOverHUD: {fileID: 1288594012}
   gameOverCheck: 0
   timer: {fileID: 34778280}
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 1846509878}
   maxHealth: 100
   currentHealth: 100
 --- !u!114 &1762682290
@@ -12133,6 +12177,17 @@ MonoBehaviour:
       data:
         m_HeightSegments: 1
         m_WidthSegments: 1
+--- !u!114 &1846509878 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5384936018074865786, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+  m_PrefabInstance: {fileID: 34778279}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c460fe8d4a90d4042876968c0a0b9833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &1917581183
 Mesh:
   m_ObjectHideFlags: 0
