@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class AttachPlayerOnly : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
     void OnTriggerEnter(Collider collider){
         // transform.sib
-        if (collider.gameObject == player && collider.transform.parent == null){
+        if (collider.tag == "Player" && collider.transform.parent == null){
             collider.transform.SetParent(transform, true);
         }
     }
     void OnTriggerExit(Collider collider){
-        if (collider.gameObject == player){
+        if (collider.tag == "Player"){
             collider.transform.parent = null;
         }
     }

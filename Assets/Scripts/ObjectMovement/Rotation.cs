@@ -6,7 +6,6 @@ public class Rotation : MonoBehaviour
 {
     public float angle = 10f;
     public float roatationSpeed = 0.15f;
-    [SerializeField] private GameObject player;
 
     void Start(){
         // transform.childCount
@@ -18,12 +17,12 @@ public class Rotation : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider collider){
-        if (collider.gameObject == player){
+        if (collider.tag == "Player"){
             collider.transform.SetParent(transform, true);
         }
     }
     void OnTriggerExit(Collider collider){
-        if (collider.gameObject == player){
+        if (collider.tag == "Player"){
             collider.transform.parent = null;
         }
     }
