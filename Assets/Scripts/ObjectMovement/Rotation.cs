@@ -6,6 +6,7 @@ public class Rotation : MonoBehaviour
 {
     public float angle = 10f;
     public float roatationSpeed = 0.15f;
+    public bool noKill = false;
 
     void Start(){
         // transform.childCount
@@ -17,13 +18,17 @@ public class Rotation : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider collider){
-        if (collider.tag == "Player"){
-            collider.transform.SetParent(transform, true);
+        if (!noKill){
+            if (collider.tag == "Player"){
+                collider.transform.SetParent(transform, true);
+            }
         }
     }
     void OnTriggerExit(Collider collider){
-        if (collider.tag == "Player"){
-            collider.transform.parent = null;
+        if (!noKill){
+            if (collider.tag == "Player"){
+                collider.transform.parent = null;
+            }
         }
     }
 }
