@@ -42,7 +42,7 @@ public class LevelCompleteScreen: MonoBehaviour
         Debug.Log("Next Level-------->");
         Debug.Log(curr_level);
         if(curr_level == 1){
-            SceneManager.LoadScene("Level_1");
+            SceneManager.LoadScene("Group1_lvl");
         }
     }
     

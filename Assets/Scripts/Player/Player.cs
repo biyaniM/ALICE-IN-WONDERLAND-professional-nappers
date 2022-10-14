@@ -18,13 +18,16 @@ public class Player : MonoBehaviour
     [SerializeField] int RED_GOAL;
     [SerializeField] int BLUE_GOAL;
     [SerializeField] int YELLOW_GOAL;
+    [SerializeField] int LEVEL_SELECT;
     // UI components
     public HealthBar healthBar;
     public CoinsScore coinsScore;
     public AmmoCount ammoCount;
     public Canvas tutorial;
-
-    public GameObject finishBoundary;
+    //public GameObject finishBoundary;
+    public GameObject finishBoundaryRed;
+    public GameObject finishBoundaryBlue;
+    public GameObject finishBoundaryYellow;
 
     public int numOfKill;
 
@@ -36,7 +39,14 @@ public class Player : MonoBehaviour
         InitHealth(100);
         InitializeHUD();
         // endboundary collider 
-        setFinishBoundary(true);
+        if(LEVEL_SELECT == 1){
+            setFinishBoundary(true, "RedFinishBoundary", finishBoundaryRed);            
+            setFinishBoundary(true, "BlueFinishBoundary", finishBoundaryBlue);            
+            setFinishBoundary(true, "YellowFinishBoundary", finishBoundaryYellow);            
+        }else{
+            setFinishBoundary(true, "FinishBoundary", finishBoundaryRed);
+        }
+        
 
         SendToGoogle analyticsComponent = GetComponent<SendToGoogle>();
         analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "1", "NA", "NA");
@@ -45,7 +55,7 @@ public class Player : MonoBehaviour
 
     void Update(){
         // Debug.Log("Time" + Time.time); //TODO Commenting it out to make other Debug logs readable
-        if(tutorial.enabled && Time.time >= 5f){
+        if(tutorial.enabled && Time.timeSinceLevelLoad >= 5f){
             tutorial.enabled = false;
         }
     }
@@ -97,20 +107,33 @@ public class Player : MonoBehaviour
 
     //check if the player has collected enough colors
     public void CheckGoal(int red, int blue, int yellow){
-        if(red >= RED_GOAL && blue >= BLUE_GOAL && yellow>= YELLOW_GOAL){
-            finishBoundary = GameObject.Find("FinishBoundary");
-            finishBoundary.GetComponent<BoxCollider>().enabled = false;
+        if(LEVEL_SELECT == 1){
+            if(red >= RED_GOAL && blue >= BLUE_GOAL && yellow>= YELLOW_GOAL){
+                finishBoundaryRed.GetComponent<BoxCollider>().enabled = false;
+                finishBoundaryBlue.GetComponent<BoxCollider>().enabled = false;
+                finishBoundaryYellow.GetComponent<BoxCollider>().enabled = false;
+            }
+        }else{
+            if(red >= RED_GOAL && blue >= BLUE_GOAL && yellow>= YELLOW_GOAL){
+                finishBoundaryRed.GetComponent<BoxCollider>().enabled = false;
+               // finishBoundary = GameObject.Find("FinishBoundary");
+                //finishBoundary.GetComponent<BoxCollider>().enabled = false;
             // finishBoundary.enabled = false;
             // Destroy(finishBoundary);
             //end game display ui
         }
+        }
+
     }
 
-    public void setFinishBoundary(bool param){
-        finishBoundary = GameObject.Find("FinishBoundary");
+    // public void setFinishBoundary(bool param){
+    //     finishBoundary = GameObject.Find("FinishBoundary");
+    //     finishBoundary.GetComponent<BoxCollider>().enabled = param;
+    // }
+    public void setFinishBoundary(bool param, string finish, GameObject finishBoundary){
+        finishBoundary = GameObject.Find(finish);
         finishBoundary.GetComponent<BoxCollider>().enabled = param;
     }
-
 
     public int GetRedCoinsScore(){
         return redCoins;
@@ -133,7 +156,4 @@ public class Player : MonoBehaviour
         return numOfKill;
     }
 
-    private void OnCollisionEnter(Collision col){
-        Debug.Log("I HIT"+ col.gameObject);
-    }
 }

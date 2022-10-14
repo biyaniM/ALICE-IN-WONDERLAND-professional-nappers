@@ -25,7 +25,7 @@ public class LevelMenu : MonoBehaviour
 
 
     public void LeveLOne(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        SceneManager.LoadScene("Group1_lvl");
     }
 
 
