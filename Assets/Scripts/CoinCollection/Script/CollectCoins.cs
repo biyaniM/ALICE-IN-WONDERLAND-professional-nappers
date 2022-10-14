@@ -45,6 +45,13 @@ public class CollectCoins : MonoBehaviour
             col.gameObject.SetActive(false);
             
         }
+        else if(col.gameObject.tag == "BlueTutorialCoin"){
+            Debug.Log("Coin Collected! Collect more color coins to finish the level!");
+            blueCoins += coinPointIncreaseOnCollection;
+            player.UpdateCoins(redCoins, blueCoins, yellowCoins);
+            col.gameObject.SetActive(false);
+            
+        }
 
     }
 
