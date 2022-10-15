@@ -49,8 +49,7 @@ public class CollectCoins : MonoBehaviour
             Debug.Log("Coin Collected! Collect more color coins to finish the level!");
             blueCoins += coinPointIncreaseOnCollection;
             player.UpdateCoins(redCoins, blueCoins, yellowCoins);
-            col.gameObject.SetActive(false);
-            
+            col.gameObject.SetActive(false);   
         }
 
     }
