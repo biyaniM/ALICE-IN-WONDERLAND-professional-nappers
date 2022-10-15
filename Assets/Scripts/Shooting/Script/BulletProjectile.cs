@@ -17,7 +17,7 @@ public class BulletProjectile : MonoBehaviour
     // public float spread;
     // public GameObject bullet;
     // public Camera fpsCam;
-    public Player player;
+    private Player player;
 
 
     private void Awake(){
@@ -35,7 +35,7 @@ public class BulletProjectile : MonoBehaviour
         }else{
             Debug.Log("Not Hit target");
         }*/
-        Destroy(gameObject);
+        if (col.gameObject.tag!="Player"){Destroy(gameObject);}
 
         if(col.gameObject.tag == "enemy_red" || col.gameObject.tag == "enemy_yellow" || col.gameObject.tag == "enemy_blue"){
             Destroy(col.gameObject);
