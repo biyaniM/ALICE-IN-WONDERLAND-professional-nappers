@@ -10,8 +10,9 @@ public class CoinOnKillAlert : MonoBehaviour
         hud = GameObject.Find("HUD").GetComponent<Player>();
     }
 
-    private void OnTriggerEnter(Collider collider) {
-        if (collider.gameObject.name == "PaintBallProjectile(Clone)"){
+    private void OnCollisionEnter(Collision col) {
+        Debug.Log("Collision Enter on Enemy Kill!");
+        if (col.gameObject.name == "PaintBallProjectile(Clone)"){
                 if (gameObject.tag=="enemy_red"){
                     SendMsg("Red");
                 }
@@ -24,10 +25,10 @@ public class CoinOnKillAlert : MonoBehaviour
                 else{
                     return;
                 }
-            }
+        }
     }
 
-    private void OnTriggerExit(Collider collider) {
+    private void OnCollisionExit(Collision other) {
         hud.CloseAlert();
     }
 
