@@ -28,40 +28,63 @@ public class CollectCoins : MonoBehaviour
             Debug.Log("Coin Collected!"); //TODO Add Collection Sound
             redCoins += coinPointIncreaseOnCollection;
             player.UpdateCoins(redCoins, blueCoins, yellowCoins);
-            col.gameObject.SetActive(false);
-            SendMsg("Red");   
+            //col.gameObject.SetActive(false);
+            SendMsg("Red");
         }
         else if(col.gameObject.tag == "BlueCoin"){
             Debug.Log("Coin Collected!");
             blueCoins += coinPointIncreaseOnCollection;
             player.UpdateCoins(redCoins, blueCoins, yellowCoins);
-            col.gameObject.SetActive(false);
+            //col.gameObject.SetActive(false);
             SendMsg("Blue");
+            
         }
         else if(col.gameObject.tag == "YellowCoin"){
             Debug.Log("Coin Collected!");
             yellowCoins += coinPointIncreaseOnCollection;
             player.UpdateCoins(redCoins, blueCoins, yellowCoins);
-            col.gameObject.SetActive(false);
+            //col.gameObject.SetActive(false);
             SendMsg("Yellow");
         }
         else if(col.gameObject.tag == "BlueTutorialCoin"){
             Debug.Log("Coin Collected! Collect more color coins to finish the level!");
             blueCoins += coinPointIncreaseOnCollection;
             player.UpdateCoins(redCoins, blueCoins, yellowCoins);
-            col.gameObject.SetActive(false);
+            //col.gameObject.SetActive(false);
             SendMsg("Blue");
         }
-
+        
     }
 
     void SendMsg(string color){
         string msg = color + " Coin : + 1";
-        player.ShowInstruction(msg);
+        player.ShowAlert(msg);
     }
 
-    private void OnCollisionExit(Collision other) {
-        player.CloseInstruction();
+    private void OnTriggerExit(Collider col) {
+        switch (col.gameObject.tag){
+            case "RedCoin":{
+                player.CloseAlert();
+                col.gameObject.SetActive(false);
+                break;
+            }
+            case "BlueCoin":{
+                player.CloseAlert();
+                col.gameObject.SetActive(false);
+                break;
+            }            
+            case "YellowCoin":{
+                player.CloseAlert();
+                col.gameObject.SetActive(false);
+                break;
+            }
+            case "BlueTutorialCoin":{
+                player.CloseAlert();
+                col.gameObject.SetActive(false);
+                break;
+            }       
+                
+        }
     }
 
     // Update is called once per frame

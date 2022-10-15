@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     public AmmoCount ammoCount;
     private GameObject instructionPanel;
     private TextMeshProUGUI instructionMsg;
+    private TextMeshProUGUI scoringAlert;
     //public GameObject finishBoundary;
     public GameObject finishBoundaryRed;
     public GameObject finishBoundaryBlue;
@@ -66,7 +67,10 @@ public class Player : MonoBehaviour
         instructionPanel = GameObject.Find("Instruction");
         instructionPanel.SetActive(false);
         //Instruction Msg
-        instructionMsg  = instructionPanel.GetComponentInChildren<TextMeshProUGUI>();        
+        instructionMsg  = instructionPanel.GetComponentInChildren<TextMeshProUGUI>();
+        //scoring alert
+        scoringAlert = GameObject.Find("Alert").GetComponent<TextMeshProUGUI>();
+        scoringAlert.enabled = false;
     }
 
     public void UpdateHealth(int health){
@@ -171,5 +175,14 @@ public class Player : MonoBehaviour
     public void CloseInstruction(){
         instructionPanel.SetActive(false);
     }
+
+    public void ShowAlert(string msg){
+        scoringAlert.enabled = true;
+        scoringAlert.text = msg;
+    }
+
+    public void CloseAlert(){
+        scoringAlert.enabled =false;
+    }    
 
 }
