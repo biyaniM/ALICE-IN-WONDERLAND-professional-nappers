@@ -24,10 +24,7 @@ public class Player : MonoBehaviour
     public CoinsScore coinsScore;
     public AmmoCount ammoCount;
     public Canvas tutorial;
-    //public GameObject finishBoundary;
-    public GameObject finishBoundaryRed;
-    public GameObject finishBoundaryBlue;
-    public GameObject finishBoundaryYellow;
+    public GameObject finishBoundary;
 
     public int numOfKill;
 
@@ -38,14 +35,10 @@ public class Player : MonoBehaviour
         // InitAmmo(80); //! Removinng from Test
         InitHealth(100);
         InitializeHUD();
+
         // endboundary collider 
-        if(LEVEL_SELECT == 1){
-            setFinishBoundary(true, "RedFinishBoundary", finishBoundaryRed);            
-            setFinishBoundary(true, "BlueFinishBoundary", finishBoundaryBlue);            
-            setFinishBoundary(true, "YellowFinishBoundary", finishBoundaryYellow);            
-        }else{
-            setFinishBoundary(true, "FinishBoundary", finishBoundaryRed);
-        }
+        Debug.Log("setting finish boundary something!!!");
+        setFinishBoundary(true, "FinishBoundary", finishBoundary);
         
 
         SendToGoogle analyticsComponent = GetComponent<SendToGoogle>();
@@ -59,8 +52,6 @@ public class Player : MonoBehaviour
             tutorial.enabled = false;
         }
     }
-
-
 
     public void UpdateHealth(int health){
         healthPoint = health;
@@ -107,29 +98,14 @@ public class Player : MonoBehaviour
 
     //check if the player has collected enough colors
     public void CheckGoal(int red, int blue, int yellow){
-        if(LEVEL_SELECT == 1){
-            if(red >= RED_GOAL && blue >= BLUE_GOAL && yellow>= YELLOW_GOAL){
-                finishBoundaryRed.GetComponent<BoxCollider>().enabled = false;
-                finishBoundaryBlue.GetComponent<BoxCollider>().enabled = false;
-                finishBoundaryYellow.GetComponent<BoxCollider>().enabled = false;
-            }
-        }else{
-            if(red >= RED_GOAL && blue >= BLUE_GOAL && yellow>= YELLOW_GOAL){
-                finishBoundaryRed.GetComponent<BoxCollider>().enabled = false;
-               // finishBoundary = GameObject.Find("FinishBoundary");
-                //finishBoundary.GetComponent<BoxCollider>().enabled = false;
-            // finishBoundary.enabled = false;
-            // Destroy(finishBoundary);
-            //end game display ui
+        if(red >= RED_GOAL && blue >= BLUE_GOAL && yellow >= YELLOW_GOAL){
+                // finishBoundary.GetComponent<BoxCollider>().enabled = false;
+                setFinishBoundary(false, "FinishBoundary", finishBoundary);
         }
-        }
+
 
     }
 
-    // public void setFinishBoundary(bool param){
-    //     finishBoundary = GameObject.Find("FinishBoundary");
-    //     finishBoundary.GetComponent<BoxCollider>().enabled = param;
-    // }
     public void setFinishBoundary(bool param, string finish, GameObject finishBoundary){
         finishBoundary = GameObject.Find(finish);
         finishBoundary.GetComponent<BoxCollider>().enabled = param;
