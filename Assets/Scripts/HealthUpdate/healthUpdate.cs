@@ -9,6 +9,7 @@ public class healthUpdate : MonoBehaviour
     [SerializeField] GameOverHUD gameOverHUD;
     [SerializeField] bool gameOverCheck;
     [SerializeField] public CountDownTimer timer;
+    private Player hud;
 
     public HealthBar healthBar;
     public int maxHealth = 100;
@@ -17,6 +18,7 @@ public class healthUpdate : MonoBehaviour
     void Start()
     {  
         gameOverCheck = false;        
+        hud = GameObject.Find("HUD").GetComponent<Player>();
     }
 
     // Update is called once per frame
@@ -46,14 +48,25 @@ public class healthUpdate : MonoBehaviour
     public void OnCollisionEnter(Collision col) {
         Debug.Log("Player got hit");
         if(col.gameObject.tag == "enemyBullet") {
-            Destroy(col.gameObject);
-            Debug.Log("Enemy bullet destroyed!");
-            Debug.Log(col.gameObject);
+            hud.ShowAlert("HP: -10");
+            //Destroy(col.gameObject);
+            //Debug.Log("Enemy bullet destroyed!");
+            Debug.Log("Bullet: " + col.gameObject);
             currentHealth = currentHealth - 10;
             updateHealth(currentHealth);
             return;            
         }
     }
+
+    private void OnCollisionExit(Collision col) {
+        Debug.Log("Collision Exit!!!");
+        if(col.gameObject.CompareTag("enemyBullet")) {
+            Debug.Log("Enemy bullet destroyed!");
+            hud.CloseAlert();
+            Destroy(col.gameObject);     
+        }    
+    }
+
 
     public void updateHealth(int health) {
         Debug.Log("Set health Called");

@@ -18,7 +18,7 @@ public class enemyBullet : MonoBehaviour
     }
     public void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag!="enemy_red" && collision.gameObject.tag!="enemy_yellow" && collision.gameObject.tag!="enemy_blue"){ 
+        if(collision.gameObject.tag!="enemy_red" && collision.gameObject.tag!="enemy_yellow" && collision.gameObject.tag!="enemy_blue" && collision.gameObject.tag != "Player"){ 
             // Debug.Log("What is the enemy bullet hitting? "+collision.gameObject);
             Destroy(gameObject);
         }
