@@ -14,11 +14,15 @@ public class CamPreview : MonoBehaviour
 
     //public GameObject playerController;
 
+    void Awake()
+    {
+        player.GetComponent<ThirdPersonShooterController>().enabled = false;
+        playerController.enabled=false;
+    }
+    
     // Start is called before the first frame update
     void Start()
     {
-        
-        playerController.enabled=false;
         StartCoroutine(Preview());
     }
 
@@ -27,5 +31,6 @@ public class CamPreview : MonoBehaviour
         mainCam.SetActive(true);
         previewCam.SetActive(false);
         playerController.enabled=true;
+        player.GetComponent<ThirdPersonShooterController>().enabled= true;
     }
 }
