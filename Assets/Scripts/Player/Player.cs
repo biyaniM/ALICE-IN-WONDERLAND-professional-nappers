@@ -117,6 +117,7 @@ public class Player : MonoBehaviour
         }else{
             if(red >= RED_GOAL && blue >= BLUE_GOAL && yellow>= YELLOW_GOAL){
                 finishBoundaryRed.GetComponent<BoxCollider>().enabled = false;
+                Debug.Log(finishBoundaryRed.GetComponent<BoxCollider>().enabled );
                // finishBoundary = GameObject.Find("FinishBoundary");
                 //finishBoundary.GetComponent<BoxCollider>().enabled = false;
             // finishBoundary.enabled = false;
