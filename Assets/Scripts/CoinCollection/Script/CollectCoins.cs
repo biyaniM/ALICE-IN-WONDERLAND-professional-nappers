@@ -18,7 +18,6 @@ public class CollectCoins : MonoBehaviour
             
     }
 
-
     public void OnTriggerEnter(Collider col){
         redCoins = player.GetRedCoinsScore();
         blueCoins = player.GetBlueCoinsScore();
