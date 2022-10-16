@@ -28,7 +28,7 @@ public class Rotation1 : MonoBehaviour
         while (true)
         {
             // delay here
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(3);
 
             float deltaAngle = 0;
 
@@ -49,7 +49,7 @@ public class Rotation1 : MonoBehaviour
                 yield return null;
             }
             // delay here
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(3);
         }
     }
 
