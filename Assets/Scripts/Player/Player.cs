@@ -63,6 +63,7 @@ public class Player : MonoBehaviour
         blueCoins = blue;
         yellowCoins = yellow;
         coinsScore.SetScores(redCoins, blueCoins, yellowCoins);
+        RenderSettings.skybox.SetColor("_Tint", new Color(15*red/255f, 15*yellow/255f, 15*blue/255f));
     }
 
     public void UpdateAmmo(int ammoAmount){
