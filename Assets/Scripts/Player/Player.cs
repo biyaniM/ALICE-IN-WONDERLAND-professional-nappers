@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
     public AmmoCount ammoCount;
     private TextMeshProUGUI guidance;
     public GameObject finishBoundary;
-
+    public PauseMenu pauseMenu;
     public int numOfKill;
 
 
@@ -55,6 +55,11 @@ public class Player : MonoBehaviour
     }
 
     void Update(){
+        if(Input.GetKeyDown(KeyCode.P)){
+            Debug.Log("Pause the game");
+            pauseMenu.Setup();
+            
+        }
 
     }
 
