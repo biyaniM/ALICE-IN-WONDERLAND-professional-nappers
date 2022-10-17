@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
     public CoinsScore coinsScore;
     public AmmoCount ammoCount;
     private TextMeshProUGUI guidance;
+    private TextMeshProUGUI alert;
     public GameObject finishBoundary;
     public PauseMenu pauseMenu;
     public int numOfKill;
@@ -52,6 +53,8 @@ public class Player : MonoBehaviour
     void SetComponents(){
         guidance = GameObject.Find("Guidance").GetComponent<TextMeshProUGUI>();
         guidance.enabled = false;
+        alert = GameObject.Find("Alert").GetComponent<TextMeshProUGUI>();
+        alert.enabled = false;
     }
 
     void Update(){
@@ -151,5 +154,16 @@ public class Player : MonoBehaviour
     public void CloseGuidance(){
         guidance.enabled = false;
     }
+
+    public void ShowAlert(string msg){
+        alert.enabled = true;
+        alert.text = msg;
+    }
+
+    public void CloseAlert(){
+        alert.enabled = false;
+    }
+
+
 
 }

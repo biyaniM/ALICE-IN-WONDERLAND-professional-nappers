@@ -28,6 +28,7 @@ public class CollectCoins : MonoBehaviour
             redCoins += coinPointIncreaseOnCollection;
             player.UpdateCoins(redCoins, blueCoins, yellowCoins);
             col.gameObject.SetActive(false);
+            SendMsgToHUD("Red");
             
         }
         else if(col.gameObject.tag == "BlueCoin"){
@@ -35,22 +36,35 @@ public class CollectCoins : MonoBehaviour
             blueCoins += coinPointIncreaseOnCollection;
             player.UpdateCoins(redCoins, blueCoins, yellowCoins);
             col.gameObject.SetActive(false);
-            
+            SendMsgToHUD("Blue");
         }
         else if(col.gameObject.tag == "YellowCoin"){
             Debug.Log("yellow Coin Collected!");
             yellowCoins += coinPointIncreaseOnCollection;
             player.UpdateCoins(redCoins, blueCoins, yellowCoins);
             col.gameObject.SetActive(false);
+            SendMsgToHUD("Yellow");
             
         }
         else if(col.gameObject.tag == "BlueTutorialCoin"){
             Debug.Log("Coin Collected! Collect more color coins to finish the level!");
             blueCoins += coinPointIncreaseOnCollection;
             player.UpdateCoins(redCoins, blueCoins, yellowCoins);
-            col.gameObject.SetActive(false);   
+            col.gameObject.SetActive(false);  
+            SendMsgToHUD("Blue");
         }
 
+    }
+
+    void SendMsgToHUD(string color){
+        string msg = color + " Coin +1";
+        player.ShowAlert(msg);
+        StartCoroutine (waiter());
+    }
+
+    IEnumerator waiter(){
+        yield return new WaitForSeconds(1);
+        player.CloseAlert();
     }
 
     // Update is called once per frame
