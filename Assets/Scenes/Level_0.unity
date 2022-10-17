@@ -171,6 +171,10 @@ PrefabInstance:
       propertyPath: finishBoundaryYellow
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4452270970643524159, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: enableKeyInstructions
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5384936018074865784, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.6203613
@@ -15377,6 +15381,7 @@ MonoBehaviour:
   playerController: {fileID: 1762682293}
   timer: {fileID: 34778280}
   hudObject: {fileID: 1320465628}
+  cameraPreviewAnimationClip: {fileID: 7400000, guid: 51be86f0a8e104329924ebb05a752321, type: 2}
   gameObjectsToDisableInBeginning:
   - {fileID: 1834931773}
   - {fileID: 1169527887}

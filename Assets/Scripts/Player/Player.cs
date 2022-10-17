@@ -27,7 +27,9 @@ public class Player : MonoBehaviour
     public GameObject finishBoundary;
 
     public int numOfKill;
-
+    [Header("Key Instructions")]
+    [SerializeField] public bool enableKeyInstructions = false;
+    public float keyInstructionTime = 10f;
 
     void Start()
     {
@@ -50,12 +52,6 @@ public class Player : MonoBehaviour
         analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "1", "NA", "NA");
     }
 
-    void Update(){
-        // Debug.Log("Time" + Time.time); //TODO Commenting it out to make other Debug logs readable
-        if(tutorial.enabled && Time.timeSinceLevelLoad >= 5f){
-            tutorial.enabled = false;
-        }
-    }
 
     public void UpdateHealth(int health){
         healthPoint = health;

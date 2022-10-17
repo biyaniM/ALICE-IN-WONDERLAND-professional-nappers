@@ -12,10 +12,11 @@ public class CamPreview : MonoBehaviour
     public CharacterController playerController;
     [SerializeField] private CountDownTimer timer;
     [SerializeField] protected Player hudObject;
-    
+    [SerializeField]private AnimationClip cameraPreviewAnimationClip;
     [Header("Game Objects to Disable")]
     [Tooltip("Add the Game Objects You Want to be disabled in the beginninng of the level")]
     [SerializeField] protected List<GameObject> gameObjectsToDisableInBeginning;
+    private bool levelPreviewCoroutineFinished = false;
 
 
     //public GameObject playerController;
@@ -33,7 +34,19 @@ public class CamPreview : MonoBehaviour
     void Start()
     {
         StartCoroutine(Preview());
+        levelPreviewCoroutineFinished = true;
     }
+
+    void Update(){
+        // Debug.Log("Time" + Time.time); //TODO Commenting it out to make other Debug logs readable
+        if (hudObject.enableKeyInstructions && levelPreviewCoroutineFinished){
+            float timeSinceLevelLoadAndCoroutine = hudObject.keyInstructionTime + cameraPreviewAnimationClip.length;
+            if(hudObject.tutorial.enabled && Time.timeSinceLevelLoad >= timeSinceLevelLoadAndCoroutine){
+                hudObject.tutorial.enabled = false;
+            }
+        }
+    }
+
 
     IEnumerator Preview(){
         timer.pauseTimer();
@@ -49,5 +62,6 @@ public class CamPreview : MonoBehaviour
         player.GetComponent<ThirdPersonShooterController>().enabled= true;
         hudObject.initializeStartup();
         timer.unPauseTimer();
+        if(hudObject.enableKeyInstructions){ hudObject.tutorial.enabled = true; }
     }
 }
