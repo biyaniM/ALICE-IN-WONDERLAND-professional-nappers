@@ -6,25 +6,31 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    private Button resume_btn;
-    private Button menu_btn;
-    private Button restart_btn;
-    private Button guide_btn;
+    public Button resume_btn;
+    public Button menu_btn;
+    public Button restart_btn;
+    public Button guide_btn;
+    public CountDownTimer timer;
 
     private void Start() {
-        resume_btn = GameObject.Find("Resume_Button").GetComponent<Button>();
-        menu_btn = GameObject.Find("MainMenu_Button").GetComponent<Button>();
-        restart_btn = GameObject.Find("Restart_Button").GetComponent<Button>();
-        guide_btn = GameObject.Find("Guidance_Button").GetComponent<Button>();
-
-        resume_btn.onClick.AddListener(Resume);
-        menu_btn.onClick.AddListener(Restart);
-        restart_btn.onClick.AddListener(BackToMenu);
-        guide_btn.onClick.AddListener(ShowGuideMenu);
+        gameObject.SetActive(false);
     }
 
-    void Resume(){
 
+    public void Setup(){
+        Debug.Log("Pause Menu Set");
+        gameObject.SetActive(true);
+        //release the cursor to press the button.
+        Cursor.lockState = CursorLockMode.None;
+        resume_btn.onClick.AddListener(Resume);
+        menu_btn.onClick.AddListener(BackToMenu);
+        restart_btn.onClick.AddListener(Restart);
+        guide_btn.onClick.AddListener(ShowGuideMenu);
+        timer.pauseTimer();
+        
+    }
+    void Resume(){
+        timer.resumeTimer();
     }
 
     void Restart(){
