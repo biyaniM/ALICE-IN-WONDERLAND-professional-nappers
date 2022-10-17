@@ -7,16 +7,18 @@ public class ArrowKeyTutorial : MonoBehaviour
     private bool instructionComplete;
     [SerializeField] private string tutorialKind;
     private string tutorialMessage;
+    private Player hud;
     // Start is called before the first frame update
     void Start()
     {
-
+        hud = GameObject.Find("HUD").GetComponent<Player>();
     }
 
     // Update is called once per frame
     void SendTutorialMessage()
     {
         if (!instructionComplete){
+            hud.ShowGuidance(tutorialMessage);
             Debug.Log(tutorialMessage,gameObject);
         }
     }
@@ -93,6 +95,7 @@ public class ArrowKeyTutorial : MonoBehaviour
     void OnTriggerExit(Collider col){
         if (col.tag=="Player" && !instructionComplete){
             instructionComplete = true;
+            hud.CloseGuidance();
         }
     }
 }
