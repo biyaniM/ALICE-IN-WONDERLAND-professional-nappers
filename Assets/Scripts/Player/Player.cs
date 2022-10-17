@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
     public HealthBar healthBar;
     public CoinsScore coinsScore;
     public AmmoCount ammoCount;
-    public Canvas tutorial;
+    
     public GameObject finishBoundary;
 
     public int numOfKill;
@@ -47,10 +47,7 @@ public class Player : MonoBehaviour
     }
 
     void Update(){
-        // Debug.Log("Time" + Time.time); //TODO Commenting it out to make other Debug logs readable
-        if(tutorial.enabled && Time.timeSinceLevelLoad >= 5f){
-            tutorial.enabled = false;
-        }
+
     }
 
     public void UpdateHealth(int health){
