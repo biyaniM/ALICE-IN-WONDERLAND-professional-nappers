@@ -43,6 +43,10 @@ public class CountDownTimer : MonoBehaviour , IPointerClickHandler
         Pause = true;
     }
 
+    public void unPauseTimer(){
+        Pause = false;
+    }
+
     private IEnumerator UpdateTimer()
     {
         while(remainingDuration >= 0)

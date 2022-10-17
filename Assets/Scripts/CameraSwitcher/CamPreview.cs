@@ -10,6 +10,7 @@ public class CamPreview : MonoBehaviour
     public GameObject player;
 
     public CharacterController playerController;
+    [SerializeField] private CountDownTimer timer;
 
 
     //public GameObject playerController;
@@ -27,10 +28,12 @@ public class CamPreview : MonoBehaviour
     }
 
     IEnumerator Preview(){
+        timer.pauseTimer();
         yield return new WaitForSeconds(10);
         mainCam.SetActive(true);
         previewCam.SetActive(false);
         playerController.enabled=true;
         player.GetComponent<ThirdPersonShooterController>().enabled= true;
+        timer.unPauseTimer();
     }
 }
