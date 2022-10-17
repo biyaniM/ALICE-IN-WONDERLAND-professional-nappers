@@ -12,7 +12,8 @@ public class DeathZone : MonoBehaviour
         if (collider.tag == "Player"){
             collider.gameObject.SetActive(false); //* Kill player by making inactive
             healthBar.SetHealth(0); //* Make Health 0
-            gameOverHUD.Setup(); //* Setup the gameover HUD
+            string msg = "Oops! You falled into Death Zone!";
+            gameOverHUD.Setup(msg); //* Setup the gameover HUD
             timer.pauseTimer();
         }
     }

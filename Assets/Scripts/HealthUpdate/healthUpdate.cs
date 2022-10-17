@@ -37,7 +37,8 @@ public class healthUpdate : MonoBehaviour
 
     public void runGameOverHud(){
         Debug.Log("Game over hud from health update!!");
-        gameOverHUD.Setup();
+        string msg = "No Health Point left! You Died!";
+        gameOverHUD.Setup(msg);
         gameOverCheck = true;
         // destroy the player
         // Destroy(gameObject);
