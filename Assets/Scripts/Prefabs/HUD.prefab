@@ -709,7 +709,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.075, y: 0.92}
   m_AnchorMax: {x: 0.31125, y: 0.98}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.6203613}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5384936018074865787
@@ -833,7 +833,7 @@ MonoBehaviour:
   yellowScore: {fileID: 5384936018907041532}
   redGoal: {fileID: 6115479887780526147}
   blueGoal: {fileID: 478427781011328660}
-  yellowGoal: {fileID: 0}
+  yellowGoal: {fileID: 859788690119820553}
 --- !u!1 &5384936018151131631
 GameObject:
   m_ObjectHideFlags: 0
@@ -1169,7 +1169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverHUD: {fileID: 0}
   uiText: {fileID: 5384936018961158228}
-  Duration: 10
+  Duration: 120
   remainingDuration: 0
 --- !u!1 &5384936019333487586
 GameObject:
@@ -1387,9 +1387,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffba569ad0b12442989e655a1b621664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RED_GOAL: 6
-  BLUE_GOAL: 6
-  YELLOW_GOAL: 6
+  RED_GOAL: 8
+  BLUE_GOAL: 8
+  YELLOW_GOAL: 10
   LEVEL_SELECT: 0
   healthBar: {fileID: 5384936018074865786}
   coinsScore: {fileID: 5384936018097057363}
