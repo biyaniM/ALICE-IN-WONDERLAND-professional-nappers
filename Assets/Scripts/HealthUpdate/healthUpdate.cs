@@ -53,7 +53,7 @@ public class healthUpdate : MonoBehaviour
             Debug.Log("Enemy bullet destroyed!");
             Debug.Log(col.gameObject);
             currentHealth = currentHealth - 10;
-            string msg = "- 10 HP";
+            string msg = "HP - 10";
             player.ShowAlert(msg);
             updateHealth(currentHealth);
             StartCoroutine (waiter());
