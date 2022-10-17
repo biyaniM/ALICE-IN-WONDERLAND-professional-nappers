@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class InLevelPause : MonoBehaviour
 {
   public Button pause_btn;
-  //public Canvas PauseMenu;
+  public PauseMenu pasueMenu;
   void Start(){
       //pause_btn = gameObject.GetComponent<Button>();
       //PauseMenu = GameObject.Find("PauseMenu").GetComponent<Canvas>();
@@ -21,6 +21,7 @@ public class InLevelPause : MonoBehaviour
   void ShowPauseMenu(){
       //Cursor.lockState = CursorLockMode.Confined;
       //PauseMenu.enabled = true;
+      pasueMenu.Setup();
       Debug.Log("Pause Menu Show up");
       
   }
