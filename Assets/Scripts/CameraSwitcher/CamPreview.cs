@@ -11,6 +11,11 @@ public class CamPreview : MonoBehaviour
 
     public CharacterController playerController;
     [SerializeField] private CountDownTimer timer;
+    [SerializeField] protected Player hudObject;
+    
+    [Header("Game Objects to Disable")]
+    [Tooltip("Add the Game Objects You Want to be disabled in the beginninng of the level")]
+    [SerializeField] protected List<GameObject> gameObjectsToDisableInBeginning;
 
 
     //public GameObject playerController;
@@ -19,6 +24,9 @@ public class CamPreview : MonoBehaviour
     {
         player.GetComponent<ThirdPersonShooterController>().enabled = false;
         playerController.enabled=false;
+        foreach(GameObject gO in gameObjectsToDisableInBeginning){
+            gO.SetActive(false);
+        }
     }
     
     // Start is called before the first frame update
@@ -30,10 +38,16 @@ public class CamPreview : MonoBehaviour
     IEnumerator Preview(){
         timer.pauseTimer();
         yield return new WaitForSeconds(10);
+        foreach(GameObject gO in gameObjectsToDisableInBeginning){
+            if(!gO.activeSelf){
+                gO.SetActive(true);
+            }
+        }
         mainCam.SetActive(true);
         previewCam.SetActive(false);
         playerController.enabled=true;
         player.GetComponent<ThirdPersonShooterController>().enabled= true;
+        hudObject.initializeStartup();
         timer.unPauseTimer();
     }
 }

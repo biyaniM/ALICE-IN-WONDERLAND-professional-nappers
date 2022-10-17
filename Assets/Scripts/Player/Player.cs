@@ -31,9 +31,14 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        
+    }
+
+    public void initializeStartup(){
         SetGoal(RED_GOAL, BLUE_GOAL, YELLOW_GOAL);
         // InitAmmo(80); //! Removinng from Test
         InitHealth(100);
+        Debug.Log("INitializing HUD");
         InitializeHUD();
 
         // endboundary collider 
@@ -43,7 +48,6 @@ public class Player : MonoBehaviour
 
         SendToGoogle analyticsComponent = GetComponent<SendToGoogle>();
         analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "1", "NA", "NA");
-
     }
 
     void Update(){
