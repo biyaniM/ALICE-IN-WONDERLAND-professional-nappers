@@ -153,8 +153,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4452270970643524159, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: YELLOW_GOAL
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4452270970643524159, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: finishBoundary
+      value: 
+      objectReference: {fileID: 113731221}
     - target: {fileID: 4452270970643524159, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: finishBoundaryRed
       value: 
@@ -638,7 +642,7 @@ GameObject:
   - component: {fileID: 113731223}
   m_Layer: 0
   m_Name: FinishBoundary
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -651,8 +655,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113731221}
   m_LocalRotation: {x: -6.7954253e-12, y: -4.0741937e-21, z: -5.9954947e-10, w: 1}
-  m_LocalPosition: {x: 4.5416174, y: 6.97, z: -0.19}
-  m_LocalScale: {x: 35.084553, y: 13.196622, z: 1}
+  m_LocalPosition: {x: 0.08, y: 1.88, z: -0.81}
+  m_LocalScale: {x: 10.586062, y: 3.9818168, z: 0.30173}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1718491239}
@@ -14702,7 +14706,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh27358
+  m_Name: pb_Mesh188924
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
