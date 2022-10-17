@@ -7,15 +7,17 @@ public class InLevelPause : MonoBehaviour
 {
   public Button pause_btn;
   public PauseMenu pasueMenu;
+
   void Start(){
       //pause_btn = gameObject.GetComponent<Button>();
       //PauseMenu = GameObject.Find("PauseMenu").GetComponent<Canvas>();
+      //pause_btn = GameObject.Find("PauseButton").GetComponent<Button>();
+      pause_btn.onClick.RemoveAllListeners();
       pause_btn.onClick.AddListener(ShowPauseMenu);
   }
- void Update()
-    {
+ void Update(){
 
-    }
+  }
 
 
   void ShowPauseMenu(){
