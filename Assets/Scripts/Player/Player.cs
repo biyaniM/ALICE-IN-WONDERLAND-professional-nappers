@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement; 
+using TMPro;
 
 public class Player : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class Player : MonoBehaviour
     public HealthBar healthBar;
     public CoinsScore coinsScore;
     public AmmoCount ammoCount;
-    
+    private TextMeshProUGUI guidance;
     public GameObject finishBoundary;
 
     public int numOfKill;
@@ -31,6 +32,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        SetComponents();
         SetGoal(RED_GOAL, BLUE_GOAL, YELLOW_GOAL);
         // InitAmmo(80); //! Removinng from Test
         InitHealth(100);
@@ -44,6 +46,12 @@ public class Player : MonoBehaviour
         SendToGoogle analyticsComponent = GetComponent<SendToGoogle>();
         analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "1", "NA", "NA");
 
+    }
+
+    //todo: fix all ui component here  
+    void SetComponents(){
+        guidance = GameObject.Find("Guidance").GetComponent<TextMeshProUGUI>();
+        guidance.enabled = false;
     }
 
     void Update(){
@@ -128,6 +136,15 @@ public class Player : MonoBehaviour
     public int GetNumberOfKill()
     {
         return numOfKill;
+    }
+
+    public void ShowGuidance(string msg){
+        guidance.enabled = true;
+        guidance.text = msg;
+    }
+
+    public void CloseGuidance(){
+        guidance.enabled = false;
     }
 
 }
