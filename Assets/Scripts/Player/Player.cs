@@ -59,11 +59,16 @@ public class Player : MonoBehaviour
 
     void Update(){
         if(Input.GetKeyDown(KeyCode.P)){
-            Debug.Log("Pause the game");
-            pauseMenu.Setup();
-            
+            if(pauseMenu.GameIsPaused){
+                // resume the game
+                pauseMenu.Resume();
+            }
+            else{
+                // pause the game
+                Debug.Log("Pause the game");
+                pauseMenu.Setup();
+            }
         }
-
     }
 
     public void UpdateHealth(int health){

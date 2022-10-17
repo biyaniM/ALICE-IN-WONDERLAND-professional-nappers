@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    [SerializeField] public bool GameIsPaused = false;
     public Button resume_btn;
     public Button menu_btn;
     public Button restart_btn;
@@ -16,8 +17,7 @@ public class PauseMenu : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-
-    public void Setup(){
+    public void Setup(){    // pause the game
         Debug.Log("Pause Menu Set");
         gameObject.SetActive(true);
         //release the cursor to press the button.
@@ -26,25 +26,34 @@ public class PauseMenu : MonoBehaviour
         menu_btn.onClick.AddListener(BackToMenu);
         restart_btn.onClick.AddListener(Restart);
         guide_btn.onClick.AddListener(ShowGuideMenu);
-        timer.pauseTimer();
+        // timer.pauseTimer();
+        Time.timeScale = 0f;
+        GameIsPaused = true;
         
     }
-    void Resume(){
-        timer.resumeTimer();
+    
+    public void Resume(){  //  working
+        Debug.Log("resume the game!");
+        // timer.resumeTimer();
+        gameObject.SetActive(false);
+        Time.timeScale = 1f;
+        GameIsPaused = false;
     }
 
-    void Restart(){
+    void Restart(){     // working
         Debug.Log("Restart Game!");
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    void BackToMenu(){
+    void BackToMenu(){  // working
         Debug.Log("Main Menu!");
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
     }
 
     void ShowGuideMenu(){
-
+        Debug.Log("show controls menu!");
     }
 
 
