@@ -6,7 +6,6 @@ public class CamPreview : MonoBehaviour
 {
     public GameObject mainCam;
     public GameObject previewCam;
-
     public GameObject player;
 
     public CharacterController playerController;
