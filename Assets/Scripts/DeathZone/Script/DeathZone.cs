@@ -10,7 +10,7 @@ public class DeathZone : MonoBehaviour
     // Start is called before the first frame update
     void OnTriggerEnter(Collider collider){
         if (collider.tag == "Player"){
-            collider.gameObject.SetActive(false); //* Kill player by making inactive
+            //collider.gameObject.SetActive(false); //* Kill player by making inactive
             healthBar.SetHealth(0); //* Make Health 0
             string msg = "You Died!";
             gameOverHUD.Setup(msg); //* Setup the gameover HUD
