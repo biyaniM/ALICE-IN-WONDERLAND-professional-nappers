@@ -15,6 +15,7 @@ public class ThirdPersonShooterController : MonoBehaviour
     [SerializeField] Player player;
     public int maxAmmo = 10;
     public int currentAmmo;
+    [SerializeField] private ParticleSystem shootFlash;
     
     void Start(){
         player.InitAmmo(maxAmmo);
@@ -27,7 +28,7 @@ public class ThirdPersonShooterController : MonoBehaviour
     void Update()
     {
         currentAmmo = player.ammoCount.currentAmmo;
-        Vector3 aimPosition = Vector3.zero;
+        // Vector3 aimPosition = Vector3.zero;
         // Get Screen centre
         // Vector2 screenCentrePoint = new Vector2(Screen.width /2f , Screen.height / 2f);
         // Ray ray = Camera.main.ScreenPointToRay(screenCentrePoint);
@@ -37,17 +38,23 @@ public class ThirdPersonShooterController : MonoBehaviour
         // }
         if (player.ammoCount.currentAmmo>0){
             if (starterAssetsInputs.shoot){
-                // Vector3 aimDir = (aimPosition - spawnProjectilePosition.position).normalized;
-                Vector3 aimDir = spawnProjectilePosition.position.normalized;
-                Instantiate(PaintBallProjectile, spawnProjectilePosition.position,spawnProjectilePosition.rotation);// Quaternion.LookRotation(aimDir, Vector3.up));
-                starterAssetsInputs.shoot = false; //* To implement Semi-automatic Shooting.
-                player.UpdateAmmo(player.ammoCount.currentAmmo - 1);
-                
-                string currentAmmoMessage = string.Format("Current Ammmo {0}/{1}",player.ammoCount.currentAmmo,player.ammoCount.totalAmmo);
-                Debug.Log(currentAmmoMessage);
+                Shoot();
             }
         }else{
 
         }
+    }
+
+    void Shoot(){
+        shootFlash.Play();
+        // Vector3 aimDir = (aimPosition - spawnProjectilePosition.position).normalized;
+        Vector3 aimDir = spawnProjectilePosition.position.normalized;
+        Instantiate(PaintBallProjectile, spawnProjectilePosition.position,spawnProjectilePosition.rotation);// Quaternion.LookRotation(aimDir, Vector3.up));
+        starterAssetsInputs.shoot = false; //* To implement Semi-automatic Shooting.
+        player.UpdateAmmo(player.ammoCount.currentAmmo - 1);
+        
+        string currentAmmoMessage = string.Format("Current Ammmo {0}/{1}",player.ammoCount.currentAmmo,player.ammoCount.totalAmmo);
+        Debug.Log(currentAmmoMessage);
+        // shootFlash.Pause();
     }
 }
