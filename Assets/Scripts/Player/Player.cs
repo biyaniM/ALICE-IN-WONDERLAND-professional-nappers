@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement; 
+using TMPro;
 
 public class Player : MonoBehaviour
 {
@@ -23,14 +24,16 @@ public class Player : MonoBehaviour
     public HealthBar healthBar;
     public CoinsScore coinsScore;
     public AmmoCount ammoCount;
-    public Canvas tutorial;
+    private TextMeshProUGUI guidance;
+    private TextMeshProUGUI alert;
     public GameObject finishBoundary;
-
+    public PauseMenu pauseMenu;
     public int numOfKill;
 
 
     void Start()
     {
+        SetComponents();
         SetGoal(RED_GOAL, BLUE_GOAL, YELLOW_GOAL);
         // InitAmmo(80); //! Removinng from Test
         InitHealth(100);
@@ -46,10 +49,25 @@ public class Player : MonoBehaviour
 
     }
 
+    //todo: fix all ui component here  
+    void SetComponents(){
+        guidance = GameObject.Find("Guidance").GetComponent<TextMeshProUGUI>();
+        guidance.enabled = false;
+        alert = GameObject.Find("Alert").GetComponent<TextMeshProUGUI>();
+        alert.enabled = false;
+    }
+
     void Update(){
-        // Debug.Log("Time" + Time.time); //TODO Commenting it out to make other Debug logs readable
-        if(tutorial.enabled && Time.timeSinceLevelLoad >= 5f){
-            tutorial.enabled = false;
+        if(Input.GetKeyDown(KeyCode.P)){
+            if(pauseMenu.GameIsPaused){
+                // resume the game
+                pauseMenu.Resume();
+            }
+            else{
+                // pause the game
+                Debug.Log("Pause the game");
+                pauseMenu.Setup();
+            }
         }
     }
 
@@ -132,5 +150,25 @@ public class Player : MonoBehaviour
     {
         return numOfKill;
     }
+
+    public void ShowGuidance(string msg){
+        guidance.enabled = true;
+        guidance.text = msg;
+    }
+
+    public void CloseGuidance(){
+        guidance.enabled = false;
+    }
+
+    public void ShowAlert(string msg){
+        alert.enabled = true;
+        alert.text = msg;
+    }
+
+    public void CloseAlert(){
+        alert.enabled = false;
+    }
+
+
 
 }

@@ -43,6 +43,10 @@ public class CountDownTimer : MonoBehaviour , IPointerClickHandler
         Pause = true;
     }
 
+    public void resumeTimer(){
+        Pause = false;
+    }
+
     private IEnumerator UpdateTimer()
     {
         while(remainingDuration >= 0)
@@ -68,7 +72,8 @@ public class CountDownTimer : MonoBehaviour , IPointerClickHandler
     private void OnEnd()
     {
         Debug.Log("Game over hud from countown timer!!");
-        gameOverHUD.Setup();
+        string msg = "Run out of time! You Died!";
+        gameOverHUD.Setup(msg);
         //End Time , if want Do something
         print("End");
         

@@ -3,20 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.EventSystems;
-
+using TMPro;
 public class healthUpdate : MonoBehaviour
 {
     [SerializeField] GameOverHUD gameOverHUD;
     [SerializeField] bool gameOverCheck;
     [SerializeField] public CountDownTimer timer;
-
+    private Player player;
     public HealthBar healthBar;
+
     public int maxHealth = 100;
     public int currentHealth = 100;
     // Start is called before the first frame update
     void Start()
     {  
-        gameOverCheck = false;        
+        gameOverCheck = false;       
+        player = GameObject.Find("HUD").GetComponent<Player>();
     }
 
     // Update is called once per frame
@@ -37,7 +39,8 @@ public class healthUpdate : MonoBehaviour
 
     public void runGameOverHud(){
         Debug.Log("Game over hud from health update!!");
-        gameOverHUD.Setup();
+        string msg = "No Health Point left! You Died!";
+        gameOverHUD.Setup(msg);
         gameOverCheck = true;
         // destroy the player
         // Destroy(gameObject);
@@ -50,9 +53,17 @@ public class healthUpdate : MonoBehaviour
             Debug.Log("Enemy bullet destroyed!");
             Debug.Log(col.gameObject);
             currentHealth = currentHealth - 10;
+            string msg = "HP - 10";
+            player.ShowAlert(msg);
             updateHealth(currentHealth);
+            StartCoroutine (waiter());
             return;            
         }
+    }
+
+    IEnumerator waiter(){
+        yield return new WaitForSeconds(1);
+        player.CloseAlert();
     }
 
     public void updateHealth(int health) {
@@ -60,6 +71,8 @@ public class healthUpdate : MonoBehaviour
         healthBar.SetHealth(health);
         Debug.Log("Health set");
     }
+
+
     //     public void OnCollisionEnter(Collision col) {
     //     Debug.Log("Got Hit!!!!");
     //     if(col.gameObject.tag == "enemyBullet") {
