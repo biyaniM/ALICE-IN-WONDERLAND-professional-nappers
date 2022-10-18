@@ -20,7 +20,10 @@ public class Reset : MonoBehaviour
     void Update()
     {
         if((transform.position.y < threshold) && !level_complete_object.levelOverCheck){
-            analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "Died", "NA", "NA", "NA", "Falling Down");
+            string curr_level = SceneManager.GetActiveScene().buildIndex.ToString();
+            if(curr_level != "3" && curr_level != "4"){
+                analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "Died", "NA", "NA", "NA", "Falling Down");
+            }
             gameOverHud.runGameOverHud();
             gameOverHud.timer.pauseTimer();
             level_complete_object.levelOverCheck = !level_complete_object.levelOverCheck;
