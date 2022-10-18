@@ -72,7 +72,7 @@ public class CountDownTimer : MonoBehaviour , IPointerClickHandler
     private void OnEnd()
     {
         Debug.Log("Game over hud from countown timer!!");
-        string msg = "Run out of time! You Died!";
+        string msg = "You Died!";
         gameOverHUD.Setup(msg);
         //End Time , if want Do something
         print("End");

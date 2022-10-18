@@ -54,6 +54,8 @@ public class PauseMenu : MonoBehaviour
 
     void ShowGuideMenu(){
         Debug.Log("show controls menu!");
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("TutorialScene");
     }
 
 

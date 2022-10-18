@@ -24,9 +24,8 @@ public class LevelCompleteScreen: MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         restartBtn.onClick.AddListener(ResetGame);
         mainMenuBtn.onClick.AddListener(BackToMain);
-        if(SceneManager.GetActiveScene().buildIndex != 2){
-            nextLevelBtn.onClick.AddListener(NextLevel);
-        }
+        nextLevelBtn.onClick.AddListener(NextLevel);
+
         Debug.Log("Setup game end ui");
         timer.pauseTimer();
         Debug.Log("paused timer!!!!----------------------");
