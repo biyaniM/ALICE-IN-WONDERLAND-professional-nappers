@@ -7,6 +7,11 @@ public class DeathZone : MonoBehaviour
     [SerializeField] GameOverHUD gameOverHUD;
     [SerializeField] CountDownTimer timer;
     public HealthBar healthBar;
+    SendToGoogle analyticsComponent;
+    void Start()
+    {
+        analyticsComponent = GameObject.Find("HUD").GetComponent<SendToGoogle>();
+    }
     // Start is called before the first frame update
     void OnTriggerEnter(Collider collider){
         if (collider.tag == "Player"){
