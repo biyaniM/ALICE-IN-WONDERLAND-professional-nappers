@@ -21,7 +21,8 @@ public class healthUpdate : MonoBehaviour
     {  
         gameOverCheck = false;       
         player = GameObject.Find("HUD").GetComponent<Player>();
-        analyticsComponent = GetComponent<SendToGoogle>();
+        // analyticsComponent = GetComponent<SendToGoogle>();
+        analyticsComponent = GameObject.Find("HUD").GetComponent<SendToGoogle>();
     }
 
     // Update is called once per frame
