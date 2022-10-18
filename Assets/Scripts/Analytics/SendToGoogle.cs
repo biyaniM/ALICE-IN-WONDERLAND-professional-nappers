@@ -10,7 +10,7 @@ public class SendToGoogle : MonoBehaviour
     // dev level
     [SerializeField] private string URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSf3B08L-3hPyw2etOwwyMn7hOziz6TsQF395ZD9-dtHGqFzrQ/formResponse";
 
-    private IEnumerator Post(string s1, string s2, string s3, string s4, string s5)
+    private IEnumerator Post(string s1, string s2, string s3, string s4, string s5, string s6, string s7)
     {
         WWWForm form = new WWWForm();
         // prod level
@@ -23,6 +23,8 @@ public class SendToGoogle : MonoBehaviour
         form.AddField("entry.63079170", s3);
         form.AddField("entry.652952371", s4);
         form.AddField("entry.1094316276", s5);
+        form.AddField("entry.1432532251", s6);
+        form.AddField("entry.378489738", s7);
 
         using (UnityWebRequest www = UnityWebRequest.Post(URL, form))
         {
@@ -40,9 +42,9 @@ public class SendToGoogle : MonoBehaviour
 
     }
 
-    public void Send(string a, string b, string c, string d, string e)
+    public void Send(string a, string b, string c, string d, string e, string f, string g)
     {
-        StartCoroutine(Post(a, b, c, d, e));
+        StartCoroutine(Post(a, b, c, d, e, f, g));
     }
 
     // Start is called before the first frame update
