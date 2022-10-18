@@ -10,8 +10,10 @@ public class LevelComplete : MonoBehaviour
     int ammoBalance;
     int numKill;
     int timer;
+    int health;
     ThirdPersonShooterController shootingComponent;
     SendToGoogle analyticsComponent;
+    healthUpdate healthComponent;
     [SerializeField] LevelCompleteScreen levelCompleteScreen;
     [SerializeField] CountDownTimer timerComponent;
     
@@ -33,25 +35,28 @@ public class LevelComplete : MonoBehaviour
         shootingComponent = GetComponent<ThirdPersonShooterController>();
         analyticsComponent = GetComponent<SendToGoogle>();
         player = GameObject.Find("HUD").GetComponent<Player>();
-        
+        healthComponent = GetComponent<healthUpdate>();
+
     }
     
 
     public void OnTriggerEnter(Collider col){
-        Debug.Log("collider: "+col.name);
+        // Debug.Log("collider: "+col.name);
         // GameObject finishBoundary = GameObject.Find("FinishBoundary");
         // get ammo balance
         ammoBalance = shootingComponent.currentAmmo;
         numKill = player.GetNumberOfKill();
         timer = timerComponent.remainingDuration+1;
+        health = healthComponent.currentHealth;
         if (levelOverCheck == false){
             if(col.gameObject.tag == "LevelCompleteTag"){
-                Debug.Log("reached level over loc!");
+                Debug.Log("reached level over loc!" + col.gameObject.name);
                 levelOverCheck = true;
                 Debug.Log("Number of Enemy Kill:" + numKill);
                 Debug.Log("Time Left:" + timer);
+                Debug.Log("Health Left:" + health);
                 // capture the analytics
-                analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), ammoBalance.ToString(), "0", timer.ToString(), numKill.ToString());
+                analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), ammoBalance.ToString(), "Completed", timer.ToString(), numKill.ToString(), health.ToString(), "NA");
 
                 //! show the level complete HUD
                 levelCompleteScreen.Setup();

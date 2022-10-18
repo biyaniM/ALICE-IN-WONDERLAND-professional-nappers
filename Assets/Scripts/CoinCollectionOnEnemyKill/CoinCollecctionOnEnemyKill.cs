@@ -38,12 +38,13 @@ public class CoinCollecctionOnEnemyKill : MonoBehaviour
                     redCoins += 1;
                     player.UpdateCoins(redCoins, blueCoins, yellowCoins);
                     Debug.Log("After Red Kill"+redCoins);
+                    SendMsgToHUD("Red");
                 }
                 else if (gameObject.tag=="enemy_yellow"){
                     // Debug.Log("Before Blue Kill"+redCoins);
                     yellowCoins += 1;
                     player.UpdateCoins(redCoins, blueCoins, yellowCoins);
-
+                    SendMsgToHUD("Yellow");
                     
                     // Debug.Log("After Red Kill"+redCoins);
                 }
@@ -51,7 +52,7 @@ public class CoinCollecctionOnEnemyKill : MonoBehaviour
                     // Debug.Log("Before Red Kill"+redCoins);
                     blueCoins += 1;
                     player.UpdateCoins(redCoins, blueCoins, yellowCoins);
-                    
+                    SendMsgToHUD("Blue");
                     // Debug.Log("After Red Kill"+redCoins);
                 }
                 else{
@@ -61,6 +62,16 @@ public class CoinCollecctionOnEnemyKill : MonoBehaviour
         }  
     }
 
+    void SendMsgToHUD(string color){
+        string msg = color + " Coin +1";
+        player.ShowAlert(msg);
+        StartCoroutine (waiter());
+    }
+
+    IEnumerator waiter(){
+        yield return new WaitForSeconds(1);
+        player.CloseAlert();
+    }
     // Update is called once per frame
     void Update()
     {        

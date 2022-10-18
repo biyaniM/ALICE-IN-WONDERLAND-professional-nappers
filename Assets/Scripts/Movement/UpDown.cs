@@ -11,6 +11,9 @@ public class UpDown : MonoBehaviour
     private List<char> movementAxisSelectionOptions = new List<char> {'X','Y','Z','x','y','z'};
     public char movementAxis;
     [SerializeField] private GameObject player;
+    [SerializeField] private int height_x;
+    [SerializeField] private int height_y;
+    [SerializeField] private int height_z;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,16 +33,17 @@ public class UpDown : MonoBehaviour
     void FixedUpdate()
     {
         if (movementAxis == 'Z' || movementAxis == 'z'){
-            float zVal = original + movementMultiplier * Mathf.Sin(Mathf.PingPong(Time.time, 2* Mathf.PI));
+            // float zVal = original + movementMultiplier * Mathf.Sin(Mathf.PingPong(Time.time, 2* Mathf.PI));
+            float zVal = original + (Mathf.PingPong(Time.time * speed, height_z));
             transform.position = new Vector3(transform.position.x, transform.position.y , zVal);
         }
         else if (movementAxis == 'X' || movementAxis == 'x'){
-            float xVal = original + (Mathf.PingPong(Time.time * speed, 18));
+            float xVal = original + (Mathf.PingPong(Time.time * speed, height_x));
             // float xVal = original + movementMultiplier * Mathf.Sin(Mathf.PingPong(Time.time, 2* Mathf.PI));
             // transform.position = new Vector3(xVal, transform.position.y , transform.position.z);
         }
         else{
-            float yVal = original + (Mathf.PingPong(Time.time * speed, 5));
+            float yVal = original + (Mathf.PingPong(Time.time * speed, height_y));
             transform.position = new Vector3(transform.position.x, yVal , transform.position.z);
         }
     }

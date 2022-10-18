@@ -24,9 +24,8 @@ public class LevelCompleteScreen: MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         restartBtn.onClick.AddListener(ResetGame);
         mainMenuBtn.onClick.AddListener(BackToMain);
-        if(SceneManager.GetActiveScene().buildIndex != 2){
-            nextLevelBtn.onClick.AddListener(NextLevel);
-        }
+        nextLevelBtn.onClick.AddListener(NextLevel);
+
         Debug.Log("Setup game end ui");
         timer.pauseTimer();
         Debug.Log("paused timer!!!!----------------------");
@@ -41,8 +40,26 @@ public class LevelCompleteScreen: MonoBehaviour
         curr_level = SceneManager.GetActiveScene().buildIndex;
         Debug.Log("Next Level-------->");
         Debug.Log(curr_level);
-        if(curr_level == 1){
-            SceneManager.LoadScene("Group1_lvl");
+        switch(curr_level){
+            case 1:{
+                nextLevelBtn.enabled = true;
+                SceneManager.LoadScene("S_G_LEVEL_2");
+                break;
+            }
+            case 2:{
+                nextLevelBtn.enabled = true;
+                SceneManager.LoadScene("new_level_3");
+                break;
+            }
+            case 3:{
+                nextLevelBtn.enabled = true;
+                SceneManager.LoadScene("new_level_4");
+                break;
+            }
+            case 4:{
+                nextLevelBtn.enabled = false;
+                break;
+            }
         }
     }
     
