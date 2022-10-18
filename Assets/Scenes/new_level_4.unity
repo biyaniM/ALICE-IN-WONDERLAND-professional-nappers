@@ -717,6 +717,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 227063952170519725, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: Duration
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 227063952170519725, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: gameOverHUD
       value: 
       objectReference: {fileID: 1288594012}
@@ -39174,8 +39178,8 @@ MonoBehaviour:
   PaintBallProjectile: {fileID: 1404114414586556645, guid: 0071948dbcd87214e848d8da0478cfe5, type: 3}
   spawnProjectilePosition: {fileID: 1804486258}
   player: {fileID: 1320465628}
-  maxAmmo: 20
-  currentAmmo: 20
+  maxAmmo: 30
+  currentAmmo: 30
   shootFlash: {fileID: 1463732911}
 --- !u!136 &546285937
 CapsuleCollider:
