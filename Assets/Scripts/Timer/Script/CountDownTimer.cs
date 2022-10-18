@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 //source: https://www.youtube.com/watch?v=2gPHkaPGbpI
 //clickalbe to pause
@@ -20,6 +21,7 @@ public class CountDownTimer : MonoBehaviour , IPointerClickHandler
     [SerializeField] private Text uiText;
 
     public int Duration;
+    SendToGoogle analyticsComponent;
 
     public int remainingDuration;
     
@@ -31,6 +33,7 @@ public class CountDownTimer : MonoBehaviour , IPointerClickHandler
     {
         Begin(Duration);
         show_time_over_hud_flag = false;
+        analyticsComponent = GameObject.Find("HUD").GetComponent<SendToGoogle>();
     }
 
     private void Begin(int Second)
@@ -72,6 +75,7 @@ public class CountDownTimer : MonoBehaviour , IPointerClickHandler
     private void OnEnd()
     {
         Debug.Log("Game over hud from countown timer!!");
+        analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "Died", "NA", "NA", "NA", "Time Over");
         string msg = "You Died!";
         gameOverHUD.Setup(msg);
         //End Time , if want Do something

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.EventSystems;
 using TMPro;
+using UnityEngine.SceneManagement;
 public class healthUpdate : MonoBehaviour
 {
     [SerializeField] GameOverHUD gameOverHUD;
@@ -11,6 +12,7 @@ public class healthUpdate : MonoBehaviour
     [SerializeField] public CountDownTimer timer;
     private Player player;
     public HealthBar healthBar;
+    SendToGoogle analyticsComponent;
 
     public int maxHealth = 100;
     public int currentHealth = 100;
@@ -19,6 +21,8 @@ public class healthUpdate : MonoBehaviour
     {  
         gameOverCheck = false;       
         player = GameObject.Find("HUD").GetComponent<Player>();
+        // analyticsComponent = GetComponent<SendToGoogle>();
+        analyticsComponent = GameObject.Find("HUD").GetComponent<SendToGoogle>();
     }
 
     // Update is called once per frame
@@ -30,6 +34,7 @@ public class healthUpdate : MonoBehaviour
             // gameOverHUD.Setup();
             gameObject.SetActiveRecursively(false);
             if(gameOverCheck == false){
+                analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "Died", "NA", "NA", "NA", "Health Over");
                 runGameOverHud();
                 // stop timer
                 timer.pauseTimer();

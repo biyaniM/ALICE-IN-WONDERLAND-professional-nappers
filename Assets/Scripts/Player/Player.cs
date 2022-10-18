@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
         
 
         SendToGoogle analyticsComponent = GetComponent<SendToGoogle>();
-        analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "1", "NA", "NA");
+        analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "Started", "NA", "NA", "NA", "NA");
 
     }
 
