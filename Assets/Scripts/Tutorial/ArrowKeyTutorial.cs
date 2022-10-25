@@ -7,16 +7,18 @@ public class ArrowKeyTutorial : MonoBehaviour
     private bool instructionComplete;
     [SerializeField] private string tutorialKind;
     private string tutorialMessage;
+    private Player hud;
     // Start is called before the first frame update
     void Start()
     {
-
+        hud = GameObject.Find("HUD").GetComponent<Player>();
     }
 
     // Update is called once per frame
     void SendTutorialMessage()
     {
         if (!instructionComplete){
+            hud.ShowGuidance(tutorialMessage);
             Debug.Log(tutorialMessage,gameObject);
         }
     }
@@ -26,14 +28,14 @@ public class ArrowKeyTutorial : MonoBehaviour
             case "movement":
                 if (col.tag=="Player" && !instructionComplete){
                     instructionComplete = false;
-                    tutorialMessage = "Use arrow keys / Left Joystick to move";
+                    tutorialMessage = "Use arrow keys to move";
                 }
                 break;
 
             case "jump":
                 if (col.tag=="Player" && !instructionComplete){
                     instructionComplete = false;
-                    tutorialMessage = "Use Spacebar / Left Trigger to jump";
+                    tutorialMessage = "Use Spacebar to jump";
                 }
                 break;
 
@@ -53,7 +55,7 @@ public class ArrowKeyTutorial : MonoBehaviour
             case "enemy close":
                 if (col.tag=="Player" && !instructionComplete){
                     instructionComplete = false;
-                    tutorialMessage = "Yellow enemy can shoot you in the yellow circle range!";
+                    tutorialMessage = "Yellow enemy can shoot you!\nKill it to get coins!";
                 }
                 break;
             case "shoot enemy":
@@ -65,7 +67,7 @@ public class ArrowKeyTutorial : MonoBehaviour
             case "enemy cant shoot":
                 if (col.tag=="Player" && !instructionComplete){
                     instructionComplete = false;
-                    tutorialMessage = "Enemy cant shoot you if it can't see you";
+                    tutorialMessage = "Enemy can't shoot you if it can't see you";
                 }
                 break;
             case "sprint":
@@ -77,13 +79,19 @@ public class ArrowKeyTutorial : MonoBehaviour
             case "enough coins":
                 if (col.tag=="Player" && !instructionComplete){
                     instructionComplete = false;
-                    tutorialMessage = "Do you have enough points to complete the level?";
+                    tutorialMessage = "Collect enough coins!";
                 }
                 break;
             case "level finish":
                 if (col.tag=="Player" && !instructionComplete){
                     instructionComplete = false;
-                    tutorialMessage = "Pass through the arch to finish the level";
+                    tutorialMessage = "Pass through the arch!\nDo you enough coins?";
+                }
+                break;
+            case "enemy give point":
+                if (col.tag=="Player" && !instructionComplete){
+                    instructionComplete = false;
+                    tutorialMessage = "Killing enemies gives you coins!";
                 }
                 break;
         }
@@ -93,6 +101,8 @@ public class ArrowKeyTutorial : MonoBehaviour
     void OnTriggerExit(Collider col){
         if (col.tag=="Player" && !instructionComplete){
             instructionComplete = true;
+            Debug.Log(tutorialKind+" completed");
+            hud.CloseGuidance();
         }
     }
 }

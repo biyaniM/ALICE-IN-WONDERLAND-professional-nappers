@@ -6,15 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public Button QuitButton;
+    private Button GuideBtn;
 
     void Start(){
-        QuitButton.onClick.AddListener(Quit);
+        GuideBtn = GameObject.Find("Guide").GetComponent<Button>();
+        GuideBtn.onClick.AddListener(ShowGuideScene);
     }
 
 
-    void Quit(){
-        Debug.Log("Quit the game!");
-        Application.Quit();
+    void ShowGuideScene(){
+        SceneManager.LoadScene("TutorialScene");
     }
 }

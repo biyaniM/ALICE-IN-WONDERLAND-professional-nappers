@@ -8,8 +8,8 @@ public class CollectCoins : MonoBehaviour
     public int redCoins; 
     public int blueCoins;
     public int yellowCoins;
-    private int coinPointIncreaseOnCollection = 2;
-    public int coinPointIncreaseOnEnemy = 2;
+    private int coinPointIncreaseOnCollection = 1;
+    public int coinPointIncreaseOnEnemy = 1;
     public bool isTriggered = false;
 
 
@@ -19,41 +19,53 @@ public class CollectCoins : MonoBehaviour
             
     }
 
-
     public void OnTriggerEnter(Collider col){
         redCoins = player.GetRedCoinsScore();
         blueCoins = player.GetBlueCoinsScore();
         yellowCoins = player.GetYellowCoinsScore();
         // Debug.Log("Collect!" + redCoins + blueCoins + yellowCoins);
         if(col.gameObject.tag == "RedCoin"){
-            Debug.Log("Coin Collected!"); //TODO Add Collection Sound
+            Debug.Log("red Coin Collected!"); //TODO Add Collection Sound
             redCoins += coinPointIncreaseOnCollection;
             player.UpdateCoins(redCoins, blueCoins, yellowCoins);
             col.gameObject.SetActive(false);
+            SendMsgToHUD("Red");
             
         }
         else if(col.gameObject.tag == "BlueCoin"){
-            Debug.Log("Coin Collected!");
+            Debug.Log("blue Coin Collected!");
             blueCoins += coinPointIncreaseOnCollection;
             player.UpdateCoins(redCoins, blueCoins, yellowCoins);
             col.gameObject.SetActive(false);
-            
+            SendMsgToHUD("Blue");
         }
         else if(col.gameObject.tag == "YellowCoin"){
-            Debug.Log("Coin Collected!");
+            Debug.Log("yellow Coin Collected!");
             yellowCoins += coinPointIncreaseOnCollection;
             player.UpdateCoins(redCoins, blueCoins, yellowCoins);
             col.gameObject.SetActive(false);
+            SendMsgToHUD("Yellow");
             
         }
         else if(col.gameObject.tag == "BlueTutorialCoin"){
             Debug.Log("Coin Collected! Collect more color coins to finish the level!");
             blueCoins += coinPointIncreaseOnCollection;
             player.UpdateCoins(redCoins, blueCoins, yellowCoins);
-            col.gameObject.SetActive(false);
-            
+            col.gameObject.SetActive(false);  
+            SendMsgToHUD("Blue");
         }
 
+    }
+
+    void SendMsgToHUD(string color){
+        string msg = color + " Coin +1";
+        player.ShowAlert(msg);
+        StartCoroutine (waiter());
+    }
+
+    IEnumerator waiter(){
+        yield return new WaitForSeconds(1);
+        player.CloseAlert();
     }
 
     // Update is called once per frame

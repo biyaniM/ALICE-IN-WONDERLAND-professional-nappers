@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement; 
+using TMPro;
 
 public class Player : MonoBehaviour
 {
@@ -23,44 +24,52 @@ public class Player : MonoBehaviour
     public HealthBar healthBar;
     public CoinsScore coinsScore;
     public AmmoCount ammoCount;
-    public Canvas tutorial;
-    //public GameObject finishBoundary;
-    public GameObject finishBoundaryRed;
-    public GameObject finishBoundaryBlue;
-    public GameObject finishBoundaryYellow;
-
+    private TextMeshProUGUI guidance;
+    private TextMeshProUGUI alert;
+    public GameObject finishBoundary;
+    public PauseMenu pauseMenu;
     public int numOfKill;
 
 
     void Start()
     {
+        SetComponents();
         SetGoal(RED_GOAL, BLUE_GOAL, YELLOW_GOAL);
         // InitAmmo(80); //! Removinng from Test
         InitHealth(100);
         InitializeHUD();
+
         // endboundary collider 
-        if(LEVEL_SELECT == 1){
-            setFinishBoundary(true, "RedFinishBoundary", finishBoundaryRed);            
-            setFinishBoundary(true, "BlueFinishBoundary", finishBoundaryBlue);            
-            setFinishBoundary(true, "YellowFinishBoundary", finishBoundaryYellow);            
-        }else{
-            setFinishBoundary(true, "FinishBoundary", finishBoundaryRed);
-        }
+        Debug.Log("setting finish boundary something!!!");
+        setFinishBoundary(true, "FinishBoundary", finishBoundary);
         
 
         SendToGoogle analyticsComponent = GetComponent<SendToGoogle>();
-        analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "1", "NA", "NA");
+        analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "Started", "NA", "NA", "NA", "NA");
 
+    }
+
+    //todo: fix all ui component here  
+    void SetComponents(){
+        guidance = GameObject.Find("Guidance").GetComponent<TextMeshProUGUI>();
+        guidance.enabled = false;
+        alert = GameObject.Find("Alert").GetComponent<TextMeshProUGUI>();
+        alert.enabled = false;
     }
 
     void Update(){
-        // Debug.Log("Time" + Time.time); //TODO Commenting it out to make other Debug logs readable
-        if(tutorial.enabled && Time.timeSinceLevelLoad >= 5f){
-            tutorial.enabled = false;
+        if(Input.GetKeyDown(KeyCode.P)){
+            if(pauseMenu.GameIsPaused){
+                // resume the game
+                pauseMenu.Resume();
+            }
+            else{
+                // pause the game
+                Debug.Log("Pause the game");
+                pauseMenu.Setup();
+            }
         }
     }
-
-
 
     public void UpdateHealth(int health){
         healthPoint = health;
@@ -108,29 +117,14 @@ public class Player : MonoBehaviour
 
     //check if the player has collected enough colors
     public void CheckGoal(int red, int blue, int yellow){
-        if(LEVEL_SELECT == 1){
-            if(red >= RED_GOAL && blue >= BLUE_GOAL && yellow>= YELLOW_GOAL){
-                finishBoundaryRed.GetComponent<BoxCollider>().enabled = false;
-                finishBoundaryBlue.GetComponent<BoxCollider>().enabled = false;
-                finishBoundaryYellow.GetComponent<BoxCollider>().enabled = false;
-            }
-        }else{
-            if(red >= RED_GOAL && blue >= BLUE_GOAL && yellow>= YELLOW_GOAL){
-                finishBoundaryRed.GetComponent<BoxCollider>().enabled = false;
-               // finishBoundary = GameObject.Find("FinishBoundary");
-                //finishBoundary.GetComponent<BoxCollider>().enabled = false;
-            // finishBoundary.enabled = false;
-            // Destroy(finishBoundary);
-            //end game display ui
+        if(red >= RED_GOAL && blue >= BLUE_GOAL && yellow >= YELLOW_GOAL){
+                // finishBoundary.GetComponent<BoxCollider>().enabled = false;
+                setFinishBoundary(false, "FinishBoundary", finishBoundary);
         }
-        }
+
 
     }
 
-    // public void setFinishBoundary(bool param){
-    //     finishBoundary = GameObject.Find("FinishBoundary");
-    //     finishBoundary.GetComponent<BoxCollider>().enabled = param;
-    // }
     public void setFinishBoundary(bool param, string finish, GameObject finishBoundary){
         finishBoundary = GameObject.Find(finish);
         finishBoundary.GetComponent<BoxCollider>().enabled = param;
@@ -156,5 +150,25 @@ public class Player : MonoBehaviour
     {
         return numOfKill;
     }
+
+    public void ShowGuidance(string msg){
+        guidance.enabled = true;
+        guidance.text = msg;
+    }
+
+    public void CloseGuidance(){
+        guidance.enabled = false;
+    }
+
+    public void ShowAlert(string msg){
+        alert.enabled = true;
+        alert.text = msg;
+    }
+
+    public void CloseAlert(){
+        alert.enabled = false;
+    }
+
+
 
 }
