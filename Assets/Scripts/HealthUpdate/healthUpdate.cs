@@ -36,7 +36,7 @@ public class healthUpdate : MonoBehaviour
     void Update()
     {  
         if(currentHealth <= 0) {
-            if(numberOfTimesSpawned <= 2) {
+            if(numberOfTimesSpawned <= 100) {
                 Debug.Log("Respawning from health <= 0");
                 Debug.Log(playerArmature.transform.position);
                 respawn();

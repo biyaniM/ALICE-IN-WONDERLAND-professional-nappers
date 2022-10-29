@@ -25,7 +25,7 @@ public class Reset : MonoBehaviour
                 analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "Died", "NA", "NA", "NA", "Falling Down");
             }
             int numberOfTimesSpawned = gameOverHud.getNumberOfTimesSpawned();
-            if(numberOfTimesSpawned <= 2) {
+            if(numberOfTimesSpawned <= 100) {
                 gameOverHud.updateHealth(0, 1);
             }
             else {
