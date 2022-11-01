@@ -24,9 +24,15 @@ public class Reset : MonoBehaviour
             if(curr_level != "3" && curr_level != "4"){
                 analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "Died", "NA", "NA", "NA", "Falling Down");
             }
-            gameOverHud.runGameOverHud();
-            gameOverHud.timer.pauseTimer();
-            level_complete_object.levelOverCheck = !level_complete_object.levelOverCheck;
+            int numberOfTimesSpawned = gameOverHud.getNumberOfTimesSpawned();
+            if(numberOfTimesSpawned <= 100) {
+                gameOverHud.updateHealth(0, 1);
+            }
+            else {
+                gameOverHud.runGameOverHud();
+                gameOverHud.timer.pauseTimer();
+                level_complete_object.levelOverCheck = !level_complete_object.levelOverCheck;
+            }
             // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }    
     }
