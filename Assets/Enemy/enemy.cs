@@ -45,6 +45,7 @@ public class enemy : MonoBehaviour
 
         fireRateDelta -= fireRateConstant * Time.deltaTime;
 
+        // if(fireRateDelta <= 0 && distance < turretShootRange)
         if(fireRateDelta <= 0 && distance < turretShootRange)
         {  
             if (Physics.Raycast(transform.position,playerDirection,out hit, turretRaycastRange)){
