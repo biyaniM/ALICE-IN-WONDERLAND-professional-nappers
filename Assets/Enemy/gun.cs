@@ -6,7 +6,7 @@ public class gun : MonoBehaviour
 {
     [SerializeField] GameObject projectile;
     [SerializeField] float rateOfFire = 15f;
-    [SerializeField] public Transform gunPoint;    
+    [SerializeField] Transform gunPoint;    
 
     private void Start()
     {
