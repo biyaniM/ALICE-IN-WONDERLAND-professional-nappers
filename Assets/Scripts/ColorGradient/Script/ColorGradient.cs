@@ -14,23 +14,18 @@ public class ColorGradient : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //_postProcessVolume = GetComponent<PostProcessVolume>();
-        _postProcessVolume.profile.TryGetSettings(out _colorGrading);
-        _colorGrading.active = true;
+        _colorGrading = ScriptableObject.CreateInstance<ColorGrading>();
+        _colorGrading.enabled.Override(true);
+        _colorGrading.saturation.Override(-100f);
 
-        _colorGrading.saturation.value = -100;
+        _postProcessVolume = PostProcessManager.instance.QuickVolume(gameObject.layer, 100f, _colorGrading);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        /* if(_colorGrading.saturation.value < 0){
-            _colorGrading.saturation.value += player.GetSaturationIncreaseFactor();
-
-            if(_colorGrading.tone.saturation.value > 0){
-                _colorGrading.saturation.value = 0;
-            }
-        } */
+        _colorGrading.saturation.value = player.GetSaturation();
 
     }
 }

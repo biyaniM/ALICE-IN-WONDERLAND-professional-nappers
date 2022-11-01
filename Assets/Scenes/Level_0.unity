@@ -8274,6 +8274,7 @@ GameObject:
   - component: {fileID: 1073856786}
   - component: {fileID: 1073856785}
   - component: {fileID: 1073856784}
+  - component: {fileID: 1073856787}
   m_Layer: 7
   m_Name: PostProcessingGameObject
   m_TagString: Untagged
@@ -8288,7 +8289,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1073856783}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ffba569ad0b12442989e655a1b621664, type: 3}
   m_Name: 
@@ -8297,8 +8298,6 @@ MonoBehaviour:
   BLUE_GOAL: 2
   YELLOW_GOAL: 2
   LEVEL_SELECT: 0
-  TOTAL_GOAL: 0
-  SATURATION_INCREASE_FACTOR: 0
   healthBar: {fileID: 1846509878}
   coinsScore: {fileID: 1223216510}
   ammoCount: {fileID: 387499113}
@@ -8312,7 +8311,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1073856783}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
@@ -8337,6 +8336,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1073856787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073856783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b1bff2d7e1cb4baa9adc578f1fc817c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1320465628}
 --- !u!43 &1097784100
 Mesh:
   m_ObjectHideFlags: 0
