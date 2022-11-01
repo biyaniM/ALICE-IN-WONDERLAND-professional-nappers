@@ -136,76 +136,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 227063952170519725, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
-      propertyPath: Duration
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 227063952170519725, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: gameOverHUD
       value: 
       objectReference: {fileID: 1288594012}
-    - target: {fileID: 2345654916992141415, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
-      propertyPath: pasueMenu
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4452270970643524159, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
-      propertyPath: RED_GOAL
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4452270970643524159, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
-      propertyPath: BLUE_GOAL
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4452270970643524159, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
-      propertyPath: PauseMenu
-      value: 
-      objectReference: {fileID: 1298020003}
     - target: {fileID: 4452270970643524159, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 5525176327689345041}
     - target: {fileID: 4452270970643524159, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
-      propertyPath: YELLOW_GOAL
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4452270970643524159, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: finishBoundary
       value: 
       objectReference: {fileID: 113731221}
-    - target: {fileID: 4452270970643524159, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
-      propertyPath: finishBoundaryRed
-      value: 
-      objectReference: {fileID: 113731221}
-    - target: {fileID: 4452270970643524159, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
-      propertyPath: finishBoundaryBlue
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4452270970643524159, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
-      propertyPath: finishBoundaryYellow
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5384936018074865784, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.6203613
-      objectReference: {fileID: 0}
-    - target: {fileID: 5384936018097057363, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
-      propertyPath: yellowGoal
-      value: 
-      objectReference: {fileID: 2022651485}
-    - target: {fileID: 5384936019333487589, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5384936019333487589, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5384936019506417936, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: m_Name
       value: HUD
-      objectReference: {fileID: 0}
-    - target: {fileID: 5384936019506417936, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5384936019506417940, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: m_Pivot.x
@@ -291,52 +235,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5635669036177942201, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 7.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5798420512532989753, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5987440376336734069, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
-      propertyPath: m_fontSize
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 5987440376336734069, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
-      propertyPath: m_fontColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5987440376336734069, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
-      propertyPath: m_fontColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5987440376336734069, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
-      propertyPath: m_fontColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5987440376336734069, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 5987440376336734069, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 8096477942832710718, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9182037895232824027, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
-      propertyPath: PauseMenu
-      value: 
-      objectReference: {fileID: 1298020003}
-    - target: {fileID: 9182037895232824027, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
-      propertyPath: pause_btn
-      value: 
-      objectReference: {fileID: 1110478912}
-    m_RemovedComponents:
-    - {fileID: 1400495364240628904, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
 --- !u!114 &34778280 stripped
 MonoBehaviour:
@@ -8418,17 +8317,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!114 &1110478912 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3304764272585025823, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
-  m_PrefabInstance: {fileID: 34778279}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1132888085
 GameObject:
   m_ObjectHideFlags: 0
@@ -8580,7 +8468,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh84908
+  m_Name: pb_Mesh130386
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9819,11 +9707,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07817b31b226441bd9749445bb14a043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!223 &1298020003 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 7981588150214230936, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
-  m_PrefabInstance: {fileID: 5525176327689345040}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1298989156
 GameObject:
   m_ObjectHideFlags: 0
@@ -22925,6 +22808,7 @@ MonoBehaviour:
   gameOverCheck: 0
   timer: {fileID: 34778280}
   healthBar: {fileID: 1846509878}
+  playerArmature: {fileID: 24084660}
   maxHealth: 100
   currentHealth: 100
 --- !u!114 &1762682290
@@ -25134,17 +25018,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!114 &2022651485 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 859788690119820553, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
-  m_PrefabInstance: {fileID: 34778279}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2026716193
 GameObject:
   m_ObjectHideFlags: 0
@@ -35440,6 +35313,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2602209332956484558, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5143654945263413072, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
       propertyPath: m_Color.a
       value: 0.59607846
