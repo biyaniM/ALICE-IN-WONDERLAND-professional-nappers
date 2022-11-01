@@ -28,7 +28,7 @@ public class healthUpdate : MonoBehaviour
         player = GameObject.Find("HUD").GetComponent<Player>();
         // analyticsComponent = GetComponent<SendToGoogle>();
         analyticsComponent = GameObject.Find("HUD").GetComponent<SendToGoogle>();
-        respawnPoint = player.transform.position; 
+        respawnPoint = playerArmature.transform.position; 
         numberOfTimesSpawned = 1;
     }
 
