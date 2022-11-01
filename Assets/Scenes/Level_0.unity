@@ -5102,10 +5102,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 2
   player: {fileID: 24084660}
   distance: 0
 --- !u!65 &681441281
@@ -7718,10 +7719,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 8
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 2
   player: {fileID: 24084660}
   distance: 0
 --- !u!65 &1012130565
@@ -23538,10 +23540,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 2
   player: {fileID: 24084660}
   distance: 0
 --- !u!65 &1803874828
