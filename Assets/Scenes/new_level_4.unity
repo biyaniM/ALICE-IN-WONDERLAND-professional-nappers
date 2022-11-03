@@ -1680,6 +1680,10 @@ MonoBehaviour:
   gameOverHUD: {fileID: 1288594012}
   timer: {fileID: 34778280}
   healthBar: {fileID: 1849744726}
+  instaKill: 0
+  healthDecrement: 10
+  healthDecrementTimeInterval: 2
+  speedDivisionFactor: 1.5
 --- !u!64 &81027670
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3592,10 +3596,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
   player: {fileID: 546285931}
   distance: 0
 --- !u!65 &117441689
@@ -3678,6 +3683,10 @@ MonoBehaviour:
   gameOverHUD: {fileID: 1288594012}
   timer: {fileID: 34778280}
   healthBar: {fileID: 1849744726}
+  instaKill: 0
+  healthDecrement: 10
+  healthDecrementTimeInterval: 2
+  speedDivisionFactor: 1.5
 --- !u!64 &120423206
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5292,6 +5301,10 @@ MonoBehaviour:
   gameOverHUD: {fileID: 1288594012}
   timer: {fileID: 34778280}
   healthBar: {fileID: 1849744726}
+  instaKill: 0
+  healthDecrement: 10
+  healthDecrementTimeInterval: 2
+  speedDivisionFactor: 1.5
 --- !u!64 &190696604
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6040,10 +6053,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
   player: {fileID: 546285931}
   distance: 0
 --- !u!65 &215195759
@@ -23731,10 +23745,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
   player: {fileID: 546285931}
   distance: 0
 --- !u!65 &386678186
@@ -29772,6 +29787,10 @@ MonoBehaviour:
   gameOverHUD: {fileID: 1288594012}
   timer: {fileID: 34778280}
   healthBar: {fileID: 1849744726}
+  instaKill: 0
+  healthDecrement: 10
+  healthDecrementTimeInterval: 2
+  speedDivisionFactor: 1.5
 --- !u!64 &439724591
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -37107,10 +37126,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
   player: {fileID: 546285931}
   distance: 0
 --- !u!65 &519731955
@@ -38727,6 +38747,10 @@ MonoBehaviour:
   gameOverHUD: {fileID: 1288594012}
   timer: {fileID: 34778280}
   healthBar: {fileID: 1849744726}
+  instaKill: 0
+  healthDecrement: 10
+  healthDecrementTimeInterval: 2
+  speedDivisionFactor: 1.5
 --- !u!64 &597321670
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -39598,6 +39622,10 @@ MonoBehaviour:
   gameOverHUD: {fileID: 1288594012}
   timer: {fileID: 34778280}
   healthBar: {fileID: 1849744726}
+  instaKill: 0
+  healthDecrement: 10
+  healthDecrementTimeInterval: 2
+  speedDivisionFactor: 1.5
 --- !u!64 &675978063
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -40946,6 +40974,10 @@ MonoBehaviour:
   gameOverHUD: {fileID: 1288594012}
   timer: {fileID: 34778280}
   healthBar: {fileID: 1849744726}
+  instaKill: 0
+  healthDecrement: 10
+  healthDecrementTimeInterval: 2
+  speedDivisionFactor: 1.5
 --- !u!64 &705510114
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -43559,10 +43591,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
   player: {fileID: 546285931}
   distance: 0
 --- !u!65 &826452402
@@ -47467,6 +47500,10 @@ MonoBehaviour:
   gameOverHUD: {fileID: 1288594012}
   timer: {fileID: 34778280}
   healthBar: {fileID: 1849744726}
+  instaKill: 0
+  healthDecrement: 10
+  healthDecrementTimeInterval: 2
+  speedDivisionFactor: 1.5
 --- !u!64 &1114867126
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -49992,10 +50029,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 50
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 10
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
   player: {fileID: 546285931}
   distance: 0
 --- !u!65 &1181819295
@@ -52646,6 +52684,10 @@ MonoBehaviour:
   gameOverHUD: {fileID: 1288594012}
   timer: {fileID: 34778280}
   healthBar: {fileID: 1849744726}
+  instaKill: 1
+  healthDecrement: 10
+  healthDecrementTimeInterval: 2
+  speedDivisionFactor: 1.5
 --- !u!64 &1226784306
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59548,10 +59590,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
   player: {fileID: 546285931}
   distance: 0
 --- !u!65 &1299078882
@@ -59773,10 +59816,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
   player: {fileID: 546285931}
   distance: 0
 --- !u!65 &1322059598
@@ -60669,10 +60713,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
   player: {fileID: 546285931}
   distance: 0
 --- !u!65 &1332165860
@@ -71080,10 +71125,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 50
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 10
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
   player: {fileID: 546285931}
   distance: 0
 --- !u!65 &1468324389
@@ -71856,6 +71902,10 @@ MonoBehaviour:
   gameOverHUD: {fileID: 1288594012}
   timer: {fileID: 34778280}
   healthBar: {fileID: 1849744726}
+  instaKill: 0
+  healthDecrement: 10
+  healthDecrementTimeInterval: 2
+  speedDivisionFactor: 1.5
 --- !u!64 &1546859959
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73122,10 +73172,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
   player: {fileID: 546285931}
   distance: 0
 --- !u!65 &1573199939
@@ -73238,10 +73289,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
   player: {fileID: 546285931}
   distance: 0
 --- !u!65 &1587954505
@@ -74343,10 +74395,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
   player: {fileID: 546285931}
   distance: 0
 --- !u!65 &1691750624
@@ -75901,10 +75954,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
   player: {fileID: 546285931}
   distance: 0
 --- !u!65 &1800125433
@@ -84656,7 +84710,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh177498
+  m_Name: pb_Mesh79042
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -90866,6 +90920,10 @@ MonoBehaviour:
   gameOverHUD: {fileID: 1288594012}
   timer: {fileID: 34778280}
   healthBar: {fileID: 1849744726}
+  instaKill: 0
+  healthDecrement: 10
+  healthDecrementTimeInterval: 2
+  speedDivisionFactor: 1.5
 --- !u!64 &2001893072
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -101009,6 +101067,10 @@ MonoBehaviour:
   gameOverHUD: {fileID: 1288594012}
   timer: {fileID: 34778280}
   healthBar: {fileID: 1849744726}
+  instaKill: 0
+  healthDecrement: 10
+  healthDecrementTimeInterval: 2
+  speedDivisionFactor: 1.5
 --- !u!64 &2136936467
 MeshCollider:
   m_ObjectHideFlags: 0
