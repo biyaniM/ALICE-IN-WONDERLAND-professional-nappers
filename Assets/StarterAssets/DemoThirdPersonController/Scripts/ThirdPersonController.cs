@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
+using UnityEngine.Assertions;
 #endif
 
 /* Note: animations are called via the controller for both the character and capsule using animator null checks
@@ -144,12 +145,16 @@ namespace StarterAssets
 #else
 			Debug.LogError( "Starter Assets package is missing dependencies. Please use Tools/Starter Assets/Reinstall Dependencies to fix it");
 #endif
-
+            AssertSprintAndMoveSpeedEqual();
             AssignAnimationIDs();
 
             // reset our timeouts on start
             _jumpTimeoutDelta = JumpTimeout;
             _fallTimeoutDelta = FallTimeout;
+        }
+
+        private void AssertSprintAndMoveSpeedEqual(){
+            Assert.AreEqual(MoveSpeed,SprintSpeed, "Sprint Speed and Walk Speed must be same!");
         }
 
         private void Update()
