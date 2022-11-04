@@ -32,15 +32,15 @@ public class MovePingPong : MonoBehaviour
     void FixedUpdate()
     {
         if (movementAxis == 'Z' || movementAxis == 'z'){
-            float zVal = original + movementMultiplier * Mathf.Sin(Mathf.PingPong(Time.time, 2* Mathf.PI));
+            float zVal = original + movementMultiplier * Mathf.Cos(Mathf.PingPong(Time.time, 2* Mathf.PI));
             transform.position = new Vector3(transform.position.x, transform.position.y , zVal);
         }
         else if (movementAxis == 'X' || movementAxis == 'x'){
-            float xVal = original + movementMultiplier * Mathf.Sin(Mathf.PingPong(Time.time, 2* Mathf.PI));
+            float xVal = original + movementMultiplier * Mathf.Cos(Mathf.PingPong(Time.time, 2* Mathf.PI));
             transform.position = new Vector3(xVal, transform.position.y , transform.position.z);
         }
         else{
-            float yVal = original + movementMultiplier * Mathf.Sin(Mathf.PingPong(Time.time, 2* Mathf.PI));
+            float yVal = original + movementMultiplier * Mathf.Cos(Mathf.PingPong(Time.time, 2* Mathf.PI));
             transform.position = new Vector3(transform.position.x, yVal , transform.position.z);
         }
     }
