@@ -35,6 +35,10 @@ public class healthUpdate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {  
+        HealthCheck();
+    }
+
+    public void HealthCheck(){
         if(currentHealth <= 0) {
             if(numberOfTimesSpawned <= 100) {
                 Debug.Log("Respawning from health <= 0");
@@ -102,12 +106,12 @@ public class healthUpdate : MonoBehaviour
     }
 
     public void updateHealth(int health, int fall = 0) {
-        Debug.Log("Set health Called");
-        Debug.Log(health);
+        // Debug.Log("Set health Called");
+        // Debug.Log(health);
         healthBar.SetHealth(health);
          if(health == 0 && fall == 1) {
-            Debug.Log("Respawning because of falling down!");
-            Debug.Log(playerArmature.transform.position);
+            // Debug.Log("Respawning because of falling down!");
+            // Debug.Log(playerArmature.transform.position);
             respawn();
          }
         Debug.Log("Health set");
