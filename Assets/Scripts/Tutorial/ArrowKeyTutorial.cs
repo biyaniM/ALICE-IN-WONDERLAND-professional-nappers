@@ -73,7 +73,7 @@ public class ArrowKeyTutorial : MonoBehaviour
             case "sprint":
                 if (col.tag=="Player" && !instructionComplete){
                     instructionComplete = false;
-                    tutorialMessage = "Press Left Shift to Sprint";
+                    tutorialMessage = "Move fast to avoid enemy shots";
                 }
                 break;
             case "enough coins":
