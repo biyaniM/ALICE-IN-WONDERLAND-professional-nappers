@@ -1,3 +1,4 @@
+//! Redundant Code. To be removed.
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,7 +15,7 @@ public class ammo_increment_mb : MonoBehaviour
     }
     private void updateAmmo(int ammo)
     {
-        totalAmmo.changeAmmoCount(ammo);
+        totalAmmo.increaseAmmoCount(ammo);
     }
     public void OnCollisionEnter(Collision col){
         if(col.gameObject.tag == "playerBullet"){
