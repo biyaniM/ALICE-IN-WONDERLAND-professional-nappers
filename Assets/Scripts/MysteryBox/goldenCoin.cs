@@ -2,21 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyBox : MonoBehaviour
+public class goldenCoin : MonoBehaviour
 {
-    public healthUpdate healthUpdate; 
     [SerializeField] private int boxDestroy = 3;
+    public CollectCoins goldCoin;
+    
+    // Start is called before the first frame update
+
     // Start is called before the first frame update
     void Start()
     {
         
     }
-    private void updateHealth(int health){
-        healthUpdate.changeCurrentHealth(health);
+    public void allCoinCollection()
+    {
+        goldCoin.updateGoldenCoin();
     }
-    
-    
-
     public void OnCollisionEnter(Collision col){
         if(col.gameObject.tag == "playerBullet"){
             Destroy(col.gameObject);
@@ -24,12 +25,17 @@ public class DestroyBox : MonoBehaviour
             if(boxDestroy <= 0){
                 Destroy(this.gameObject);
             }
-            
+            if(boxDestroy==0)
+            {
+                allCoinCollection();
+            }
         }
-        if(boxDestroy == 0){
-            updateHealth(10);
-        }
-        return;
     }
     
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }

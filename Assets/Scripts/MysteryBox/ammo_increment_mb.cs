@@ -2,21 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyBox : MonoBehaviour
+public class ammo_increment_mb : MonoBehaviour
 {
-    public healthUpdate healthUpdate; 
     [SerializeField] private int boxDestroy = 3;
+    public AmmoCount totalAmmo;
     // Start is called before the first frame update
+
     void Start()
     {
         
     }
-    private void updateHealth(int health){
-        healthUpdate.changeCurrentHealth(health);
+    private void updateAmmo(int ammo)
+    {
+        totalAmmo.changeAmmoCount(ammo);
     }
-    
-    
-
     public void OnCollisionEnter(Collision col){
         if(col.gameObject.tag == "playerBullet"){
             Destroy(col.gameObject);
@@ -24,12 +23,17 @@ public class DestroyBox : MonoBehaviour
             if(boxDestroy <= 0){
                 Destroy(this.gameObject);
             }
-            
+            if(boxDestroy==0)
+            {
+                updateAmmo(ammo: 10);
+            }
         }
-        if(boxDestroy == 0){
-            updateHealth(10);
-        }
-        return;
     }
+    // Start is called before the first frame update
     
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }
