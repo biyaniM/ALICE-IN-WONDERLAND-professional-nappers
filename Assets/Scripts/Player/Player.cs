@@ -29,6 +29,7 @@ public class Player : MonoBehaviour
     public GameObject finishBoundary;
     public PauseMenu pauseMenu;
     public int numOfKill;
+    
 
 
     void Start()
