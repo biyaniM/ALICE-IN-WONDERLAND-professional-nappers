@@ -22,10 +22,16 @@ public class AmmoCount : MonoBehaviour
         // balance.text = count.ToString();
     }
 
-    public void changeAmmoCount(int count){
+    public void increaseAmmoCount(int count){
         Debug.Log("Updated ammo ::: "+ count);
         currentAmmo += count;
-        SetBalance(currentAmmo);
+        SetBalance(Mathf.Min(currentAmmo,totalAmmo));
+        Debug.Log("Current ammo ::: "+ currentAmmo);
+    }
+    public void decreaseAmmoCount(int count){
+        Debug.Log("Updated ammo ::: "+ count);
+        currentAmmo -= count;
+        SetBalance(Mathf.Max(currentAmmo,0));
         Debug.Log("Current ammo ::: "+ currentAmmo);
     }
 }

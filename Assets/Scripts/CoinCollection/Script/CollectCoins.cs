@@ -75,15 +75,20 @@ public class CollectCoins : MonoBehaviour
         player.CheckGoal(redCoins, blueCoins, yellowCoins);
     }
 
-    public void updateGoldenCoin()
-    {
+    public void updateGoldenCoin(int goldenCoinIncrement=0) 
+    { //TODO Need to change this to only one coin increment (no blue, no red, no yellow). @sulysu
         redCoins = player.GetRedCoinsScore();
         blueCoins = player.GetBlueCoinsScore();
         yellowCoins = player.GetYellowCoinsScore();
-
-        redCoins += coinPointIncreaseOnCollection;
-        blueCoins += coinPointIncreaseOnCollection;
-        yellowCoins += coinPointIncreaseOnCollection;
+        
+        //* Increase golden coin amount to a custom value (pref higer than default). This helps make golden coin more useful.
+        int coinIncrement = goldenCoinIncrement !=0 ? goldenCoinIncrement : coinPointIncreaseOnCollection;
+        
+        //* Update Coins
+        redCoins += coinIncrement;
+        blueCoins += coinIncrement;
+        yellowCoins += coinIncrement;
+        
         player.UpdateCoins(redCoins, blueCoins, yellowCoins);
         
     }
