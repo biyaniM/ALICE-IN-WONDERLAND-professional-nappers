@@ -22,6 +22,7 @@ public class LevelCompleteScreen: MonoBehaviour
         gameObject.SetActive(true);
         //release the cursor to press the button.
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         restartBtn.onClick.AddListener(ResetGame);
         mainMenuBtn.onClick.AddListener(BackToMain);
         nextLevelBtn.onClick.AddListener(NextLevel);
@@ -34,6 +35,8 @@ public class LevelCompleteScreen: MonoBehaviour
     void ResetGame(){
         Debug.Log("Restart Game!");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     void NextLevel(){
@@ -61,6 +64,8 @@ public class LevelCompleteScreen: MonoBehaviour
                 break;
             }
         }
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
     }
     
     void BackToMain(){

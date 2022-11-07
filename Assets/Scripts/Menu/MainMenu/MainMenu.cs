@@ -11,6 +11,7 @@ public class MainMenu : MonoBehaviour
     void Start(){
         GuideBtn = GameObject.Find("Guide").GetComponent<Button>();
         GuideBtn.onClick.AddListener(ShowGuideScene);
+        Cursor.visible = true;
     }
 
 
