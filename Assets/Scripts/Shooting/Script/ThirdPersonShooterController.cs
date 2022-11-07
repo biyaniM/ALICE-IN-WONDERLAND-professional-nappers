@@ -19,7 +19,7 @@ public class ThirdPersonShooterController : MonoBehaviour
     
     void Start(){
         player.InitAmmo(maxAmmo);
-        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.lockState = CursorLockMode.Locked;
     }
     void Awake(){
         starterAssetsInputs = GetComponent<StarterAssetsInputs>();

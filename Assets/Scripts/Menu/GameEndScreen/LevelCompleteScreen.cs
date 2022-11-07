@@ -36,7 +36,7 @@ public class LevelCompleteScreen: MonoBehaviour
         Debug.Log("Restart Game!");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void NextLevel(){
@@ -65,7 +65,7 @@ public class LevelCompleteScreen: MonoBehaviour
             }
         }
         Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.lockState = CursorLockMode.Locked;
     }
     
     void BackToMain(){
