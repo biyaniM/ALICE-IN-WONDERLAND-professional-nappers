@@ -5,7 +5,7 @@ using UnityEngine;
 public class ArrowKeyTutorial : MonoBehaviour
 {
     private bool instructionComplete;
-    [SerializeField] private string tutorialKind;
+    [SerializeField] private string tutorialKind; //TODO Change to Enum to make easy to select in Editor
     private string tutorialMessage;
     private Player hud;
     // Start is called before the first frame update
@@ -70,10 +70,10 @@ public class ArrowKeyTutorial : MonoBehaviour
                     tutorialMessage = "Enemy can't shoot you if it can't see you";
                 }
                 break;
-            case "sprint":
+            case "time increase":
                 if (col.tag=="Player" && !instructionComplete){
                     instructionComplete = false;
-                    tutorialMessage = "Move fast to avoid enemy shots";
+                    tutorialMessage = "Killing enemy gives you a time boost";
                 }
                 break;
             case "enough coins":
