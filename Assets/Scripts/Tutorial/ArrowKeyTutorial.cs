@@ -28,7 +28,7 @@ public class ArrowKeyTutorial : MonoBehaviour
             case "movement":
                 if (col.tag=="Player" && !instructionComplete){
                     instructionComplete = false;
-                    tutorialMessage = "Use arrow keys to move";
+                    tutorialMessage = "Use W A S D to move\n\nUse mouse to look around";
                 }
                 break;
 
@@ -42,7 +42,7 @@ public class ArrowKeyTutorial : MonoBehaviour
             case "directed jump":
                 if (col.tag=="Player" && !instructionComplete){
                     instructionComplete = false;
-                    tutorialMessage = "Jump with arrow keys to direct your jump";
+                    tutorialMessage = "Jump with WASD to direct your jump";
                 }
                 break;
 
@@ -61,7 +61,7 @@ public class ArrowKeyTutorial : MonoBehaviour
             case "shoot enemy":
                 if (col.tag=="Player" && !instructionComplete){
                     instructionComplete = false;
-                    tutorialMessage = "Look towards enemy and press S to Shoot";
+                    tutorialMessage = "Aim Player towards enemy and press left click to Shoot";
                 }
                 break;
             case "enemy cant shoot":

@@ -9,6 +9,8 @@ public class CoinCollecctionOnEnemyKill : MonoBehaviour
     public int blueCoins;
     public int yellowCoins;
     private bool passed;
+
+    public CountDownTimer countDownTimer;
     
     // Start is called before the first frame update
     void Start()
@@ -33,27 +35,32 @@ public class CoinCollecctionOnEnemyKill : MonoBehaviour
                 blueCoins = player.GetBlueCoinsScore();
                 yellowCoins = player.GetYellowCoinsScore();
 
+
+
                 if (gameObject.tag=="enemy_red"){
-                    Debug.Log("Before Red Kill"+redCoins);
-                    redCoins += 1;
-                    player.UpdateCoins(redCoins, blueCoins, yellowCoins);
-                    Debug.Log("After Red Kill"+redCoins);
-                    SendMsgToHUD("Red");
+                    // Debug.Log("Before Red Kill"+redCoins);
+                    // redCoins += 1;
+                    // player.UpdateCoins(redCoins, blueCoins, yellowCoins);
+                    // Debug.Log("After Red Kill"+redCoins);
+                    // SendMsgToHUD("Red");
+                    setNewTimeAfterKillingEnemy();
                 }
                 else if (gameObject.tag=="enemy_yellow"){
                     // Debug.Log("Before Blue Kill"+redCoins);
-                    yellowCoins += 1;
-                    player.UpdateCoins(redCoins, blueCoins, yellowCoins);
-                    SendMsgToHUD("Yellow");
+                    // yellowCoins += 1;
+                    // player.UpdateCoins(redCoins, blueCoins, yellowCoins);
+                    // SendMsgToHUD("Yellow");
                     
                     // Debug.Log("After Red Kill"+redCoins);
+                    setNewTimeAfterKillingEnemy();
                 }
                 else if (gameObject.tag=="enemy_blue"){
                     // Debug.Log("Before Red Kill"+redCoins);
-                    blueCoins += 1;
-                    player.UpdateCoins(redCoins, blueCoins, yellowCoins);
-                    SendMsgToHUD("Blue");
+                    // blueCoins += 1;
+                    // player.UpdateCoins(redCoins, blueCoins, yellowCoins);
+                    // SendMsgToHUD("Blue");
                     // Debug.Log("After Red Kill"+redCoins);
+                    setNewTimeAfterKillingEnemy();
                 }
                 else{
                     return;
@@ -77,5 +84,11 @@ public class CoinCollecctionOnEnemyKill : MonoBehaviour
     {        
          //check if player has collected enough colors to pass gate
         player.CheckGoal(redCoins, blueCoins, yellowCoins);
+    }
+
+    public void setNewTimeAfterKillingEnemy() {
+        int remainingDuration = countDownTimer.getRemainingDuration();
+        int newDuration = remainingDuration + 6;
+        countDownTimer.setRemainingDuration(newDuration);
     }
 }

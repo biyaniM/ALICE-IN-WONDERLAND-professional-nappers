@@ -121,17 +121,11 @@ public class healthUpdate : MonoBehaviour
         return numberOfTimesSpawned;
     }
 
-
-    //     public void OnCollisionEnter(Collision col) {
-    //     Debug.Log("Got Hit!!!!");
-    //     if(col.gameObject.tag == "enemyBullet") {
-    //         Destroy(col.gameObject);
-    //         Debug.Log("Enemy YOOOOO");
-    //         Debug.Log(col.gameObject);
-    //         currentHealth = currentHealth - 20;
-    //         Debug.Log(currentHealth);
-    //         healthBar.SetHealth(currentHealth);
-            
-    //     }
-    // }
+    public void changeCurrentHealth(int health){
+        Debug.Log("Updated health ::: "+ health);
+        currentHealth += health;
+        updateHealth(health: currentHealth);
+        Debug.Log("Current health ::: "+ currentHealth);
+    }
+    
 }
