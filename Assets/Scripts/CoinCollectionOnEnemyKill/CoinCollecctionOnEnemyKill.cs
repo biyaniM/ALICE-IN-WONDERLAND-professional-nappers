@@ -5,9 +5,9 @@ using UnityEngine;
 public class CoinCollecctionOnEnemyKill : MonoBehaviour
 {
     public Player player;
-    public int redCoins; 
-    public int blueCoins;
-    public int yellowCoins;
+    //public int redCoins; 
+    //public int blueCoins;
+    //public int yellowCoins;
     private bool passed;
     public int timerIncrease = 6;
     protected CountDownTimer countDownTimer;
@@ -31,9 +31,9 @@ public class CoinCollecctionOnEnemyKill : MonoBehaviour
                 Debug.Log("Passed?"+passed);
                 passed = true;
                 Debug.Log("Hit!");
-                redCoins = player.GetRedCoinsScore();
-                blueCoins = player.GetBlueCoinsScore();
-                yellowCoins = player.GetYellowCoinsScore();
+                // redCoins = player.GetRedCoinsScore();
+                // blueCoins = player.GetBlueCoinsScore();
+                // yellowCoins = player.GetYellowCoinsScore();
 
                 if (gameObject.tag=="enemy_red"){
                     // Debug.Log("Before Red Kill"+redCoins);
@@ -81,7 +81,7 @@ public class CoinCollecctionOnEnemyKill : MonoBehaviour
     void Update()
     {        
          //check if player has collected enough colors to pass gate
-        player.CheckGoal(redCoins, blueCoins, yellowCoins);
+        //player.CheckGoal(redCoins, blueCoins, yellowCoins);
     }
 
     public void setNewTimeAfterKillingEnemy() {
