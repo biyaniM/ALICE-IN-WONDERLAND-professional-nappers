@@ -9,12 +9,13 @@ public class CoinCollecctionOnEnemyKill : MonoBehaviour
     public int blueCoins;
     public int yellowCoins;
     private bool passed;
-    public CountDownTimer countDownTimer;
+    public int timerIncrease = 6;
+    protected CountDownTimer countDownTimer;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        countDownTimer = GameObject.Find("HUD").GetComponentInChildren<CountDownTimer>();
     }
 
     void Awake(){
@@ -85,7 +86,7 @@ public class CoinCollecctionOnEnemyKill : MonoBehaviour
 
     public void setNewTimeAfterKillingEnemy() {
         int remainingDuration = countDownTimer.getRemainingDuration();
-        int newDuration = remainingDuration + 6;
+        int newDuration = remainingDuration + timerIncrease;
         countDownTimer.setRemainingDuration(newDuration);
     }
 }
