@@ -51952,6 +51952,7 @@ GameObject:
   - component: {fileID: 1162686422}
   - component: {fileID: 1162686421}
   - component: {fileID: 1162686420}
+  - component: {fileID: 1162686425}
   m_Layer: 0
   m_Name: enemyRed (5)
   m_TagString: enemy_red
@@ -52055,6 +52056,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1162686425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162686418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6b7a7012fb28e418afd174d580599a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  movementMultiplier: 3
+  movementAxis: 122
 --- !u!1 &1166511033
 GameObject:
   m_ObjectHideFlags: 0
@@ -56525,6 +56541,7 @@ GameObject:
   - component: {fileID: 1368003471}
   - component: {fileID: 1368003470}
   - component: {fileID: 1368003469}
+  - component: {fileID: 1368003474}
   m_Layer: 0
   m_Name: enemyRed (4)
   m_TagString: enemy_red
@@ -56628,6 +56645,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1368003474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368003467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6b7a7012fb28e418afd174d580599a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  movementMultiplier: 3
+  movementAxis: 122
 --- !u!1 &1370569884
 GameObject:
   m_ObjectHideFlags: 0
