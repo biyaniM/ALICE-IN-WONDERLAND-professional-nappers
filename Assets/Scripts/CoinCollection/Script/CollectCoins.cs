@@ -12,6 +12,7 @@ public class CollectCoins : MonoBehaviour
     public int coinPointIncreaseOnEnemy = 1;
     public bool isTriggered = false;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -72,5 +73,23 @@ public class CollectCoins : MonoBehaviour
     {
          //check if player has collected enough colors to pass gate
         player.CheckGoal(redCoins, blueCoins, yellowCoins);
+    }
+
+    public void updateGoldenCoin(int goldenCoinIncrement=0) 
+    { //TODO Need to change this to only one coin increment (no blue, no red, no yellow). @sulysu
+        redCoins = player.GetRedCoinsScore();
+        blueCoins = player.GetBlueCoinsScore();
+        yellowCoins = player.GetYellowCoinsScore();
+        
+        //* Increase golden coin amount to a custom value (pref higer than default). This helps make golden coin more useful.
+        int coinIncrement = goldenCoinIncrement !=0 ? goldenCoinIncrement : coinPointIncreaseOnCollection;
+        
+        //* Update Coins
+        redCoins += coinIncrement;
+        blueCoins += coinIncrement;
+        yellowCoins += coinIncrement;
+        
+        player.UpdateCoins(redCoins, blueCoins, yellowCoins);
+        
     }
 }

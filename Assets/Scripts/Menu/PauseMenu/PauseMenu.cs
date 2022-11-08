@@ -29,7 +29,7 @@ public class PauseMenu : MonoBehaviour
         // timer.pauseTimer();
         Time.timeScale = 0f;
         GameIsPaused = true;
-        
+        Cursor.visible = true;
     }
     
     public void Resume(){  //  working
@@ -38,12 +38,14 @@ public class PauseMenu : MonoBehaviour
         gameObject.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+        Cursor.visible = false;
     }
 
     void Restart(){     // working
         Debug.Log("Restart Game!");
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Cursor.visible = false;
     }
 
     void BackToMenu(){  // working

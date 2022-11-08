@@ -28,18 +28,22 @@ public class LevelMenu : MonoBehaviour
 
     public void LeveLOne(){
        SceneManager.LoadScene("Level_0");
+       Cursor.visible = false;
     }
 
     public void LeveLTwo(){
         SceneManager.LoadScene("S_G_LEVEL_2");
+        Cursor.visible = false;
     }
 
     public void LeveLThree(){
         SceneManager.LoadScene("new_level_3");
+        Cursor.visible = false;
     }
 
     public void LeveLFour(){
         SceneManager.LoadScene("new_level_4");
+        Cursor.visible = false;
     }
 
 

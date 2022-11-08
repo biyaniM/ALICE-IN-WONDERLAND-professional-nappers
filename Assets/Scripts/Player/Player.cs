@@ -12,10 +12,14 @@ public class Player : MonoBehaviour
     private int redCoins;
     private int blueCoins;
     private int yellowCoins;
+    private int totalCoins;
     private int ammoBalance;
+    private float saturation;
     //fake const(set from outside)
     private int SUM_AMMO;
     private int SUM_HEALTH;
+    private int TOTAL_GOAL;
+    private float SATURATION_INCREASE_FACTOR;
     [SerializeField] int RED_GOAL;
     [SerializeField] int BLUE_GOAL;
     [SerializeField] int YELLOW_GOAL;
@@ -35,6 +39,7 @@ public class Player : MonoBehaviour
     {
         SetComponents();
         SetGoal(RED_GOAL, BLUE_GOAL, YELLOW_GOAL);
+        saturation = -100f;
         // InitAmmo(80); //! Removinng from Test
         InitHealth(100);
         InitializeHUD();
@@ -80,6 +85,8 @@ public class Player : MonoBehaviour
         redCoins = red;
         blueCoins = blue;
         yellowCoins = yellow;
+        totalCoins = redCoins + blueCoins + yellowCoins;
+        saturation += SATURATION_INCREASE_FACTOR;
         coinsScore.SetScores(redCoins, blueCoins, yellowCoins);
         RenderSettings.skybox.SetColor("_Tint", new Color(15*red/255f, 15*yellow/255f, 15*blue/255f));
     }
@@ -93,6 +100,8 @@ public class Player : MonoBehaviour
         RED_GOAL = redGoal;
         BLUE_GOAL = blueGoal;
         YELLOW_GOAL = yellowGoal;
+        TOTAL_GOAL = RED_GOAL + YELLOW_GOAL + BLUE_GOAL;
+        SATURATION_INCREASE_FACTOR = 100f / TOTAL_GOAL;
         coinsScore.SetGoals(RED_GOAL, BLUE_GOAL, YELLOW_GOAL);
     }
     //import from player shooting???
@@ -140,6 +149,10 @@ public class Player : MonoBehaviour
 
     public int GetYellowCoinsScore(){
         return yellowCoins;
+    }
+
+    public float GetSaturation(){
+        return saturation;
     }
 
     public void UpdateNumberOfKill()
