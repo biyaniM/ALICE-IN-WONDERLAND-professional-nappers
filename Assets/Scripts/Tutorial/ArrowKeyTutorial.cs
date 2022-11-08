@@ -55,7 +55,7 @@ public class ArrowKeyTutorial : MonoBehaviour
             case "enemy close":
                 if (col.tag=="Player" && !instructionComplete){
                     instructionComplete = false;
-                    tutorialMessage = "Yellow enemy can shoot you!\nKill it to get coins!";
+                    tutorialMessage = "Yellow enemy can shoot you!\nKill it to gain time!";
                 }
                 break;
             case "shoot enemy":
