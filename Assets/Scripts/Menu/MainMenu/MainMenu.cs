@@ -9,13 +9,13 @@ public class MainMenu : MonoBehaviour
     private Button GuideBtn;
 
     void Start(){
-        GuideBtn = GameObject.Find("Guide").GetComponent<Button>();
-        GuideBtn.onClick.AddListener(ShowGuideScene);
+        //GuideBtn = GameObject.Find("Guide").GetComponent<Button>();
+        //GuideBtn.onClick.AddListener(ShowGuideScene);
         Cursor.visible = true;
     }
 
 
     void ShowGuideScene(){
-        SceneManager.LoadScene("TutorialScene");
+       // SceneManager.LoadScene("TutorialScene");
     }
 }
