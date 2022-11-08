@@ -9,9 +9,6 @@ public class Player : MonoBehaviour
 {
     //Attributes
     private int healthPoint;
-    //private int redCoins;
-    //private int blueCoins;
-    //private int yellowCoins;
     private int collectedCoins;
     private int ammoBalance;
     private float saturation;
@@ -19,9 +16,6 @@ public class Player : MonoBehaviour
     private int SUM_AMMO;
     private int SUM_HEALTH;
     private float SATURATION_INCREASE_FACTOR;
-    //[SerializeField] int RED_GOAL;
-    //[SerializeField] int BLUE_GOAL;
-    //[SerializeField] int YELLOW_GOAL;
     [SerializeField] int TOTAL_GOAL;
     [SerializeField] int LEVEL_SELECT;
     // UI components
@@ -38,10 +32,10 @@ public class Player : MonoBehaviour
     void Start()
     {
         SetComponents();
-        //SetGoal(RED_GOAL, BLUE_GOAL, YELLOW_GOAL);
         SetGoal(TOTAL_GOAL);
+
         saturation = -100f;
-        // InitAmmo(80); //! Removinng from Test
+
         InitHealth(100);
         InitializeHUD();
 
@@ -82,16 +76,10 @@ public class Player : MonoBehaviour
         healthBar.SetHealth(healthPoint);
     }
 
-    //public void UpdateCoins(int red, int blue, int yellow){
     public void UpdateCoins(int coins){
-        // redCoins = red;
-        // blueCoins = blue;
-        // yellowCoins = yellow;
-        //collectedCoins = redCoins + blueCoins + yellowCoins;
         collectedCoins = coins;
         saturation += SATURATION_INCREASE_FACTOR;
         coinsScore.SetScores(collectedCoins);
-        //RenderSettings.skybox.SetColor("_Tint", new Color(15*red/255f, 15*yellow/255f, 15*blue/255f));
         RenderSettings.skybox.SetColor("_Tint", new Color(15*coins/255f, 15*coins/255f, 15*coins/255f));
     }
 
@@ -100,15 +88,9 @@ public class Player : MonoBehaviour
         ammoCount.SetBalance(ammoBalance);
     }
     //import setting from level side
-    //void SetGoal(int redGoal, int blueGoal, int yellowGoal){
     void SetGoal(int totalGoal){
-        //RED_GOAL = redGoal;
-        //BLUE_GOAL = blueGoal;
-        //YELLOW_GOAL = yellowGoal;
-        //TOTAL_GOAL = RED_GOAL + YELLOW_GOAL + BLUE_GOAL;
         TOTAL_GOAL = totalGoal;
         SATURATION_INCREASE_FACTOR = 100f / TOTAL_GOAL;
-        //coinsScore.SetGoals(RED_GOAL, BLUE_GOAL, YELLOW_GOAL);
         coinsScore.SetGoals(TOTAL_GOAL);
     }
     //import from player shooting???
@@ -125,20 +107,14 @@ public class Player : MonoBehaviour
     void InitializeHUD(){
         healthPoint = SUM_HEALTH;
         ammoBalance = SUM_AMMO;
-        //redCoins = 0;
-        //blueCoins = 0;
-        //yellowCoins = 0;
         collectedCoins = 0;
         Debug.Log("Initialize HUD values");
     }
 
-    //check if the player has collected enough colors
-    //public void CheckGoal(int red, int blue, int yellow){
+    //check if the player has collected enough coins
     public void CheckGoal(int coins){
-       // if(red >= RED_GOAL && blue >= BLUE_GOAL && yellow >= YELLOW_GOAL){
         if(coins >= TOTAL_GOAL){
-                // finishBoundary.GetComponent<BoxCollider>().enabled = false;
-                setFinishBoundary(false, "FinishBoundary", finishBoundary);
+            setFinishBoundary(false, "FinishBoundary", finishBoundary);
         }
     }
 
@@ -146,18 +122,7 @@ public class Player : MonoBehaviour
         finishBoundary = GameObject.Find(finish);
         finishBoundary.GetComponent<BoxCollider>().enabled = param;
     }
-
-    // public int GetRedCoinsScore(){
-    //     return redCoins;
-    // }
-
-    // public int GetBlueCoinsScore(){
-    //     return blueCoins;
-    // }
-
-    // public int GetYellowCoinsScore(){
-    //     return yellowCoins;
-    // }
+    
     public int GetCoinsScore(){
          return collectedCoins;
     }
