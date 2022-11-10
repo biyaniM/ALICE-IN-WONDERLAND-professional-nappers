@@ -5,7 +5,7 @@ using UnityEngine;
 public class ArrowKeyTutorial : MonoBehaviour
 {
     private bool instructionComplete;
-    [SerializeField] private string tutorialKind;
+    [SerializeField] private string tutorialKind; //TODO Change to Enum to make easy to select in Editor
     private string tutorialMessage;
     private Player hud;
     // Start is called before the first frame update
@@ -28,7 +28,7 @@ public class ArrowKeyTutorial : MonoBehaviour
             case "movement":
                 if (col.tag=="Player" && !instructionComplete){
                     instructionComplete = false;
-                    tutorialMessage = "Use arrow keys to move";
+                    tutorialMessage = "Use W A S D to move\n\nUse mouse to look around";
                 }
                 break;
 
@@ -42,7 +42,7 @@ public class ArrowKeyTutorial : MonoBehaviour
             case "directed jump":
                 if (col.tag=="Player" && !instructionComplete){
                     instructionComplete = false;
-                    tutorialMessage = "Jump with arrow keys to direct your jump";
+                    tutorialMessage = "Jump with WASD to direct your jump";
                 }
                 break;
 
@@ -55,13 +55,13 @@ public class ArrowKeyTutorial : MonoBehaviour
             case "enemy close":
                 if (col.tag=="Player" && !instructionComplete){
                     instructionComplete = false;
-                    tutorialMessage = "Yellow enemy can shoot you!\nKill it to get coins!";
+                    tutorialMessage = "Yellow enemy can shoot you!\nKill it to gain time!";
                 }
                 break;
             case "shoot enemy":
                 if (col.tag=="Player" && !instructionComplete){
                     instructionComplete = false;
-                    tutorialMessage = "Look towards enemy and press S to Shoot";
+                    tutorialMessage = "Aim Player towards enemy and press left click to Shoot";
                 }
                 break;
             case "enemy cant shoot":
@@ -70,10 +70,10 @@ public class ArrowKeyTutorial : MonoBehaviour
                     tutorialMessage = "Enemy can't shoot you if it can't see you";
                 }
                 break;
-            case "sprint":
+            case "time increase":
                 if (col.tag=="Player" && !instructionComplete){
                     instructionComplete = false;
-                    tutorialMessage = "Move fast to avoid enemy shots";
+                    tutorialMessage = "Killing enemy gives you a time boost";
                 }
                 break;
             case "enough coins":

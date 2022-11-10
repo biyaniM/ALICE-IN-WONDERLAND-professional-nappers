@@ -14,6 +14,7 @@ public class InLevelPause : MonoBehaviour
       //pause_btn = GameObject.Find("PauseButton").GetComponent<Button>();
       pause_btn.onClick.RemoveAllListeners();
       pause_btn.onClick.AddListener(ShowPauseMenu);
+      Cursor.visible = true;
   }
  void Update(){
 
@@ -23,6 +24,7 @@ public class InLevelPause : MonoBehaviour
   void ShowPauseMenu(){
       //Cursor.lockState = CursorLockMode.Confined;
       //PauseMenu.enabled = true;
+      Cursor.visible = true;
       pasueMenu.Setup();
       Debug.Log("Pause Menu Show up");
       

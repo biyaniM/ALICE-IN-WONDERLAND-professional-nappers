@@ -737,13 +737,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 182510461}
     - target: {fileID: 4452270970643524159, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: TOTAL_GOAL
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452270970643524159, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: YELLOW_GOAL
-      value: 10
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452270970643524159, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: LEVEL_SELECT
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4452270970643524159, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: finishBoundary
       value: 
       objectReference: {fileID: 1955364185}
+    - target: {fileID: 5384936018097057363, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: Goal
+      value: 
+      objectReference: {fileID: 34778281}
+    - target: {fileID: 5384936018097057363, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: totalScore
+      value: 
+      objectReference: {fileID: 34778282}
     - target: {fileID: 5384936019333487589, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -855,6 +871,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d556d11c6e8744c068e142730eddbd90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &34778281 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6115479887780526147, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+  m_PrefabInstance: {fileID: 34778279}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &34778282 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5384936018151131617, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+  m_PrefabInstance: {fileID: 34778279}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &36841260
@@ -1680,6 +1718,10 @@ MonoBehaviour:
   gameOverHUD: {fileID: 1288594012}
   timer: {fileID: 34778280}
   healthBar: {fileID: 1849744726}
+  instaKill: 0
+  healthDecrement: 10
+  healthDecrementTimeInterval: 2
+  speedDivisionFactor: 1.5
 --- !u!64 &81027670
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3577,9 +3619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &117441688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3592,10 +3632,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
   player: {fileID: 546285931}
   distance: 0
 --- !u!65 &117441689
@@ -3678,6 +3719,10 @@ MonoBehaviour:
   gameOverHUD: {fileID: 1288594012}
   timer: {fileID: 34778280}
   healthBar: {fileID: 1849744726}
+  instaKill: 0
+  healthDecrement: 10
+  healthDecrementTimeInterval: 2
+  speedDivisionFactor: 1.5
 --- !u!64 &120423206
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5292,6 +5337,10 @@ MonoBehaviour:
   gameOverHUD: {fileID: 1288594012}
   timer: {fileID: 34778280}
   healthBar: {fileID: 1849744726}
+  instaKill: 0
+  healthDecrement: 10
+  healthDecrementTimeInterval: 2
+  speedDivisionFactor: 1.5
 --- !u!64 &190696604
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6025,9 +6074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &215195758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6040,10 +6087,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
   player: {fileID: 546285931}
   distance: 0
 --- !u!65 &215195759
@@ -23693,7 +23741,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 386678182}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11, y: -2.16, z: 22.3}
+  m_LocalPosition: {x: -8.78, y: -2.16, z: 22.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -23716,9 +23764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &386678185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23731,10 +23777,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
   player: {fileID: 546285931}
   distance: 0
 --- !u!65 &386678186
@@ -23905,7 +23952,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh135730
+  m_Name: pb_Mesh29448
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -29772,6 +29819,10 @@ MonoBehaviour:
   gameOverHUD: {fileID: 1288594012}
   timer: {fileID: 34778280}
   healthBar: {fileID: 1849744726}
+  instaKill: 0
+  healthDecrement: 10
+  healthDecrementTimeInterval: 2
+  speedDivisionFactor: 1.5
 --- !u!64 &439724591
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -37092,9 +37143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &519731954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37107,10 +37156,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
   player: {fileID: 546285931}
   distance: 0
 --- !u!65 &519731955
@@ -38067,10 +38117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
-  coinPointIncreaseOnEnemy: 1
+  totalCoins: 0
   isTriggered: 0
 --- !u!114 &546285936
 MonoBehaviour:
@@ -38132,7 +38179,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh134914
+  m_Name: pb_Mesh28622
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -38392,7 +38439,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2070925442191277755, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
   m_PrefabInstance: {fileID: 1175657751}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &581674725
+--- !u!114 &581674728
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -38401,40 +38448,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 581674707}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ad980451443d70438faac0bc6c235a0, type: 3}
+  m_Script: {fileID: 11500000, guid: bd6043bde05a7fc4cba197d06915c1e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
-  m_LookaheadTime: 0
-  m_LookaheadSmoothing: 0
-  m_LookaheadIgnoreY: 0
-  m_XDamping: 1
-  m_YDamping: 1
-  m_ZDamping: 1
-  m_TargetMovementOnly: 1
-  m_ScreenX: 0.5
-  m_ScreenY: 0.5
-  m_CameraDistance: 15
-  m_DeadZoneWidth: 0
-  m_DeadZoneHeight: 0
-  m_DeadZoneDepth: 0
-  m_UnlimitedSoftZone: 0
-  m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 0.8
-  m_BiasX: 0
-  m_BiasY: 0
-  m_CenterOnActivate: 1
-  m_GroupFramingMode: 2
-  m_AdjustmentMode: 0
-  m_GroupFramingSize: 0.8
-  m_MaxDollyIn: 5000
-  m_MaxDollyOut: 5000
-  m_MinimumDistance: 1
-  m_MaximumDistance: 5000
-  m_MinimumFOV: 3
-  m_MaximumFOV: 60
-  m_MinimumOrthoSize: 1
-  m_MaximumOrthoSize: 5000
+  Damping: {x: 0.1, y: 0.5, z: 0.3}
+  ShoulderOffset: {x: 0, y: 1.75, z: 0}
+  VerticalArmLength: 0.4
+  CameraSide: 0.5
+  CameraDistance: 10
+  CameraCollisionFilter:
+    serializedVersion: 2
+    m_Bits: 0
+  IgnoreTag: 
+  CameraRadius: 0.2
+  DampingIntoCollision: 0
+  DampingFromCollision: 2
 --- !u!1 &597321663
 GameObject:
   m_ObjectHideFlags: 0
@@ -38727,6 +38755,10 @@ MonoBehaviour:
   gameOverHUD: {fileID: 1288594012}
   timer: {fileID: 34778280}
   healthBar: {fileID: 1849744726}
+  instaKill: 0
+  healthDecrement: 10
+  healthDecrementTimeInterval: 2
+  speedDivisionFactor: 1.5
 --- !u!64 &597321670
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -39598,6 +39630,10 @@ MonoBehaviour:
   gameOverHUD: {fileID: 1288594012}
   timer: {fileID: 34778280}
   healthBar: {fileID: 1849744726}
+  instaKill: 0
+  healthDecrement: 10
+  healthDecrementTimeInterval: 2
+  speedDivisionFactor: 1.5
 --- !u!64 &675978063
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -40946,6 +40982,10 @@ MonoBehaviour:
   gameOverHUD: {fileID: 1288594012}
   timer: {fileID: 34778280}
   healthBar: {fileID: 1849744726}
+  instaKill: 0
+  healthDecrement: 10
+  healthDecrementTimeInterval: 2
+  speedDivisionFactor: 1.5
 --- !u!64 &705510114
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -43544,9 +43584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &826452401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43559,10 +43597,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
   player: {fileID: 546285931}
   distance: 0
 --- !u!65 &826452402
@@ -44818,7 +44857,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899342364}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -21.7, y: -4.9, z: 32.7}
+  m_LocalPosition: {x: -3.02, y: -4.9, z: 26.65}
   m_LocalScale: {x: 0.67488885, y: -0.024953296, z: 0.6748887}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -46808,7 +46847,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh134334
+  m_Name: pb_Mesh28048
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -47467,6 +47506,10 @@ MonoBehaviour:
   gameOverHUD: {fileID: 1288594012}
   timer: {fileID: 34778280}
   healthBar: {fileID: 1849744726}
+  instaKill: 0
+  healthDecrement: 10
+  healthDecrementTimeInterval: 2
+  speedDivisionFactor: 1.5
 --- !u!64 &1114867126
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -49593,31 +49636,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.96
+      value: -0.44
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.475019
+      value: 5.355
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.4096293
+      value: 3.9399996
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.96592563
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.2588198
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -2.7685878e-32
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -49767,7 +49810,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh135416
+  m_Name: pb_Mesh178390
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -49977,9 +50020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1181819294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49992,10 +50033,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 50
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 10
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
   player: {fileID: 546285931}
   distance: 0
 --- !u!65 &1181819295
@@ -52446,23 +52488,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.96
+      value: -0.44
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.475019
+      value: 5.355
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.4096293
+      value: 3.9399996
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.96592563
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.2588198
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalRotation.y
@@ -52470,7 +52512,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -2.7685878e-32
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -52490,6 +52532,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
+--- !u!4 &1221041500 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
+  m_PrefabInstance: {fileID: 1221041499}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1221118499
 GameObject:
   m_ObjectHideFlags: 0
@@ -52646,6 +52693,10 @@ MonoBehaviour:
   gameOverHUD: {fileID: 1288594012}
   timer: {fileID: 34778280}
   healthBar: {fileID: 1849744726}
+  instaKill: 1
+  healthDecrement: 10
+  healthDecrementTimeInterval: 2
+  speedDivisionFactor: 1.5
 --- !u!64 &1226784306
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -52929,7 +52980,8 @@ GameObject:
   - component: {fileID: 1231933330}
   - component: {fileID: 1231933329}
   - component: {fileID: 1231933328}
-  m_Layer: 0
+  - component: {fileID: 1231933334}
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53258,6 +53310,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1231933334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231933327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7609e7a60896fd84080ce26b07c523b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers: []
+  position: {x: 0, y: 0, z: 0}
+  materials: []
+  initialAlpha: 0
+--- !u!1 &1249053226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1249053228}
+  - component: {fileID: 1249053227}
+  m_Layer: 9
+  m_Name: PostProcessingGameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!114 &1249053227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249053226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88b17a6212b914a97bf20201c81aadcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1320465628}
+--- !u!4 &1249053228
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249053226}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.15999985, y: 7.285001, z: -45.090378}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 93
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1252897808
 Mesh:
@@ -59533,9 +59646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1299078881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59548,10 +59659,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
   player: {fileID: 546285931}
   distance: 0
 --- !u!65 &1299078882
@@ -59758,9 +59870,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1322059597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59773,10 +59883,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
   player: {fileID: 546285931}
   distance: 0
 --- !u!65 &1322059598
@@ -60654,9 +60765,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1332165859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60669,10 +60778,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
   player: {fileID: 546285931}
   distance: 0
 --- !u!65 &1332165860
@@ -60910,7 +61020,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1351061906}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.65, y: -1.89, z: 31.99}
+  m_LocalPosition: {x: -0.65, y: -1.89, z: 39.65}
   m_LocalScale: {x: 0.67488885, y: -0.024953293, z: 0.6748888}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -62394,7 +62504,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh134706
+  m_Name: pb_Mesh177676
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -71065,9 +71175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1468324388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71080,10 +71188,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 50
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 10
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
   player: {fileID: 546285931}
   distance: 0
 --- !u!65 &1468324389
@@ -71856,6 +71965,10 @@ MonoBehaviour:
   gameOverHUD: {fileID: 1288594012}
   timer: {fileID: 34778280}
   healthBar: {fileID: 1849744726}
+  instaKill: 0
+  healthDecrement: 10
+  healthDecrementTimeInterval: 2
+  speedDivisionFactor: 1.5
 --- !u!64 &1546859959
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -73107,9 +73220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1573199938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73122,10 +73233,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
   player: {fileID: 546285931}
   distance: 0
 --- !u!65 &1573199939
@@ -73223,9 +73335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1587954504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73238,10 +73348,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
   player: {fileID: 546285931}
   distance: 0
 --- !u!65 &1587954505
@@ -74328,9 +74439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1691750623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74343,10 +74452,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
   player: {fileID: 546285931}
   distance: 0
 --- !u!65 &1691750624
@@ -75886,9 +75996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1800125432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75901,10 +76009,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
   player: {fileID: 546285931}
   distance: 0
 --- !u!65 &1800125433
@@ -76952,15 +77061,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.96
+      value: -0.44
       objectReference: {fileID: 0}
     - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6
+      value: 1.83
       objectReference: {fileID: 0}
     - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 17.4
+      value: 13.94
       objectReference: {fileID: 0}
     - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_LocalRotation.w
@@ -84656,7 +84765,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh177498
+  m_Name: pb_Mesh79042
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -90738,7 +90847,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1992980403}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -12.59, y: -5.12, z: 33.96}
+  m_LocalPosition: {x: -3.05, y: -5.12, z: 31.08}
   m_LocalScale: {x: 0.67488885, y: -0.024953295, z: 0.67488873}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -90866,6 +90975,10 @@ MonoBehaviour:
   gameOverHUD: {fileID: 1288594012}
   timer: {fileID: 34778280}
   healthBar: {fileID: 1849744726}
+  instaKill: 0
+  healthDecrement: 10
+  healthDecrementTimeInterval: 2
+  speedDivisionFactor: 1.5
 --- !u!64 &2001893072
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -98097,6 +98210,66 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 8944336655422409496, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
   m_PrefabInstance: {fileID: 1221041499}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2105702606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105702601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 1221041500}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!1 &2107477791
 GameObject:
   m_ObjectHideFlags: 0
@@ -100008,8 +100181,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2132646009}
   m_LocalRotation: {x: 1.11022296e-17, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.9, y: -1.8608, z: 31.16}
-  m_LocalScale: {x: 0.35352, y: 0.7858, z: 1}
+  m_LocalPosition: {x: -0.7604, y: -1.8608, z: 31.16}
+  m_LocalScale: {x: 0.190618, y: 0.7858, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -101009,6 +101182,10 @@ MonoBehaviour:
   gameOverHUD: {fileID: 1288594012}
   timer: {fileID: 34778280}
   healthBar: {fileID: 1849744726}
+  instaKill: 0
+  healthDecrement: 10
+  healthDecrementTimeInterval: 2
+  speedDivisionFactor: 1.5
 --- !u!64 &2136936467
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -101534,11 +101711,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1260686454386265094, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.9958689
+      value: 0.40830624
       objectReference: {fileID: 0}
     - target: {fileID: 1260686454386265094, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.8856
+      value: -0.487
       objectReference: {fileID: 0}
     - target: {fileID: 1260686454386265094, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -101778,15 +101955,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8345070700331616360, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.2438955
+      value: 1.3971459
       objectReference: {fileID: 0}
     - target: {fileID: 8345070700331616360, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
       propertyPath: m_LocalScale.z
-      value: 4.7408657
+      value: 4.8309426
       objectReference: {fileID: 0}
     - target: {fileID: 8345070700331616360, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.6207
+      value: -0.3876
       objectReference: {fileID: 0}
     - target: {fileID: 8345070700331616360, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -101794,7 +101971,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8345070700331616360, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 23.4
+      value: 22.961
       objectReference: {fileID: 0}
     - target: {fileID: 8680289381081499115, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
       propertyPath: m_Materials.Array.data[0]
