@@ -84,4 +84,12 @@ public class CountDownTimer : MonoBehaviour , IPointerClickHandler
         //! if slider.value  <= 0: trigger the game over HUD
         
     }
+
+    public int getRemainingDuration() {
+        return remainingDuration;
+    }
+
+    public void setRemainingDuration(int newRemainingDuration) {
+        remainingDuration = newRemainingDuration;
+    }
 }
