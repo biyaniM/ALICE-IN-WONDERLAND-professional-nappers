@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7428250167625856803
 RectTransform:
   m_ObjectHideFlags: 0
@@ -122,7 +122,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8673070039067633208
 RectTransform:
   m_ObjectHideFlags: 0
@@ -452,7 +452,7 @@ GameObject:
   - component: {fileID: 8001450177752513072}
   - component: {fileID: 6115479887780526147}
   m_Layer: 5
-  m_Name: Red Goal
+  m_Name: Goal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -828,12 +828,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81c1af4bfde464916a75a089290ed5ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redScore: {fileID: 5384936018151131617}
-  blueScore: {fileID: 5384936018385427991}
-  yellowScore: {fileID: 5384936018907041532}
-  redGoal: {fileID: 6115479887780526147}
-  blueGoal: {fileID: 478427781011328660}
-  yellowGoal: {fileID: 859788690119820553}
+  totalScore: {fileID: 0}
+  Goal: {fileID: 0}
 --- !u!1 &5384936018151131631
 GameObject:
   m_ObjectHideFlags: 0
@@ -846,7 +842,7 @@ GameObject:
   - component: {fileID: 5384936018151131616}
   - component: {fileID: 5384936018151131617}
   m_Layer: 5
-  m_Name: Red Score
+  m_Name: Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1386,9 +1382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffba569ad0b12442989e655a1b621664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RED_GOAL: 2
-  BLUE_GOAL: 2
-  YELLOW_GOAL: 2
+  TOTAL_GOAL: 0
   LEVEL_SELECT: 0
   healthBar: {fileID: 5384936018074865786}
   coinsScore: {fileID: 5384936018097057363}
@@ -2275,7 +2269,7 @@ GameObject:
   - component: {fileID: 5672438117276518291}
   - component: {fileID: 7811684699726737484}
   m_Layer: 5
-  m_Name: Red
+  m_Name: Score/Goal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

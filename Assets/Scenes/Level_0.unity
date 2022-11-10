@@ -139,6 +139,14 @@ PrefabInstance:
       propertyPath: gameOverHUD
       value: 
       objectReference: {fileID: 1288594012}
+    - target: {fileID: 957916560223008862, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339758036048306986, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4452270970643524159, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: RED_GOAL
       value: 1
@@ -152,6 +160,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5525176327689345041}
     - target: {fileID: 4452270970643524159, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: TOTAL_GOAL
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452270970643524159, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: YELLOW_GOAL
       value: 1
       objectReference: {fileID: 0}
@@ -159,6 +171,22 @@ PrefabInstance:
       propertyPath: finishBoundary
       value: 
       objectReference: {fileID: 113731221}
+    - target: {fileID: 4805885189004742324, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: m_Name
+      value: Goal
+      objectReference: {fileID: 0}
+    - target: {fileID: 5384936018097057363, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: Goal
+      value: 
+      objectReference: {fileID: 1782465104}
+    - target: {fileID: 5384936018097057363, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: totalScore
+      value: 
+      objectReference: {fileID: 2064878132}
+    - target: {fileID: 5384936018151131631, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: m_Name
+      value: Score
+      objectReference: {fileID: 0}
     - target: {fileID: 5384936019333487589, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -254,6 +282,14 @@ PrefabInstance:
     - target: {fileID: 5384936019506417940, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7985757309334516850, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8901600977471888528, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
@@ -5065,10 +5101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
-  countDownTimer: {fileID: 34778280}
+  timerIncrease: 6
 --- !u!4 &700051398 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8338988566280778637, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
@@ -7605,10 +7638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
-  countDownTimer: {fileID: 34778280}
+  timerIncrease: 6
 --- !u!114 &1012130564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22775,10 +22805,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
-  coinPointIncreaseOnEnemy: 1
+  totalCoins: 0
   isTriggered: 0
 --- !u!114 &1762682278
 MonoBehaviour:
@@ -22892,6 +22919,17 @@ ReflectionProbe:
   m_UseOcclusionCulling: 1
   m_Importance: 1
   m_CustomBakedTexture: {fileID: 0}
+--- !u!114 &1782465104 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6115479887780526147, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+  m_PrefabInstance: {fileID: 34778279}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &1795285706
 Mesh:
   m_ObjectHideFlags: 0
@@ -23412,10 +23450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
-  countDownTimer: {fileID: 34778280}
+  timerIncrease: 6
 --- !u!114 &1803874827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26008,6 +26043,17 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &2064878132 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5384936018151131617, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+  m_PrefabInstance: {fileID: 34778279}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &2071283340
 Mesh:
   m_ObjectHideFlags: 0
