@@ -737,6 +737,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 182510461}
     - target: {fileID: 4452270970643524159, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: TOTAL_GOAL
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452270970643524159, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: YELLOW_GOAL
       value: 8
       objectReference: {fileID: 0}
@@ -748,6 +752,14 @@ PrefabInstance:
       propertyPath: finishBoundary
       value: 
       objectReference: {fileID: 1955364185}
+    - target: {fileID: 5384936018097057363, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: Goal
+      value: 
+      objectReference: {fileID: 34778281}
+    - target: {fileID: 5384936018097057363, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: totalScore
+      value: 
+      objectReference: {fileID: 34778282}
     - target: {fileID: 5384936019333487589, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -859,6 +871,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d556d11c6e8744c068e142730eddbd90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &34778281 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6115479887780526147, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+  m_PrefabInstance: {fileID: 34778279}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &34778282 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5384936018151131617, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+  m_PrefabInstance: {fileID: 34778279}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &36841260
@@ -3585,9 +3619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &117441688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6042,9 +6074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &215195758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23734,9 +23764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &386678185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37115,9 +37143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &519731954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38091,10 +38117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
-  coinPointIncreaseOnEnemy: 1
+  totalCoins: 0
   isTriggered: 0
 --- !u!114 &546285936
 MonoBehaviour:
@@ -43561,9 +43584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &826452401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49999,9 +50020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1181819294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59627,9 +59646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1299078881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59853,9 +59870,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1322059597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60750,9 +60765,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1332165859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71162,9 +71175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1468324388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73209,9 +73220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1573199938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73326,9 +73335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1587954504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74432,9 +74439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1691750623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75991,9 +75996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1800125432
 MonoBehaviour:
   m_ObjectHideFlags: 0
