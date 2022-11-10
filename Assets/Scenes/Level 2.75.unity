@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1579,9 +1579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1637253786}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &62978450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2939,9 +2937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1637253786}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &113582036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12804,9 +12800,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1637253786}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &275717593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14931,9 +14925,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1637253786}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &331588849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31866,9 +31858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1637253786}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &459340463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31998,9 +31988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1637253786}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &459589177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42955,9 +42943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1637253786}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &555127407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43429,10 +43415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1637253786}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
-  coinPointIncreaseOnEnemy: 1
+  totalCoins: 0
   isTriggered: 0
 --- !u!114 &583192435
 MonoBehaviour:
@@ -50335,9 +50318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1637253786}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &716091581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53588,9 +53569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1637253786}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &805434939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53967,9 +53946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1637253786}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &829994941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59081,9 +59058,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1637253786}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &956718832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61758,6 +61733,17 @@ LightProbeGroup:
   - {x: 7.1518564, y: 2.7763042, z: -11.2319765}
   - {x: 8.993203, y: 2.3566551, z: -8.796325}
   m_Dering: 1
+--- !u!114 &1009839345 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5384936018151131617, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+  m_PrefabInstance: {fileID: 1391940676}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1012521341
 GameObject:
   m_ObjectHideFlags: 0
@@ -64952,9 +64938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1637253786}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1110654524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66860,9 +66844,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1637253786}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1162686421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66992,9 +66974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1637253786}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1166511036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69472,9 +69452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1637253786}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1245535242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71742,9 +71720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1637253786}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1322400353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78608,9 +78584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1637253786}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1368003470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78986,9 +78960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1637253786}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1383452982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79396,6 +79368,14 @@ PrefabInstance:
       propertyPath: finishBoundary
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5384936018097057363, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: Goal
+      value: 
+      objectReference: {fileID: 1462785142}
+    - target: {fileID: 5384936018097057363, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: totalScore
+      value: 
+      objectReference: {fileID: 1009839345}
     - target: {fileID: 5384936019333487589, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -81602,6 +81582,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 52
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1462785142 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6115479887780526147, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+  m_PrefabInstance: {fileID: 1391940676}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1493552568
 GameObject:
   m_ObjectHideFlags: 0
@@ -81752,9 +81743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1637253786}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1505795929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83984,9 +83973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1637253786}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1573967908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84767,9 +84754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1637253786}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1584737996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88069,9 +88054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1637253786}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1641252420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99528,9 +99511,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1637253786}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1787216755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114667,9 +114648,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1637253786}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1934262048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119068,9 +119047,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1637253786}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &2090823402
 MonoBehaviour:
   m_ObjectHideFlags: 0
