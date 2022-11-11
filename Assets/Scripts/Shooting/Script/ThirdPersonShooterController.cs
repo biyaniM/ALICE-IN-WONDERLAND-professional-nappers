@@ -16,7 +16,6 @@ public class ThirdPersonShooterController : MonoBehaviour
     public int currentAmmo;
     [Header("Shooting VFX")]
     [Tooltip("Particle System for Shooting VFX")][SerializeField] private ParticleSystem shootFlash;
-    // private ThirdPersonController thirdPersonController;
     [Header("Player Rotation with Camera")]
     private GameObject TPPAimCamera;
     
@@ -29,7 +28,7 @@ public class ThirdPersonShooterController : MonoBehaviour
         starterAssetsInputs = GetComponent<StarterAssetsInputs>();
         currentAmmo = player.ammoCount.currentAmmo;
     }
-    // Update is called once per frame
+
     void Update()
     {
         RotateWithCamera();
@@ -54,14 +53,9 @@ public class ThirdPersonShooterController : MonoBehaviour
 
     void Shoot(){
         shootFlash.Play();
-        // Vector3 aimDir = (aimPosition - spawnProjectilePosition.position).normalized;
-        Vector3 aimDir = spawnProjectilePosition.position.normalized;
-        Instantiate(PaintBallProjectile, spawnProjectilePosition.position,spawnProjectilePosition.rotation);// Quaternion.LookRotation(aimDir, Vector3.up));
+        
+        Instantiate(PaintBallProjectile, spawnProjectilePosition.position,spawnProjectilePosition.rotation);
         starterAssetsInputs.shoot = false; //* To implement Semi-automatic Shooting.
         player.UpdateAmmo(player.ammoCount.currentAmmo - 1);
-        
-        string currentAmmoMessage = string.Format("Current Ammmo {0}/{1}",player.ammoCount.currentAmmo,player.ammoCount.totalAmmo);
-        Debug.Log(currentAmmoMessage);
-        // shootFlash.Pause();
     }
 }
