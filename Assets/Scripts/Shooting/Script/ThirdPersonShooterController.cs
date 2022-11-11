@@ -6,20 +6,24 @@ using StarterAssets;
 
 public class ThirdPersonShooterController : MonoBehaviour
 {
-    
-    // [SerializeField] private LayerMask aimColliderLayerMask = new LayerMask();
-    [SerializeField] private Transform debugTransform;
-    [SerializeField] private Transform PaintBallProjectile;
-    [SerializeField] private Transform spawnProjectilePosition;
+    [Header("Bullet Projectile Settings")]
+    [Tooltip("Bullet Projectile Prefab")][SerializeField] private Transform PaintBallProjectile;
+    [Tooltip("Gun Point on Player")][SerializeField] private Transform spawnProjectilePosition;
     private StarterAssetsInputs starterAssetsInputs;
-    [SerializeField] Player player;
+    [Header("Ammo Settings")]
+    [Tooltip("HUD Object")][SerializeField] Player player;
     public int maxAmmo = 10;
     public int currentAmmo;
-    [SerializeField] private ParticleSystem shootFlash;
+    [Header("Shooting VFX")]
+    [Tooltip("Particle System for Shooting VFX")][SerializeField] private ParticleSystem shootFlash;
+    // private ThirdPersonController thirdPersonController;
+    [Header("Player Rotation with Camera")]
+    private GameObject TPPAimCamera;
     
     void Start(){
         player.InitAmmo(maxAmmo);
         Cursor.lockState = CursorLockMode.Locked;
+        TPPAimCamera = GameObject.Find("TPPAimCamera");
     }
     void Awake(){
         starterAssetsInputs = GetComponent<StarterAssetsInputs>();
@@ -28,22 +32,24 @@ public class ThirdPersonShooterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        RotateWithCamera();
+
+        //* Ammo Update
         currentAmmo = player.ammoCount.currentAmmo;
-        // Vector3 aimPosition = Vector3.zero;
-        // Get Screen centre
-        // Vector2 screenCentrePoint = new Vector2(Screen.width /2f , Screen.height / 2f);
-        // Ray ray = Camera.main.ScreenPointToRay(screenCentrePoint);
-        // if (Physics.Raycast(ray, hitInfo: out RaycastHit rayCastHit, 999f, aimColliderLayerMask)){
-        //     transform.position = rayCastHit.point;
-        //     // debugTransform.position = rayCastHit.point;
-        // }
         if (player.ammoCount.currentAmmo>0){
             if (starterAssetsInputs.shoot){
                 Shoot();
             }
         }else{
-
+            //TODO Play no ammo audio.
         }
+    }
+
+    private void RotateWithCamera(){ //* Rotates the Player with the Camera
+        Quaternion aimDir = TPPAimCamera.transform.rotation;
+        aimDir.x = 0;
+        aimDir.z = 0;
+        transform.rotation = aimDir;
     }
 
     void Shoot(){

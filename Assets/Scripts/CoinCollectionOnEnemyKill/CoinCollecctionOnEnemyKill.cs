@@ -22,9 +22,7 @@ public class CoinCollecctionOnEnemyKill : MonoBehaviour
     void OnTriggerEnter(Collider collider){
         if(!passed){
             if (collider.gameObject.name == "PaintBallProjectile(Clone)"){
-                Debug.Log("Passed?"+passed);
                 passed = true;
-                Debug.Log("Hit!");
 
                 if (gameObject.tag == "enemy_red" || gameObject.tag=="enemy_yellow" || gameObject.tag=="enemy_blue"){
                     setNewTimeAfterKillingEnemy();
