@@ -51,6 +51,7 @@ public class ThirdPersonShooterController : MonoBehaviour
         // Vector3 aimDir = (aimPosition - spawnProjectilePosition.position).normalized;
         Vector3 aimDir = spawnProjectilePosition.position.normalized;
         Instantiate(PaintBallProjectile, spawnProjectilePosition.position,spawnProjectilePosition.rotation);// Quaternion.LookRotation(aimDir, Vector3.up));
+        FindObjectOfType<AudioManager>().play("shooting");
         starterAssetsInputs.shoot = false; //* To implement Semi-automatic Shooting.
         player.UpdateAmmo(player.ammoCount.currentAmmo - 1);
         
