@@ -22,28 +22,21 @@ public class CoinCollecctionOnEnemyKill : MonoBehaviour
     void OnTriggerEnter(Collider collider){
         if(!passed){
             if (collider.gameObject.name == "PaintBallProjectile(Clone)"){
-                Debug.Log("Passed?"+passed);
                 passed = true;
-                Debug.Log("Hit!");
 
-                if (gameObject.tag=="enemy_red"){
+                if (gameObject.tag == "enemy_red" || gameObject.tag=="enemy_yellow" || gameObject.tag=="enemy_blue"){
                     setNewTimeAfterKillingEnemy();
-                }
-                else if (gameObject.tag=="enemy_yellow"){
-                    setNewTimeAfterKillingEnemy();
-                }
-                else if (gameObject.tag=="enemy_blue"){
-                    setNewTimeAfterKillingEnemy();
-                }
-                else{
+                    SendMsgToHUD("+ "+timerIncrease.ToString()+" Seconds");
+                }else{
                     return;
                 }
+                
+                Destroy(gameObject);
             }
-        }  
+        }
     }
 
-    void SendMsgToHUD(string color){
-        string msg = color + " Coin +1";
+    void SendMsgToHUD(string msg){
         player.ShowAlert(msg);
         StartCoroutine (waiter());
     }

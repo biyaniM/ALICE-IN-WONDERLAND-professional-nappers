@@ -38,7 +38,6 @@ public class BulletProjectile : MonoBehaviour
         if (col.gameObject.tag!="Player"){Destroy(gameObject);}
 
         if(col.gameObject.tag == "enemy_red" || col.gameObject.tag == "enemy_yellow" || col.gameObject.tag == "enemy_blue"){
-            Destroy(col.gameObject);
             Debug.Log("Killed Enemy!!!!!");
             player = GameObject.Find("HUD").GetComponent<Player>();
             player.UpdateNumberOfKill();
