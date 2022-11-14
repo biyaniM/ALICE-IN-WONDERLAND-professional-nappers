@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
 public class LevelGallery : MonoBehaviour,IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler{
     public RectTransform levelPreview;
     public GameObject levelBrief;
+    public string LevelName;
  
     Vector3 cachedScale;
  
@@ -31,6 +33,6 @@ public class LevelGallery : MonoBehaviour,IPointerEnterHandler, IPointerExitHand
 
     public void OnPointerClick(PointerEventData eventData){
         //go to level
-        
+        SceneManager.LoadScene(LevelName);
     }
  }
