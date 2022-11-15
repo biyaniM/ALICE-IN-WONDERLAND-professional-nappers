@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.025259795, g: 0.025672503, b: 0.029711166, a: 1}
+  m_IndirectSpecularColor: {r: 0.025741346, g: 0.026223412, b: 0.030502593, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1490,7 +1490,11 @@ MonoBehaviour:
   turretShootRange: 7
   fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 583192429}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!65 &62978451
 BoxCollider:
@@ -3523,7 +3527,11 @@ MonoBehaviour:
   turretShootRange: 10
   fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 583192429}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!65 &113582037
 BoxCollider:
@@ -12619,7 +12627,11 @@ MonoBehaviour:
   turretShootRange: 7
   fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 583192429}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!65 &275717594
 BoxCollider:
@@ -14295,7 +14307,11 @@ MonoBehaviour:
   turretShootRange: 7
   fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 583192429}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!65 &331588850
 BoxCollider:
@@ -16978,7 +16994,11 @@ MonoBehaviour:
   turretShootRange: 7
   fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 583192429}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!65 &459340464
 BoxCollider:
@@ -27582,7 +27602,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c471bae6ce5a064a98db34f11fdd310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugTransform: {fileID: 0}
   PaintBallProjectile: {fileID: 1404114414586556645, guid: 0071948dbcd87214e848d8da0478cfe5, type: 3}
   spawnProjectilePosition: {fileID: 859780624}
   player: {fileID: 1637253786}
@@ -35208,7 +35227,11 @@ MonoBehaviour:
   turretShootRange: 7
   fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 583192429}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!65 &716091582
 BoxCollider:
@@ -37084,7 +37107,11 @@ MonoBehaviour:
   turretShootRange: 7
   fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 583192429}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!65 &805434940
 BoxCollider:
@@ -37606,7 +37633,11 @@ MonoBehaviour:
   turretShootRange: 7
   fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 583192429}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!65 &829994942
 BoxCollider:
@@ -37910,7 +37941,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.2696303
+      value: 1.2696295
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -41841,7 +41872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.2696303
+      value: 1.2696295
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -42100,7 +42131,11 @@ MonoBehaviour:
   turretShootRange: 7
   fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 583192429}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!65 &956718833
 BoxCollider:
@@ -46291,7 +46326,11 @@ MonoBehaviour:
   turretShootRange: 7
   fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 583192429}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!65 &1110654525
 BoxCollider:
@@ -47363,7 +47402,11 @@ MonoBehaviour:
   turretShootRange: 7
   fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 583192429}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!65 &1162686422
 BoxCollider:
@@ -50172,7 +50215,11 @@ MonoBehaviour:
   turretShootRange: 7
   fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 583192429}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!65 &1245535243
 BoxCollider:
@@ -51794,7 +51841,11 @@ MonoBehaviour:
   turretShootRange: 7
   fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 583192429}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!65 &1322400354
 BoxCollider:
@@ -58055,7 +58106,11 @@ MonoBehaviour:
   turretShootRange: 7
   fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 583192429}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!65 &1368003471
 BoxCollider:
@@ -58671,7 +58726,11 @@ MonoBehaviour:
   turretShootRange: 10
   fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 583192429}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!65 &1383452983
 BoxCollider:
@@ -61681,7 +61740,11 @@ MonoBehaviour:
   turretShootRange: 7
   fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 583192429}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!65 &1505795930
 BoxCollider:
@@ -62201,7 +62264,11 @@ MonoBehaviour:
   turretShootRange: 7
   fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 583192429}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!1001 &1525847140
 PrefabInstance:
@@ -63335,7 +63402,11 @@ MonoBehaviour:
   turretShootRange: 7
   fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 583192429}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!65 &1573967909
 BoxCollider:
@@ -63568,7 +63639,11 @@ MonoBehaviour:
   turretShootRange: 7
   fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 583192429}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!65 &1584737997
 BoxCollider:
@@ -63878,7 +63953,11 @@ MonoBehaviour:
   turretShootRange: 10
   fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 583192429}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!65 &1596311499
 BoxCollider:
@@ -65011,7 +65090,11 @@ MonoBehaviour:
   turretShootRange: 7
   fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 583192429}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!65 &1641252421
 BoxCollider:
@@ -73113,7 +73196,11 @@ MonoBehaviour:
   turretShootRange: 7
   fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 583192429}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!65 &1787216756
 BoxCollider:
@@ -86852,7 +86939,11 @@ MonoBehaviour:
   turretShootRange: 7
   fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 583192429}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!65 &1934262049
 BoxCollider:
@@ -87095,6 +87186,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 135756642000475821, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
+      propertyPath: cursorLocked
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 838459166706130364, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: gameOverHud
       value: 
@@ -89467,7 +89562,11 @@ MonoBehaviour:
   turretShootRange: 7
   fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 583192429}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!65 &2090823403
 BoxCollider:
