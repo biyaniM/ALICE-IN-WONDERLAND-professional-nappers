@@ -10,8 +10,8 @@ public class enemy : MonoBehaviour
     [SerializeField] int turretShootRange = 7;
     [SerializeField] int fireRateConstant = 10;
     [SerializeField] float turrentRotationSpeedMultiplier = 1f;
-    [SerializeField] float farAngleThreshold = 15f;
-    [SerializeField] float closeAngleThreshold = 30f;
+    [SerializeField] float farAngleThreshold = 3f;
+    [SerializeField] float closeAngleThreshold = 5f;
     [SerializeField] float closeAngleDistanceThreshold = 4f;
 
    // private Transform playerTransform;  //could be changed to 'target' 
@@ -52,8 +52,6 @@ public class enemy : MonoBehaviour
         if(fireRateDelta <= 0 && distance < turretShootRange)
         {  
             if (Physics.Raycast(transform.position,playerDirection,out hit, turretRaycastRange)){
-                //* Rotate if the player is in range for the turret
-                RotateTurret(playerDirection);
                 
                 if(hit.collider.gameObject == player.gameObject){
                     //* If the collider in sight is the player
@@ -62,6 +60,10 @@ public class enemy : MonoBehaviour
                         //* If target is in sight, shoot!
                         currentGun.Fire();
                         fireRateDelta = fireRate;
+                    }
+                    else{
+                        //* Rotate if the player is in range for the turret
+                        RotateTurret(playerDirection);
                     }
                 }
             }
@@ -72,7 +74,7 @@ public class enemy : MonoBehaviour
     private void RotateTurret(Vector3 playerDirection){
         Quaternion rotation = Quaternion.LookRotation(playerDirection.normalized);
         Quaternion current = transform.localRotation;{
-        transform.localRotation = Quaternion.Slerp(current, rotation, Time.deltaTime * turretRotationSpeed * turrentRotationSpeedMultiplier);}
+        transform.rotation = Quaternion.Slerp(current, rotation, Time.deltaTime * turretRotationSpeed * turrentRotationSpeedMultiplier);}
     }
 
     private bool TargetInSight(){
@@ -87,7 +89,12 @@ public class enemy : MonoBehaviour
                 //* If enemy is far and angle is suitable to shoot, then target is in sight
                 return true;
             }
-            else if (angle <= closeAngleThreshold && distanceBetween <= closeAngleDistanceThreshold){ 
+            else if (distanceBetween <= closeAngleDistanceThreshold){
+                //* If enemy is close then rotate. 
+                RotateTurret(newDir);
+                return true;
+            }
+            else if (angle <= closeAngleThreshold && distanceBetween <= closeAngleDistanceThreshold){ //TODO Remove redundant logic
                 //* If enemy is close and angle is suitable to shoot, then target is in sight
                 return true;
             }
