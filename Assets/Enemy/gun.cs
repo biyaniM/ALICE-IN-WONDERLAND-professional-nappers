@@ -21,7 +21,9 @@ public class gun : MonoBehaviour
 
     public void Fire()
     {
+        if (shootFlash != null){
         shootFlash.Play();
+        }
         Instantiate(projectile.transform, gunPoint.position, gunPoint.rotation);     
     }
 }
