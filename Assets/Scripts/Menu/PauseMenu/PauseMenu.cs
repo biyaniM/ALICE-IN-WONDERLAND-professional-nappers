@@ -25,7 +25,7 @@ public class PauseMenu : MonoBehaviour
         resume_btn.onClick.AddListener(Resume);
         menu_btn.onClick.AddListener(BackToMenu);
         restart_btn.onClick.AddListener(Restart);
-        guide_btn.onClick.AddListener(ShowGuideMenu);
+        //guide_btn.onClick.AddListener(ShowGuideMenu);
         // timer.pauseTimer();
         Time.timeScale = 0f;
         GameIsPaused = true;
@@ -51,7 +51,8 @@ public class PauseMenu : MonoBehaviour
     void BackToMenu(){  // working
         Debug.Log("Main Menu!");
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Menu");
+        //SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("New_Menu");
     }
 
     void ShowGuideMenu(){
