@@ -40,7 +40,7 @@ public class UpDown : MonoBehaviour
         else if (movementAxis == 'X' || movementAxis == 'x'){
             float xVal = original + (Mathf.PingPong(Time.time * speed, height_x));
             // float xVal = original + movementMultiplier * Mathf.Sin(Mathf.PingPong(Time.time, 2* Mathf.PI));
-            // transform.position = new Vector3(xVal, transform.position.y , transform.position.z);
+            transform.position = new Vector3(xVal, transform.position.y , transform.position.z);
         }
         else{
             float yVal = original + (Mathf.PingPong(Time.time * speed, height_y));
