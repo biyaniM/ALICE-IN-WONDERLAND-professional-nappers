@@ -6,11 +6,12 @@ public class gun : MonoBehaviour
 {
     [SerializeField] GameObject projectile;
     [SerializeField] float rateOfFire = 15f;
-    [SerializeField] public Transform gunPoint;    
+    [SerializeField] public Transform gunPoint;
+    private ParticleSystem shootFlash;  
 
     private void Start()
     {
-
+        shootFlash = GetComponentInChildren<ParticleSystem>();
     }
 
     public float GetRateOfFire()
@@ -20,7 +21,7 @@ public class gun : MonoBehaviour
 
     public void Fire()
     {
-        Instantiate(projectile.transform, gunPoint.position, gunPoint.rotation);   
-        // Instantiate(projectile, gunPoint.position, transform.rotation);  
+        shootFlash.Play();
+        Instantiate(projectile.transform, gunPoint.position, gunPoint.rotation);     
     }
 }
