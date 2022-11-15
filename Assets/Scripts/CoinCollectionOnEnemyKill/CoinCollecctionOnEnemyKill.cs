@@ -21,6 +21,7 @@ public class CoinCollecctionOnEnemyKill : MonoBehaviour
 
     void OnTriggerEnter(Collider collider){
         if(!passed){
+            Debug.Log("I hit "+collider.gameObject);
             if (collider.gameObject.name == "PaintBallProjectile(Clone)"){
                 passed = true;
 
