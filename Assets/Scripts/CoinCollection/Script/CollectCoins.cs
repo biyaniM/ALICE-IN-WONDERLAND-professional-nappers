@@ -20,6 +20,7 @@ public class CollectCoins : MonoBehaviour
         if(col.gameObject.tag == "RedCoin" || col.gameObject.tag == "BlueCoin" || col.gameObject.tag == "YellowCoin" || col.gameObject.tag == "BlueTutorialCoin"){
             //TODO Add Collection Sound
             totalCoins += coinPointIncreaseOnCollection;
+            FindObjectOfType<GrayScaleFunctions>().addNewShade();
             player.UpdateCoins(totalCoins);
             col.gameObject.SetActive(false);
             SendMsgToHUD();

@@ -5,12 +5,14 @@ using UnityEngine;
 public class Init : MonoBehaviour
 {
     // Start is called before the first frame update
-    public FadeToGray fadeToGray;
+    public GrayScaleFunctions grayScaleFunctions;
     public int[] indexes;
+    public int numberOfCoins;
 
     void Awake() {
-        fadeToGray.fadeAll();
-        fadeToGray.setColorToCoins(indexes);
+        grayScaleFunctions.fadeAllExceptCoins();
+        grayScaleFunctions.setInitialShadeFactor(numberOfCoins);
+       // fadeToGray.setColorToCoins(indexes);
     }
     void Start()
     {

@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d3a4f0e359594d529aaef5d671c25bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 0
+  numberOfCoins: 0
 --- !u!1 &1640614192
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,9 +428,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materials:
-  - {fileID: 2100000, guid: 153f605e25524409692f53744bd66cad, type: 2}
-  - {fileID: 2100000, guid: ead0e29b647004e52b3da9bb2500544d, type: 2}
-  - {fileID: 2100000, guid: c12728cbdf93f41c3a9d602534b14c3e, type: 2}
+  - material: {fileID: 2100000, guid: 153f605e25524409692f53744bd66cad, type: 2}
+    isCoin: 0
+  - material: {fileID: 2100000, guid: ead0e29b647004e52b3da9bb2500544d, type: 2}
+    isCoin: 0
+  - material: {fileID: 2100000, guid: c12728cbdf93f41c3a9d602534b14c3e, type: 2}
+    isCoin: 1
 --- !u!114 &1640614197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -443,8 +446,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b66c50402067496e8bdf81d2302476c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeToGray: {fileID: 1640614196}
+  grayScaleFunctions: {fileID: 1640614196}
   indexes: 02000000
+  numberOfCoins: 2
 --- !u!1 &1649956303
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,7 +559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d3a4f0e359594d529aaef5d671c25bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 2
+  numberOfCoins: 0
 --- !u!1 &1682668479
 GameObject:
   m_ObjectHideFlags: 0
@@ -667,4 +671,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d3a4f0e359594d529aaef5d671c25bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 1
+  numberOfCoins: 0
