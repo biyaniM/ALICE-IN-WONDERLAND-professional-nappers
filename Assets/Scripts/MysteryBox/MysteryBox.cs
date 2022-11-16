@@ -63,10 +63,7 @@ public class MysteryBox : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider col){
-        Debug.Log("Mystery Hit "+col);
-        
         if (col.gameObject.tag=="Player"){
-            Debug.Log("Mystery Good Job "+col);
             switch (mysteryBoxType){
                 case mysteryBoxTypes.Health:
                     coroutine = StartCoroutine(HealthReplenish(changeAmount));

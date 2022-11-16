@@ -28,7 +28,7 @@ public class ArrowKeyTutorial : MonoBehaviour
             case "movement":
                 if (col.tag=="Player" && !instructionComplete){
                     instructionComplete = false;
-                    tutorialMessage = "Use W A S D to move\n\nUse mouse to look around";
+                    tutorialMessage = "Use W A S D to move\nUse mouse to look around";
                 }
                 break;
 

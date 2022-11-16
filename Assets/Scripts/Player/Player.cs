@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
     public CoinsScore coinsScore;
     public AmmoCount ammoCount;
     private TextMeshProUGUI guidance;
+    public Image guidanceArea;
     private TextMeshProUGUI alert;
     public GameObject finishBoundary;
     public PauseMenu pauseMenu;
@@ -51,6 +52,7 @@ public class Player : MonoBehaviour
 
     //todo: fix all ui component here  
     void SetComponents(){
+        guidanceArea.enabled = false;
         guidance = GameObject.Find("Guidance").GetComponent<TextMeshProUGUI>();
         guidance.enabled = false;
         alert = GameObject.Find("Alert").GetComponent<TextMeshProUGUI>();
@@ -141,11 +143,13 @@ public class Player : MonoBehaviour
     }
 
     public void ShowGuidance(string msg){
+        guidanceArea.enabled = true;
         guidance.enabled = true;
         guidance.text = msg;
     }
 
     public void CloseGuidance(){
+        guidanceArea.enabled = false;
         guidance.enabled = false;
     }
 

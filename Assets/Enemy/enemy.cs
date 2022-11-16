@@ -89,7 +89,12 @@ public class enemy : MonoBehaviour
                 //* If enemy is far and angle is suitable to shoot, then target is in sight
                 return true;
             }
-            else if (angle <= closeAngleThreshold && distanceBetween <= closeAngleDistanceThreshold){ 
+            else if (distanceBetween <= closeAngleDistanceThreshold){
+                //* If enemy is close then rotate. 
+                RotateTurret(newDir);
+                return true;
+            }
+            else if (angle <= closeAngleThreshold && distanceBetween <= closeAngleDistanceThreshold){ //TODO Remove redundant logic
                 //* If enemy is close and angle is suitable to shoot, then target is in sight
                 return true;
             }
