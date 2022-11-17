@@ -9,26 +9,21 @@ public class Player : MonoBehaviour
 {
     //Attributes
     private int healthPoint;
-    private int redCoins;
-    private int blueCoins;
-    private int yellowCoins;
-    private int totalCoins;
+    private int collectedCoins;
     private int ammoBalance;
     private float saturation;
     //fake const(set from outside)
     private int SUM_AMMO;
     private int SUM_HEALTH;
-    private int TOTAL_GOAL;
     private float SATURATION_INCREASE_FACTOR;
-    [SerializeField] int RED_GOAL;
-    [SerializeField] int BLUE_GOAL;
-    [SerializeField] int YELLOW_GOAL;
+    [SerializeField] int TOTAL_GOAL;
     [SerializeField] int LEVEL_SELECT;
     // UI components
     public HealthBar healthBar;
     public CoinsScore coinsScore;
     public AmmoCount ammoCount;
     private TextMeshProUGUI guidance;
+    public Image guidanceArea;
     private TextMeshProUGUI alert;
     public GameObject finishBoundary;
     public PauseMenu pauseMenu;
@@ -38,9 +33,10 @@ public class Player : MonoBehaviour
     void Start()
     {
         SetComponents();
-        SetGoal(RED_GOAL, BLUE_GOAL, YELLOW_GOAL);
+        SetGoal(TOTAL_GOAL);
+
         saturation = -100f;
-        // InitAmmo(80); //! Removinng from Test
+
         InitHealth(100);
         InitializeHUD();
 
@@ -56,6 +52,7 @@ public class Player : MonoBehaviour
 
     //todo: fix all ui component here  
     void SetComponents(){
+        guidanceArea.enabled = false;
         guidance = GameObject.Find("Guidance").GetComponent<TextMeshProUGUI>();
         guidance.enabled = false;
         alert = GameObject.Find("Alert").GetComponent<TextMeshProUGUI>();
@@ -81,14 +78,11 @@ public class Player : MonoBehaviour
         healthBar.SetHealth(healthPoint);
     }
 
-    public void UpdateCoins(int red, int blue, int yellow){
-        redCoins = red;
-        blueCoins = blue;
-        yellowCoins = yellow;
-        totalCoins = redCoins + blueCoins + yellowCoins;
+    public void UpdateCoins(int coins){
+        collectedCoins = coins;
         saturation += SATURATION_INCREASE_FACTOR;
-        coinsScore.SetScores(redCoins, blueCoins, yellowCoins);
-        RenderSettings.skybox.SetColor("_Tint", new Color(15*red/255f, 15*yellow/255f, 15*blue/255f));
+        coinsScore.SetScores(collectedCoins);
+        RenderSettings.skybox.SetColor("_Tint", new Color(15*coins/255f, 15*coins/255f, 15*coins/255f));
     }
 
     public void UpdateAmmo(int ammoAmount){
@@ -96,13 +90,10 @@ public class Player : MonoBehaviour
         ammoCount.SetBalance(ammoBalance);
     }
     //import setting from level side
-    void SetGoal(int redGoal, int blueGoal, int yellowGoal){
-        RED_GOAL = redGoal;
-        BLUE_GOAL = blueGoal;
-        YELLOW_GOAL = yellowGoal;
-        TOTAL_GOAL = RED_GOAL + YELLOW_GOAL + BLUE_GOAL;
+    void SetGoal(int totalGoal){
+        TOTAL_GOAL = totalGoal;
         SATURATION_INCREASE_FACTOR = 100f / TOTAL_GOAL;
-        coinsScore.SetGoals(RED_GOAL, BLUE_GOAL, YELLOW_GOAL);
+        coinsScore.SetGoals(TOTAL_GOAL);
     }
     //import from player shooting???
     public void InitAmmo(int ammoAmount){
@@ -118,37 +109,24 @@ public class Player : MonoBehaviour
     void InitializeHUD(){
         healthPoint = SUM_HEALTH;
         ammoBalance = SUM_AMMO;
-        redCoins = 0;
-        blueCoins = 0;
-        yellowCoins = 0;
+        collectedCoins = 0;
         Debug.Log("Initialize HUD values");
     }
 
-    //check if the player has collected enough colors
-    public void CheckGoal(int red, int blue, int yellow){
-        if(red >= RED_GOAL && blue >= BLUE_GOAL && yellow >= YELLOW_GOAL){
-                // finishBoundary.GetComponent<BoxCollider>().enabled = false;
-                setFinishBoundary(false, "FinishBoundary", finishBoundary);
+    //check if the player has collected enough coins
+    public void CheckGoal(int coins){
+        if(coins >= TOTAL_GOAL){
+            setFinishBoundary(false, "FinishBoundary", finishBoundary);
         }
-
-
     }
 
     public void setFinishBoundary(bool param, string finish, GameObject finishBoundary){
         finishBoundary = GameObject.Find(finish);
         finishBoundary.GetComponent<BoxCollider>().enabled = param;
     }
-
-    public int GetRedCoinsScore(){
-        return redCoins;
-    }
-
-    public int GetBlueCoinsScore(){
-        return blueCoins;
-    }
-
-    public int GetYellowCoinsScore(){
-        return yellowCoins;
+    
+    public int GetCoinsScore(){
+         return collectedCoins;
     }
 
     public float GetSaturation(){
@@ -165,11 +143,13 @@ public class Player : MonoBehaviour
     }
 
     public void ShowGuidance(string msg){
+        guidanceArea.enabled = true;
         guidance.enabled = true;
         guidance.text = msg;
     }
 
     public void CloseGuidance(){
+        guidanceArea.enabled = false;
         guidance.enabled = false;
     }
 
