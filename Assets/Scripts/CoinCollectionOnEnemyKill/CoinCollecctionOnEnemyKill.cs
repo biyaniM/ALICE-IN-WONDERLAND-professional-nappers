@@ -8,6 +8,7 @@ public class CoinCollecctionOnEnemyKill : MonoBehaviour
     private bool passed;
     public int timerIncrease = 6;
     protected CountDownTimer countDownTimer;
+    protected ParticleSystem explosion;
     
     // Start is called before the first frame update
     void Start()
@@ -31,6 +32,10 @@ public class CoinCollecctionOnEnemyKill : MonoBehaviour
                 }else{
                     return;
                 }
+
+                //* Explosion
+                explosion = transform.parent.Find("Explosion").GetComponent<ParticleSystem>();
+                if (explosion!= null) explosion.Play();
                 
                 Destroy(gameObject);
             }
@@ -49,7 +54,7 @@ public class CoinCollecctionOnEnemyKill : MonoBehaviour
     // Update is called once per frame
     void Update()
     {        
-        
+
     }
 
     public void setNewTimeAfterKillingEnemy() {
