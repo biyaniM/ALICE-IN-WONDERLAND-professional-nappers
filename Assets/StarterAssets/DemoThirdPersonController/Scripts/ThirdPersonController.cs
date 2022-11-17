@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
-using UnityEngine.Assertions;
 #endif
+using UnityEngine.Assertions;
 
 /* Note: animations are called via the controller for both the character and capsule using animator null checks
  */
