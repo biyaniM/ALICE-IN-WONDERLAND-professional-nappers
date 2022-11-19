@@ -80,7 +80,9 @@ public class Player : MonoBehaviour
 
     public void UpdateCoins(int coins){
         collectedCoins = coins;
-        saturation += SATURATION_INCREASE_FACTOR;
+        if(saturation < 0){
+            saturation += SATURATION_INCREASE_FACTOR;
+        }
         coinsScore.SetScores(collectedCoins);
         RenderSettings.skybox.SetColor("_Tint", new Color(15*coins/255f, 15*coins/255f, 15*coins/255f));
     }
