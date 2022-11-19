@@ -14,6 +14,7 @@ public class UpDown : MonoBehaviour
     [SerializeField] private int height_x;
     [SerializeField] private int height_y;
     [SerializeField] private int height_z;
+    [SerializeField] private int direction; // switch between plus and minus if 0 then plus else minus
     // Start is called before the first frame update
     void Start()
     {
@@ -32,18 +33,34 @@ public class UpDown : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        float zVal, xVal, yVal;
         if (movementAxis == 'Z' || movementAxis == 'z'){
             // float zVal = original + movementMultiplier * Mathf.Sin(Mathf.PingPong(Time.time, 2* Mathf.PI));
-            float zVal = original + (Mathf.PingPong(Time.time * speed, height_z));
+            if(direction == 0){
+                zVal = original + (Mathf.PingPong(Time.time * speed, height_z));
+            }
+            else{
+                zVal = original - (Mathf.PingPong(Time.time * speed, height_z));
+            }
             transform.position = new Vector3(transform.position.x, transform.position.y , zVal);
         }
         else if (movementAxis == 'X' || movementAxis == 'x'){
-            float xVal = original + (Mathf.PingPong(Time.time * speed, height_x));
+            if(direction == 0){
+                xVal = original + (Mathf.PingPong(Time.time * speed, height_x));    
+            }
+            else{
+                xVal = original - (Mathf.PingPong(Time.time * speed, height_x));
+            }
             // float xVal = original + movementMultiplier * Mathf.Sin(Mathf.PingPong(Time.time, 2* Mathf.PI));
             transform.position = new Vector3(xVal, transform.position.y , transform.position.z);
         }
         else{
-            float yVal = original + (Mathf.PingPong(Time.time * speed, height_y));
+            if(direction == 0){
+                yVal = original + (Mathf.PingPong(Time.time * speed, height_y));
+            }
+            else{
+                yVal = original - (Mathf.PingPong(Time.time * speed, height_y));
+            }
             transform.position = new Vector3(transform.position.x, yVal , transform.position.z);
         }
     }
