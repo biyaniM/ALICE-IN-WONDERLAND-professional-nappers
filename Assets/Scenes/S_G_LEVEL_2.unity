@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6601773, g: 0.6338455, b: 0.82810235, a: 1}
+  m_IndirectSpecularColor: {r: 0.6601218, g: 0.63382, b: 0.8280174, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -279,6 +279,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!1 &18520866 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1361042428347342, guid: ae87697315833463bb6a7f98852d51ee, type: 3}
@@ -4457,6 +4458,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!1 &135339814
 GameObject:
   m_ObjectHideFlags: 0
@@ -4973,6 +4975,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 5
+  direction: 0
 --- !u!1 &197950850
 GameObject:
   m_ObjectHideFlags: 0
@@ -5726,6 +5729,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!1 &292426218
 GameObject:
   m_ObjectHideFlags: 0
@@ -7011,6 +7015,7 @@ MonoBehaviour:
   height_x: 5
   height_y: 0
   height_z: 0
+  direction: 0
 --- !u!4 &403209431 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000011633533144, guid: 5fc793910aad343818747bda99b45d90, type: 3}
@@ -7157,6 +7162,7 @@ MonoBehaviour:
   height_x: 5
   height_y: 0
   height_z: 0
+  direction: 0
 --- !u!4 &445185055 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000011633533144, guid: 5fc793910aad343818747bda99b45d90, type: 3}
@@ -7252,6 +7258,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!1001 &453093270
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7411,6 +7418,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!1001 &463032810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8776,6 +8784,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 1
   height_z: 0
+  direction: 0
 --- !u!1001 &646650990
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9146,6 +9155,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!1 &676424787
 GameObject:
   m_ObjectHideFlags: 0
@@ -9616,6 +9626,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!1001 &695655616
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9918,6 +9929,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!1001 &720688164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10729,6 +10741,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!1001 &796133425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11246,6 +11259,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!1 &847941328
 GameObject:
   m_ObjectHideFlags: 0
@@ -11541,6 +11555,7 @@ MonoBehaviour:
   height_x: 100
   height_y: 0
   height_z: 0
+  direction: 0
 --- !u!4 &881545868 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000011633533144, guid: 5fc793910aad343818747bda99b45d90, type: 3}
@@ -12208,6 +12223,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4452270970643524159, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: alertArea
+      value: 
+      objectReference: {fileID: 895958265}
+    - target: {fileID: 4452270970643524159, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 1853559539}
@@ -12424,6 +12443,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d556d11c6e8744c068e142730eddbd90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &895958265 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 505253625652732260, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+  m_PrefabInstance: {fileID: 895958260}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &922464928
@@ -12660,6 +12690,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!1001 &935602960
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14375,6 +14406,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 5
   height_z: 0
+  direction: 0
 --- !u!1001 &1040348878
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15562,6 +15594,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!1001 &1155917755
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16071,6 +16104,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!1001 &1191544353
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17215,6 +17249,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!1001 &1296117758
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17640,6 +17675,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 1
   height_z: 0
+  direction: 0
 --- !u!1001 &1325581495
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17730,6 +17766,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!1 &1327299790 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000013931470818, guid: 5c02591794acece409986647ed6329a7, type: 3}
@@ -17905,6 +17942,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!4 &1342276735 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000011633533144, guid: 5fc793910aad343818747bda99b45d90, type: 3}
@@ -18086,6 +18124,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!1 &1359854106
 GameObject:
   m_ObjectHideFlags: 0
@@ -18212,6 +18251,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!4 &1376227624 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2631398037336199219, guid: f1e954ce2c39d8346a6d13ba1d4a003f, type: 3}
@@ -18389,6 +18429,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 1
   height_z: 0
+  direction: 0
 --- !u!1 &1393455014
 GameObject:
   m_ObjectHideFlags: 0
@@ -19406,6 +19447,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!1001 &1440193317
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20176,6 +20218,7 @@ MonoBehaviour:
   height_x: 70
   height_y: 0
   height_z: 0
+  direction: 0
 --- !u!1 &1489337302
 GameObject:
   m_ObjectHideFlags: 0
@@ -20350,6 +20393,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!43 &1500836609
 Mesh:
   m_ObjectHideFlags: 0
@@ -20670,6 +20714,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!1001 &1516188904
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21278,6 +21323,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!1 &1592148499 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 115936, guid: bde3364085e3d0447a70a576adb5be33, type: 3}
@@ -21302,6 +21348,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!1 &1594598085
 GameObject:
   m_ObjectHideFlags: 0
@@ -21424,6 +21471,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!1001 &1619054849
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21591,6 +21639,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 1
   height_z: 0
+  direction: 0
 --- !u!1 &1640946883
 GameObject:
   m_ObjectHideFlags: 0
@@ -27128,6 +27177,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!1 &1751958441 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000013931470818, guid: 5c02591794acece409986647ed6329a7, type: 3}
@@ -27425,6 +27475,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!1001 &1776863436
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27523,6 +27574,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 12
+  direction: 0
 --- !u!1 &1784909237 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000013931470818, guid: 5c02591794acece409986647ed6329a7, type: 3}
@@ -28052,6 +28104,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!1001 &1816991808
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28216,6 +28269,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!1001 &1825152503
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28227,9 +28281,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4605442552670555592, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2.2000122
+      objectReference: {fileID: 0}
     - target: {fileID: 5143654945263413072, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
       propertyPath: m_Color.a
       value: 0.59607846
+      objectReference: {fileID: 0}
+    - target: {fileID: 5475762487283306744, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.1000061
+      objectReference: {fileID: 0}
+    - target: {fileID: 5475762487283306744, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.1000061
       objectReference: {fileID: 0}
     - target: {fileID: 6490298819815039122, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
       propertyPath: m_Name
@@ -28240,8 +28306,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6769537328424014683, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.6000366
+      objectReference: {fileID: 0}
+    - target: {fileID: 6769537328424014683, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.4820633
+      value: -0.48205566
+      objectReference: {fileID: 0}
+    - target: {fileID: 7281178155397448560, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 3.5999756
       objectReference: {fileID: 0}
     - target: {fileID: 8391786826361184298, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
       propertyPath: timer
@@ -28897,6 +28971,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!1001 &1869125025
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30033,6 +30108,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!114 &1978769634 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 748240375881037333, guid: 8226e0801bb3e42d5ba3a84691b45f79, type: 3}
@@ -30137,6 +30213,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 1
   height_z: 0
+  direction: 0
 --- !u!1 &1994581538 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000013931470818, guid: 5c02591794acece409986647ed6329a7, type: 3}
@@ -30315,6 +30392,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!1001 &2032884455
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30405,6 +30483,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!1001 &2035136983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30643,6 +30722,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!1001 &2050260423
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30817,6 +30897,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 5
+  direction: 0
 --- !u!114 &2083488735 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4452270970643524159, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
@@ -30983,6 +31064,7 @@ MonoBehaviour:
   height_x: 70
   height_y: 0
   height_z: 0
+  direction: 0
 --- !u!1001 &2088763333
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31318,6 +31400,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 20
+  direction: 0
 --- !u!1001 &2115244720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31780,6 +31863,7 @@ MonoBehaviour:
   height_x: 0
   height_y: 0
   height_z: 70
+  direction: 0
 --- !u!114 &2146236987
 MonoBehaviour:
   m_ObjectHideFlags: 0

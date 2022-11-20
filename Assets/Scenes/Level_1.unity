@@ -175,9 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &23147625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,11 +188,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 24084660}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!65 &23147626
 BoxCollider:
@@ -267,6 +270,10 @@ PrefabInstance:
       propertyPath: BLUE_GOAL
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4452270970643524159, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: alertArea
+      value: 
+      objectReference: {fileID: 34778282}
     - target: {fileID: 4452270970643524159, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: YELLOW_GOAL
       value: 6
@@ -393,6 +400,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5384936019506417940, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
   m_PrefabInstance: {fileID: 34778279}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &34778282 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 505253625652732260, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+  m_PrefabInstance: {fileID: 34778279}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &62297649
 GameObject:
   m_ObjectHideFlags: 0
@@ -3533,11 +3551,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 24084660}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!65 &261995575
 BoxCollider:
@@ -3595,9 +3618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!1 &283671975
 GameObject:
   m_ObjectHideFlags: 0
@@ -5301,11 +5322,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 24084660}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!65 &681441281
 BoxCollider:
@@ -5363,9 +5389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!4 &700051398 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8338988566280778637, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
@@ -5421,11 +5445,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 24084660}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!65 &732443382
 BoxCollider:
@@ -5483,9 +5512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!1 &745890511
 GameObject:
   m_ObjectHideFlags: 0
@@ -7105,11 +7132,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79e62490a61abcd4b97e8915d290404a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 24084660}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
   speed: 2.5
 --- !u!114 &929895073
@@ -7125,9 +7157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &929895074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7140,11 +7170,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 24084660}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!65 &929895075
 BoxCollider:
@@ -8374,9 +8409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1039692609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8389,11 +8422,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 24084660}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!65 &1039692610
 BoxCollider:
@@ -13610,9 +13648,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1235385864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13625,11 +13661,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 24084660}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!65 &1235385865
 BoxCollider:
@@ -15374,9 +15415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1513814446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15389,11 +15428,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 24084660}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!65 &1513814447
 BoxCollider:
@@ -15450,11 +15494,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79e62490a61abcd4b97e8915d290404a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 24084660}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
   speed: 2
 --- !u!1 &1592553785
@@ -16742,7 +16791,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c471bae6ce5a064a98db34f11fdd310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugTransform: {fileID: 0}
   PaintBallProjectile: {fileID: 1404114414586556645, guid: 0071948dbcd87214e848d8da0478cfe5, type: 3}
   spawnProjectilePosition: {fileID: 62297650}
   player: {fileID: 1320465628}
@@ -16792,10 +16840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
-  coinPointIncreaseOnEnemy: 1
+  totalCoins: 0
   isTriggered: 0
 --- !u!114 &1762682278
 MonoBehaviour:
@@ -16828,6 +16873,7 @@ MonoBehaviour:
   gameOverCheck: 0
   timer: {fileID: 34778280}
   healthBar: {fileID: 1849744726}
+  playerArmature: {fileID: 0}
   maxHealth: 100
   currentHealth: 100
 --- !u!114 &1762682285
@@ -17298,9 +17344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1320465628}
-  redCoins: 0
-  blueCoins: 0
-  yellowCoins: 0
+  timerIncrease: 6
 --- !u!114 &1861210950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17313,11 +17357,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRange: 13
-  turretRotationOnDetectionSpeed: 30
+  turretRaycastRange: 13
+  turretRotationSpeed: 50
   turretShootRange: 7
   fireRateConstant: 10
+  turrentRotationSpeedMultiplier: 1
+  farAngleThreshold: 3
+  closeAngleThreshold: 5
+  closeAngleDistanceThreshold: 4
   player: {fileID: 24084660}
+  playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
 --- !u!65 &1861210951
 BoxCollider:
