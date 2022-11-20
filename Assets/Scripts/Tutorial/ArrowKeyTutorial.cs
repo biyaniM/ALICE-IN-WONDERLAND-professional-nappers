@@ -7,11 +7,11 @@ public class ArrowKeyTutorial : MonoBehaviour
     private bool instructionComplete;
     [SerializeField] private string tutorialKind; //TODO Change to Enum to make easy to select in Editor
     private string tutorialMessage;
-    private Player hud;
+    public Player hud;
     // Start is called before the first frame update
     void Start()
     {
-        hud = GameObject.Find("HUD").GetComponent<Player>();
+        //hud = GameObject.Find("HUD").GetComponent<Player>();
     }
 
     // Update is called once per frame
