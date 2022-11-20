@@ -86,10 +86,10 @@ public class healthUpdate : MonoBehaviour
     }
 
     public void OnCollisionEnter(Collision col) {
-        Debug.Log("Player got hit");
+        // Debug.Log("Player got hit");
         if(col.gameObject.tag == "enemyBullet") {
             Destroy(col.gameObject);
-            Debug.Log("Enemy bullet destroyed!");
+            // Debug.Log("Enemy bullet destroyed!");
             Debug.Log(col.gameObject);
             currentHealth = currentHealth - 10;
             string msg = "HP - 10";
