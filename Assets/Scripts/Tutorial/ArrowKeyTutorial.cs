@@ -85,7 +85,7 @@ public class ArrowKeyTutorial : MonoBehaviour
             case "level finish":
                 if (col.tag=="Player" && !instructionComplete){
                     instructionComplete = false;
-                    tutorialMessage = "Pass through the arch!\nDo you enough coins?";
+                    tutorialMessage = "Pass through the arch!\nDo you collect enough coins?";
                 }
                 break;
             case "enemy give point":
