@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
     public AmmoCount ammoCount;
     private TextMeshProUGUI guidance;
     public Image guidanceArea;
+    public Image alertArea;
     private TextMeshProUGUI alert;
     public GameObject finishBoundary;
     public PauseMenu pauseMenu;
@@ -55,6 +56,7 @@ public class Player : MonoBehaviour
         guidanceArea.enabled = false;
         guidance = GameObject.Find("Guidance").GetComponent<TextMeshProUGUI>();
         guidance.enabled = false;
+        alertArea.enabled = false;
         alert = GameObject.Find("Alert").GetComponent<TextMeshProUGUI>();
         alert.enabled = false;
     }
@@ -154,11 +156,13 @@ public class Player : MonoBehaviour
     }
 
     public void ShowAlert(string msg){
+        alertArea.enabled = true;
         alert.enabled = true;
         alert.text = msg;
     }
 
     public void CloseAlert(){
+        alertArea.enabled = false;
         alert.enabled = false;
     }
 
