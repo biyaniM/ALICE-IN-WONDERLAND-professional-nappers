@@ -40,7 +40,6 @@ public class healthUpdate : MonoBehaviour
 
     public void HealthCheck(){
         if(currentHealth <= 0) {
-            FindObjectOfType<AudioManager>().play("death");
             if(numberOfTimesSpawned <= 100) {
                 Debug.Log("Respawning from health <= 0");
                 Debug.Log(playerArmature.transform.position);
