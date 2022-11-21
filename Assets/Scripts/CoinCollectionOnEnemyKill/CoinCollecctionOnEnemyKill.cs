@@ -21,6 +21,7 @@ public class CoinCollecctionOnEnemyKill : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider collider){
+        Debug.Log("HIT");
         if(!passed){
 
             if (collider.gameObject.name == "PaintBallProjectile(Clone)"){
@@ -34,8 +35,12 @@ public class CoinCollecctionOnEnemyKill : MonoBehaviour
                 }
 
                 //* Explosion
-                explosion = transform.parent.Find("Explosion").GetComponent<ParticleSystem>();
-                if (explosion!= null) explosion.Play();
+                try {
+                    explosion = transform.parent.Find("Explosion").GetComponent<ParticleSystem>();
+                    if (explosion!= null) explosion.Play();
+                }catch (System.NullReferenceException e){
+                    Debug.LogException(e);
+                }
                 
                 Destroy(gameObject);
             }
