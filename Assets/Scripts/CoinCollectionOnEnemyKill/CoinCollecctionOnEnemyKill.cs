@@ -39,7 +39,8 @@ public class CoinCollecctionOnEnemyKill : MonoBehaviour
                     explosion = transform.parent.Find("Explosion").GetComponent<ParticleSystem>();
                     if (explosion!= null) explosion.Play();
                 }catch (System.NullReferenceException e){
-                    Debug.LogException(e);
+                    Debug.LogException(e, this);
+                    Debug.Log("Please Provide Explosion Game Object");
                 }
                 
                 Destroy(gameObject);
