@@ -14936,7 +14936,7 @@ GameObject:
   - component: {fileID: 318813156}
   - component: {fileID: 318813155}
   - component: {fileID: 318813154}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: yellow coin (1)
   m_TagString: YellowCoin
   m_Icon: {fileID: 0}
@@ -15399,7 +15399,7 @@ GameObject:
   - component: {fileID: 345633365}
   - component: {fileID: 345633364}
   - component: {fileID: 345633363}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: red coin (1)
   m_TagString: RedCoin
   m_Icon: {fileID: 0}
@@ -15754,7 +15754,7 @@ GameObject:
   - component: {fileID: 359320433}
   - component: {fileID: 359320432}
   - component: {fileID: 359320431}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: yellow coin4
   m_TagString: YellowCoin
   m_Icon: {fileID: 0}
@@ -16096,7 +16096,7 @@ GameObject:
   - component: {fileID: 369902356}
   - component: {fileID: 369902355}
   - component: {fileID: 369902354}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: blue coin5
   m_TagString: BlueCoin
   m_Icon: {fileID: 0}
@@ -17818,10 +17818,10 @@ Transform:
   - {fileID: 2018779261}
   - {fileID: 1519881647}
   - {fileID: 31626750}
+  - {fileID: 805603504}
   - {fileID: 1552176403}
   - {fileID: 1142115067}
   - {fileID: 1452729744}
-  - {fileID: 805603504}
   - {fileID: 883430365}
   - {fileID: 1828356167}
   - {fileID: 1475980922}
@@ -20260,6 +20260,90 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8769589318228091662, guid: b57fd40d48262b246b906f83f81e930b, type: 3}
   m_PrefabInstance: {fileID: 739560785}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &579595600
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 579595601}
+  - component: {fileID: 579595603}
+  - component: {fileID: 579595602}
+  m_Layer: 10
+  m_Name: NoPostCam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &579595601
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579595600}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1221041500}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &579595602
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579595600}
+  m_Enabled: 1
+--- !u!20 &579595603
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579595600}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 4
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.2
+  far clip plane: 500
+  field of view: 40
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
 --- !u!1 &581674707 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2070925442191277755, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
@@ -26947,7 +27031,7 @@ Transform:
   - {fileID: 677274760}
   - {fileID: 1705413582}
   m_Father: {fileID: 443947364}
-  m_RootOrder: 8
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &807589595
 GameObject:
@@ -27240,7 +27324,7 @@ GameObject:
   - component: {fileID: 821900948}
   - component: {fileID: 821900947}
   - component: {fileID: 821900946}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: blue coin (1)
   m_TagString: BlueCoin
   m_Icon: {fileID: 0}
@@ -28786,7 +28870,7 @@ GameObject:
   - component: {fileID: 885844859}
   - component: {fileID: 885844858}
   - component: {fileID: 885844857}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: red coin (1)
   m_TagString: RedCoin
   m_Icon: {fileID: 0}
@@ -29538,7 +29622,7 @@ GameObject:
   - component: {fileID: 926984536}
   - component: {fileID: 926984535}
   - component: {fileID: 926984534}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: blue coin4
   m_TagString: BlueCoin
   m_Icon: {fileID: 0}
@@ -30079,7 +30163,7 @@ GameObject:
   - component: {fileID: 943817824}
   - component: {fileID: 943817823}
   - component: {fileID: 943817822}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: red coin (1)
   m_TagString: RedCoin
   m_Icon: {fileID: 0}
@@ -42803,7 +42887,7 @@ GameObject:
   - component: {fileID: 1154022469}
   - component: {fileID: 1154022468}
   - component: {fileID: 1154022467}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: yellow coin (1)
   m_TagString: YellowCoin
   m_Icon: {fileID: 0}
@@ -43283,7 +43367,7 @@ GameObject:
   - component: {fileID: 1170773496}
   - component: {fileID: 1170773495}
   - component: {fileID: 1170773494}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: yellow coin (1)
   m_TagString: YellowCoin
   m_Icon: {fileID: 0}
@@ -44013,7 +44097,7 @@ GameObject:
   - component: {fileID: 1186866166}
   - component: {fileID: 1186866165}
   - component: {fileID: 1186866164}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: blue coin (1)
   m_TagString: BlueCoin
   m_Icon: {fileID: 0}
@@ -45113,7 +45197,7 @@ GameObject:
   - component: {fileID: 1219028693}
   - component: {fileID: 1219028692}
   - component: {fileID: 1219028691}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: blue coin3
   m_TagString: BlueCoin
   m_Icon: {fileID: 0}
@@ -45914,7 +45998,7 @@ GameObject:
   - component: {fileID: 1237837476}
   - component: {fileID: 1237837475}
   - component: {fileID: 1237837474}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: red coin3
   m_TagString: RedCoin
   m_Icon: {fileID: 0}
@@ -46283,7 +46367,7 @@ GameObject:
   - component: {fileID: 1253974181}
   - component: {fileID: 1253974180}
   - component: {fileID: 1253974179}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: blue coin (1)
   m_TagString: BlueCoin
   m_Icon: {fileID: 0}
@@ -56963,7 +57047,7 @@ GameObject:
   - component: {fileID: 1587145628}
   - component: {fileID: 1587145627}
   - component: {fileID: 1587145626}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: red coin4
   m_TagString: RedCoin
   m_Icon: {fileID: 0}
@@ -68768,7 +68852,7 @@ GameObject:
   - component: {fileID: 1715786503}
   - component: {fileID: 1715786502}
   - component: {fileID: 1715786501}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: yellow coin3
   m_TagString: YellowCoin
   m_Icon: {fileID: 0}
@@ -76294,7 +76378,7 @@ GameObject:
   - component: {fileID: 2037968838}
   - component: {fileID: 2037968837}
   - component: {fileID: 2037968836}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: yellow coin (1)
   m_TagString: YellowCoin
   m_Icon: {fileID: 0}
@@ -76740,7 +76824,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2060953134}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Coins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78471,7 +78555,7 @@ GameObject:
   - component: {fileID: 2127044296}
   - component: {fileID: 2127044295}
   - component: {fileID: 2127044294}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: red coin (1)
   m_TagString: RedCoin
   m_Icon: {fileID: 0}

@@ -1540,7 +1540,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 87574054}
-  m_Layer: 3
+  m_Layer: 10
   m_Name: Final Coins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22375,6 +22375,90 @@ MonoBehaviour:
   projectile: {fileID: 2866643433148882676, guid: 1aefbf1866b2e6d4a8c33f405def8aca, type: 3}
   rateOfFire: 15
   gunPoint: {fileID: 434254778}
+--- !u!1 &443513024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 443513025}
+  - component: {fileID: 443513027}
+  - component: {fileID: 443513026}
+  m_Layer: 10
+  m_Name: NoPostCam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &443513025
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443513024}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2105702609}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &443513026
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443513024}
+  m_Enabled: 1
+--- !u!20 &443513027
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443513024}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 4
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.2
+  far clip plane: 500
+  field of view: 40
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
 --- !u!1 &460075091
 GameObject:
   m_ObjectHideFlags: 0
@@ -22745,7 +22829,7 @@ GameObject:
   - component: {fileID: 486409145}
   - component: {fileID: 486409144}
   - component: {fileID: 486409147}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: q (2)
   m_TagString: BlueCoin
   m_Icon: {fileID: 0}
@@ -22864,7 +22948,7 @@ GameObject:
   - component: {fileID: 487495428}
   - component: {fileID: 487495427}
   - component: {fileID: 487495430}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Coin1 (2)
   m_TagString: YellowCoin
   m_Icon: {fileID: 0}
@@ -36379,7 +36463,7 @@ GameObject:
   - component: {fileID: 776674366}
   - component: {fileID: 776674365}
   - component: {fileID: 776674368}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Final Blue Coin
   m_TagString: BlueCoin
   m_Icon: {fileID: 0}
@@ -37815,7 +37899,7 @@ GameObject:
   - component: {fileID: 899342367}
   - component: {fileID: 899342366}
   - component: {fileID: 899342369}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Coin1
   m_TagString: BlueCoin
   m_Icon: {fileID: 0}
@@ -38153,7 +38237,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 901898635}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Coins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38517,7 +38601,7 @@ GameObject:
   - component: {fileID: 932772467}
   - component: {fileID: 932772466}
   - component: {fileID: 932772469}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Coin1
   m_TagString: YellowCoin
   m_Icon: {fileID: 0}
@@ -40786,7 +40870,7 @@ GameObject:
   - component: {fileID: 1028755954}
   - component: {fileID: 1028755953}
   - component: {fileID: 1028755956}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Red Coin 1
   m_TagString: RedCoin
   m_Icon: {fileID: 0}
@@ -41386,7 +41470,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1083659029}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BlueColorCoins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42302,7 +42386,7 @@ GameObject:
   - component: {fileID: 1138476077}
   - component: {fileID: 1138476076}
   - component: {fileID: 1138476075}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Red Coin 1 (1)
   m_TagString: RedCoin
   m_Icon: {fileID: 0}
@@ -45314,7 +45398,7 @@ GameObject:
   - component: {fileID: 1298409132}
   - component: {fileID: 1298409131}
   - component: {fileID: 1298409134}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Coin1
   m_TagString: RedCoin
   m_Icon: {fileID: 0}
@@ -56108,7 +56192,7 @@ GameObject:
   - component: {fileID: 1351061909}
   - component: {fileID: 1351061908}
   - component: {fileID: 1351061911}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Coin1
   m_TagString: RedCoin
   m_Icon: {fileID: 0}
@@ -56325,7 +56409,7 @@ GameObject:
   - component: {fileID: 1361488184}
   - component: {fileID: 1361488183}
   - component: {fileID: 1361488186}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Final Yellow Coin
   m_TagString: YellowCoin
   m_Icon: {fileID: 0}
@@ -69501,7 +69585,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1611577973}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: redColorCoins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77949,7 +78033,7 @@ GameObject:
   - component: {fileID: 1652685360}
   - component: {fileID: 1652685359}
   - component: {fileID: 1652685362}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Coin1 (1)
   m_TagString: BlueCoin
   m_Icon: {fileID: 0}
@@ -78064,7 +78148,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1658879403}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RedColorCoins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78166,7 +78250,7 @@ GameObject:
   - component: {fileID: 1666285556}
   - component: {fileID: 1666285555}
   - component: {fileID: 1666285558}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: q
   m_TagString: BlueCoin
   m_Icon: {fileID: 0}
@@ -80521,7 +80605,7 @@ GameObject:
   - component: {fileID: 1895946535}
   - component: {fileID: 1895946534}
   - component: {fileID: 1895946537}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Coin1 (3)
   m_TagString: YellowCoin
   m_Icon: {fileID: 0}
@@ -86729,7 +86813,7 @@ GameObject:
   - component: {fileID: 1980575891}
   - component: {fileID: 1980575890}
   - component: {fileID: 1980575893}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: q (4)
   m_TagString: BlueCoin
   m_Icon: {fileID: 0}
@@ -87106,7 +87190,7 @@ GameObject:
   - component: {fileID: 1992980406}
   - component: {fileID: 1992980405}
   - component: {fileID: 1992980408}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Coin1 (1)
   m_TagString: YellowCoin
   m_Icon: {fileID: 0}
@@ -93043,7 +93127,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2083088347}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: YellowColorCoins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93163,7 +93247,7 @@ GameObject:
   - component: {fileID: 2089487937}
   - component: {fileID: 2089487936}
   - component: {fileID: 2089487939}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Coin1 (1)
   m_TagString: RedCoin
   m_Icon: {fileID: 0}
@@ -93377,7 +93461,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh115942
+  m_Name: pb_Mesh432618
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
