@@ -8,6 +8,7 @@ public class CoinCollecctionOnEnemyKill : MonoBehaviour
     private bool passed;
     public int timerIncrease = 6;
     protected CountDownTimer countDownTimer;
+    protected ParticleSystem explosion;
     
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class CoinCollecctionOnEnemyKill : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider collider){
+        Debug.Log("HIT");
         if(!passed){
 
             if (collider.gameObject.name == "PaintBallProjectile(Clone)"){
@@ -30,6 +32,15 @@ public class CoinCollecctionOnEnemyKill : MonoBehaviour
                     SendMsgToHUD("+ "+timerIncrease.ToString()+" Seconds");
                 }else{
                     return;
+                }
+
+                //* Explosion
+                try {
+                    explosion = transform.parent.Find("Explosion").GetComponent<ParticleSystem>();
+                    if (explosion!= null) explosion.Play();
+                }catch (System.NullReferenceException e){
+                    Debug.LogException(e, this);
+                    Debug.Log("Please Provide Explosion Game Object");
                 }
                 
                 Destroy(gameObject);
@@ -49,7 +60,7 @@ public class CoinCollecctionOnEnemyKill : MonoBehaviour
     // Update is called once per frame
     void Update()
     {        
-        
+
     }
 
     public void setNewTimeAfterKillingEnemy() {
