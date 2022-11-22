@@ -46,37 +46,37 @@ public class LevelCompleteScreen: MonoBehaviour
         switch(curr_level){
             case 1:{
                 nextLevelBtn.enabled = true;
-                SceneManager.LoadScene("Level 1");
+                SceneManager.LoadScene("Level 2");
                 break;
             }
             case 2:{
                 nextLevelBtn.enabled = true;
-                SceneManager.LoadScene("Level 2");
+                SceneManager.LoadScene("Level 3");
                 break;
             }
             case 3:{
                 nextLevelBtn.enabled = true;
-                SceneManager.LoadScene("Level 3");
+                SceneManager.LoadScene("Level 4");
                 break;
             }
             case 4:{
                 nextLevelBtn.enabled = true;
-                SceneManager.LoadScene("Level 4");
+                SceneManager.LoadScene("Level 5");
                 break;
             }
             case 5:{
                 nextLevelBtn.enabled = true;
-                SceneManager.LoadScene("Level 5");
+                SceneManager.LoadScene("Level 6");
                 break;
             }
             case 6:{
                 nextLevelBtn.enabled = true;
-                SceneManager.LoadScene("Level 6");
+                SceneManager.LoadScene("Level 7");
                 break;
             }
             case 7:{
                 nextLevelBtn.enabled = true;
-                SceneManager.LoadScene("Level 7");
+                SceneManager.LoadScene("Level 8");
                 break;
             }
             case 8:{
