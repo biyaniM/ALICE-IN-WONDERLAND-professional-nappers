@@ -46,33 +46,43 @@ public class LevelCompleteScreen: MonoBehaviour
         switch(curr_level){
             case 1:{
                 nextLevelBtn.enabled = true;
-                SceneManager.LoadScene("old_level_2");
+                SceneManager.LoadScene("Level 1");
                 break;
             }
             case 2:{
                 nextLevelBtn.enabled = true;
-                SceneManager.LoadScene("S_G_LEVEL_2");
+                SceneManager.LoadScene("Level 2");
                 break;
             }
             case 3:{
                 nextLevelBtn.enabled = true;
-                SceneManager.LoadScene("level 2.5");
+                SceneManager.LoadScene("Level 3");
                 break;
             }
             case 4:{
                 nextLevelBtn.enabled = true;
-                SceneManager.LoadScene("new_level_3");
+                SceneManager.LoadScene("Level 4");
                 break;
             }
             case 5:{
                 nextLevelBtn.enabled = true;
-                SceneManager.LoadScene("new_level_4");
+                SceneManager.LoadScene("Level 5");
                 break;
             }
             case 6:{
-                nextLevelBtn.enabled = false;
+                nextLevelBtn.enabled = true;
+                SceneManager.LoadScene("Level 6");
                 break;
             }
+            case 7:{
+                nextLevelBtn.enabled = true;
+                SceneManager.LoadScene("Level 7");
+                break;
+            }
+            case 8:{
+                nextLevelBtn.enabled = false;
+                break;
+            }            
         }
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -80,6 +90,7 @@ public class LevelCompleteScreen: MonoBehaviour
     
     void BackToMain(){
         Debug.Log("Main Menu!");
-        SceneManager.LoadScene("Menu");
+        //SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("New_Menu");
     }
 }

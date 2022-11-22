@@ -51,8 +51,8 @@ public class PauseMenu : MonoBehaviour
     void BackToMenu(){  // working
         Debug.Log("Main Menu!");
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Menu");
-        // SceneManager.LoadScene("New_Menu");
+        //SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("New_Menu");
     }
 
     void ShowGuideMenu(){
