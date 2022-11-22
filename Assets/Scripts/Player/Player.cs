@@ -79,10 +79,34 @@ public class Player : MonoBehaviour
     }
 
     public void UpdateCoins(int coins){
+        int prevCoins = collectedCoins;
+        int changeCoins = coins - collectedCoins;
         collectedCoins = coins;
-        if(saturation < 0){
-            saturation += SATURATION_INCREASE_FACTOR;
+        float changeSaturation = 0;
+        if(prevCoins == 0){
+            if(changeCoins == 1){
+                changeSaturation = 50f;
+            }
+            else if(changeCoins == 2){
+                changeSaturation = 75f;
+            }
+            else{
+                changeSaturation = 75f + (changeCoins - 2) * SATURATION_INCREASE_FACTOR;
+            }
         }
+        else if(prevCoins == 1){
+            if(changeCoins == 1){
+                changeSaturation = 25;
+            }
+            else{
+                changeSaturation = 25f + (changeCoins - 1) * SATURATION_INCREASE_FACTOR;
+            }
+        }
+        else{
+            changeSaturation = changeCoins * SATURATION_INCREASE_FACTOR;
+        }
+        
+        saturation = Mathf.Min(25f, saturation + changeSaturation);
         coinsScore.SetScores(collectedCoins);
         RenderSettings.skybox.SetColor("_Tint", new Color(15*coins/255f, 15*coins/255f, 15*coins/255f));
     }
@@ -94,7 +118,7 @@ public class Player : MonoBehaviour
     //import setting from level side
     void SetGoal(int totalGoal){
         TOTAL_GOAL = totalGoal;
-        SATURATION_INCREASE_FACTOR = 100f / TOTAL_GOAL;
+        SATURATION_INCREASE_FACTOR = 50f / (TOTAL_GOAL - 2);
         coinsScore.SetGoals(TOTAL_GOAL);
     }
     //import from player shooting???
