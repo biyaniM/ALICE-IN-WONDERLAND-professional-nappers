@@ -19,7 +19,7 @@ public class LevelGallery : MonoBehaviour,IPointerEnterHandler, IPointerExitHand
  
     public void OnPointerEnter(PointerEventData eventData) {
          
-        levelPreview.localScale = new Vector3(1.1f, 1.1f, 1.1f);
+        levelPreview.localScale = new Vector3(1.05f, 1.05f, 1.05f);
         levelBrief.SetActive(true);
         Debug.Log("Hover In!");
 
