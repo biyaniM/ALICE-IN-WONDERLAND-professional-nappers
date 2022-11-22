@@ -41,7 +41,10 @@ public class healthUpdate : MonoBehaviour
     public void HealthCheck(){
         if(currentHealth <= 0) {
             if(numberOfTimesSpawned <= 100) {
-                FindObjectOfType<AudioManager>().play("death");
+                
+                try {FindObjectOfType<AudioManager>().play("death");}
+                catch (System.NullReferenceException e) { Debug.LogWarning("Death sound not appointed in "+gameObject.scene+"\n"+e.ToString()); }
+                
                 Debug.Log("Respawning from health <= 0");
                 Debug.Log(playerArmature.transform.position);
                 respawn();
