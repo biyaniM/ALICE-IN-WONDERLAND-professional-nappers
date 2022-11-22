@@ -1638,6 +1638,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000013283378482, guid: 9180379527e1845e0a39c678a7759818, type: 3}
   m_PrefabInstance: {fileID: 91009908}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &92114355 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6831495042802401915, guid: bbec6865acff6c44c89d9287c9c4a58d, type: 3}
+  m_PrefabInstance: {fileID: 1166449032}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &94399377
 GameObject:
   m_ObjectHideFlags: 0
@@ -41687,6 +41692,11 @@ MonoBehaviour:
   projectile: {fileID: 2866643433148882676, guid: 195ef47d4bf9f32449d3c19c01103d03, type: 3}
   rateOfFire: 15
   gunPoint: {fileID: 758599476}
+--- !u!1 &774725332 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6831495042802401915, guid: bbec6865acff6c44c89d9287c9c4a58d, type: 3}
+  m_PrefabInstance: {fileID: 1926890576}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &778045580
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41752,6 +41762,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cc7ca4365d84414093dc8147c13e180, type: 3}
+--- !u!1 &779709162 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6831495042802401915, guid: bbec6865acff6c44c89d9287c9c4a58d, type: 3}
+  m_PrefabInstance: {fileID: 1361950380}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &798123942
 GameObject:
   m_ObjectHideFlags: 0
@@ -43784,6 +43799,101 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4009463146294534, guid: 8cc7ca4365d84414093dc8147c13e180, type: 3}
   m_PrefabInstance: {fileID: 620679758}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &947272564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 947272566}
+  - component: {fileID: 947272565}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &947272565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947272564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2de0cc64c3c245728aff1c3b5b120d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: shooting
+    clip: {fileID: 8300000, guid: 4310474905e266640852f43bd609a1a4, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: death
+    clip: {fileID: 8300000, guid: e91ecfd6b39d25b4c9554ffaaba1c1a1, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: final death
+    clip: {fileID: 8300000, guid: 4fc11817e44f2ba4aadd159e93f59df7, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: coin collect
+    clip: {fileID: 8300000, guid: 58c4695af42aad042939762e556563a8, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: mystery health
+    clip: {fileID: 8300000, guid: c48a972d3d024c2408a3331750786a29, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: mystery ammo
+    clip: {fileID: 8300000, guid: 82e2b84bf4aec1a4098f4800739bcb37, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: mystery coin
+    clip: {fileID: 8300000, guid: a3735fc5cdf01f242a9dab7550eec381, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: player hurt
+    clip: {fileID: 8300000, guid: 3ddf3c0a753f22941a84da730b2ac17e, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: enemy shot
+    clip: {fileID: 8300000, guid: 8401456349c492a489ed90469e317e43, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: level complete
+    clip: {fileID: 8300000, guid: d659c0b82620b394fb646c3f18f1c146, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+--- !u!4 &947272566
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947272564}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.620016, y: 3.9455075, z: 10.6900425}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 60
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &951171036
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48035,6 +48145,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: scifi-wall-corridor-stripe (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6831495042802401915, guid: bbec6865acff6c44c89d9287c9c4a58d, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbec6865acff6c44c89d9287c9c4a58d, type: 3}
 --- !u!4 &1166449033 stripped
@@ -48042,6 +48156,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6831495042802376283, guid: bbec6865acff6c44c89d9287c9c4a58d, type: 3}
   m_PrefabInstance: {fileID: 1166449032}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1166449037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92114355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7609e7a60896fd84080ce26b07c523b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers: []
+  position: {x: 0, y: 0, z: 0}
+  materials: []
+  initialAlpha: 0
 --- !u!1 &1167598202
 GameObject:
   m_ObjectHideFlags: 0
@@ -61551,6 +61681,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: scifi-wall-corridor-stripe
       objectReference: {fileID: 0}
+    - target: {fileID: 6831495042802401915, guid: bbec6865acff6c44c89d9287c9c4a58d, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbec6865acff6c44c89d9287c9c4a58d, type: 3}
 --- !u!4 &1361950381 stripped
@@ -61558,6 +61692,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6831495042802376283, guid: bbec6865acff6c44c89d9287c9c4a58d, type: 3}
   m_PrefabInstance: {fileID: 1361950380}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1361950385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779709162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7609e7a60896fd84080ce26b07c523b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers: []
+  position: {x: 0, y: 0, z: 0}
+  materials: []
+  initialAlpha: 0
 --- !u!1001 &1379414355
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -91999,6 +92149,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: scifi-wall-corridor-stripe (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6831495042802401915, guid: bbec6865acff6c44c89d9287c9c4a58d, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbec6865acff6c44c89d9287c9c4a58d, type: 3}
 --- !u!4 &1926890577 stripped
@@ -92006,6 +92160,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6831495042802376283, guid: bbec6865acff6c44c89d9287c9c4a58d, type: 3}
   m_PrefabInstance: {fileID: 1926890576}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1926890581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774725332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7609e7a60896fd84080ce26b07c523b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers: []
+  position: {x: 0, y: 0, z: 0}
+  materials: []
+  initialAlpha: 0
 --- !u!1 &1931873684
 GameObject:
   m_ObjectHideFlags: 0

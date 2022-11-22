@@ -41,6 +41,10 @@ public class MysteryBox : MonoBehaviour
         string msg = "HP +"+healthIncerement.ToString();
         playerObj.ShowAlert(msg);
         healthUpdateObj.currentHealth += healthIncerement;
+
+        try {FindObjectOfType<AudioManager>().play("mystery health");}
+        catch (System.NullReferenceException e) { Debug.LogWarning("Death sound not appointed in "+gameObject.scene+"\n"+e.ToString()); }
+
         healthUpdateObj.updateHealth(Mathf.Min(healthUpdateObj.currentHealth,healthUpdateObj.maxHealth));
         yield return new WaitForSeconds(hudAlertTime);
         playerObj.CloseAlert();
@@ -50,6 +54,10 @@ public class MysteryBox : MonoBehaviour
         string msg = "Ammo +"+ammoIncrement.ToString();
         playerObj.ShowAlert(msg);
         ammoCountObj.increaseAmmoCount(ammoIncrement);
+
+        try {FindObjectOfType<AudioManager>().play("mystery ammo");}
+        catch (System.NullReferenceException e) { Debug.LogWarning("Death sound not appointed in "+gameObject.scene+"\n"+e.ToString()); }
+
         yield return new WaitForSeconds(hudAlertTime);
         playerObj.CloseAlert();
     }
@@ -58,6 +66,10 @@ public class MysteryBox : MonoBehaviour
         string msg = "Coins +"+coinIncrement.ToString();
         playerObj.ShowAlert(msg);
         coinCollectObj.updateGoldenCoin(coinIncrement);
+
+        try {FindObjectOfType<AudioManager>().play("mystery coin");}
+        catch (System.NullReferenceException e) { Debug.LogWarning("Death sound not appointed in "+gameObject.scene+"\n"+e.ToString()); }
+
         yield return new WaitForSeconds(hudAlertTime);
         playerObj.CloseAlert();
     }

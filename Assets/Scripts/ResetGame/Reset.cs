@@ -26,9 +26,17 @@ public class Reset : MonoBehaviour
             }
             int numberOfTimesSpawned = gameOverHud.getNumberOfTimesSpawned();
             if(numberOfTimesSpawned <= 100) {
+
+                try {FindObjectOfType<AudioManager>().play("death");}
+                catch (System.NullReferenceException e) { Debug.LogWarning("Death sound not appointed in "+gameObject.scene+"\n"+e.ToString()); }
+
                 gameOverHud.updateHealth(0, 1);
             }
             else {
+
+                try {FindObjectOfType<AudioManager>().play("final death");}
+                catch (System.NullReferenceException e) { Debug.LogWarning("Death sound not appointed in "+gameObject.scene+"\n"+e.ToString()); }
+
                 gameOverHud.runGameOverHud();
                 gameOverHud.timer.pauseTimer();
                 level_complete_object.levelOverCheck = !level_complete_object.levelOverCheck;
