@@ -50,11 +50,11 @@ public class LevelComplete : MonoBehaviour
         health = healthComponent.currentHealth;
         if (levelOverCheck == false){
             if(col.gameObject.tag == "LevelCompleteTag"){
-                Debug.Log("reached level over loc!" + col.gameObject.name);
                 levelOverCheck = true;
-                Debug.Log("Number of Enemy Kill:" + numKill);
-                Debug.Log("Time Left:" + timer);
-                Debug.Log("Health Left:" + health);
+
+                try {FindObjectOfType<AudioManager>().play("level complete");}
+                catch (System.NullReferenceException e) { Debug.LogWarning("Level Complete sound not appointed in "+gameObject.scene+"\n"+e.ToString()); }
+
                 // capture the analytics
                 analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), ammoBalance.ToString(), "Completed", timer.ToString(), numKill.ToString(), health.ToString(), "NA");
 
