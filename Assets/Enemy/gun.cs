@@ -24,6 +24,10 @@ public class gun : MonoBehaviour
         if (shootFlash != null){
         shootFlash.Play();
         }
+
+        try {FindObjectOfType<AudioManager>().play("enemy shot");}
+        catch (System.NullReferenceException e) { Debug.LogWarning("Enemy Shot sound not appointed in "+gameObject.scene+"\n"+e.ToString()); }
+
         Instantiate(projectile.transform, gunPoint.position, gunPoint.rotation);     
     }
 }

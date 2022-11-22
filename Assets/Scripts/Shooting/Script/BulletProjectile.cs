@@ -10,7 +10,7 @@ public class BulletProjectile : MonoBehaviour
     public Transform spawnPoint;
     public float bulletSpeed = 30f;
     public float bulletLifeSpan = 0.3f;
-    [SerializeField] float projectileSpeed = 15f;
+    // [SerializeField] float projectileSpeed = 15f;
     // public float projectileSpeed = 5f;
     // public Transform attackPoint;
     // public float shootForce, upwardForce;

@@ -77691,6 +77691,101 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6271823570623891963, guid: 7b9859d2e2cad9549a4f2ff9c618cbe3, type: 3}
   m_PrefabInstance: {fileID: 1988406435}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1992380464
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1992380466}
+  - component: {fileID: 1992380465}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1992380465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992380464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2de0cc64c3c245728aff1c3b5b120d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: shooting
+    clip: {fileID: 8300000, guid: 4310474905e266640852f43bd609a1a4, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: death
+    clip: {fileID: 8300000, guid: e91ecfd6b39d25b4c9554ffaaba1c1a1, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: final death
+    clip: {fileID: 8300000, guid: 4fc11817e44f2ba4aadd159e93f59df7, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: coin collect
+    clip: {fileID: 8300000, guid: 58c4695af42aad042939762e556563a8, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: mystery health
+    clip: {fileID: 8300000, guid: c48a972d3d024c2408a3331750786a29, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: mystery ammo
+    clip: {fileID: 8300000, guid: 82e2b84bf4aec1a4098f4800739bcb37, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: mystery coin
+    clip: {fileID: 8300000, guid: a3735fc5cdf01f242a9dab7550eec381, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: player hurt
+    clip: {fileID: 8300000, guid: 3ddf3c0a753f22941a84da730b2ac17e, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: enemy shot
+    clip: {fileID: 8300000, guid: 8401456349c492a489ed90469e317e43, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: level complete
+    clip: {fileID: 8300000, guid: d659c0b82620b394fb646c3f18f1c146, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+--- !u!4 &1992380466
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992380464}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.620016, y: 3.9455075, z: 10.6900425}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 50
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1994364300
 GameObject:
   m_ObjectHideFlags: 0

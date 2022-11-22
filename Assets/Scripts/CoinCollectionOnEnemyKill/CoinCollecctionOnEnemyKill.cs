@@ -27,7 +27,7 @@ public class CoinCollecctionOnEnemyKill : MonoBehaviour
             if (collider.gameObject.name == "PaintBallProjectile(Clone)"){
                 passed = true;
 
-                if (gameObject.tag == "enemy_red" || gameObject.tag=="enemy_yellow" || gameObject.tag=="enemy_blue"){
+                if (gameObject.tag == "enemy_red" || gameObject.tag=="enemy_yellow" || gameObject.tag=="enemy_blue"){    
                     setNewTimeAfterKillingEnemy();
                     SendMsgToHUD("+ "+timerIncrease.ToString()+" Seconds");
                 }else{
