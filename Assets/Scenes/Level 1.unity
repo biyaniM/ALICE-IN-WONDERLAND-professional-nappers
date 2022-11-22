@@ -159,6 +159,18 @@ PrefabInstance:
       propertyPath: finishBoundary
       value: 
       objectReference: {fileID: 113731221}
+    - target: {fileID: 4679591685922676928, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -6.7576904
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747491102279773381, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.19239807
+      objectReference: {fileID: 0}
+    - target: {fileID: 5384936018074865784, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.35009766
+      objectReference: {fileID: 0}
     - target: {fileID: 5384936019333487589, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -2653,86 +2665,6 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!1 &271560550
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 271560552}
-  - component: {fileID: 271560551}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &271560551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 271560550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2de0cc64c3c245728aff1c3b5b120d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: shooting
-    clip: {fileID: 8300000, guid: 4310474905e266640852f43bd609a1a4, type: 3}
-    volume: 1
-    pitch: 1
-    source: {fileID: 0}
-  - name: death
-    clip: {fileID: 8300000, guid: e91ecfd6b39d25b4c9554ffaaba1c1a1, type: 3}
-    volume: 1
-    pitch: 1
-    source: {fileID: 0}
-  - name: final death
-    clip: {fileID: 8300000, guid: 4fc11817e44f2ba4aadd159e93f59df7, type: 3}
-    volume: 1
-    pitch: 1
-    source: {fileID: 0}
-  - name: coin collect
-    clip: {fileID: 8300000, guid: 58c4695af42aad042939762e556563a8, type: 3}
-    volume: 1
-    pitch: 1
-    source: {fileID: 0}
-  - name: mystery health
-    clip: {fileID: 8300000, guid: c48a972d3d024c2408a3331750786a29, type: 3}
-    volume: 1
-    pitch: 1
-    source: {fileID: 0}
-  - name: mystery ammo
-    clip: {fileID: 8300000, guid: 82e2b84bf4aec1a4098f4800739bcb37, type: 3}
-    volume: 1
-    pitch: 1
-    source: {fileID: 0}
-  - name: mystery coin
-    clip: {fileID: 8300000, guid: a3735fc5cdf01f242a9dab7550eec381, type: 3}
-    volume: 1
-    pitch: 1
-    source: {fileID: 0}
---- !u!4 &271560552
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 271560550}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.620016, y: 3.9455075, z: 10.6900425}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &281850149
 GameObject:
   m_ObjectHideFlags: 0
@@ -2806,6 +2738,101 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 281850149}
   m_CullTransparentMesh: 1
+--- !u!1 &314297570
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 314297572}
+  - component: {fileID: 314297571}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &314297571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314297570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2de0cc64c3c245728aff1c3b5b120d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: shooting
+    clip: {fileID: 8300000, guid: 4310474905e266640852f43bd609a1a4, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: death
+    clip: {fileID: 8300000, guid: e91ecfd6b39d25b4c9554ffaaba1c1a1, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: final death
+    clip: {fileID: 8300000, guid: 4fc11817e44f2ba4aadd159e93f59df7, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: coin collect
+    clip: {fileID: 8300000, guid: 58c4695af42aad042939762e556563a8, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: mystery health
+    clip: {fileID: 8300000, guid: c48a972d3d024c2408a3331750786a29, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: mystery ammo
+    clip: {fileID: 8300000, guid: 82e2b84bf4aec1a4098f4800739bcb37, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: mystery coin
+    clip: {fileID: 8300000, guid: a3735fc5cdf01f242a9dab7550eec381, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: player hurt
+    clip: {fileID: 8300000, guid: 3ddf3c0a753f22941a84da730b2ac17e, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: enemy shot
+    clip: {fileID: 8300000, guid: 8401456349c492a489ed90469e317e43, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: level complete
+    clip: {fileID: 8300000, guid: d659c0b82620b394fb646c3f18f1c146, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+--- !u!4 &314297572
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314297570}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.620016, y: 3.9455075, z: 10.6900425}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &376671056 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000012217082492, guid: 984a6653e794dbe4b9e9ab6b9ff47491, type: 3}
@@ -7138,7 +7165,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012015927304, guid: 5c02591794acece409986647ed6329a7, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 4000012015927304, guid: 5c02591794acece409986647ed6329a7, type: 3}
       propertyPath: m_LocalScale.x
@@ -8211,7 +8238,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1014815283}
   m_LocalRotation: {x: -0, y: -0, z: -2.7685878e-32, w: 1}
-  m_LocalPosition: {x: -22.0976, y: 4.27, z: 65.9212}
+  m_LocalPosition: {x: -22.0976, y: 4.27, z: 73.94}
   m_LocalScale: {x: 17.044409, y: 10, z: 0.8776}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10436,7 +10463,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012015927304, guid: 5c02591794acece409986647ed6329a7, type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4000012015927304, guid: 5c02591794acece409986647ed6329a7, type: 3}
       propertyPath: m_LocalScale.x
@@ -37240,9 +37267,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1074549015}
     m_Modifications:
+    - target: {fileID: 5475762487283306744, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.1000061
+      objectReference: {fileID: 0}
+    - target: {fileID: 5475762487283306744, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.1000061
+      objectReference: {fileID: 0}
     - target: {fileID: 6490298819815039122, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
       propertyPath: m_Name
       value: PauseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6769537328424014683, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.5999756
+      objectReference: {fileID: 0}
+    - target: {fileID: 7281178155397448560, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 3.6000366
       objectReference: {fileID: 0}
     - target: {fileID: 8391786826361184298, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
       propertyPath: timer
