@@ -55,6 +55,10 @@ public class ThirdPersonShooterController : MonoBehaviour
         shootFlash.Play();
         
         Instantiate(PaintBallProjectile, spawnProjectilePosition.position,spawnProjectilePosition.rotation);
+        
+        try{ FindObjectOfType<AudioManager>().play("shooting"); }
+        catch (System.NullReferenceException e) { Debug.LogWarning("Shoot sound not appointed in "+gameObject.scene+"\n"+e.ToString()); }
+
         starterAssetsInputs.shoot = false; //* To implement Semi-automatic Shooting.
         player.UpdateAmmo(player.ammoCount.currentAmmo - 1);
     }

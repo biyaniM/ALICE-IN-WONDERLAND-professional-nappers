@@ -41,6 +41,10 @@ public class healthUpdate : MonoBehaviour
     public void HealthCheck(){
         if(currentHealth <= 0) {
             if(numberOfTimesSpawned <= 100) {
+                
+                try {FindObjectOfType<AudioManager>().play("death");}
+                catch (System.NullReferenceException e) { Debug.LogWarning("Death sound not appointed in "+gameObject.scene+"\n"+e.ToString()); }
+                
                 Debug.Log("Respawning from health <= 0");
                 Debug.Log(playerArmature.transform.position);
                 respawn();
@@ -49,6 +53,10 @@ public class healthUpdate : MonoBehaviour
                 gameObject.SetActiveRecursively(false);
                 if(gameOverCheck == false){
                 analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "Died", "NA", "NA", "NA", "Health Over");
+
+                try {FindObjectOfType<AudioManager>().play("final death");}
+                catch (System.NullReferenceException e) { Debug.LogWarning("Death sound not appointed in "+gameObject.scene+"\n"+e.ToString()); }
+
                 runGameOverHud();
                 // stop timer
                 timer.pauseTimer();
@@ -86,13 +94,17 @@ public class healthUpdate : MonoBehaviour
     }
 
     public void OnCollisionEnter(Collision col) {
-        Debug.Log("Player got hit");
+        // Debug.Log("Player got hit");
         if(col.gameObject.tag == "enemyBullet") {
             Destroy(col.gameObject);
-            Debug.Log("Enemy bullet destroyed!");
+            // Debug.Log("Enemy bullet destroyed!");
             Debug.Log(col.gameObject);
             currentHealth = currentHealth - 10;
             string msg = "HP - 10";
+
+            try {FindObjectOfType<AudioManager>().play("player hurt");}
+            catch (System.NullReferenceException e) { Debug.LogWarning("Player hurt sound not appointed in "+gameObject.scene+"\n"+e.ToString()); }
+
             player.ShowAlert(msg);
             updateHealth(currentHealth);
             StartCoroutine (waiter());

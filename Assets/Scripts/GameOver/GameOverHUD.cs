@@ -34,6 +34,7 @@ public class GameOverHUD : MonoBehaviour
 
     void BackToMain(){
         Debug.Log("Main Menu!");
-        SceneManager.LoadScene("Menu");
+        //SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("New_Menu");
     }
 }

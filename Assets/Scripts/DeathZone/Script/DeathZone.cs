@@ -34,12 +34,15 @@ public class DeathZone : MonoBehaviour
     
     IEnumerator DeathZoneHealthDecrement(){
         while (healthUpdate.currentHealth > 0){
-            string msg = "HP - "+healthDecrement.ToString();
+            string msg = "HP -"+healthDecrement.ToString();
             playerObj.ShowAlert(msg);
 
             //* Decrease Player Health
             healthUpdate.currentHealth -= healthDecrement;
             healthUpdate.updateHealth(healthUpdate.currentHealth, 1);
+
+            try {FindObjectOfType<AudioManager>().play("player hurt");}
+            catch (System.NullReferenceException e) { Debug.LogWarning("Coin Collect sound not appointed in "+gameObject.scene+"\n"+e.ToString()); }
 
             //* Wait for half time interval to close the HP decrease HUD
             yield return new WaitForSeconds(healthDecrementTimeInterval/2);
