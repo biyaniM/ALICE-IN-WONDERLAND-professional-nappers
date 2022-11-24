@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 8900000, guid: 619e305f5165a9946b7f72464e44ca4a, type: 3}
   m_Sun: {fileID: 2114283754330233425}
-  m_IndirectSpecularColor: {r: 0.1727952, g: 0.2600245, b: 0.36693013, a: 1}
+  m_IndirectSpecularColor: {r: 0.025741346, g: 0.026223412, b: 0.030502593, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 51e8050f26ab504469d218c927558c5e, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: c1e7e255be80a401397d6dfd1bbe9452, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 3b3f7400d3526e9429c39d03afb714b3, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -670,9 +670,17 @@ PrefabInstance:
       propertyPath: finishBoundaryRed
       value: 
       objectReference: {fileID: 899150193}
+    - target: {fileID: 4679591685922676928, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -6.7576904
+      objectReference: {fileID: 0}
     - target: {fileID: 4747491102279773381, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.19239807
+      objectReference: {fileID: 0}
+    - target: {fileID: 5384936018074865784, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.35009766
       objectReference: {fileID: 0}
     - target: {fileID: 5384936018074865784, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -29428,6 +29436,14 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0.59607846
       objectReference: {fileID: 0}
+    - target: {fileID: 5475762487283306744, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.1000061
+      objectReference: {fileID: 0}
+    - target: {fileID: 5475762487283306744, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.1000061
+      objectReference: {fileID: 0}
     - target: {fileID: 6490298819815039122, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
       propertyPath: m_Name
       value: PauseMenu
@@ -29435,6 +29451,10 @@ PrefabInstance:
     - target: {fileID: 6490298819815039122, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7281178155397448560, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 3.6000366
       objectReference: {fileID: 0}
     - target: {fileID: 8391786826361184298, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
       propertyPath: timer
