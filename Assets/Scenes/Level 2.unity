@@ -182,6 +182,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5080235681964357736, guid: 0c2a4692c75880f40b73baf84f92eb16, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c2a4692c75880f40b73baf84f92eb16, type: 3}
 --- !u!4 &7073543 stripped
@@ -1524,6 +1528,10 @@ PrefabInstance:
     - target: {fileID: 922128493945154414, guid: 0c2a4692c75880f40b73baf84f92eb16, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5080235681964357736, guid: 0c2a4692c75880f40b73baf84f92eb16, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c2a4692c75880f40b73baf84f92eb16, type: 3}
@@ -3211,7 +3219,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 193536069}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
@@ -5347,7 +5355,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 303450573}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.036, z: 0.667}
+  m_LocalPosition: {x: 0, y: 0.489, z: 0.667}
   m_LocalScale: {x: 1.2972937, y: 1.5260991, z: 1.4579343}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5841,6 +5849,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5080235681964357736, guid: 0c2a4692c75880f40b73baf84f92eb16, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c2a4692c75880f40b73baf84f92eb16, type: 3}
 --- !u!1001 &351380867
@@ -5967,7 +5979,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 357476888}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.036, z: 0.667}
+  m_LocalPosition: {x: 0, y: 0.489, z: 0.667}
   m_LocalScale: {x: 1.2972937, y: 1.5260991, z: 1.4579343}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8784,7 +8796,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh516552
+  m_Name: pb_Mesh194508
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10046,7 +10058,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642031406}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.036, z: 0.667}
+  m_LocalPosition: {x: 0, y: 0.489, z: 0.667}
   m_LocalScale: {x: 1.2972937, y: 1.5260991, z: 1.4579343}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11065,6 +11077,10 @@ PrefabInstance:
     - target: {fileID: 922128493945154414, guid: 0c2a4692c75880f40b73baf84f92eb16, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5080235681964357736, guid: 0c2a4692c75880f40b73baf84f92eb16, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c2a4692c75880f40b73baf84f92eb16, type: 3}
@@ -14345,7 +14361,6 @@ GameObject:
   - component: {fileID: 948667926}
   - component: {fileID: 948667931}
   - component: {fileID: 948667930}
-  - component: {fileID: 948667929}
   - component: {fileID: 948667928}
   - component: {fileID: 948667927}
   m_Layer: 0
@@ -14410,19 +14425,6 @@ MonoBehaviour:
   player: {fileID: 562017683}
   playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
---- !u!65 &948667929
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 948667925}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &948667930
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14433,8 +14435,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 1
-  m_Height: 1
+  m_Radius: 0.5
+  m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &948667931
@@ -15127,7 +15129,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1011650575}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
@@ -22764,7 +22766,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1226935817}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
@@ -27847,7 +27849,6 @@ GameObject:
   - component: {fileID: 1306167127}
   - component: {fileID: 1306167132}
   - component: {fileID: 1306167131}
-  - component: {fileID: 1306167130}
   - component: {fileID: 1306167129}
   - component: {fileID: 1306167128}
   m_Layer: 0
@@ -27912,19 +27913,6 @@ MonoBehaviour:
   player: {fileID: 562017683}
   playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
---- !u!65 &1306167130
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1306167126}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &1306167131
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -27935,8 +27923,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 1
-  m_Height: 1
+  m_Radius: 0.5
+  m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1306167132
@@ -32124,7 +32112,6 @@ GameObject:
   - component: {fileID: 1657740840}
   - component: {fileID: 1657740845}
   - component: {fileID: 1657740844}
-  - component: {fileID: 1657740843}
   - component: {fileID: 1657740842}
   - component: {fileID: 1657740841}
   m_Layer: 0
@@ -32189,19 +32176,6 @@ MonoBehaviour:
   player: {fileID: 562017683}
   playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
---- !u!65 &1657740843
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1657740839}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &1657740844
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -32212,8 +32186,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 1
-  m_Height: 1
+  m_Radius: 0.5
+  m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1657740845
@@ -32309,7 +32283,6 @@ GameObject:
   - component: {fileID: 1668674731}
   - component: {fileID: 1668674730}
   - component: {fileID: 1668674729}
-  - component: {fileID: 1668674728}
   - component: {fileID: 1668674727}
   - component: {fileID: 1668674726}
   m_Layer: 0
@@ -32356,19 +32329,6 @@ MonoBehaviour:
   player: {fileID: 562017683}
   playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
---- !u!65 &1668674728
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1668674725}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &1668674729
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -32379,8 +32339,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 1
-  m_Height: 1
+  m_Radius: 0.5
+  m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1668674730
@@ -32812,7 +32772,6 @@ GameObject:
   - component: {fileID: 1726423072}
   - component: {fileID: 1726423077}
   - component: {fileID: 1726423076}
-  - component: {fileID: 1726423075}
   - component: {fileID: 1726423074}
   - component: {fileID: 1726423073}
   m_Layer: 0
@@ -32877,19 +32836,6 @@ MonoBehaviour:
   player: {fileID: 562017683}
   playerArmatureSkeletonPartPath: Skeleton/Hips
   distance: 0
---- !u!65 &1726423075
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1726423071}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &1726423076
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -32900,8 +32846,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 1
-  m_Height: 1
+  m_Radius: 0.5
+  m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1726423077
@@ -33325,7 +33271,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1751045122}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
@@ -34318,7 +34264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769537328424014683, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.48205566
+      value: -0.48204803
       objectReference: {fileID: 0}
     - target: {fileID: 7281178155397448560, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -35667,7 +35613,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1896779516}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.036, z: 0.667}
+  m_LocalPosition: {x: 0, y: 0.489, z: 0.667}
   m_LocalScale: {x: 1.2972937, y: 1.5260991, z: 1.4579343}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -36876,7 +36822,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1986653665}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.036, z: 0.667}
+  m_LocalPosition: {x: 0, y: 0.489, z: 0.667}
   m_LocalScale: {x: 1.2972937, y: 1.5260991, z: 1.4579343}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -37761,6 +37707,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5080235681964357736, guid: 0c2a4692c75880f40b73baf84f92eb16, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c2a4692c75880f40b73baf84f92eb16, type: 3}
 --- !u!4 &2010859123 stripped
@@ -38366,7 +38316,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 2074333567}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
