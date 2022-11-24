@@ -63,7 +63,7 @@ public class MysteryBox : MonoBehaviour
     }
 
     IEnumerator GoldenCoin(int coinIncrement){
-        string msg = "Coins +"+coinIncrement.ToString();
+        string msg = "Gem +"+coinIncrement.ToString();
         playerObj.ShowAlert(msg);
         coinCollectObj.updateGoldenCoin(coinIncrement);
 
