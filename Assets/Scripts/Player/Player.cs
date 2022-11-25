@@ -85,21 +85,21 @@ public class Player : MonoBehaviour
         float changeSaturation = 0;
         if(prevCoins == 0){
             if(changeCoins == 1){
-                changeSaturation = 50f;
+                changeSaturation = 100f/3f;
             }
             else if(changeCoins == 2){
-                changeSaturation = 75f;
+                changeSaturation = 50f;
             }
             else{
-                changeSaturation = 75f + (changeCoins - 2) * SATURATION_INCREASE_FACTOR;
+                changeSaturation = 50f + (changeCoins - 2) * SATURATION_INCREASE_FACTOR;
             }
         }
         else if(prevCoins == 1){
             if(changeCoins == 1){
-                changeSaturation = 25;
+                changeSaturation = 50f/3f;
             }
             else{
-                changeSaturation = 25f + (changeCoins - 1) * SATURATION_INCREASE_FACTOR;
+                changeSaturation = (50f/3f) + (changeCoins - 1) * SATURATION_INCREASE_FACTOR;
             }
         }
         else{
@@ -118,7 +118,7 @@ public class Player : MonoBehaviour
     //import setting from level side
     void SetGoal(int totalGoal){
         TOTAL_GOAL = totalGoal;
-        SATURATION_INCREASE_FACTOR = 50f / (TOTAL_GOAL - 2);
+        SATURATION_INCREASE_FACTOR = 75f / (TOTAL_GOAL - 2);
         coinsScore.SetGoals(TOTAL_GOAL);
     }
     //import from player shooting???
