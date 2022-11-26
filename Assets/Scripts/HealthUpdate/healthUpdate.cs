@@ -58,6 +58,7 @@ public class healthUpdate : MonoBehaviour
                 catch (System.NullReferenceException e) { Debug.LogWarning("Death sound not appointed in "+gameObject.scene+"\n"+e.ToString()); }
 
                 runGameOverHud();
+                player.SetGameStatus(true);
                 // stop timer
                 timer.pauseTimer();
                 }
@@ -89,6 +90,7 @@ public class healthUpdate : MonoBehaviour
         string msg = "You Died!";
         gameOverHUD.Setup(msg);
         gameOverCheck = true;
+        
         // destroy the player
         // Destroy(gameObject);
     }
