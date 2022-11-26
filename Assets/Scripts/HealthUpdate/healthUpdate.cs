@@ -121,7 +121,7 @@ public class healthUpdate : MonoBehaviour
         // Debug.Log("Set health Called");
         // Debug.Log(health);
         healthBar.SetHealth(health);
-         if(health == 0 && fall == 1) {
+         if(health == 0 && fall == 1 && numberOfTimesSpawned <=3) {
             // Debug.Log("Respawning because of falling down!");
             // Debug.Log(playerArmature.transform.position);
             respawn();
