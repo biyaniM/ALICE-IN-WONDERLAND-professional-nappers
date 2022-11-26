@@ -60,6 +60,7 @@ public class DeathZone : MonoBehaviour
         healthBar.SetHealth(0); //* Make Health 0
         string msg = "You Died!";
         gameOverHUD.Setup(msg); //* Setup the gameover HUD
+        playerObj.SetGameStatus(true);
         timer.pauseTimer();
     }
     
