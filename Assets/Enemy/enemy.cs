@@ -48,7 +48,19 @@ public class enemy : MonoBehaviour
         if(col.transform.CompareTag("Player"))
         {
             col.transform.parent = null;
-            Debug.Log("Hello");
+            Debug.Log("Hello enter");
+        }
+        
+    }
+
+    public void OnTriggerExit(Collider col)
+    {
+        // Debug.WriteLine("Hello");
+        
+        if(col.transform.CompareTag("Player"))
+        {
+            col.transform.parent = null;
+            Debug.Log("Hello exit");
         }
         
     }
