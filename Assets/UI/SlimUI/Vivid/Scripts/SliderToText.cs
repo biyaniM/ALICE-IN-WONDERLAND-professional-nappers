@@ -36,6 +36,7 @@ namespace SlimUI.Vivid{
 		}
 
 		public void UpdateText(){
+			AudioListener.volume = mainSlider.value;
 			fillValue = Mathf.Round(mainSlider.value).ToString();
 			if(valNum){
 				valNum.text = fillValue;
