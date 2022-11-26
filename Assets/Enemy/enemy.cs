@@ -40,30 +40,6 @@ public class enemy : MonoBehaviour
                 string skeletonPart="Skeleton/Hips/Spine/Chest/UpperChest"){
         return playerArmature.transform.Find(skeletonPart);
     }
-    
-    public void OnTriggerEnter(Collider col)
-    {
-        // Debug.WriteLine("Hello");
-        
-        if(col.transform.CompareTag("Player"))
-        {
-            col.transform.parent = null;
-            Debug.Log("Hello enter");
-        }
-        
-    }
-
-    public void OnTriggerExit(Collider col)
-    {
-        // Debug.WriteLine("Hello");
-        
-        if(col.transform.CompareTag("Player"))
-        {
-            col.transform.parent = null;
-            Debug.Log("Hello exit");
-        }
-        
-    }
 
     protected void Update()
     {   
