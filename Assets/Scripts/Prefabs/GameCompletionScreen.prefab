@@ -466,6 +466,8 @@ GameObject:
   - component: {fileID: 748240375881037328}
   - component: {fileID: 748240375881037329}
   - component: {fileID: 748240375881037333}
+  - component: {fileID: 4869721712572602191}
+  - component: {fileID: 5821044680925074839}
   m_Layer: 5
   m_Name: GameCompletionScreen
   m_TagString: Untagged
@@ -572,6 +574,44 @@ MonoBehaviour:
   mainMenuBtn: {fileID: 748240375762124993}
   curr_level: 1
   timer: {fileID: 0}
+--- !u!222 &4869721712572602191
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748240375881037330}
+  m_CullTransparentMesh: 1
+--- !u!114 &5821044680925074839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748240375881037330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.4480511, g: 0.30215383, b: 0.6603774, a: 0.8352941}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &748240376386206219
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,8 +645,8 @@ RectTransform:
   m_Father: {fileID: 748240375417229089}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.74200004}
+  m_AnchorMin: {x: 0.051250003, y: 0.5}
+  m_AnchorMax: {x: 0.96875, y: 0.7375544}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -631,7 +671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.444982, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.97088087, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -651,7 +691,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Congrats! Level Completed!
+  m_Text: 'Congrats!
+
+    Level Completed!'
 --- !u!1 &6277372910442591908
 GameObject:
   m_ObjectHideFlags: 0
