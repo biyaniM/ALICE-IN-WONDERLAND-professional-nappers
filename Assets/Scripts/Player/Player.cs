@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
     public GameObject finishBoundary;
     public PauseMenu pauseMenu;
     public int numOfKill;
+    private bool isEnd;
 
 
     void Start()
@@ -39,6 +40,7 @@ public class Player : MonoBehaviour
 
         InitHealth(100);
         InitializeHUD();
+        SetGameStatus(false);
 
         // endboundary collider 
         Debug.Log("setting finish boundary something!!!");
@@ -57,10 +59,11 @@ public class Player : MonoBehaviour
         guidance.enabled = false;
         alert = GameObject.Find("Alert").GetComponent<TextMeshProUGUI>();
         alert.enabled = false;
+        
     }
 
     void Update(){
-        if(Input.GetKeyDown(KeyCode.P)){
+        if(Input.GetKeyDown(KeyCode.P)&& !isEnd){
             if(pauseMenu.GameIsPaused){
                 // resume the game
                 pauseMenu.Resume();
@@ -166,6 +169,14 @@ public class Player : MonoBehaviour
     public int GetNumberOfKill()
     {
         return numOfKill;
+    }
+
+    public void SetGameStatus(bool status){
+        isEnd = status;
+    }
+
+    public bool GetGameStatus(){
+        return isEnd;
     }
 
     public void ShowGuidance(string msg){

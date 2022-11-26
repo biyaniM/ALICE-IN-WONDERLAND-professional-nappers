@@ -60,6 +60,8 @@ public class LevelComplete : MonoBehaviour
 
                 //! show the level complete HUD
                 levelCompleteScreen.Setup();
+                //Set game status
+                player.SetGameStatus(true);
             }
         }
         // show the finishboundary again

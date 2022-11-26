@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 8900000, guid: 619e305f5165a9946b7f72464e44ca4a, type: 3}
   m_Sun: {fileID: 2114283754330233425}
-  m_IndirectSpecularColor: {r: 0.6601325, g: 0.63384855, b: 0.8280575, a: 1}
+  m_IndirectSpecularColor: {r: 0.6601998, g: 0.63388705, b: 0.8281415, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -135,6 +135,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1074549015}
     m_Modifications:
+    - target: {fileID: 227063952170519725, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: Duration
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 227063952170519725, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: gameOverHUD
       value: 
@@ -37427,6 +37431,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1074549015}
     m_Modifications:
+    - target: {fileID: 4605442552670555592, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2.2000122
+      objectReference: {fileID: 0}
     - target: {fileID: 5475762487283306744, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.1000061
@@ -37445,7 +37453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769537328424014683, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.48204803
+      value: -0.48205566
       objectReference: {fileID: 0}
     - target: {fileID: 7281178155397448560, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -37982,6 +37990,10 @@ PrefabInstance:
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 8894378669607556094, guid: 633a3525fcb9d413fa25f325b7c85700, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1320465628}
     - target: {fileID: 8894378670850114168, guid: 633a3525fcb9d413fa25f325b7c85700, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0

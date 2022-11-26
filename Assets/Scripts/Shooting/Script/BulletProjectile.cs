@@ -35,7 +35,15 @@ public class BulletProjectile : MonoBehaviour
         }else{
             Debug.Log("Not Hit target");
         }*/
-        if (col.gameObject.tag!="Player"){Destroy(gameObject);}
+        if (col.gameObject.tag!="Player"){
+            GameObject playerObject = GameObject.FindWithTag("Player");
+            if(playerObject.transform.parent != null){
+                Debug.Log("Setting Player parent as Null");
+                playerObject.transform.parent = null; 
+            }
+            
+            Destroy(gameObject);
+        }
 
         if(col.gameObject.tag == "enemy_red" || col.gameObject.tag == "enemy_yellow" || col.gameObject.tag == "enemy_blue"){
             Debug.Log("Killed Enemy!!!!!");
