@@ -34,7 +34,6 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound: " + name + " not found in "+gameObject.scene);
             return;
         }
-        isMute = 1;
         Debug.Log("ISMUTE===");
         Debug.Log(isMute);
         if(isMute == 1) {
