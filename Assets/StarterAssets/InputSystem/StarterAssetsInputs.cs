@@ -53,7 +53,6 @@ namespace StarterAssets
 
 		public void OnPause(InputValue value)
 		{
-			Debug.Log("OnPause Called");
 			PauseInput(value.isPressed);
 		}
 #endif

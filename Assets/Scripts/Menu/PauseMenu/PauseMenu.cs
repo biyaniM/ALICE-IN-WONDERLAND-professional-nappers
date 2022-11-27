@@ -24,7 +24,6 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void Setup(){    // pause the game
-        Debug.Log("Pause Menu Set");
         gameObject.SetActive(true);
         //release the cursor to press the button.
         Cursor.lockState = CursorLockMode.None;
