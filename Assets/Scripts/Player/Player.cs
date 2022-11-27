@@ -79,10 +79,10 @@ public class Player : MonoBehaviour
         float changeSaturation = 0;
         if(prevCoins == 0){
             if(changeCoins == 1){
-                if(TOTAL_GOAL < 10){
+                if(TOTAL_GOAL < 7){
                     changeSaturation = 50f;
                 }
-                else if(TOTAL_GOAL < 20){
+                else if(TOTAL_GOAL < 17){
                     changeSaturation = 100f/3f;
                 }
                 else{
@@ -90,11 +90,11 @@ public class Player : MonoBehaviour
                 }
                 
             }
-            else if(changeCoins == 2){
-                if(TOTAL_GOAL < 10){
+            else if(changeCoins == 7){
+                if(TOTAL_GOAL < 7){
                     changeSaturation = 75f;
                 }
-                else if(TOTAL_GOAL < 20){
+                else if(TOTAL_GOAL < 17){
                     changeSaturation = 50f;
                 }
                 else{
@@ -102,10 +102,10 @@ public class Player : MonoBehaviour
                 }
             }
             else{
-                if(TOTAL_GOAL < 10){
+                if(TOTAL_GOAL < 7){
                     changeSaturation = 75f + (changeCoins - 2) * SATURATION_INCREASE_FACTOR;
                 }
-                else if(TOTAL_GOAL < 20){
+                else if(TOTAL_GOAL < 17){
                     changeSaturation = 50f + (changeCoins - 2) * SATURATION_INCREASE_FACTOR;
                 }
                 else{
@@ -115,10 +115,10 @@ public class Player : MonoBehaviour
         }
         else if(prevCoins == 1){
             if(changeCoins == 1){
-                if(TOTAL_GOAL < 10){
+                if(TOTAL_GOAL < 7){
                     changeSaturation = 25f;
                 }
-                else if(TOTAL_GOAL < 20){
+                else if(TOTAL_GOAL < 17){
                     changeSaturation = 50f/3f;
                 }
                 else{
@@ -126,10 +126,10 @@ public class Player : MonoBehaviour
                 }
             }
             else{
-                if(TOTAL_GOAL < 10){
+                if(TOTAL_GOAL < 7){
                     changeSaturation = 25f + (changeCoins - 1) * SATURATION_INCREASE_FACTOR;
                 }
-                else if(TOTAL_GOAL < 20){
+                else if(TOTAL_GOAL < 17){
                     changeSaturation = (50f/3f) + (changeCoins - 1) * SATURATION_INCREASE_FACTOR;
                 }
                 else{
