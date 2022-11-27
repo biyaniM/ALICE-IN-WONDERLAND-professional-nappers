@@ -23,9 +23,10 @@ public class Player : MonoBehaviour
     public HealthBar healthBar;
     public CoinsScore coinsScore;
     public AmmoCount ammoCount;
-    private TextMeshProUGUI guidance;
+    public TextMeshProUGUI guidance;
     public Image guidanceArea;
-    private TextMeshProUGUI alert;
+    public Image alertArea;
+    public TextMeshProUGUI alert;
     public GameObject finishBoundary;
     // public PauseMenu pauseMenu;
     public int numOfKill;
@@ -56,9 +57,10 @@ public class Player : MonoBehaviour
     //todo: fix all ui component here  
     void SetComponents(){
         guidanceArea.enabled = false;
-        guidance = GameObject.Find("Guidance").GetComponent<TextMeshProUGUI>();
+        //guidance = GameObject.Find("Guidance").GetComponent<TextMeshProUGUI>();
         guidance.enabled = false;
-        alert = GameObject.Find("Alert").GetComponent<TextMeshProUGUI>();
+        alertArea.enabled = false;
+        //alert = GameObject.Find("Alert").GetComponent<TextMeshProUGUI>();
         alert.enabled = false;
         
     }
@@ -182,11 +184,13 @@ public class Player : MonoBehaviour
     }
 
     public void ShowAlert(string msg){
+        alertArea.enabled = true;
         alert.enabled = true;
         alert.text = msg;
     }
 
     public void CloseAlert(){
+        alertArea.enabled = false;
         alert.enabled = false;
     }
 
