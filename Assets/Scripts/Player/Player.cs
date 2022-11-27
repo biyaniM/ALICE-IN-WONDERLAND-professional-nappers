@@ -121,6 +121,9 @@ public class Player : MonoBehaviour
                 else if(TOTAL_GOAL < 20){
                     changeSaturation = 50f/3f;
                 }
+                else{
+                    changeSaturation = 10f;
+                }
                 
             }
             else{
