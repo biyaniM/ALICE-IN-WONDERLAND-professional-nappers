@@ -79,7 +79,13 @@ public class Player : MonoBehaviour
         float changeSaturation = 0;
         if(prevCoins == 0){
             if(changeCoins == 1){
-                changeSaturation = 100f/3f;
+                if(TOTAL_COINS < 10){
+
+                }
+                else if(TOTAL_COINS < 20){
+                    changeSaturation = 100f/3f;
+                }
+                
             }
             else if(changeCoins == 2){
                 changeSaturation = 50f;
