@@ -6,6 +6,7 @@ public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
     float defaultVolume = 0.35f;
+    public int isMute = 1;
 
     void Awake() {
             foreach (Sound s in sounds) {
@@ -33,9 +34,21 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound: " + name + " not found in "+gameObject.scene);
             return;
         }
+        if(isMute == 1) {
+            Debug.Log("MUTED!");
+            return;
+        }
         s.source.volume = defaultVolume;
         s.source.Play();
     }
 
-    public void mu
+    public void muteAudio() {
+        isMute = 1;
+    }
+
+    public void unMuteAudio() {
+        isMute = 0;
+    }
+
+
 }
