@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    [SerializeField] public bool GameIsPaused = false;
+    // [SerializeField] public bool GameIsPaused = false;
     public Button resume_btn;
     public Button menu_btn;
     public Button restart_btn;
@@ -28,7 +28,7 @@ public class PauseMenu : MonoBehaviour
         //guide_btn.onClick.AddListener(ShowGuideMenu);
         // timer.pauseTimer();
         Time.timeScale = 0f;
-        GameIsPaused = true;
+        // GameIsPaused = true;
         Cursor.visible = true;
     }
     
@@ -37,7 +37,7 @@ public class PauseMenu : MonoBehaviour
         // timer.resumeTimer();
         gameObject.SetActive(false);
         Time.timeScale = 1f;
-        GameIsPaused = false;
+        // GameIsPaused = false;
         Cursor.visible = false;
     }
 

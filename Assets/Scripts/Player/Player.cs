@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement; 
 using TMPro;
+using StarterAssets;
 
 public class Player : MonoBehaviour
 {
@@ -26,7 +27,7 @@ public class Player : MonoBehaviour
     public Image guidanceArea;
     private TextMeshProUGUI alert;
     public GameObject finishBoundary;
-    public PauseMenu pauseMenu;
+    // public PauseMenu pauseMenu;
     public int numOfKill;
     private bool isEnd;
 
@@ -63,17 +64,7 @@ public class Player : MonoBehaviour
     }
 
     void Update(){
-        if(Input.GetKeyDown(KeyCode.P)&& !isEnd){
-            if(pauseMenu.GameIsPaused){
-                // resume the game
-                pauseMenu.Resume();
-            }
-            else{
-                // pause the game
-                Debug.Log("Pause the game");
-                pauseMenu.Setup();
-            }
-        }
+
     }
 
     public void UpdateHealth(int health){
