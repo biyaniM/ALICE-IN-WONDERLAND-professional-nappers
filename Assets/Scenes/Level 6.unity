@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 8900000, guid: 619e305f5165a9946b7f72464e44ca4a, type: 3}
   m_Sun: {fileID: 2114283754330233425}
-  m_IndirectSpecularColor: {r: 0.024204085, g: 0.024991276, b: 0.02947677, a: 1}
+  m_IndirectSpecularColor: {r: 0.025741346, g: 0.026223412, b: 0.030502593, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -705,7 +705,7 @@ PrefabInstance:
     - target: {fileID: 5384936018097057363, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: yellowGoal
       value: 
-      objectReference: {fileID: 34778281}
+      objectReference: {fileID: 0}
     - target: {fileID: 5384936018151131617, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: m_Text
       value: 00
@@ -721,6 +721,10 @@ PrefabInstance:
     - target: {fileID: 5384936019506417936, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: m_Name
       value: HUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 5384936019506417936, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5384936019506417940, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: m_Pivot.x
@@ -829,28 +833,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1400495364240628904, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
---- !u!114 &34778280 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 227063952170519725, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
-  m_PrefabInstance: {fileID: 34778279}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d556d11c6e8744c068e142730eddbd90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &34778281 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 859788690119820553, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
-  m_PrefabInstance: {fileID: 34778279}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &34778282 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6115479887780526147, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
@@ -29095,7 +29077,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverHUD: {fileID: 1288594012}
   gameOverCheck: 0
-  timer: {fileID: 34778280}
+  timer: {fileID: 0}
   healthBar: {fileID: 1849744726}
   playerArmature: {fileID: 546285931}
   maxHealth: 100
@@ -29114,7 +29096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelOverCheck: 0
   levelCompleteScreen: {fileID: 1973104590}
-  timerComponent: {fileID: 34778280}
+  timerComponent: {fileID: 0}
 --- !u!114 &546285935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29564,9 +29546,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1362782512999460279, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602209332956484558, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2602209332956484558, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 105
       objectReference: {fileID: 0}
     - target: {fileID: 5143654945263413072, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
       propertyPath: m_Color.a
@@ -29579,6 +29569,18 @@ PrefabInstance:
     - target: {fileID: 5475762487283306744, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.1000061
+      objectReference: {fileID: 0}
+    - target: {fileID: 5563360397391193623, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5721820706018738386, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 255
+      objectReference: {fileID: 0}
+    - target: {fileID: 5721820706018738386, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 387
       objectReference: {fileID: 0}
     - target: {fileID: 6490298819815039122, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
       propertyPath: m_Name
@@ -29599,7 +29601,7 @@ PrefabInstance:
     - target: {fileID: 8391786826361184298, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
       propertyPath: timer
       value: 
-      objectReference: {fileID: 34778280}
+      objectReference: {fileID: 0}
     - target: {fileID: 8391786826361184298, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
       propertyPath: menu_btn
       value: 
@@ -47496,7 +47498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverHUD: {fileID: 1288594012}
-  timer: {fileID: 34778280}
+  timer: {fileID: 0}
   healthBar: {fileID: 1849744726}
   instaKill: 0
   healthDecrement: 10
@@ -49424,7 +49426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverHUD: {fileID: 1288594012}
-  timer: {fileID: 34778280}
+  timer: {fileID: 0}
   healthBar: {fileID: 1849744726}
   instaKill: 0
   healthDecrement: 10
@@ -56371,7 +56373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverHUD: {fileID: 1288594012}
-  timer: {fileID: 34778280}
+  timer: {fileID: 0}
   healthBar: {fileID: 1849744726}
   instaKill: 0
   healthDecrement: 10
@@ -68790,7 +68792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverHUD: {fileID: 1288594012}
-  timer: {fileID: 34778280}
+  timer: {fileID: 0}
   healthBar: {fileID: 1849744726}
   instaKill: 0
   healthDecrement: 10
@@ -84407,7 +84409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverHUD: {fileID: 1288594012}
-  timer: {fileID: 34778280}
+  timer: {fileID: 0}
   healthBar: {fileID: 1849744726}
   instaKill: 0
   healthDecrement: 10
@@ -100875,7 +100877,7 @@ PrefabInstance:
     - target: {fileID: 748240375881037333, guid: 8226e0801bb3e42d5ba3a84691b45f79, type: 3}
       propertyPath: timer
       value: 
-      objectReference: {fileID: 34778280}
+      objectReference: {fileID: 0}
     - target: {fileID: 748240375881037333, guid: 8226e0801bb3e42d5ba3a84691b45f79, type: 3}
       propertyPath: curr_level
       value: 6
@@ -101193,6 +101195,10 @@ PrefabInstance:
     - target: {fileID: 8894378669607556089, guid: 633a3525fcb9d413fa25f325b7c85700, type: 3}
       propertyPath: m_Name
       value: GameOverScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894378669607556089, guid: 633a3525fcb9d413fa25f325b7c85700, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 633a3525fcb9d413fa25f325b7c85700, type: 3}
