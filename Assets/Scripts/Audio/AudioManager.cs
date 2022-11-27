@@ -5,6 +5,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
+    float defaultVolume = 0.35f;
 
     void Awake() {
             foreach (Sound s in sounds) {
@@ -28,11 +29,13 @@ public class AudioManager : MonoBehaviour
     public void play (string name) {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
-        {
+        {  
             Debug.LogWarning("Sound: " + name + " not found in "+gameObject.scene);
             return;
         }
-
+        s.source.volume = defaultVolume;
         s.source.Play();
     }
+
+    public void mu
 }
