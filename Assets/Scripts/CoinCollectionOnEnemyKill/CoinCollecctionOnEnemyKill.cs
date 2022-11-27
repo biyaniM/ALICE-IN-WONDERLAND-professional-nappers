@@ -49,7 +49,7 @@ public class CoinCollecctionOnEnemyKill : MonoBehaviour
     }
 
     void SendMsgToHUD(string msg){
-        player.ShowAlert(msg);
+        player.ShowAlert(msg, "time");
         StartCoroutine (waiter());
     }
 

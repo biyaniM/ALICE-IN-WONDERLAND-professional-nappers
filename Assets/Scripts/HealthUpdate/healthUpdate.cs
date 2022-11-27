@@ -107,7 +107,7 @@ public class healthUpdate : MonoBehaviour
             try {FindObjectOfType<AudioManager>().play("player hurt");}
             catch (System.NullReferenceException e) { Debug.LogWarning("Player hurt sound not appointed in "+gameObject.scene+"\n"+e.ToString()); }
 
-            player.ShowAlert(msg);
+            player.ShowAlert(msg, "hp");
             updateHealth(currentHealth);
             StartCoroutine (waiter());
             return;            

@@ -182,11 +182,27 @@ public class Player : MonoBehaviour
         guidanceArea.enabled = false;
         guidance.enabled = false;
     }
-
-    public void ShowAlert(string msg){
+    //gem/hp/time/ammo
+    public void ShowAlert(string msg, string type){
         alertArea.enabled = true;
         alert.enabled = true;
         alert.text = msg;
+        //Debug.Log("Alert Type: " + type);
+        switch(type){
+            case "gem": //purple
+                Debug.Log("Alert Type: " + type);
+                alertArea.color = new Color32(143, 0, 254, 255);
+                break;
+            case "hp"://red
+                alertArea.color = new Color32(254, 9, 0, 255);
+                break;
+            case "time"://green
+                alertArea.color = new Color32(0, 255, 32, 186);
+                break;
+            case "ammo"://blue
+                alertArea.color = new Color32 (20, 64, 246, 90);
+                break;
+        }
     }
 
     public void CloseAlert(){
