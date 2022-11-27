@@ -127,7 +127,12 @@ public class Player : MonoBehaviour
                 
             }
             else{
-                changeSaturation = (50f/3f) + (changeCoins - 1) * SATURATION_INCREASE_FACTOR;
+                if(TOTAL_GOAL < 10){
+
+                }
+                else if(TOTAL_GOAL < 20){
+                    changeSaturation = (50f/3f) + (changeCoins - 1) * SATURATION_INCREASE_FACTOR;
+                }
             }
         }
         else{
