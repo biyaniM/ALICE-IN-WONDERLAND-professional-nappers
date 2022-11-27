@@ -665,6 +665,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8894378669607556094, guid: 633a3525fcb9d413fa25f325b7c85700, type: 3}
+      propertyPath: guide_btn
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 633a3525fcb9d413fa25f325b7c85700, type: 3}
 --- !u!114 &36438215 stripped
@@ -8469,7 +8473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelOverCheck: 0
   levelCompleteScreen: {fileID: 2092568465}
-  timerComponent: {fileID: 0}
+  timerComponent: {fileID: 1431258086}
 --- !u!114 &562017687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29387,6 +29391,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414584794}
   m_Mesh: {fileID: 4300000, guid: cd10fd161348f1d43b3e7b2ec62f0f20, type: 3}
+--- !u!114 &1431258086 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7640456753763228236, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+  m_PrefabInstance: {fileID: 895958260}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d556d11c6e8744c068e142730eddbd90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1432705011
 PrefabInstance:
   m_ObjectHideFlags: 0

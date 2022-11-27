@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 8900000, guid: 619e305f5165a9946b7f72464e44ca4a, type: 3}
   m_Sun: {fileID: 2114283754330233425}
-  m_IndirectSpecularColor: {r: 0.6601998, g: 0.63388705, b: 0.8281415, a: 1}
+  m_IndirectSpecularColor: {r: 0.6601325, g: 0.63384855, b: 0.8280575, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -343,7 +343,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
 --- !u!114 &34778280 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 227063952170519725, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7640456753763228236, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
   m_PrefabInstance: {fileID: 34778279}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -24284,7 +24284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverHUD: {fileID: 1288594012}
   gameOverCheck: 0
-  timer: {fileID: 34778280}
+  timer: {fileID: 0}
   healthBar: {fileID: 1846509878}
   playerArmature: {fileID: 24084660}
   maxHealth: 100
@@ -28604,7 +28604,7 @@ PrefabInstance:
     - target: {fileID: 748240375881037333, guid: 8226e0801bb3e42d5ba3a84691b45f79, type: 3}
       propertyPath: timer
       value: 
-      objectReference: {fileID: 34778280}
+      objectReference: {fileID: 0}
     - target: {fileID: 748240375881037334, guid: 8226e0801bb3e42d5ba3a84691b45f79, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -37543,7 +37543,7 @@ PrefabInstance:
     - target: {fileID: 8391786826361184298, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
       propertyPath: timer
       value: 
-      objectReference: {fileID: 34778280}
+      objectReference: {fileID: 0}
     - target: {fileID: 8538726227987275226, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
       propertyPath: m_Pivot.x
       value: 0
