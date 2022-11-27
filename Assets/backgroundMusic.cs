@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class backgroundMusic : MonoBehaviour
 {   
-    public int isMute = 0;
     AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
@@ -13,10 +12,10 @@ public class backgroundMusic : MonoBehaviour
     }
 
     public void muteAudio() {
-        isMute = 1;
+        audioSource.mute = true;
     }
 
     public void unMuteAudio() {
-        isMute = 0;
+        audioSource.mute = false;
     }
 }
