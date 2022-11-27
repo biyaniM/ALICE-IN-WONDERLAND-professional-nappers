@@ -682,7 +682,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8894378669607556089, guid: 633a3525fcb9d413fa25f325b7c85700, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8894378669607556094, guid: 633a3525fcb9d413fa25f325b7c85700, type: 3}
       propertyPath: settingBtn
@@ -32541,7 +32541,7 @@ PrefabInstance:
     - target: {fileID: 5384936018097057363, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: yellowGoal
       value: 
-      objectReference: {fileID: 895958261}
+      objectReference: {fileID: 0}
     - target: {fileID: 5384936018961158229, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.011108398
@@ -32680,7 +32680,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8347092047251452256, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -2.0250015
+      value: 15.4
       objectReference: {fileID: 0}
     - target: {fileID: 8347092047251452256, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -32689,17 +32689,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1400495364240628904, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
---- !u!114 &895958261 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 859788690119820553, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
-  m_PrefabInstance: {fileID: 895958260}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &895958262 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6115479887780526147, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
@@ -32720,17 +32709,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &895958264 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 227063952170519725, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
-  m_PrefabInstance: {fileID: 895958260}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d556d11c6e8744c068e142730eddbd90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &922464928
@@ -45459,7 +45437,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelOverCheck: 0
   levelCompleteScreen: {fileID: 1978769634}
-  timerComponent: {fileID: 895958264}
+  timerComponent: {fileID: 0}
 --- !u!114 &1464882972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45474,7 +45452,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverHUD: {fileID: 36438215}
   gameOverCheck: 0
-  timer: {fileID: 895958264}
+  timer: {fileID: 0}
   healthBar: {fileID: 523430877}
   playerArmature: {fileID: 1464882967}
   maxHealth: 100
@@ -59567,7 +59545,7 @@ PrefabInstance:
     - target: {fileID: 8391786826361184298, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
       propertyPath: timer
       value: 
-      objectReference: {fileID: 895958264}
+      objectReference: {fileID: 0}
     - target: {fileID: 8391786826361184298, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
       propertyPath: menu_btn
       value: 
@@ -59718,7 +59696,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1825152505 stripped
@@ -67453,12 +67431,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 748240375881037330, guid: 8226e0801bb3e42d5ba3a84691b45f79, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 748240375881037333, guid: 8226e0801bb3e42d5ba3a84691b45f79, type: 3}
       propertyPath: timer
       value: 
-      objectReference: {fileID: 895958264}
+      objectReference: {fileID: 0}
     - target: {fileID: 748240375881037333, guid: 8226e0801bb3e42d5ba3a84691b45f79, type: 3}
       propertyPath: curr_level
       value: 4
