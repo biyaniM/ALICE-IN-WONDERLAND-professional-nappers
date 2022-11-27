@@ -369,7 +369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4245283, g: 0.39449093, b: 0.39449093, a: 0.5686275}
+  m_Color: {r: 0.4245283, g: 0.39449093, b: 0.39449093, a: 0.4}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -953,7 +953,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5369384018873193658}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.32658476}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -961,8 +961,8 @@ RectTransform:
   m_Father: {fileID: 5384936019506417940}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.40500003, y: 0.72456324}
-  m_AnchorMax: {x: 0.59625006, y: 0.8272177}
+  m_AnchorMin: {x: 0.4275, y: 0.72456324}
+  m_AnchorMax: {x: 0.57250005, y: 0.8316643}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1915,7 +1915,6 @@ MonoBehaviour:
   alertArea: {fileID: 5460315260029566239}
   alert: {fileID: 2524432977214290252}
   finishBoundary: {fileID: 0}
-  pauseMenu: {fileID: 0}
   numOfKill: 0
 --- !u!114 &1320465629
 MonoBehaviour:
@@ -2886,10 +2885,10 @@ RectTransform:
   m_Father: {fileID: 255012393459820946}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.17653595, y: 0.259898}
-  m_AnchorMax: {x: 0.83000004, y: 0.69500005}
-  m_AnchoredPosition: {x: 0.5509033, y: 0.9999695}
-  m_SizeDelta: {x: -5.2143, y: -1.9999771}
+  m_AnchorMin: {x: 0.21100001, y: 0.2183801}
+  m_AnchorMax: {x: 0.7955173, y: 0.69500005}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3363369651059613285
 CanvasRenderer:
@@ -2948,11 +2947,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15.05
+  m_fontSize: 19.1
   m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 1
+  m_fontSizeMin: 10
   m_fontSizeMax: 50
   m_fontStyle: 1
   m_HorizontalAlignment: 2
