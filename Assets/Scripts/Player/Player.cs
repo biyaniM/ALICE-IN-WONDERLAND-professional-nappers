@@ -112,7 +112,16 @@ public class Player : MonoBehaviour
     //import setting from level side
     void SetGoal(int totalGoal){
         TOTAL_GOAL = totalGoal;
-        SATURATION_INCREASE_FACTOR = 75f / (TOTAL_GOAL - 2);
+        if(TOTAL_GOAL < 10){
+            SATURATION_INCREASE_FACTOR = 50f / (TOTAL_GOAL - 2);
+        }
+        else if(TOTAL_GOAL < 20){
+            SATURATION_INCREASE_FACTOR = 75f / (TOTAL_GOAL - 2);
+        }
+        else{
+            SATURATION_INCREASE_FACTOR = 95f / (TOTAL_GOAL - 2);
+        }
+        
         coinsScore.SetGoals(TOTAL_GOAL);
     }
     //import from player shooting???
