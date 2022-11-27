@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1750337503529015852}
   - component: {fileID: 1541515571778505690}
   m_Layer: 5
-  m_Name: Health-Icon (3)
+  m_Name: CP4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -398,7 +398,7 @@ GameObject:
   - component: {fileID: 3493390789804256149}
   - component: {fileID: 2259045723864162999}
   m_Layer: 5
-  m_Name: Health-Icon (2)
+  m_Name: CP3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -627,7 +627,7 @@ GameObject:
   - component: {fileID: 7062843098041342431}
   - component: {fileID: 2113061927297224731}
   m_Layer: 5
-  m_Name: Heart
+  m_Name: CP1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -703,7 +703,7 @@ GameObject:
   - component: {fileID: 5984229391305772503}
   - component: {fileID: 6261048621629102003}
   m_Layer: 5
-  m_Name: Health-Icon (1)
+  m_Name: CP2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2361,6 +2361,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5162739532560495207}
+  - component: {fileID: 2008613438719546750}
   m_Layer: 0
   m_Name: Respawn
   m_TagString: Untagged
@@ -2387,6 +2388,23 @@ Transform:
   m_Father: {fileID: 5384936019506417940}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2008613438719546750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6444860469207173171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 436afc11e862d43a9b0954c486306bad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CP1: {fileID: 2113061927297224731}
+  CP2: {fileID: 6261048621629102003}
+  CP3: {fileID: 2259045723864162999}
+  CP4: {fileID: 1541515571778505690}
+  healthUpdate: {fileID: 0}
 --- !u!1 &6484845780892531684
 GameObject:
   m_ObjectHideFlags: 0
