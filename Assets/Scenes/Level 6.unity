@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 8900000, guid: 619e305f5165a9946b7f72464e44ca4a, type: 3}
   m_Sun: {fileID: 2114283754330233425}
-  m_IndirectSpecularColor: {r: 0.024404744, g: 0.025139421, b: 0.02963356, a: 1}
+  m_IndirectSpecularColor: {r: 0.024204085, g: 0.024991276, b: 0.02947677, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -638,6 +638,10 @@ PrefabInstance:
       propertyPath: gameOverHUD
       value: 
       objectReference: {fileID: 1288594012}
+    - target: {fileID: 2008613438719546750, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: healthUpdate
+      value: 
+      objectReference: {fileID: 546285933}
     - target: {fileID: 4452270970643524159, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: RED_GOAL
       value: 5
@@ -809,6 +813,10 @@ PrefabInstance:
     - target: {fileID: 5798420512532989753, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5854901430387369560, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7985757309334516850, guid: d7d18dd0e2b024e99888862594d3e711, type: 3}
       propertyPath: m_PresetInfoIsWorld
