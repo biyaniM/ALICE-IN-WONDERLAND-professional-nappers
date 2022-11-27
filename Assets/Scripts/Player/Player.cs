@@ -85,6 +85,9 @@ public class Player : MonoBehaviour
                 else if(TOTAL_COINS < 20){
                     changeSaturation = 100f/3f;
                 }
+                else{
+                    changeSaturation = 20f;
+                }
                 
             }
             else if(changeCoins == 2){
