@@ -196,16 +196,19 @@ namespace StarterAssets
                 if(isPaused){
                     //* resume the game
                     pauseMenu.Resume();
-                    isPaused = false;
-                    AudioListener.pause = false;
+                    SetPause(false);
                 }
                 else{
                     //* pause the game
                     pauseMenu.Setup();
-                    isPaused = true;
-                    AudioListener.pause = true;
+                    SetPause(true);
                 }
             }
+        }
+
+        public void SetPause(bool value){
+            isPaused = value;
+            AudioListener.pause = value;
         }
 
         private void GroundedCheck()

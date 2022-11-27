@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using StarterAssets;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -12,6 +13,11 @@ public class PauseMenu : MonoBehaviour
     public Button restart_btn;
     public Button guide_btn;
     public CountDownTimer timer;
+    private ThirdPersonController controller;
+
+    void Awake(){
+        controller = GameObject.FindGameObjectWithTag("Player").GetComponent<ThirdPersonController>();
+    }
 
     private void Start() {
         gameObject.SetActive(false);
@@ -28,7 +34,6 @@ public class PauseMenu : MonoBehaviour
         //guide_btn.onClick.AddListener(ShowGuideMenu);
         // timer.pauseTimer();
         Time.timeScale = 0f;
-        // GameIsPaused = true;
         Cursor.visible = true;
     }
     
@@ -39,6 +44,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         // GameIsPaused = false;
         Cursor.visible = false;
+        controller.SetPause(false);
     }
 
     void Restart(){     // working
@@ -46,6 +52,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Cursor.visible = false;
+        controller.SetPause(false);
     }
 
     void BackToMenu(){  // working
@@ -53,6 +60,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         //SceneManager.LoadScene("Menu");
         SceneManager.LoadScene("New_Menu");
+        controller.SetPause(false);
     }
 
     void ShowGuideMenu(){
