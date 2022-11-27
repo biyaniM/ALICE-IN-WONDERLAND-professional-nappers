@@ -25,7 +25,7 @@ public class Reset : MonoBehaviour
                 analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "Died", "NA", "NA", "NA", "Falling Down");
             }
             int numberOfTimesSpawned = gameOverHud.getNumberOfTimesSpawned();
-            if(numberOfTimesSpawned <= 100) {
+            if(numberOfTimesSpawned <= 3) {
 
                 try {FindObjectOfType<AudioManager>().play("death");}
                 catch (System.NullReferenceException e) { Debug.LogWarning("Death sound not appointed in "+gameObject.scene+"\n"+e.ToString()); }
@@ -45,3 +45,5 @@ public class Reset : MonoBehaviour
         }    
     }
 }
+
+                           
