@@ -8,11 +8,13 @@ public class GameOverHUD : MonoBehaviour
 {
     [SerializeField] Button restartBtn;
     [SerializeField] Button mainMenuBtn;
-    public Text gameOverText;
+    private Text gameOverText;
+    private Player player;
 
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("HUD").GetComponent<Player>();
         gameObject.SetActive(false);   
         //gameOverText = GameObject.Find("LevelCompleteText").GetComponent<Text>();
     }
@@ -23,8 +25,9 @@ public class GameOverHUD : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         restartBtn.onClick.AddListener(ResetGame);
         mainMenuBtn.onClick.AddListener(BackToMain);
-        gameOverText.text = msg;
+        //gameOverText.text = msg;
         Debug.Log("Game over end ui");
+        player.SetGameStatus(true);
     }
 
     void ResetGame(){

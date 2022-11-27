@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement; 
 using TMPro;
+using StarterAssets;
 
 public class Player : MonoBehaviour
 {
@@ -26,8 +27,9 @@ public class Player : MonoBehaviour
     public Image guidanceArea;
     private TextMeshProUGUI alert;
     public GameObject finishBoundary;
-    public PauseMenu pauseMenu;
+    // public PauseMenu pauseMenu;
     public int numOfKill;
+    private bool isEnd;
 
 
     void Start()
@@ -39,6 +41,7 @@ public class Player : MonoBehaviour
 
         InitHealth(100);
         InitializeHUD();
+        SetGameStatus(false);
 
         // endboundary collider 
         Debug.Log("setting finish boundary something!!!");
@@ -57,20 +60,11 @@ public class Player : MonoBehaviour
         guidance.enabled = false;
         alert = GameObject.Find("Alert").GetComponent<TextMeshProUGUI>();
         alert.enabled = false;
+        
     }
 
     void Update(){
-        if(Input.GetKeyDown(KeyCode.P)){
-            if(pauseMenu.GameIsPaused){
-                // resume the game
-                pauseMenu.Resume();
-            }
-            else{
-                // pause the game
-                Debug.Log("Pause the game");
-                pauseMenu.Setup();
-            }
-        }
+
     }
 
     public void UpdateHealth(int health){
@@ -166,6 +160,14 @@ public class Player : MonoBehaviour
     public int GetNumberOfKill()
     {
         return numOfKill;
+    }
+
+    public void SetGameStatus(bool status){
+        isEnd = status;
+    }
+
+    public bool GetGameStatus(){
+        return isEnd;
     }
 
     public void ShowGuidance(string msg){
