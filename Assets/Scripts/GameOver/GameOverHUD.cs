@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using StarterAssets;
 
 public class GameOverHUD : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class GameOverHUD : MonoBehaviour
     [SerializeField] Button mainMenuBtn;
     private Text gameOverText;
     private Player player;
+    private ThirdPersonController controller;
+
+    void Awake(){
+        controller = GameObject.FindGameObjectWithTag("Player").GetComponent<ThirdPersonController>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -28,16 +34,19 @@ public class GameOverHUD : MonoBehaviour
         //gameOverText.text = msg;
         Debug.Log("Game over end ui");
         player.SetGameStatus(true);
+        controller.isPaused = true;
     }
 
     void ResetGame(){
         Debug.Log("Restart Game!");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        controller.isPaused = false;
     }
 
     void BackToMain(){
         Debug.Log("Main Menu!");
         //SceneManager.LoadScene("Menu");
         SceneManager.LoadScene("New_Menu");
+        controller.isPaused = true;
     }
 }
