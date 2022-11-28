@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6601701, g: 0.63384134, b: 0.8280924, a: 1}
+  m_IndirectSpecularColor: {r: 0.6601325, g: 0.63384855, b: 0.8280575, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -392,15 +392,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 441816, guid: d68eddb8a44e25b44857e9e0c5f916e7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.027729
+      value: 10.17
       objectReference: {fileID: 0}
     - target: {fileID: 441816, guid: d68eddb8a44e25b44857e9e0c5f916e7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.401908
+      value: -5.37
       objectReference: {fileID: 0}
     - target: {fileID: 441816, guid: d68eddb8a44e25b44857e9e0c5f916e7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 26.74602
+      value: 26.87
       objectReference: {fileID: 0}
     - target: {fileID: 441816, guid: d68eddb8a44e25b44857e9e0c5f916e7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9507,7 +9507,7 @@ MonoBehaviour:
   turretRaycastRange: 13
   turretRotationSpeed: 100
   turretShootRange: 100
-  fireRateConstant: 15
+  fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
   farAngleThreshold: 10
   closeAngleThreshold: 3
@@ -9525,10 +9525,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 2.25
+  m_Radius: 2.3
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!64 &140233052
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -15754,7 +15754,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -9, y: 21}
   m_SizeDelta: {x: -644, y: -188}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &302312651
@@ -18684,10 +18684,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 2.25
+  m_Radius: 2.3
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!64 &580478001
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -18933,15 +18933,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012015927304, guid: 5c02591794acece409986647ed6329a7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.09
+      value: 2.13
       objectReference: {fileID: 0}
     - target: {fileID: 4000012015927304, guid: 5c02591794acece409986647ed6329a7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -15.167
+      value: -15.17
       objectReference: {fileID: 0}
     - target: {fileID: 4000012015927304, guid: 5c02591794acece409986647ed6329a7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 22.53
+      value: 24.35
       objectReference: {fileID: 0}
     - target: {fileID: 4000012015927304, guid: 5c02591794acece409986647ed6329a7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -19883,9 +19883,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turretRaycastRange: 13
-  turretRotationSpeed: 100
-  turretShootRange: 70
-  fireRateConstant: 15
+  turretRotationSpeed: 90
+  turretShootRange: 40
+  fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
   farAngleThreshold: 7
   closeAngleThreshold: 3
@@ -19931,10 +19931,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 2.25
+  m_Radius: 2.3
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1001 &695292219
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20474,7 +20474,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh68374
+  m_Name: pb_Mesh213484
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -33671,7 +33671,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh67430
+  m_Name: pb_Mesh212534
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -35672,7 +35672,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1000, y: 600}
+  m_ReferenceResolution: {x: 1400, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -36240,10 +36240,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRaycastRange: 30
-  turretRotationSpeed: 100
-  turretShootRange: 100
-  fireRateConstant: 25
+  turretRaycastRange: 20
+  turretRotationSpeed: 90
+  turretShootRange: 80
+  fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
   farAngleThreshold: 10
   closeAngleThreshold: 3
@@ -36289,10 +36289,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 2.25
+  m_Radius: 2.3
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1001 &1187771975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45338,6 +45338,7 @@ MonoBehaviour:
   playerArmature: {fileID: 1464882967}
   maxHealth: 100
   currentHealth: 100
+  maxRespawnCount: 3
 --- !u!114 &1464882973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45951,7 +45952,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh67022
+  m_Name: pb_Mesh212126
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -47414,7 +47415,7 @@ MonoBehaviour:
   turretRaycastRange: 13
   turretRotationSpeed: 100
   turretShootRange: 70
-  fireRateConstant: 15
+  fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
   farAngleThreshold: 7
   closeAngleThreshold: 3
@@ -47460,10 +47461,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 2.25
+  m_Radius: 2.3
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &1640946883
 GameObject:
   m_ObjectHideFlags: 0
@@ -52600,7 +52601,7 @@ MonoBehaviour:
   turretRaycastRange: 13
   turretRotationSpeed: 100
   turretShootRange: 50
-  fireRateConstant: 15
+  fireRateConstant: 5
   turrentRotationSpeedMultiplier: 1
   farAngleThreshold: 7
   closeAngleThreshold: 3
@@ -52618,10 +52619,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 2.25
+  m_Radius: 2.3
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!64 &1687923031
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -52923,7 +52924,7 @@ MonoBehaviour:
   turretRaycastRange: 30
   turretRotationSpeed: 100
   turretShootRange: 100
-  fireRateConstant: 15
+  fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
   farAngleThreshold: 10
   closeAngleThreshold: 3
@@ -52941,10 +52942,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 2.25
+  m_Radius: 2.3
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!64 &1719725892
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58866,7 +58867,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh66782
+  m_Name: pb_Mesh211886
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -59321,6 +59322,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 506288880277402893, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2602209332956484558, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
@@ -59355,7 +59360,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6769537328424014683, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.48201752
+      value: -0.48202515
       objectReference: {fileID: 0}
     - target: {fileID: 7281178155397448560, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -67390,7 +67395,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh67522
+  m_Name: pb_Mesh212626
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
