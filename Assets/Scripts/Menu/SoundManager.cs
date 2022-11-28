@@ -22,15 +22,12 @@ public class SoundManager : MonoBehaviour
     }
 
     public void onButtonPress(){
-        
         if(muted == false){
             muted = true;
-            AudioListener.pause = true;
-            Debug.Log("Press Mute Button : true");
+            AudioListener.volume = 0;
         }else{
             muted = false;
-            AudioListener.pause = false;
-            Debug.Log("Press Mute Button : false");
+            AudioListener.volume = 1;
         }
         Save();
         UpdateButtonIcon();
@@ -38,7 +35,7 @@ public class SoundManager : MonoBehaviour
 
     private void UpdateButtonIcon(){
         if(muted == false){
-            soundOn.en = true;
+            soundOn.enabled = true;
             soundOff.enabled = false;
         }else{
             soundOn.enabled = false;
@@ -48,7 +45,6 @@ public class SoundManager : MonoBehaviour
 
     private void Load(){
         muted = PlayerPrefs.GetInt("muted") == 1;
-
     }
 
     private void Save(){
