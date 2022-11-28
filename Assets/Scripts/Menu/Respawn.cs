@@ -11,11 +11,36 @@ public class Respawn : MonoBehaviour
     public Image CP3;
     public Image CP4;
     public healthUpdate healthUpdate;
-    private int usedTimes;
+    public int usedTimes;
     // Update is called once per frame
     void Update()
     {
-        usedTimes = healthUpdate.getNumberOfTimesSpawned();
+        // usedTimes = healthUpdate.getNumberOfTimesSpawned();
+        // Debug.Log("usedTimeds");
+        // Debug.Log(usedTimes);
+        // switch (usedTimes)
+        // {
+        //     case 2:
+        //         CP4.enabled = false;
+        //         break;
+        //     case 3:
+        //         CP3.enabled = false;
+        //         break;
+        //     case 4:
+        //         CP2.enabled = false;
+        //         break;
+        //     case 5:
+        //         CP1.enabled = false;
+        //         break;
+        //     default:
+        //         break;
+        // }
+
+    }
+
+    // try not to have checks in update function unless necessary.
+    public void update_respawn_ui(int usedTimes){
+        Debug.Log(usedTimes);
         switch (usedTimes)
         {
             case 2:
@@ -33,6 +58,5 @@ public class Respawn : MonoBehaviour
             default:
                 break;
         }
-
     }
 }

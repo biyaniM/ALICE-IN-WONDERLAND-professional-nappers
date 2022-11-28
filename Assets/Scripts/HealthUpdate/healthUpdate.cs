@@ -20,11 +20,14 @@ public class healthUpdate : MonoBehaviour
 
     private bool respawning;
     private static Vector3 respawnPoint;
-    private int numberOfTimesSpawned;
+    public int numberOfTimesSpawned;
     public int maxRespawnCount = 3;
+
+    public Respawn respawnScript;
     // Start is called before the first frame update
     void Start()
     {  
+        respawnScript = FindObjectOfType<Respawn>();
         gameOverCheck = false;       
         player = GameObject.Find("HUD").GetComponent<Player>();
         // analyticsComponent = GetComponent<SendToGoogle>();
@@ -77,6 +80,7 @@ public class healthUpdate : MonoBehaviour
         numberOfTimesSpawned = numberOfTimesSpawned + 1;
         Debug.Log("numberOfTimesSpawned");
         Debug.Log(numberOfTimesSpawned);
+        respawnScript.update_respawn_ui(numberOfTimesSpawned);
     }
 
     public static void setSpawnPoint(Vector3 spawnPoint) {
