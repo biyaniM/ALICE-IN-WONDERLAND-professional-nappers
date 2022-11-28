@@ -392,15 +392,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 441816, guid: d68eddb8a44e25b44857e9e0c5f916e7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.027729
+      value: 10.17
       objectReference: {fileID: 0}
     - target: {fileID: 441816, guid: d68eddb8a44e25b44857e9e0c5f916e7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.401908
+      value: -5.37
       objectReference: {fileID: 0}
     - target: {fileID: 441816, guid: d68eddb8a44e25b44857e9e0c5f916e7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 26.74602
+      value: 26.87
       objectReference: {fileID: 0}
     - target: {fileID: 441816, guid: d68eddb8a44e25b44857e9e0c5f916e7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9507,7 +9507,7 @@ MonoBehaviour:
   turretRaycastRange: 13
   turretRotationSpeed: 100
   turretShootRange: 100
-  fireRateConstant: 15
+  fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
   farAngleThreshold: 10
   closeAngleThreshold: 3
@@ -9525,10 +9525,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 2.25
+  m_Radius: 2.3
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!64 &140233052
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -18684,10 +18684,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 2.25
+  m_Radius: 2.3
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!64 &580478001
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -18933,15 +18933,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012015927304, guid: 5c02591794acece409986647ed6329a7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.09
+      value: 2.13
       objectReference: {fileID: 0}
     - target: {fileID: 4000012015927304, guid: 5c02591794acece409986647ed6329a7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -15.167
+      value: -15.17
       objectReference: {fileID: 0}
     - target: {fileID: 4000012015927304, guid: 5c02591794acece409986647ed6329a7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 22.53
+      value: 24.35
       objectReference: {fileID: 0}
     - target: {fileID: 4000012015927304, guid: 5c02591794acece409986647ed6329a7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -19883,9 +19883,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turretRaycastRange: 13
-  turretRotationSpeed: 100
-  turretShootRange: 70
-  fireRateConstant: 15
+  turretRotationSpeed: 90
+  turretShootRange: 40
+  fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
   farAngleThreshold: 7
   closeAngleThreshold: 3
@@ -19931,10 +19931,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 2.25
+  m_Radius: 2.3
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1001 &695292219
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20474,7 +20474,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh68374
+  m_Name: pb_Mesh213484
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -33671,7 +33671,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh67430
+  m_Name: pb_Mesh212534
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -36240,10 +36240,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba43a5190e5814ddb90118155d00faf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretRaycastRange: 30
-  turretRotationSpeed: 100
-  turretShootRange: 100
-  fireRateConstant: 25
+  turretRaycastRange: 20
+  turretRotationSpeed: 90
+  turretShootRange: 80
+  fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
   farAngleThreshold: 10
   closeAngleThreshold: 3
@@ -36289,10 +36289,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 2.25
+  m_Radius: 2.3
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1001 &1187771975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45952,7 +45952,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh67022
+  m_Name: pb_Mesh212126
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -47415,7 +47415,7 @@ MonoBehaviour:
   turretRaycastRange: 13
   turretRotationSpeed: 100
   turretShootRange: 70
-  fireRateConstant: 15
+  fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
   farAngleThreshold: 7
   closeAngleThreshold: 3
@@ -47461,10 +47461,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 2.25
+  m_Radius: 2.3
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &1640946883
 GameObject:
   m_ObjectHideFlags: 0
@@ -52601,7 +52601,7 @@ MonoBehaviour:
   turretRaycastRange: 13
   turretRotationSpeed: 100
   turretShootRange: 50
-  fireRateConstant: 15
+  fireRateConstant: 5
   turrentRotationSpeedMultiplier: 1
   farAngleThreshold: 7
   closeAngleThreshold: 3
@@ -52619,10 +52619,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 2.25
+  m_Radius: 2.3
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!64 &1687923031
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -52924,7 +52924,7 @@ MonoBehaviour:
   turretRaycastRange: 30
   turretRotationSpeed: 100
   turretShootRange: 100
-  fireRateConstant: 15
+  fireRateConstant: 10
   turrentRotationSpeedMultiplier: 1
   farAngleThreshold: 10
   closeAngleThreshold: 3
@@ -52942,10 +52942,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 2.25
+  m_Radius: 2.3
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!64 &1719725892
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -58867,7 +58867,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh66782
+  m_Name: pb_Mesh211886
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -67395,7 +67395,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh67522
+  m_Name: pb_Mesh212626
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
