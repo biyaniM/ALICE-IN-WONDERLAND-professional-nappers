@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 8900000, guid: 619e305f5165a9946b7f72464e44ca4a, type: 3}
   m_Sun: {fileID: 2114283754330233425}
-  m_IndirectSpecularColor: {r: 0.66851705, g: 0.40396294, b: 0.74544036, a: 1}
+  m_IndirectSpecularColor: {r: 0.6686626, g: 0.40422627, b: 0.74563646, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -22339,54 +22339,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5143654945263413072, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
-      propertyPath: m_Color.a
-      value: 0.59607846
-      objectReference: {fileID: 0}
-    - target: {fileID: 5475762487283306744, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.1000061
-      objectReference: {fileID: 0}
-    - target: {fileID: 5475762487283306744, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.1000061
-      objectReference: {fileID: 0}
     - target: {fileID: 6490298819815039122, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
       propertyPath: m_Name
       value: PauseMenu
       objectReference: {fileID: 0}
-    - target: {fileID: 6490298819815039122, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6769537328424014683, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.48204803
-      objectReference: {fileID: 0}
-    - target: {fileID: 7281178155397448560, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 3.6000366
-      objectReference: {fileID: 0}
-    - target: {fileID: 8391786826361184298, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
-      propertyPath: timer
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8391786826361184298, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
-      propertyPath: menu_btn
-      value: 
-      objectReference: {fileID: 589016033}
-    - target: {fileID: 8391786826361184298, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
-      propertyPath: guide_btn
-      value: 
-      objectReference: {fileID: 589016031}
-    - target: {fileID: 8391786826361184298, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
-      propertyPath: resume_btn
-      value: 
-      objectReference: {fileID: 589016034}
-    - target: {fileID: 8391786826361184298, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
-      propertyPath: restart_btn
-      value: 
-      objectReference: {fileID: 589016032}
     - target: {fileID: 8538726227987275226, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -22482,50 +22438,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f3ccf099abc94cf69425104dbc4cd83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &589016031 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1528060657978493774, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
-  m_PrefabInstance: {fileID: 589016029}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &589016032 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2113278764212899337, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
-  m_PrefabInstance: {fileID: 589016029}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &589016033 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9074977309986857761, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
-  m_PrefabInstance: {fileID: 589016029}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &589016034 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3125419454213249974, guid: 4831c663e87f4418b95bd3b9ba9f496e, type: 3}
-  m_PrefabInstance: {fileID: 589016029}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &591681546
@@ -83514,14 +83426,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameEndUI
       objectReference: {fileID: 0}
-    - target: {fileID: 748240375881037333, guid: 8226e0801bb3e42d5ba3a84691b45f79, type: 3}
-      propertyPath: timer
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 748240375881037333, guid: 8226e0801bb3e42d5ba3a84691b45f79, type: 3}
-      propertyPath: curr_level
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 748240375881037334, guid: 8226e0801bb3e42d5ba3a84691b45f79, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -83606,10 +83510,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 748240375881037335, guid: 8226e0801bb3e42d5ba3a84691b45f79, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 2105702605}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8226e0801bb3e42d5ba3a84691b45f79, type: 3}
 --- !u!1 &2114283753834967212
