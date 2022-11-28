@@ -52,7 +52,7 @@ public class healthUpdate : MonoBehaviour
             else {
                 gameObject.SetActiveRecursively(false);
                 if(gameOverCheck == false){
-                analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "Died", "NA", "NA", "NA", "Health Over");
+                // analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "Died", "NA", "NA", "NA", "Health Over");
 
                 try {FindObjectOfType<AudioManager>().play("final death");}
                 catch (System.NullReferenceException e) { Debug.LogWarning("Death sound not appointed in "+gameObject.scene+"\n"+e.ToString()); }
