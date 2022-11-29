@@ -26,10 +26,11 @@ public class CoinCollecctionOnEnemyKill : MonoBehaviour
 
             if (collider.gameObject.name == "PaintBallProjectile(Clone)"){
                 passed = true;
+                Coroutine messageCoroutine;
 
                 if (gameObject.tag == "enemy_red" || gameObject.tag=="enemy_yellow" || gameObject.tag=="enemy_blue"){    
                     setNewTimeAfterKillingEnemy();
-                    SendMsgToHUD("+ "+timerIncrease.ToString()+" Seconds");
+                    messageCoroutine = SendMsgToHUD("+ "+timerIncrease.ToString()+" Seconds");
                 }else{
                     return;
                 }
@@ -44,13 +45,14 @@ public class CoinCollecctionOnEnemyKill : MonoBehaviour
                 }
                 
                 Destroy(gameObject);
+                StopCoroutine(messageCoroutine);
             }
         }
     }
 
-    void SendMsgToHUD(string msg){
+    Coroutine SendMsgToHUD(string msg){
         player.ShowAlert(msg, "time");
-        StartCoroutine (waiter());
+        return StartCoroutine (waiter());
     }
 
     IEnumerator waiter(){
