@@ -13,19 +13,28 @@ public class SettingMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int volume = (int) Math.Round(slider.value, 0);
         if(!PlayerPrefs.HasKey("volume")){
+            volume = 5;
             Save(volume);
         }else{
             Load();
         }
-        changeVolume();
+        Debug.Log("Load Volume: " + volume);
+        updateSlider(volume);
+        
     }
 
+    public void updateSlider(int volume){
+        slider.value = volume;
+        volume_text.text = volume.ToString();
+    }
+    
     public void changeVolume(){
         int volume = (int) Math.Round(slider.value, 0);
+        Save(volume);
         volume_text.text = volume.ToString();
         AudioListener.volume = (float) volume / 10;
+        
     }
     // Update is called once per frame
     void Update()
