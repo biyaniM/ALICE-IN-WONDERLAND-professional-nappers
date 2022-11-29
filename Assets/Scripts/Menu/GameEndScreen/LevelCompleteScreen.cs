@@ -41,6 +41,7 @@ public class LevelCompleteScreen: MonoBehaviour
 
     void ResetGame(){
         Debug.Log("Restart Game!");
+        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -48,6 +49,7 @@ public class LevelCompleteScreen: MonoBehaviour
     }
 
     void NextLevel(){
+        Time.timeScale = 1;
         curr_level = SceneManager.GetActiveScene().buildIndex;
         Debug.Log("Next Level-------->");
         Debug.Log(curr_level);
@@ -98,6 +100,7 @@ public class LevelCompleteScreen: MonoBehaviour
     }
     
     void BackToMain(){
+        Time.timeScale = 1;
         Debug.Log("Main Menu!");
         //SceneManager.LoadScene("Menu");
         SceneManager.LoadScene("New_Menu");
