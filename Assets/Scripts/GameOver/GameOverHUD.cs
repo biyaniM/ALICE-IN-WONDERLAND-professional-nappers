@@ -29,6 +29,7 @@ public class GameOverHUD : MonoBehaviour
         gameObject.SetActive(true);
         //release the cursor to press the button.
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         restartBtn.onClick.AddListener(ResetGame);
         mainMenuBtn.onClick.AddListener(BackToMain);
         //gameOverText.text = msg;
