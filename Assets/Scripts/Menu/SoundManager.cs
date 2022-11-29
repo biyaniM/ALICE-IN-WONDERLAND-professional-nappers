@@ -8,9 +8,16 @@ public class SoundManager : MonoBehaviour
     [SerializeField] Image soundOn;
     [SerializeField] Image soundOff;
     private bool muted = false;
+    private float volume;
     // Start is called before the first frame update
     void Start()
     {
+        if(!PlayerPrefs.HasKey("volume")){
+            PlayerPrefs.SetInt("volume", 5);
+        }else{
+            int soundVolume = PlayerPrefs.GetInt("volume");
+            volume = (float) soundVolume / 10;
+        }
         if(!PlayerPrefs.HasKey("muted")){
             PlayerPrefs.SetInt("muted", 0);
             Load();
@@ -27,7 +34,7 @@ public class SoundManager : MonoBehaviour
             AudioListener.volume = 0;
         }else{
             muted = false;
-            AudioListener.volume = 1;
+            AudioListener.volume = volume;
         }
         Save();
         UpdateButtonIcon();
