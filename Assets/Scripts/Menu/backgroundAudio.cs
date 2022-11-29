@@ -9,7 +9,6 @@ public class backgroundAudio : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        muteAudio();
     }
 
     public void muteAudio() {
@@ -20,6 +19,7 @@ public class backgroundAudio : MonoBehaviour
         audioSource.mute = false;
     }
 }
+
 
 
 
