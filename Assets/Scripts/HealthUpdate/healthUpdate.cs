@@ -21,6 +21,7 @@ public class healthUpdate : MonoBehaviour
     private bool respawning;
     private static Vector3 respawnPoint;
     private int numberOfTimesSpawned;
+    public int maxRespawnCount = 3;
     // Start is called before the first frame update
     void Start()
     {  
@@ -40,7 +41,7 @@ public class healthUpdate : MonoBehaviour
 
     public void HealthCheck(){
         if(currentHealth <= 0) {
-            if(numberOfTimesSpawned <= 3) {
+            if(numberOfTimesSpawned <= maxRespawnCount) {
                 
                 try {FindObjectOfType<AudioManager>().play("death");}
                 catch (System.NullReferenceException e) { Debug.LogWarning("Death sound not appointed in "+gameObject.scene+"\n"+e.ToString()); }
@@ -50,7 +51,7 @@ public class healthUpdate : MonoBehaviour
                 respawn();
             }
             else {
-                gameObject.SetActiveRecursively(false);
+                gameObject.SetActive(false);
                 if(gameOverCheck == false){
                 // analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "Died", "NA", "NA", "NA", "Health Over");
 

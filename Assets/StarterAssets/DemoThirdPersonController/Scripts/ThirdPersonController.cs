@@ -135,6 +135,9 @@ namespace StarterAssets
             {
                 _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
             }
+            pauseMenu = GameObject.Find("PauseMenu").GetComponent<PauseMenu>();
+            Debug.Log("Pause Menu "+pauseMenu);
+            hud = GameObject.Find("HUD").GetComponent<Player>();
         }
 
         private void Start()
@@ -156,8 +159,6 @@ namespace StarterAssets
             _jumpTimeoutDelta = JumpTimeout;
             _fallTimeoutDelta = FallTimeout;
 
-            pauseMenu = GameObject.Find("PauseMenu").GetComponent<PauseMenu>();
-            hud = GameObject.Find("HUD").GetComponent<Player>();
         }
 
         private void AssertSprintAndMoveSpeedEqual(){

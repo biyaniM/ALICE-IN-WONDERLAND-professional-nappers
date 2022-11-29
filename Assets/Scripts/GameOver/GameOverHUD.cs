@@ -11,12 +11,12 @@ public class GameOverHUD : MonoBehaviour
     [SerializeField] Button mainMenuBtn;
     private Text gameOverText;
     private Player player;
-    private ThirdPersonController thirdPersonController;
+    private ThirdPersonController controller;
 
     void Awake(){
-        thirdPersonController = GameObject.FindGameObjectWithTag("Player").GetComponent<ThirdPersonController>();
+        controller = GameObject.FindGameObjectWithTag("Player").GetComponent<ThirdPersonController>();
     }
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +26,6 @@ public class GameOverHUD : MonoBehaviour
     }
 
     public void Setup(string msg){
-        thirdPersonController.isPaused = true;
         gameObject.SetActive(true);
         //release the cursor to press the button.
         Cursor.lockState = CursorLockMode.None;
@@ -35,18 +34,19 @@ public class GameOverHUD : MonoBehaviour
         //gameOverText.text = msg;
         Debug.Log("Game over end ui");
         player.SetGameStatus(true);
+        controller.isPaused = true;
     }
 
     void ResetGame(){
-        thirdPersonController.isPaused = false;
         Debug.Log("Restart Game!");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        controller.isPaused = false;
     }
 
     void BackToMain(){
-        thirdPersonController.isPaused = true;
         Debug.Log("Main Menu!");
         //SceneManager.LoadScene("Menu");
         SceneManager.LoadScene("New_Menu");
+        controller.isPaused = true;
     }
 }
