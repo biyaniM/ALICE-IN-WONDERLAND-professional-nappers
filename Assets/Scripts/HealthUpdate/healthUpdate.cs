@@ -53,7 +53,7 @@ public class healthUpdate : MonoBehaviour
             else {
                 gameObject.SetActive(false);
                 if(gameOverCheck == false){
-                analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "Died", "NA", "NA", "NA", "Health Over");
+                // analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "Died", "NA", "NA", "NA", "Health Over");
 
                 try {FindObjectOfType<AudioManager>().play("final death");}
                 catch (System.NullReferenceException e) { Debug.LogWarning("Death sound not appointed in "+gameObject.scene+"\n"+e.ToString()); }
@@ -108,7 +108,7 @@ public class healthUpdate : MonoBehaviour
             try {FindObjectOfType<AudioManager>().play("player hurt");}
             catch (System.NullReferenceException e) { Debug.LogWarning("Player hurt sound not appointed in "+gameObject.scene+"\n"+e.ToString()); }
 
-            player.ShowAlert(msg);
+            player.ShowAlert(msg, "hp");
             updateHealth(currentHealth);
             StartCoroutine (waiter());
             return;            

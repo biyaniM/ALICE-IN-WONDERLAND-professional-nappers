@@ -35,7 +35,7 @@ public class DeathZone : MonoBehaviour
     IEnumerator DeathZoneHealthDecrement(){
         while (healthUpdate.currentHealth > 0){
             string msg = "HP -"+healthDecrement.ToString();
-            playerObj.ShowAlert(msg);
+            playerObj.ShowAlert(msg, "hp");
 
             //* Decrease Player Health
             healthUpdate.currentHealth -= healthDecrement;

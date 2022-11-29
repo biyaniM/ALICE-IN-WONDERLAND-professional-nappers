@@ -34,17 +34,20 @@ public class GameOverHUD : MonoBehaviour
         //gameOverText.text = msg;
         Debug.Log("Game over end ui");
         player.SetGameStatus(true);
+        Time.timeScale = 0f;
         controller.isPaused = true;
     }
 
     void ResetGame(){
         Debug.Log("Restart Game!");
+        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         controller.isPaused = false;
     }
 
     void BackToMain(){
         Debug.Log("Main Menu!");
+        Time.timeScale = 1;
         //SceneManager.LoadScene("Menu");
         SceneManager.LoadScene("New_Menu");
         controller.isPaused = true;
