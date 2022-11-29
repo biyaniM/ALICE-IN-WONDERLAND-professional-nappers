@@ -46,7 +46,7 @@ public class Reset : MonoBehaviour
             }    
         }
         catch (System.NullReferenceException e){
-            Debug.LogWarning(e.ToString());
+            Debug.LogWarning("Player Dead" + e.ToString());
         }
     }
 }
