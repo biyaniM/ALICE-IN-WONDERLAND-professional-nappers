@@ -13,6 +13,8 @@ namespace StarterAssets
 		public bool jump;
 		public bool sprint;
 		public bool shoot;
+		public bool pause;
+		private ThirdPersonController controller;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -22,6 +24,10 @@ namespace StarterAssets
 		public bool cursorInputForLook = true;
 
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
+		void Awake(){
+			controller = GetComponent<ThirdPersonController>();
+		}
+
 		public void OnMove(InputValue value)
 		{
 			MoveInput(value.Get<Vector2>());
@@ -47,7 +53,12 @@ namespace StarterAssets
 
 		public void OnShoot(InputValue value)
 		{
-			ShootInput(value.isPressed);
+			if (!controller.isPaused) ShootInput(value.isPressed);
+		}
+
+		public void OnPause(InputValue value)
+		{
+			PauseInput(value.isPressed);
 		}
 #endif
 
@@ -69,6 +80,11 @@ namespace StarterAssets
 		public void ShootInput(bool newShootState)
 		{
 			shoot = newShootState;
+		}
+
+		public void PauseInput(bool newPauseState)
+		{
+			pause = newPauseState;
 		}
 
 		public void SprintInput(bool newSprintState)

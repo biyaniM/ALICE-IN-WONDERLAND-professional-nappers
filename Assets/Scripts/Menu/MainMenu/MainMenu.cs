@@ -12,10 +12,12 @@ public class MainMenu : MonoBehaviour
         GuideBtn = GameObject.Find("Guide").GetComponent<Button>();
         GuideBtn.onClick.AddListener(ShowGuideScene);
         Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
 
     void ShowGuideScene(){
         SceneManager.LoadScene("TutorialScene");
+        Cursor.lockState = CursorLockMode.None;
     }
 }

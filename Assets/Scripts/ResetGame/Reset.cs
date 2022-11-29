@@ -19,29 +19,36 @@ public class Reset : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if((transform.position.y < threshold) && !level_complete_object.levelOverCheck){
-            string curr_level = SceneManager.GetActiveScene().buildIndex.ToString();
-            if(curr_level != "3" && curr_level != "4"){
-                analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "Died", "NA", "NA", "NA", "Falling Down");
-            }
-            int numberOfTimesSpawned = gameOverHud.getNumberOfTimesSpawned();
-            if(numberOfTimesSpawned <= 100) {
+        try{
+            if((transform.position.y < threshold) && !level_complete_object.levelOverCheck){
+                string curr_level = SceneManager.GetActiveScene().buildIndex.ToString();
+                if(curr_level != "3" && curr_level != "4"){
+                    analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "Died", "NA", "NA", "NA", "Falling Down");
+                }
+                int numberOfTimesSpawned = gameOverHud.getNumberOfTimesSpawned();
+                if(numberOfTimesSpawned <= 3) {
 
-                try {FindObjectOfType<AudioManager>().play("death");}
-                catch (System.NullReferenceException e) { Debug.LogWarning("Death sound not appointed in "+gameObject.scene+"\n"+e.ToString()); }
+                    try {FindObjectOfType<AudioManager>().play("death");}
+                    catch (System.NullReferenceException e) { Debug.LogWarning("Death sound not appointed in "+gameObject.scene+"\n"+e.ToString()); }
 
-                gameOverHud.updateHealth(0, 1);
-            }
-            else {
+                    gameOverHud.updateHealth(0, 1);
+                }
+                else {
 
-                try {FindObjectOfType<AudioManager>().play("final death");}
-                catch (System.NullReferenceException e) { Debug.LogWarning("Death sound not appointed in "+gameObject.scene+"\n"+e.ToString()); }
+                    try {FindObjectOfType<AudioManager>().play("final death");}
+                    catch (System.NullReferenceException e) { Debug.LogWarning("Death sound not appointed in "+gameObject.scene+"\n"+e.ToString()); }
 
-                gameOverHud.runGameOverHud();
-                gameOverHud.timer.pauseTimer();
-                level_complete_object.levelOverCheck = !level_complete_object.levelOverCheck;
-            }
-            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }    
+                    gameOverHud.runGameOverHud();
+                    // gameOverHud.timer.pauseTimer(); //! Already being called in healthUpdate.cs
+                    level_complete_object.levelOverCheck = !level_complete_object.levelOverCheck;
+                }
+                // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }    
+        }
+        catch (System.NullReferenceException e){
+            Debug.LogWarning("Player Dead" + e.ToString());
+        }
     }
 }
+
+                           

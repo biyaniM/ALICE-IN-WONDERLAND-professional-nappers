@@ -111,6 +111,10 @@ namespace StarterAssets
 
         private bool _hasAnimator;
 
+        public bool isPaused = false;
+        private Player hud;
+        private PauseMenu pauseMenu;
+
         private bool IsCurrentDeviceMouse
         {
             get
@@ -131,6 +135,9 @@ namespace StarterAssets
             {
                 _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
             }
+            pauseMenu = GameObject.Find("PauseMenu").GetComponent<PauseMenu>();
+            Debug.Log("Pause Menu "+pauseMenu);
+            hud = GameObject.Find("HUD").GetComponent<Player>();
         }
 
         private void Start()
@@ -151,6 +158,7 @@ namespace StarterAssets
             // reset our timeouts on start
             _jumpTimeoutDelta = JumpTimeout;
             _fallTimeoutDelta = FallTimeout;
+
         }
 
         private void AssertSprintAndMoveSpeedEqual(){
@@ -161,14 +169,17 @@ namespace StarterAssets
         {
             _hasAnimator = TryGetComponent(out _animator);
 
-            JumpAndGravity();
-            GroundedCheck();
-            Move();
+            CheckPauseInput();
+            if (!isPaused){
+                JumpAndGravity();
+                GroundedCheck();
+                Move();
+            }
         }
 
         private void LateUpdate()
         {
-            CameraRotation();
+            if (!isPaused) CameraRotation();
         }
 
         private void AssignAnimationIDs()
@@ -178,6 +189,27 @@ namespace StarterAssets
             _animIDJump = Animator.StringToHash("Jump");
             _animIDFreeFall = Animator.StringToHash("FreeFall");
             _animIDMotionSpeed = Animator.StringToHash("MotionSpeed");
+        }
+
+        void CheckPauseInput(){
+            if(_input.pause && !hud.GetGameStatus()){ //* If pause input and game has not ended
+                _input.pause = false;
+                if(isPaused){
+                    //* resume the game
+                    pauseMenu.Resume();
+                    SetPause(false);
+                }
+                else{
+                    //* pause the game
+                    pauseMenu.Setup();
+                    SetPause(true);
+                }
+            }
+        }
+
+        public void SetPause(bool value){
+            isPaused = value;
+            AudioListener.pause = value;
         }
 
         private void GroundedCheck()

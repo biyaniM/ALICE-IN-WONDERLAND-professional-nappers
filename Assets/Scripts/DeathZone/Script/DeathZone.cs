@@ -35,7 +35,7 @@ public class DeathZone : MonoBehaviour
     IEnumerator DeathZoneHealthDecrement(){
         while (healthUpdate.currentHealth > 0){
             string msg = "HP -"+healthDecrement.ToString();
-            playerObj.ShowAlert(msg);
+            playerObj.ShowAlert(msg, "hp");
 
             //* Decrease Player Health
             healthUpdate.currentHealth -= healthDecrement;
@@ -60,6 +60,7 @@ public class DeathZone : MonoBehaviour
         healthBar.SetHealth(0); //* Make Health 0
         string msg = "You Died!";
         gameOverHUD.Setup(msg); //* Setup the gameover HUD
+        playerObj.SetGameStatus(true);
         timer.pauseTimer();
     }
     

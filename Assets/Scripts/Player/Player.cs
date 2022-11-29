@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement; 
 using TMPro;
+using StarterAssets;
 
 public class Player : MonoBehaviour
 {
@@ -22,12 +23,14 @@ public class Player : MonoBehaviour
     public HealthBar healthBar;
     public CoinsScore coinsScore;
     public AmmoCount ammoCount;
-    private TextMeshProUGUI guidance;
+    public TextMeshProUGUI guidance;
     public Image guidanceArea;
-    private TextMeshProUGUI alert;
+    public Image alertArea;
+    public TextMeshProUGUI alert;
     public GameObject finishBoundary;
-    public PauseMenu pauseMenu;
+    // public PauseMenu pauseMenu;
     public int numOfKill;
+    private bool isEnd;
 
 
     void Start()
@@ -39,6 +42,7 @@ public class Player : MonoBehaviour
 
         InitHealth(100);
         InitializeHUD();
+        SetGameStatus(false);
 
         // endboundary collider 
         Debug.Log("setting finish boundary something!!!");
@@ -53,24 +57,16 @@ public class Player : MonoBehaviour
     //todo: fix all ui component here  
     void SetComponents(){
         guidanceArea.enabled = false;
-        guidance = GameObject.Find("Guidance").GetComponent<TextMeshProUGUI>();
+        //guidance = GameObject.Find("Guidance").GetComponent<TextMeshProUGUI>();
         guidance.enabled = false;
-        alert = GameObject.Find("Alert").GetComponent<TextMeshProUGUI>();
+        alertArea.enabled = false;
+        //alert = GameObject.Find("Alert").GetComponent<TextMeshProUGUI>();
         alert.enabled = false;
+        
     }
 
     void Update(){
-        if(Input.GetKeyDown(KeyCode.P)){
-            if(pauseMenu.GameIsPaused){
-                // resume the game
-                pauseMenu.Resume();
-            }
-            else{
-                // pause the game
-                Debug.Log("Pause the game");
-                pauseMenu.Setup();
-            }
-        }
+
     }
 
     public void UpdateHealth(int health){
@@ -85,21 +81,62 @@ public class Player : MonoBehaviour
         float changeSaturation = 0;
         if(prevCoins == 0){
             if(changeCoins == 1){
-                changeSaturation = 50f;
+                if(TOTAL_GOAL < 7){
+                    changeSaturation = 50f;
+                }
+                else if(TOTAL_GOAL < 17){
+                    changeSaturation = 100f/3f;
+                }
+                else{
+                    changeSaturation = 20f;
+                }
+                
             }
-            else if(changeCoins == 2){
-                changeSaturation = 75f;
+            else if(changeCoins == 7){
+                if(TOTAL_GOAL < 7){
+                    changeSaturation = 75f;
+                }
+                else if(TOTAL_GOAL < 17){
+                    changeSaturation = 50f;
+                }
+                else{
+                    changeSaturation = 30f;
+                }
             }
             else{
-                changeSaturation = 75f + (changeCoins - 2) * SATURATION_INCREASE_FACTOR;
+                if(TOTAL_GOAL < 7){
+                    changeSaturation = 75f + (changeCoins - 2) * SATURATION_INCREASE_FACTOR;
+                }
+                else if(TOTAL_GOAL < 17){
+                    changeSaturation = 50f + (changeCoins - 2) * SATURATION_INCREASE_FACTOR;
+                }
+                else{
+                    changeSaturation = 50f + (changeCoins - 2) * SATURATION_INCREASE_FACTOR;
+                }
             }
         }
         else if(prevCoins == 1){
             if(changeCoins == 1){
-                changeSaturation = 25;
+                if(TOTAL_GOAL < 7){
+                    changeSaturation = 25f;
+                }
+                else if(TOTAL_GOAL < 17){
+                    changeSaturation = 50f/3f;
+                }
+                else{
+                    changeSaturation = 10f;
+                }
             }
             else{
-                changeSaturation = 25f + (changeCoins - 1) * SATURATION_INCREASE_FACTOR;
+                if(TOTAL_GOAL < 7){
+                    changeSaturation = 25f + (changeCoins - 1) * SATURATION_INCREASE_FACTOR;
+                }
+                else if(TOTAL_GOAL < 17){
+                    changeSaturation = (50f/3f) + (changeCoins - 1) * SATURATION_INCREASE_FACTOR;
+                }
+                else{
+                    changeSaturation = 10f + (changeCoins - 1) * SATURATION_INCREASE_FACTOR;
+                }
             }
         }
         else{
@@ -118,7 +155,16 @@ public class Player : MonoBehaviour
     //import setting from level side
     void SetGoal(int totalGoal){
         TOTAL_GOAL = totalGoal;
-        SATURATION_INCREASE_FACTOR = 50f / (TOTAL_GOAL - 2);
+        if(TOTAL_GOAL < 10){
+            SATURATION_INCREASE_FACTOR = 50f / (TOTAL_GOAL - 2);
+        }
+        else if(TOTAL_GOAL < 20){
+            SATURATION_INCREASE_FACTOR = 75f / (TOTAL_GOAL - 2);
+        }
+        else{
+            SATURATION_INCREASE_FACTOR = 95f / (TOTAL_GOAL - 2);
+        }
+        
         coinsScore.SetGoals(TOTAL_GOAL);
     }
     //import from player shooting???
@@ -168,6 +214,14 @@ public class Player : MonoBehaviour
         return numOfKill;
     }
 
+    public void SetGameStatus(bool status){
+        isEnd = status;
+    }
+
+    public bool GetGameStatus(){
+        return isEnd;
+    }
+
     public void ShowGuidance(string msg){
         guidanceArea.enabled = true;
         guidance.enabled = true;
@@ -178,13 +232,31 @@ public class Player : MonoBehaviour
         guidanceArea.enabled = false;
         guidance.enabled = false;
     }
-
-    public void ShowAlert(string msg){
+    //gem/hp/time/ammo
+    public void ShowAlert(string msg, string type){
+        alertArea.enabled = true;
         alert.enabled = true;
         alert.text = msg;
+        //Debug.Log("Alert Type: " + type);
+        switch(type){
+            case "gem": //purple
+                Debug.Log("Alert Type: " + type);
+                alertArea.color = new Color32(143, 0, 254, 255);
+                break;
+            case "hp"://red
+                alertArea.color = new Color32(254, 9, 0, 255);
+                break;
+            case "time"://green
+                alertArea.color = new Color32(0, 255, 32, 186);
+                break;
+            case "ammo"://blue
+                alertArea.color = new Color32 (20, 64, 246, 90);
+                break;
+        }
     }
 
     public void CloseAlert(){
+        alertArea.enabled = false;
         alert.enabled = false;
     }
 

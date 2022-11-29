@@ -49,7 +49,7 @@ public class ArrowKeyTutorial : MonoBehaviour
             case "collect coin":
                 if (col.tag=="Player" && !instructionComplete){
                     instructionComplete = false;
-                    tutorialMessage = "Walk through coin to collect";
+                    tutorialMessage = "Walk through gem to collect";
                 }
                 break;
             case "enemy close":
@@ -79,13 +79,13 @@ public class ArrowKeyTutorial : MonoBehaviour
             case "enough coins":
                 if (col.tag=="Player" && !instructionComplete){
                     instructionComplete = false;
-                    tutorialMessage = "Collect enough coins!";
+                    tutorialMessage = "Collect enough gems!";
                 }
                 break;
             case "level finish":
                 if (col.tag=="Player" && !instructionComplete){
                     instructionComplete = false;
-                    tutorialMessage = "Pass through the arch!\nDo you enough coins?";
+                    tutorialMessage = "Pass through the arch!\nDo you have enough gems?";
                 }
                 break;
             case "enemy give point":

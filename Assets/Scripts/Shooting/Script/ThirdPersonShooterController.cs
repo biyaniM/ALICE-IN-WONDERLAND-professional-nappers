@@ -18,11 +18,13 @@ public class ThirdPersonShooterController : MonoBehaviour
     [Tooltip("Particle System for Shooting VFX")][SerializeField] private ParticleSystem shootFlash;
     [Header("Player Rotation with Camera")]
     private GameObject TPPAimCamera;
+    private ThirdPersonController thirdPersonController;
     
     void Start(){
         player.InitAmmo(maxAmmo);
         Cursor.lockState = CursorLockMode.Locked;
         TPPAimCamera = GameObject.Find("TPPAimCamera");
+        thirdPersonController = gameObject.GetComponent<ThirdPersonController>();
     }
     void Awake(){
         starterAssetsInputs = GetComponent<StarterAssetsInputs>();
@@ -36,7 +38,7 @@ public class ThirdPersonShooterController : MonoBehaviour
         //* Ammo Update
         currentAmmo = player.ammoCount.currentAmmo;
         if (player.ammoCount.currentAmmo>0){
-            if (starterAssetsInputs.shoot){
+            if (starterAssetsInputs.shoot && !thirdPersonController.isPaused){
                 Shoot();
             }
         }else{

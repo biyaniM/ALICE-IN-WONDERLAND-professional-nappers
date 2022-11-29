@@ -39,7 +39,7 @@ public class MysteryBox : MonoBehaviour
 
     IEnumerator HealthReplenish(int healthIncerement){
         string msg = "HP +"+healthIncerement.ToString();
-        playerObj.ShowAlert(msg);
+        playerObj.ShowAlert(msg,"hp");
         healthUpdateObj.currentHealth += healthIncerement;
 
         try {FindObjectOfType<AudioManager>().play("mystery health");}
@@ -52,7 +52,7 @@ public class MysteryBox : MonoBehaviour
 
     IEnumerator AmmoReplenish(int ammoIncrement){
         string msg = "Ammo +"+ammoIncrement.ToString();
-        playerObj.ShowAlert(msg);
+        playerObj.ShowAlert(msg,"ammo");
         ammoCountObj.increaseAmmoCount(ammoIncrement);
 
         try {FindObjectOfType<AudioManager>().play("mystery ammo");}
@@ -63,8 +63,8 @@ public class MysteryBox : MonoBehaviour
     }
 
     IEnumerator GoldenCoin(int coinIncrement){
-        string msg = "Coins +"+coinIncrement.ToString();
-        playerObj.ShowAlert(msg);
+        string msg = "Gem +"+coinIncrement.ToString();
+        playerObj.ShowAlert(msg,"gem");
         coinCollectObj.updateGoldenCoin(coinIncrement);
 
         try {FindObjectOfType<AudioManager>().play("mystery coin");}

@@ -28,8 +28,8 @@ public class CollectCoins : MonoBehaviour
     }
 
     void SendMsgToHUD(){
-        string msg = "Coin +1";
-        player.ShowAlert(msg);
+        string msg = "Gem +1";
+        player.ShowAlert(msg, "gem");
         try {FindObjectOfType<AudioManager>().play("coin collect");}
         catch (System.NullReferenceException e) { Debug.LogWarning("Coin Collect sound not appointed in "+gameObject.scene+"\n"+e.ToString()); }
         StartCoroutine (waiter());

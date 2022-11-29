@@ -21,6 +21,7 @@ public class healthUpdate : MonoBehaviour
     private bool respawning;
     private static Vector3 respawnPoint;
     private int numberOfTimesSpawned;
+    public int maxRespawnCount = 3;
     // Start is called before the first frame update
     void Start()
     {  
@@ -40,7 +41,7 @@ public class healthUpdate : MonoBehaviour
 
     public void HealthCheck(){
         if(currentHealth <= 0) {
-            if(numberOfTimesSpawned <= 100) {
+            if(numberOfTimesSpawned <= maxRespawnCount) {
                 
                 try {FindObjectOfType<AudioManager>().play("death");}
                 catch (System.NullReferenceException e) { Debug.LogWarning("Death sound not appointed in "+gameObject.scene+"\n"+e.ToString()); }
@@ -50,14 +51,15 @@ public class healthUpdate : MonoBehaviour
                 respawn();
             }
             else {
-                gameObject.SetActiveRecursively(false);
+                gameObject.SetActive(false);
                 if(gameOverCheck == false){
-                analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "Died", "NA", "NA", "NA", "Health Over");
+                // analyticsComponent.Send(SceneManager.GetActiveScene().buildIndex.ToString(), "NA", "Died", "NA", "NA", "NA", "Health Over");
 
                 try {FindObjectOfType<AudioManager>().play("final death");}
                 catch (System.NullReferenceException e) { Debug.LogWarning("Death sound not appointed in "+gameObject.scene+"\n"+e.ToString()); }
 
                 runGameOverHud();
+                player.SetGameStatus(true);
                 // stop timer
                 timer.pauseTimer();
                 }
@@ -89,6 +91,7 @@ public class healthUpdate : MonoBehaviour
         string msg = "You Died!";
         gameOverHUD.Setup(msg);
         gameOverCheck = true;
+        
         // destroy the player
         // Destroy(gameObject);
     }
@@ -105,7 +108,7 @@ public class healthUpdate : MonoBehaviour
             try {FindObjectOfType<AudioManager>().play("player hurt");}
             catch (System.NullReferenceException e) { Debug.LogWarning("Player hurt sound not appointed in "+gameObject.scene+"\n"+e.ToString()); }
 
-            player.ShowAlert(msg);
+            player.ShowAlert(msg, "hp");
             updateHealth(currentHealth);
             StartCoroutine (waiter());
             return;            
@@ -121,7 +124,7 @@ public class healthUpdate : MonoBehaviour
         // Debug.Log("Set health Called");
         // Debug.Log(health);
         healthBar.SetHealth(health);
-         if(health == 0 && fall == 1) {
+         if(health == 0 && fall == 1 && numberOfTimesSpawned <=3) {
             // Debug.Log("Respawning because of falling down!");
             // Debug.Log(playerArmature.transform.position);
             respawn();
