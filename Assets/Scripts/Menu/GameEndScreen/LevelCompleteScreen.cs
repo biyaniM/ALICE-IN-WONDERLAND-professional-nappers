@@ -35,6 +35,7 @@ public class LevelCompleteScreen: MonoBehaviour
         controller.isPaused = true;
         Debug.Log("Setup game end ui");
         timer.pauseTimer();
+        Time.timeScale = 0f;
         Debug.Log("paused timer!!!!----------------------");
     }
 

@@ -6,7 +6,7 @@ public class CoinCollecctionOnEnemyKill : MonoBehaviour
 {
     public Player player;
     private bool passed;
-    public int timerIncrease = 6;
+    public int timerIncrease = 2;
     protected CountDownTimer countDownTimer;
     protected ParticleSystem explosion;
     

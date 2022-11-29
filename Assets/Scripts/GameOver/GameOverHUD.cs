@@ -34,6 +34,7 @@ public class GameOverHUD : MonoBehaviour
         //gameOverText.text = msg;
         Debug.Log("Game over end ui");
         player.SetGameStatus(true);
+        Time.timeScale = 0f;
         controller.isPaused = true;
     }
 
